@@ -3,7 +3,14 @@ from pprint import pprint as pp
 from bs4 import BeautifulSoup
 import re
 import datetime
-from datetime import date
+from dotenv import load_dotenv
+import os
+import urllib.request as ur
+from tqdm import tqdm
+
+load_dotenv()
+token = os.getenv("GITHUB_TOKEN")
+
 
 def get_languages(url):
     response = requests.get(url)
@@ -65,17 +72,71 @@ def get_active_status(inDate):
         return True
     else:
         return False
+    
+def get_num_repos_from_topics(in_url):
+    url = ur.urlopen(in_url)
+    soup = BeautifulSoup(url.read(), "html.parser")
+    html_string = soup.find_all('h2')[1]
+    pattern = r'\b(\d+)\b'
+    match = re.search(pattern, str(html_string))
+    if match:
+        number = match.group(1)
+    else:
+        number = 0
+    return int(number)
+
+def get_repos_from_topics(num_repos, in_url): # used to get repo names and owners from github topics page
+    repos = []
+    page_count = -(-num_repos // 20) # 20 is num of repos per page on github topics
+    print("page count:", page_count)
+    for i in tqdm(range(1, page_count+1, 1)):
+        url= in_url + '?page=' + str(i)
+        # print(url)
+        u = ur.urlopen(url)
+        headings=[]
+        soup = BeautifulSoup(u.read(), "html.parser")
+        for heading in soup.find_all("h3"):
+            repos.append(heading.text.replace('\n', '').replace(' ', ''))
+        repos.pop()
+       # repos[i] = headings
+    return repos
+
 
 if __name__ == '__main__':
+
+# github api authentication
+    headers = {'Authorization': 'token ' + token}
+    response = requests.get("https://api.github.com/rate_limit", headers=headers)
+    rate_status_dict = response.json()
+    #pp(rate_status_dict)    #show how status of rate limit 
+
+    rate_used = rate_status_dict["resources"]["core"]["used"]
+    rate_limit = rate_status_dict["resources"]["core"]["limit"]
+    # rate_remaining = rate_status_dict["resources"]["core"]["remaining"]
+    print(f"Rate Status: {rate_used}/{rate_limit} used")
+
+
 # Create an API request 
 # url = 'https://api.github.com/repos/coronasafe/care'
     # url = 'https://api.github.com/search/repositories?q=topic:sustainable-development-goals'
+    url = 'https://github.com/topics/sustainable-development-goals'
+
+    num_repos = get_num_repos_from_topics(url)
+    if num_repos != 0:
+        repo_list = get_repos_from_topics(num_repos, url)
+    else:
+        repo_list = get_repos_from_topics(20, url)
+    print(repo_list)
+    print(len(repo_list))
     
+    # TODO:
+    # loop thru repo_list and extract data from each, test with 10 first and see rate limit
+
     # response = requests.get(url)
     # print("Status code: ", response.status_code)
     # # In a variable, save the API response.
     # response_dict = response.json()
-    # # print(response_dict)
+    # print(response_dict)
     # # Evaluate the results.
     # print("Total repos:", response_dict['total_count'])
     # # find total number of repositories
@@ -84,13 +145,13 @@ if __name__ == '__main__':
 
     # examine the first repository
     # repo_dict = repos_dicts[1]
-    url = 'https://api.github.com/repos/coronasafe/care'
-    repo_dict = requests.get(url).json()
-    print("Keys:", len(repo_dict))
-    for key in sorted(repo_dict.keys()):
-        print(key)
+    # url = 'https://api.github.com/repos/coronasafe/care'
+    # repo_dict = requests.get(url, headers=headers).json()
+    # print("Keys:", len(repo_dict))
+    # for key in sorted(repo_dict.keys()):
+    #     print(key)
 
-    pp(repo_dict)
+    # pp(repo_dict)
 
     # need to get: TODO:
     # readme X
@@ -108,6 +169,8 @@ if __name__ == '__main__':
     # number of stars  X
     # number of commits (DONT NEED)
     # number of forks X
+    # use github token to increase rate limit X
+    # test getting data for multiple repos as once (sdg topic on github)
     # return as JSON object at the end
     print("\nThe following is some information regarding the first repository:")
     # print('Name:', repo_dict['name'])  #print the project's name
@@ -132,8 +195,9 @@ if __name__ == '__main__':
     # print("Top 5 Contributors:", get_top5_contributors(repo_dict['contributors_url']))
 
     # print("README:", get_readme(url, repo_dict['default_branch']))
-    status = "Active" if get_active_status(repo_dict["updated_at"]) else "Not Active"
-    print("Repo Status (Active/Not Active):", status)
+    # status = "Active" if get_active_status(repo_dict["updated_at"]) else "Not Active"
+    # print("Repo Status (Active/Not Active):", status)
+
 
     
 
