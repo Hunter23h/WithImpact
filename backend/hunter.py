@@ -66,6 +66,7 @@ def scraper(repo='coronasafe/care'):
   #     json.dump(repo, file, indent=4)
 
 
+
 # TODO
 # scrape data from each repo
 # def getTags(tag):
@@ -93,6 +94,7 @@ if __name__ == '__main__':
 #   tags = getTags('p')
 #   repos = headingTags('h3')
   scraper()
+
 #   for i in repos['python']:
 #     print(i)
 #     scraper(i)

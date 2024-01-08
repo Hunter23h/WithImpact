@@ -194,7 +194,7 @@ if __name__ == '__main__':
     if num_repos != 0:
         repo_list = get_repos_from_topics(num_repos, url_topics)
     else:
-        repo_list = get_repos_from_topics(20, url_topics) #if ccan't get number of repos, default to getting 20 (first page only)
+        repo_list = get_repos_from_topics(20, url_topics) #if can't get number of repos, default to getting 20 (first page only)
     # print(repo_list)
     print(len(repo_list))
     
@@ -273,32 +273,6 @@ if __name__ == '__main__':
     # use github token to increase rate limit X
     # test getting data for multiple repos as once (sdg topic on github) X
     # return as JSON object at the end X
-
-    #print("\nThe following is some information regarding the first repository:")
-    # print('Name:', repo_dict['name'])  #print the project's name
-    # print('Owner:', repo_dict['owner']['login'])  #use the key owner and the the key login to get the dictionary describing the owner and the owner’s login name respectively.
-    # print('Stars:', repo_dict['stargazers_count'])  #print how many stars the project has earned
-    # print('Forks:', repo_dict['forks_count'])
-    #print('Watchers:', repo_dict['subscribers_count'])
-    # print("Latest commit date:", get_latest_commit(repo_dict['branches_url'].replace("{/branch}", "/" + repo_dict['default_branch'])))
-    # print('Languages:', ", ".join(get_languages(repo_dict['languages_url'])))
-    # print('Topics:', ", ".join(repo_dict['topics']))
-    # print('Repository:', repo_dict['html_url'])  #print URL for the project’s GitHub repoitory
-    # print('Created:', repo_dict['created_at'])  #print when it was created
-    # print('Updated:', repo_dict['updated_at'])  #show when it was last updated
-
-    # print('Last Push Date:', repo_dict['pushed_at'])
-    # print('Description:', repo_dict['description']) #print the repository’s description
-
-    # num_open_PR = get_open_PR(repo_dict['pulls_url'].replace("{/number}", "?state=open&per_page=200")) # get number of open Pull requests
-    # num_open_issues = repo_dict['open_issues_count'] - num_open_PR # get number of open issues (open_issues_count returns number of open PRs + number of open issues)
-    # print("Number of open pull requests:", num_open_PR)
-    # print('Number of open issues:', num_open_issues)
-    # print("Top 5 Contributors:", get_top5_contributors(repo_dict['contributors_url']))
-
-    # print("README:", get_readme(url, repo_dict['default_branch']))
-    # status = "Active" if get_active_status(repo_dict["updated_at"]) else "Not Active"
-    # print("Repo Status (Active/Not Active):", status)
 
 
     
