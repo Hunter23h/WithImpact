@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Detail</title>
+</head>
+<body>
+    <h1>Project Detail</h1>
+    
+    <h2>{{ project.name }}</h2>
+    <p>Description: {{ project.description }}</p>
+    
+    <h3>Tags:</h3>
+    <ul>
+        {% for tag in project.tags %}
+            <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>SDG Categories:</h3>
+    <ul>
+        {% for category in project.sdgCategories %}
+            <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add any additional details you want to display -->
+</body>
+</html>
