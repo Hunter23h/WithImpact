@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Information</title>
+</head>
+<body>
+    <h1>{{ users.username }}</h1>
+
+    <h2>Favourite Projects</h2>
+
+    <ul>
+        {% for proj in users.favourite_projects %}
+        <li>{{ proj }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Email (testing purposes)</h2>
+    <p>{{ users.email }}</p>
+
+    <!-- Add any additional details you want to display -->
+</body>
+
+</html>

@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.Home.as_view()),
-    path("mymodel/", views.MyModelList.as_view()),
-    path("getProjects/", views.Projects.as_view()),
+    #path("mymodel/", views.MyModelList.as_view()),
+    path("getProjects/", views.Projects.as_view(), name='projects'),
+    path("users/<int:pk>/", views.Users.as_view(), name='user_detail')
 ]

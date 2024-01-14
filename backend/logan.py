@@ -77,8 +77,8 @@ def get_active_status(inDate):
     new_date = datetime.datetime.strptime(inDate,"%Y-%m-%dT%H:%M:%SZ")
     today = datetime.datetime.now()
     
-    # is active if there has been a commit in the last 12 months, can change this easily
-    if today - new_date <= datetime.timedelta(days=365):
+    # is active if there has been a commit in the last 1 month, can change this easily
+    if today - new_date <= datetime.timedelta(days=31):
         return True
     else:
         return False
@@ -162,7 +162,7 @@ def repo_metrics_to_dict(repo_dict, repo):
     all_repos_dict["Top 5 Contributors"] = get_top5_contributors(repo_dict['contributors_url'])
     status = "Active" if get_active_status(commit_date) else "Not Active"
     all_repos_dict["Status"] = status
-    all_repos_dict["README"] = get_readme(repo_name=repo, branch_name=repo_dict['default_branch'])
+    #all_repos_dict["README"] = get_readme(repo_name=repo, branch_name=repo_dict['default_branch'])
 
     return all_repos_dict
 
@@ -214,7 +214,7 @@ if __name__ == '__main__':
         list_of_repos.append(repo_info)
     #print(list_of_repos)
 
-    out_file = open("repos.json", "w") 
+    out_file = open("repos_noreadme.json", "w") 
   
     json.dump(list_of_repos, out_file, indent = 6) 
   
