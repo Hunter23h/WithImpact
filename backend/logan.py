@@ -111,6 +111,23 @@ def get_repos_from_topics(num_repos, in_url): # used to get repo names and owner
        # repos[i] = headings
     return repos
 
+def check_newcomer_friendly_status(repo_name): #uses community standards for now
+    owner, repo = repo_name.split("/")
+   # https://raw.githubusercontent.com/octokit/octokit.rb/master/README.md
+    # readme_url = "https://raw.githubusercontent.com/" + owner + "/" + repo + "/" + branch_name + "/README.md"
+    comm_stds_url = f"https://api.github.com/repos/{owner}/{repo}/community/profile"
+    comm_stds_resp = requests.get(comm_stds_url, headers=headers)
+    comm_stds_dict = comm_stds_resp.json()
+    if comm_stds_resp.status_code == 200: # or != 404
+        comm_health = comm_stds_dict["health_percentage"]
+        if comm_health >= 75:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 def print_repo_metrics(repo_dict, repo):
     print('Name:', repo_dict['name'])  #print the project's name
     print('Owner:', repo_dict['owner']['login'])  #use the key owner and the the key login to get the dictionary describing the owner and the owner’s login name respectively.
@@ -136,6 +153,9 @@ def print_repo_metrics(repo_dict, repo):
     print("README:", get_readme(repo_name=repo, branch_name=repo_dict['default_branch']))
     status = "Active" if get_active_status(repo_dict["updated_at"]) else "Not Active"
     print("Repo Status (Active/Not Active):", status)
+    newcomer = check_newcomer_friendly_status(repo_name=repo)
+    print("Newcomer Status:", newcomer)
+    print()
 
         #print(repo_dict["commits_url"])
     print("------------------------------------------------\n")
@@ -162,6 +182,9 @@ def repo_metrics_to_dict(repo_dict, repo):
     all_repos_dict["Top 5 Contributors"] = get_top5_contributors(repo_dict['contributors_url'])
     status = "Active" if get_active_status(commit_date) else "Not Active"
     all_repos_dict["Status"] = status
+    newcomer = check_newcomer_friendly_status(repo_name=repo)
+    all_repos_dict["Newcomer Friendly"] = newcomer
+
     #all_repos_dict["README"] = get_readme(repo_name=repo, branch_name=repo_dict['default_branch'])
 
     return all_repos_dict
@@ -198,8 +221,7 @@ if __name__ == '__main__':
     # print(repo_list)
     print(len(repo_list))
     
-    # TODO:
-    # loop thru repo_list and extract data from each, test with 10 first and see rate limit:
+
     start_time = time.time()
     print(f"Start time: {time.ctime()}")
     url = 'https://api.github.com/repos/'
@@ -207,14 +229,14 @@ if __name__ == '__main__':
     active_count = 0
     for repo in repo_list:
         repo_dict = requests.get(url=(url+repo), headers=headers).json()
-        #print_repo_metrics(repo_dict, repo)
+        # print_repo_metrics(repo_dict, repo)
         repo_info = repo_metrics_to_dict(repo_dict, repo)
         if repo_info["Status"] == "Active":
             active_count +=1
         list_of_repos.append(repo_info)
-    #print(list_of_repos)
+    print(list_of_repos)
 
-    out_file = open("repos_noreadme.json", "w") 
+    out_file = open("repos_noreadme_1month_active.json", "w") 
   
     json.dump(list_of_repos, out_file, indent = 6) 
   
@@ -230,10 +252,10 @@ if __name__ == '__main__':
     end_time = time.time()
     total_time = end_time - start_time
     print(f"End time: {time.ctime()}, time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
+        
+    #------------------------------------------------------------------------------ --
 
-    #-------------------------------------------------------------------------------------#
-
-    # response = requests.get(url)
+   # response = requests.get(url)
     # print("Status code: ", response.status_code)
     # # In a variable, save the API response.
     # response_dict = response.json()
@@ -253,26 +275,6 @@ if __name__ == '__main__':
     #     print(key)
 
     # pp(repo_dict)
-
-    # need to get: TODO: clean up code and find more repos to scrape data from
-    # readme X
-    # last updated X
-    # description X
-    # tags X
-    # status (active or inactive)
-    # last commit - take branches url and remove the {branch} at the end to automate X
-    # languages X
-    # contributors (top 5) X
-    # number of open issues X
-    # number of open PRs X
-    # project difficulty???
-    # github link X
-    # number of stars  X
-    # number of commits (DONT NEED)
-    # number of forks X
-    # use github token to increase rate limit X
-    # test getting data for multiple repos as once (sdg topic on github) X
-    # return as JSON object at the end X
 
 
     

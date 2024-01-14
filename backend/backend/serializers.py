@@ -14,7 +14,7 @@ class ProjectsSerializer(serializers.ModelSerializer):
         fields = ["name", "owner", "repo_url", "created_date", "updated_date", "description",
                   "last_push_date", "latest_commit_date", "stars", "forks", "watchers",
                   "languages", "tags", "open_prs", "open_issues", "top_contributors",
-                  "status", "sdg_categories", "readme"]
+                  "status", "newcomer_friendly", "sdg_categories", "readme"]
 
 class UsersSerializer(serializers.ModelSerializer):
     class Data:

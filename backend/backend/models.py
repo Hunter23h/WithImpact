@@ -27,14 +27,15 @@ class Project(models.Model):
     open_issues = models.IntegerField()
     top_contributors = models.JSONField()
     status = models.CharField(max_length=20)
+    newcomer_friendly = models.BooleanField(default=False)
     sdg_categories = models.JSONField(null=True)
     readme = models.TextField(null=True)
 
 
 class User(models.Model):
-    id = models.AutoField(primary_key=True, serialize=True)
+    #id = models.AutoField(primary_key=True, serialize=True)
     email = models.EmailField()
-    username = models.TextField()
+    username = models.TextField(unique=True, primary_key=True)
     favourite_projects = models.JSONField()
 
 

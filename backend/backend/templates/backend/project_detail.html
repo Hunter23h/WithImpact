@@ -9,34 +9,10 @@
             margin: 20px;
         }
 
-        h1,
-        h2,
-        h3,
-        p,
-        ul,
-        li {
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li::before {
-            content: "•";
-            /* Use a bullet point as the list item marker */
-            color: #007bff;
-            /* Set the bullet point color */
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
     </style>
 </head>
 
 <body>
-    {% for project in projects %}
     <h1>Project Detail</h1>
 
     <h2>{{ project.owner }} / {{ project.name }}</h2>
@@ -68,15 +44,31 @@
         <li>Stars: {{ project.stars }}</li>
         <li>Forks: {{ project.forks }}</li>
         <li>Watchers: {{ project.watchers }}</li>
-        <li>Languages: {{ project.languages }}</li>
+        <li>Languages:
+            <ul>
+                {% for lang in project.languages %}
+                <li>{{ lang }}</li>
+                {% endfor %}
+            </ul>
+        </li>
         <li>Open Pull Requests: {{ project.open_prs }}</li>
         <li>Open Issues: {{ project.open_issues }}</li>
-        <li>Top Contributors: {{ project.top_contributors }}</li>
+        <li>Top Contributors:
+            <ul>
+                {% for entry in project.top_contributors %}
+                <li>{{ entry.login }}</li>
+                <ul>
+                    <li>{{ entry.avatar_url }}</li>
+                    <li># of Contributions: {{ entry.contributions }}</li>
+                </ul>
+                {% endfor %}
+            </ul>
+        </li>
         <li>Status: {{ project.status }}</li>
+        <li>Newcomer Friendly: {{ project.newcomer_friendly }} </li>
     </ul>
 
     <!-- Add any additional details you want to display -->
-    {% endfor %}
 </body>
 
 </html>
