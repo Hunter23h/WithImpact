@@ -10,8 +10,17 @@
     <h2>Favourite Projects</h2>
 
     <ul>
-        {% for proj in users.favourite_projects %}
+        <!-- {% for proj in users.favourite_projects %}
         <li>{{ proj }}</li>
+
+        {% endfor %} -->
+        {% for project in project %}
+        <li>
+            <a href="{% url 'project_detail' owner=project.owner name=project.name %}">
+                {{ project.owner }} / {{ project.name }}
+            </a>
+            <!-- - GitHub: <a href="{{ project.repo_url }}" target="_blank">{{ project.repo_url }}</a> -->
+        </li>
         {% endfor %}
     </ul>
 
