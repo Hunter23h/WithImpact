@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import render, get_object_or_404
 from .models import User, Project
+from .forms import ProjectFilterForm
 # from .serializers import MyModelSerializer
 from django.http import HttpResponse
 
@@ -23,17 +24,26 @@ class Home(APIView):
 
 class ProjectList(APIView):
     def get(self, request, format=None):
-        # first_project = Project.objects.first()
-        # print("this is the project: ----------", first_project.tags)
-        # if not first_project:
-        #     return HttpResponse(
-        #         "oof.",
-        #     )
+        # project_obj = Project.objects.all()
+        # context = {
+        #     "projects": project_obj
+        # }
+        form = ProjectFilterForm(request.GET)
+        
+        projects = Project.objects.all()
+        
+        if form.is_valid():
+            newcomer_friendly = form.cleaned_data.get('newcomer_friendly')
+            if newcomer_friendly:
+                projects = projects.filter(newcomer_friendly=newcomer_friendly == 'True')
+            
+            status = form.cleaned_data.get('status')
+            if status:
+                projects = projects.filter(status=status)
 
-        # return render(request, "backend/project_detail.html", {"project": first_project})
-        project_obj = Project.objects.all()
         context = {
-            "projects": project_obj
+            'projects': projects,
+            'form': form,
         }
 
         return render(request, "backend/project_list.html", context)

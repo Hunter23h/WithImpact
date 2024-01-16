@@ -36,6 +36,10 @@
 </head>
 
 <body>
+    <form method="get" action="{% url 'project_list' %}">
+        {{ form.as_p }}
+        <input type="submit" value="Filter">
+    </form>
     {% for project in projects %}
     <!-- <h1>Project Detail</h1> -->
 
