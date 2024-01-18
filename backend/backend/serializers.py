@@ -1,14 +1,22 @@
 from rest_framework import serializers
-from .models import MyModel, Project
+from .models import User, Project
 
 
-class MyModelSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MyModel
-        fields = ["id", "name", "description"]
+# class MyModelSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = MyModel
+#         fields = ["id", "name", "description"]
 
 
 class ProjectsSerializer(serializers.ModelSerializer):
     class Data:
         model = Project
-        fields = ["id", "name", "description", "tags", "sdgCategories"]
+        fields = ["name", "owner", "repo_url", "created_date", "updated_date", "description",
+                  "last_push_date", "latest_commit_date", "stars", "forks", "watchers",
+                  "languages", "tags", "open_prs", "open_issues", "top_contributors",
+                  "status", "newcomer_friendly", "sdg_categories", "readme"]
+
+class UsersSerializer(serializers.ModelSerializer):
+    class Data:
+        model = User
+        fields = ["email", "username", "favourite_projects"]

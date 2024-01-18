@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Project Detail</title>
+    <title>Project Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+    </style>
 </head>
+
 <body>
     <h1>Project Detail</h1>
-    
-    <h2>{{ project.name }}</h2>
+
+    <h2>{{ project.owner }} / {{ project.name }}</h2>
     <p>Description: {{ project.description }}</p>
-    
+
     <h3>Tags:</h3>
     <ul>
         {% for tag in project.tags %}
-            <li>{{ tag }}</li>
+        <li>{{ tag }}</li>
         {% endfor %}
     </ul>
 
     <h3>SDG Categories:</h3>
     <ul>
-        {% for category in project.sdgCategories %}
-            <li>{{ category }}</li>
+        {% for category in project.sdg_categories %}
+        <li>{{ category }}</li>
         {% endfor %}
+    </ul>
+
+    <h3>Additional Details:</h3>
+    <ul>
+        <!-- <li>Name: {{ project.name }}</li>
+        <li>Owner: {{ project.owner }}</li> -->
+        <li>Repository URL: {{ project.repo_url }}</li>
+        <li>Created Date: {{ project.created_date }}</li>
+        <li>Updated Date: {{ project.updated_date }}</li>
+        <li>Last Push Date: {{ project.last_push_date }}</li>
+        <li>Latest Commit Date: {{ project.latest_commit_date }}</li>
+        <li>Stars: {{ project.stars }}</li>
+        <li>Forks: {{ project.forks }}</li>
+        <li>Watchers: {{ project.watchers }}</li>
+        <li>Languages:
+            <ul>
+                {% for lang in project.languages %}
+                <li>{{ lang }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Open Pull Requests: {{ project.open_prs }}</li>
+        <li>Open Issues: {{ project.open_issues }}</li>
+        <li>Top Contributors:
+            <ul>
+                {% for entry in project.top_contributors %}
+                <li>{{ entry.login }}</li>
+                <ul>
+                    <li>{{ entry.avatar_url }}</li>
+                    <li># of Contributions: {{ entry.contributions }}</li>
+                </ul>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Status: {{ project.status }}</li>
+        <li>Newcomer Friendly: {{ project.newcomer_friendly }} </li>
     </ul>
 
     <!-- Add any additional details you want to display -->
 </body>
+
 </html>

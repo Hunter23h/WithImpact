@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: "•";
+            /* Use a bullet point as the list item marker */
+            color: #007bff;
+            /* Set the bullet point color */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    {% for project in projects %}
+    <!-- <h1>Project Detail</h1> -->
+
+    <h2><a href="{% url 'project_detail' owner=project.owner name=project.name %}">
+        {{ project.owner }} / {{ project.name }}
+    </a></h2>
+    <p>Description: {{ project.description }}</p>
+
+    <h3>SDG Categories:</h3>
+    <ul>
+        {% for category in project.sdg_categories %}
+        <li>{{ category }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add any additional details you want to display -->
+    {% endfor %}
+</body>
+
+</html>
