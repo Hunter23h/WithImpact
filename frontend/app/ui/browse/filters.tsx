@@ -8,8 +8,8 @@ function Filters() {
       {/* SDG Goals */}
       <div>
         <h3>SDG Goals</h3>
-        {["Poverty", "Hunger"].map((filter) => (
-          <div className="flex justify-start gap-[10px] items-center">
+        {["Poverty", "Hunger"].map((filter, key) => (
+          <div className="flex justify-start gap-[10px] items-center" key={key}>
             <Checkbox checked={true} onCheckedChange={() => {}} />
             <label>{filter}</label>
           </div>
@@ -19,8 +19,8 @@ function Filters() {
       {/* Difficulty*/}
       <div>
         <h3>Difficulty</h3>
-        {["Beginner Friendly", "Hard"].map((filter) => (
-          <div className="flex justify-start gap-[10px] items-center">
+        {["Beginner Friendly", "Hard"].map((filter, key) => (
+          <div className="flex justify-start gap-[10px] items-center" key={key}>
             <Checkbox checked={true} onCheckedChange={() => {}} />
             <label>{filter}</label>
           </div>

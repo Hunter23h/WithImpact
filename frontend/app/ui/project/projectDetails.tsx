@@ -16,8 +16,8 @@ function ProjectDetails() {
         <div>
           <p className="font-bold">Tags</p>
           <div className=" flex gap-[7px]">
-            {[1, 2, 3].map((tag) => (
-              <Badge>tag {tag} </Badge>
+            {[1, 2, 3].map((tag, key) => (
+              <Badge key={key}>tag {tag} </Badge>
             ))}
           </div>
         </div>
@@ -60,8 +60,9 @@ function ProjectDetails() {
                   percentage: "w-[10%]",
                   color: "bg-[#081221]",
                 },
-              ].map((item) => (
+              ].map((item, key) => (
                 <div
+                  key={key}
                   className={cn("h-[100%]", item.color, `${item.percentage}`)}
                 ></div>
               ))}
@@ -71,8 +72,8 @@ function ProjectDetails() {
               { language: "Python", percentage: "30" },
               { language: "HTML", percentage: "40" },
               { language: "CSS", percentage: "20" },
-            ].map((item) => (
-              <div className="flex items-center gap-[10px]">
+            ].map((item, key) => (
+              <div className="flex items-center gap-[10px]" key={key}>
                 <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
                 <span>{item.language}</span>
               </div>
@@ -83,8 +84,11 @@ function ProjectDetails() {
         <div>
           <p className="font-bold">Contributors</p>
           <div className="flex gap-[10px]">
-            {[1, 2, 3, 4].map(() => (
-              <div className="w-[30px] h-[30px] rounded-[50%] border-border border-[1px]"></div>
+            {[1, 2, 3, 4].map((_, key) => (
+              <div
+                className="w-[30px] h-[30px] rounded-[50%] border-border border-[1px]"
+                key={key}
+              ></div>
             ))}
           </div>
         </div>

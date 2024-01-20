@@ -24,8 +24,11 @@ function ProjectComments() {
           { author: "Ainsley", msg: "You don't know me son!" },
           { author: "Hunter", msg: "You don't know me son!" },
           { author: "Logan", msg: "You don't know me son!" },
-        ].map((comment) => (
-          <div className="flex flex-col gap-[30px] p-[30px] border-solid border-[2px] border-white rounded-[10px] shadow-comments">
+        ].map((comment, key) => (
+          <div
+            key={key}
+            className="flex flex-col gap-[30px] p-[30px] border-solid border-[2px] border-white rounded-[10px] shadow-comments"
+          >
             <div
               className={cn(
                 "w-[50px] h-[50px] border-border border-[1px] rounded-[50%]",

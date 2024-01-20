@@ -35,8 +35,8 @@ function SDGCards() {
   return (
     <div className="flex w-[100%]">
       <div className="grid grid-cols-sm_sdgs md:grid-cols-md_sdgs 2xl:grid-cols-sdgs grid-rows-sm_sdgs md:grid-rows-md_sdgs 2xl:grid-rows-sdgs gap-[10px] m-auto w-[100%] max-w-[500px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] 2xl:max-w-[1400px] 3xl:max-w-[1900px]">
-        {SDGs.map((sdg) => (
-          <Dialog>
+        {SDGs.map((sdg, key) => (
+          <Dialog key={key}>
             <DialogTrigger asChild>
               <button className="relative aspect-square transition-all hover:scale-[1.07]">
                 <Image

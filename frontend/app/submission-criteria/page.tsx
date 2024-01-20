@@ -50,8 +50,9 @@ function SubmissionCriteria() {
           project:
         </p>
         <div className="flex flex-col w-[100%] gap-[30px]">
-          {OBJECTIVES.map((objective) => (
+          {OBJECTIVES.map((objective, key) => (
             <ChecklistItem
+              key={key}
               title={objective.title}
               content={objective.content}
               image={objective.image}

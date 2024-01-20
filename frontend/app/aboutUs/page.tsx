@@ -47,8 +47,9 @@ function AboutUs() {
         <h1>What is WithImpact about?</h1>
 
         <div className="flex flex-col w-[100%] gap-[30px]">
-          {OBJECTIVES.map((objective) => (
+          {OBJECTIVES.map((objective, key) => (
             <MissionObjective
+              key={key}
               title={objective.title}
               content={objective.content}
               image={objective.image}

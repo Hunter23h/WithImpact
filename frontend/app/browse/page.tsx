@@ -3,7 +3,7 @@ import Projects from "../ui/browse/projects";
 import SidebarActions from "../ui/browse/sidebarActions";
 import Container from "../ui/container";
 
-function Browse() {
+async function Browse() {
   return (
     <div className="flex  min-h-[100vh] items-stretch">
       {/* Filter and Sorting */}

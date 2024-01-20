@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./ui/nav";
 import { cn } from "@/lib/utils";
+import { GlobalContextProvider } from "./context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +26,10 @@ export default function RootLayout({
             "h-[100vh] flex flex-col overflow-auto"
           )}
         >
-          <Nav />
-          {children}
+          <GlobalContextProvider>
+            <Nav />
+            {children}
+          </GlobalContextProvider>
         </body>
       </html>
     </>
