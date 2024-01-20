@@ -14,7 +14,7 @@ import Image from "next/image";
 
 function Sort() {
   return (
-    <div >
+    <div>
       <div className="flex justify-start items-center gap-[5px]">
         <h3>Sort By</h3>
         <Image src={"/icons/sort.svg"} height={25} width={25} alt="sort" />
