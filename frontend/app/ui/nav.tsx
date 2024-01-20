@@ -76,8 +76,8 @@ function Nav() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
               <NavigationMenuContent className="flex flex-col gap-[5px] p-[10px]">
-                {components.map((item) => (
-                  <Link href={item.href}>
+                {components.map((item, key) => (
+                  <Link href={item.href} key={key}>
                     <NavigationMenuLink>
                       <Button
                         variant={pathname === item.href ? "secondary" : "ghost"}

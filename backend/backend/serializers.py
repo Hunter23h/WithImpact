@@ -9,7 +9,7 @@ from .models import User, Project
 
 
 class ProjectsSerializer(serializers.ModelSerializer):
-    class Data:
+    class Meta:
         model = Project
         fields = ["name", "owner", "repo_url", "created_date", "updated_date", "description",
                   "last_push_date", "latest_commit_date", "stars", "forks", "watchers",
@@ -17,6 +17,6 @@ class ProjectsSerializer(serializers.ModelSerializer):
                   "status", "newcomer_friendly", "sdg_categories", "readme"]
 
 class UsersSerializer(serializers.ModelSerializer):
-    class Data:
+    class Meta:
         model = User
         fields = ["email", "username", "favourite_projects"]
