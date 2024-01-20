@@ -1,9 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
 from django.shortcuts import render, get_object_or_404
 from .models import User, Project
+from .forms import ProjectFilterForm
 # from .serializers import MyModelSerializer
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .serializers import ProjectsSerializer, UsersSerializer
 
 
 # class MyModelList(APIView):
@@ -23,20 +26,32 @@ class Home(APIView):
 
 class ProjectList(APIView):
     def get(self, request, format=None):
-        # first_project = Project.objects.first()
-        # print("this is the project: ----------", first_project.tags)
-        # if not first_project:
-        #     return HttpResponse(
-        #         "oof.",
-        #     )
+        # project_obj = Project.objects.all()
+        # context = {
+        #     "projects": project_obj
+        # }
+        # form = ProjectFilterForm(request.GET)
+        
+        projects = Project.objects.all()
+        project_serializer = ProjectsSerializer(projects, many=True)
 
-        # return render(request, "backend/project_detail.html", {"project": first_project})
-        project_obj = Project.objects.all()
-        context = {
-            "projects": project_obj
-        }
+        
+        # if form.is_valid():
+        #     newcomer_friendly = form.cleaned_data.get('newcomer_friendly')
+        #     if newcomer_friendly:
+        #         projects = projects.filter(newcomer_friendly=newcomer_friendly == 'True')
+            
+        #     status = form.cleaned_data.get('status')
+        #     if status:
+        #         projects = projects.filter(status=status)
 
-        return render(request, "backend/project_list.html", context)
+        # context = {
+        #     'projects': projects,
+        #     # 'form': form,
+        # }
+
+        # return render(request, "backend/project_list.html", context)
+        return Response(project_serializer.data, status=status.HTTP_200_OK)
     
 class Projects(APIView):
     def get(self, request,name, owner, format=None):

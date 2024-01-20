@@ -29,6 +29,14 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = []
 
+# Allow all origins during development; you may want to restrict this in production
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # or your Next.js development server
+]
+
+# Allow credentials (cookies, Authorization headers, etc.) to be included in the CORS requests
+CORS_ALLOW_CREDENTIALS = True
+
 
 # Application definition
 
@@ -41,6 +49,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "backend",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -51,8 +60,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware"
 ]
-
 ROOT_URLCONF = "backend.urls"
 
 TEMPLATES = [

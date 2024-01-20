@@ -1,8 +1,23 @@
+'use client'
 import Image from "next/image";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
+
+  const fetchData = async ()=>{
+    try{
+
+      const response = await fetch("http://localhost:8000/getprojects/")
+      const data = await response.json()
+      console.log(data)
+      console.log(data[0])
+      // alert(response.json())
+      // console.log(response.json())
+    }catch(e){
+      console.log(e)
+    }
+  }
   return (
     <main className=" flex flex-col items-center justify-center h-[100%]">
       <div className="flex flex-col items-center gap-[40px] relative bottom-[120px]">
@@ -13,6 +28,10 @@ export default function Home() {
             United Nations Sustainable Development Goals...
           </h3>
         </div>
+        <button onClick={()=>fetchData()}>
+          fetch data
+        </button>
+          
         <Link href={"/browse"}>
           <Button
             role="link"
