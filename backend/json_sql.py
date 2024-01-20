@@ -3,8 +3,12 @@ import psycopg2
 from psycopg2.extras import Json
 import os
 from dotenv import load_dotenv
+import argparse
 
 load_dotenv()
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", type=str, help="JSON file name")
+args = parser.parse_args()
 
 # Function to read JSON data from a file
 def read_json(file_path):
@@ -32,6 +36,8 @@ def insert_into_postgresql(data, table_name, connection_params):
                  record['Last Push Date'], record['Latest Commit Date'],record['Stars'], record['Forks'],record['Watchers'], Json(record['Languages']),
                  Json(record['Tags']), record['Open PRs'],record['Open Issues'], Json(record['Top 5 Contributors']),record['Status'], record['Newcomer Friendly'])
             )
+        # for record in data:
+        #     print(record)
             
 
         # Commit changes and close the connection
@@ -61,7 +67,7 @@ if __name__ == "__main__":
     table_name = 'backend_project'
 
     # Replace 'your_file.json' with your actual JSON file path
-    json_file_path = 'repos_noreadme_1month_active.json'
+    json_file_path = args.f
 
     # Read JSON data
     data = read_json(json_file_path)

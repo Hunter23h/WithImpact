@@ -202,9 +202,6 @@ def check_criteria(url):
         else:
             return True
 
-
-
-
 if __name__ == '__main__':
 
     rate_used_start, rate_total = get_rate_limit()
@@ -219,13 +216,21 @@ if __name__ == '__main__':
     api_url, repo = convert_to_api_url(url)
     # print(f"GitHub API URL: {api_url}")
     start_time = time.time()
+    list_repo = []
     print(f"Start time: {time.ctime()}")
     valid_project = check_criteria(api_url)
     if valid_project:
         repo_dict = requests.get(api_url, headers=headers).json()
         # print_repo_metrics(repo_dict, repo)
         repo_info = repo_metrics_to_dict(repo_dict, repo)
-        pp(repo_info)
+        # pp(repo_info)
+        list_repo.append(repo_info)
+
+        out_file = open("../jsons/submitted_repo.json", "w") 
+  
+        json.dump(list_repo, out_file, indent = 6) 
+  
+        out_file.close()  
 
         print("End:")
         rate_used_end, rate_total = get_rate_limit()

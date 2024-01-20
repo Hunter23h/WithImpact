@@ -1,0 +1,59 @@
+[
+      {
+            "Name": "hon",
+            "Owner": "Andre0512",
+            "URL": "https://github.com/Andre0512/hon",
+            "Created": "2023-02-19T01:48:43Z",
+            "Updated": "2024-01-20T22:38:52Z",
+            "Description": "Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines and air conditioners in 19 languages.",
+            "Last Push Date": "2024-01-20T12:17:16Z",
+            "Latest Commit Date": "2024-01-20T12:17:16Z",
+            "Stars": 679,
+            "Forks": 1810,
+            "Watchers": 19,
+            "Languages": [
+                  "Python"
+            ],
+            "Tags": [
+                  "candy",
+                  "haier",
+                  "haier-hon",
+                  "home-assistant",
+                  "home-assistant-integration",
+                  "homeassistant",
+                  "hoover",
+                  "python"
+            ],
+            "Open PRs": 3,
+            "Open Issues": 35,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Andre0512",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/20325077?v=4",
+                        "contributions": 212
+                  },
+                  {
+                        "login": "drudgebg",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/11229872?v=4",
+                        "contributions": 10
+                  },
+                  {
+                        "login": "MiguelAngelLV",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/638110?v=4",
+                        "contributions": 7
+                  },
+                  {
+                        "login": "alexandre-leites",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1256013?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "cylonbrain",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/441892?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Active",
+            "Newcomer Friendly": false
+      }
+]

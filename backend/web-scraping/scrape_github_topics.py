@@ -236,7 +236,7 @@ if __name__ == '__main__':
         list_of_repos.append(repo_info)
     print(list_of_repos)
 
-    out_file = open("repos_noreadme_1month_active.json", "w") 
+    out_file = open("../jsons/repos_noreadme_1month_active.json", "w") 
   
     json.dump(list_of_repos, out_file, indent = 6) 
   
