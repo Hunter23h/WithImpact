@@ -8,7 +8,7 @@ export default function Home() {
   const fetchData = async ()=>{
     try{
 
-      const response = await fetch("http://localhost:8000/getprojects/")
+      const response = await fetch("http://localhost:8000/getusers/")
       const data = await response.json()
       console.log(data)
       console.log(data[0])

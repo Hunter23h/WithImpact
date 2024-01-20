@@ -53,6 +53,14 @@ class ProjectList(APIView):
         # return render(request, "backend/project_list.html", context)
         return Response(project_serializer.data, status=status.HTTP_200_OK)
     
+class UserList(APIView):
+    def get(self, reqest, format=None):
+        
+        users = User.objects.all()
+        user_serializer = UsersSerializer(users, many=True)
+
+        return Response(user_serializer.data, status=status.HTTP_200_OK)
+    
 class Projects(APIView):
     def get(self, request,name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)
