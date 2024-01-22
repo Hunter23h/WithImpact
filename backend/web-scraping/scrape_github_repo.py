@@ -181,7 +181,7 @@ def convert_to_api_url(repo_url):
         return "Not a valid GitHub repository URL"
 
     # Extract username and repository from the URL
-    parts = url.strip("/").split("/")
+    parts = repo_url.strip("/").split("/")
     owner = parts[-2]
     name = parts[-1]
     repo = owner + "/" + name
