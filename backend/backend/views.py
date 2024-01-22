@@ -52,8 +52,6 @@ class ProjectList(APIView):
         if sdg:
 
             goals = [goal.strip() for goal in sdg.split(",")]
-
-
             sdg_filters = Q()
             for goal in goals:
                 sdg_filters &= Q(sdg_categories__contains=[goal])
@@ -62,8 +60,6 @@ class ProjectList(APIView):
         if languages_list:
 
             languages = [language.strip() for language in languages_list.split(",")]
-
-
             language_filters = Q()
             for language in languages:
                 language_filters &= Q(languages__contains=[language])
