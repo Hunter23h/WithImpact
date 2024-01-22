@@ -203,7 +203,18 @@ def get_rate_limit():
 def print_rate_limit(rate_used, rate_limit):
     print(f"Rate Status: {rate_used}/{rate_limit} used")
 
-
+def check_criteria(url):
+    resp = requests.get(url, headers=headers)
+    resp_dict = resp.json()
+    # print(resp.status_code)
+    if resp.status_code == 404:
+        return False
+    else:
+        if resp_dict["description"] == None:
+            return False
+        else:
+            return True
+        
 if __name__ == '__main__':
 
     rate_used_start, rate_total = get_rate_limit()
@@ -221,6 +232,7 @@ if __name__ == '__main__':
     # print(repo_list)
     print(len(repo_list))
     
+    
 
     start_time = time.time()
     print(f"Start time: {time.ctime()}")
@@ -228,21 +240,25 @@ if __name__ == '__main__':
     list_of_repos = []
     active_count = 0
     for repo in repo_list:
-        repo_dict = requests.get(url=(url+repo), headers=headers).json()
-        # print_repo_metrics(repo_dict, repo)
-        repo_info = repo_metrics_to_dict(repo_dict, repo)
-        if repo_info["Status"] == "Active":
-            active_count +=1
-        list_of_repos.append(repo_info)
-    print(list_of_repos)
+        valid_project = check_criteria(url+repo)
+        if valid_project:
+            repo_dict = requests.get(url=(url+repo), headers=headers).json()
+            # print_repo_metrics(repo_dict, repo)
+            repo_info = repo_metrics_to_dict(repo_dict, repo)
+            # if repo_info["Status"] == "Active":
+            #     active_count +=1
+            list_of_repos.append(repo_info)
+    # print(list_of_repos)
+        else:
+            print("Invalid Project")
 
-    out_file = open("../jsons/repos_noreadme_1month_active.json", "w") 
-  
+    out_file = open("../jsons/repos.json", "w") 
+
     json.dump(list_of_repos, out_file, indent = 6) 
-  
+
     out_file.close()  
 
-    print(f"Number of active repos: {active_count}")
+    # print(f"Number of active repos: {active_count}")
 
     print("End:")
     rate_used_end, rate_total = get_rate_limit()

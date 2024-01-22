@@ -4,13 +4,13 @@
             "Owner": "Andre0512",
             "URL": "https://github.com/Andre0512/hon",
             "Created": "2023-02-19T01:48:43Z",
-            "Updated": "2024-01-20T22:38:52Z",
+            "Updated": "2024-01-21T20:22:31Z",
             "Description": "Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines and air conditioners in 19 languages.",
-            "Last Push Date": "2024-01-20T12:17:16Z",
-            "Latest Commit Date": "2024-01-20T12:17:16Z",
-            "Stars": 679,
-            "Forks": 1810,
-            "Watchers": 19,
+            "Last Push Date": "2024-01-21T03:12:15Z",
+            "Latest Commit Date": "2024-01-19T18:02:02Z",
+            "Stars": 767,
+            "Forks": 1932,
+            "Watchers": 20,
             "Languages": [
                   "Python"
             ],
@@ -24,13 +24,13 @@
                   "hoover",
                   "python"
             ],
-            "Open PRs": 3,
-            "Open Issues": 35,
+            "Open PRs": 2,
+            "Open Issues": 37,
             "Top 5 Contributors": [
                   {
                         "login": "Andre0512",
                         "avatar_url": "https://avatars.githubusercontent.com/u/20325077?v=4",
-                        "contributions": 212
+                        "contributions": 213
                   },
                   {
                         "login": "drudgebg",

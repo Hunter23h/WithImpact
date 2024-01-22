@@ -191,7 +191,7 @@ def convert_to_api_url(repo_url):
     return api_url, repo
 
 def check_criteria(url):
-    resp = requests.get(api_url, headers=headers)
+    resp = requests.get(url, headers=headers)
     resp_dict = resp.json()
     # print(resp.status_code)
     if resp.status_code == 404:
@@ -226,7 +226,8 @@ if __name__ == '__main__':
         # pp(repo_info)
         list_repo.append(repo_info)
 
-        out_file = open("../jsons/submitted_repo.json", "w") 
+        
+        out_file = open("../jsons/submitted_repo.json", "w") # run from /web-scraping
   
         json.dump(list_repo, out_file, indent = 6) 
   

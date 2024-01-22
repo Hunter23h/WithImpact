@@ -15,7 +15,7 @@ class Project(models.Model):
     repo_url = models.TextField()
     created_date = models.TextField()
     updated_date = models.TextField()
-    description = models.TextField(null=True)
+    description = models.TextField()
     last_push_date = models.TextField()
     latest_commit_date = models.TextField()
     stars = models.BigIntegerField()

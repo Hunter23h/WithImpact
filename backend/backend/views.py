@@ -9,6 +9,7 @@ from .forms import ProjectFilterForm
 from django.http import HttpResponse, JsonResponse
 from .serializers import ProjectsSerializer, UsersSerializer
 from rest_framework.pagination import PageNumberPagination
+from django.db.models import Q
 
 
 # class MyModelList(APIView):
@@ -30,12 +31,32 @@ class ProjectList(APIView):
     pagination_class = PageNumberPagination
 
     def get(self, request, format=None):
-        # project_obj = Project.objects.all()
-        # context = {
-        #     "projects": project_obj
-        # }
-        # form = ProjectFilterForm(request.GET)
-        projects = Project.objects.all()
+
+        #Filters
+
+        newcomer_friendly = request.GET.get('newcomer_friendly', None)
+        status = request.GET.get('status', None)
+        # SDG = request.GET.get()
+        languages_list = request.GET.get('languages', None)
+
+    
+        projects = Project.objects.all().order_by('id')
+
+        if newcomer_friendly:
+            projects = projects.filter(newcomer_friendly=newcomer_friendly)
+        
+        if status:
+            projects = projects.filter(status=status)
+        
+        if languages_list:
+
+            languages = [language.strip() for language in languages_list.split(",")]
+
+
+            language_filters = Q()
+            for language in languages:
+                language_filters &= Q(languages__contains=[language])
+            projects = projects.filter(language_filters)
 
         paginator = self.pagination_class()
         results_proj_page = paginator.paginate_queryset(projects, request)
@@ -43,6 +64,12 @@ class ProjectList(APIView):
         return paginator.get_paginated_response(
             project_serializer.data
         )
+    
+        # project_obj = Project.objects.all()
+        # context = {
+        #     "projects": project_obj
+        # }
+        # form = ProjectFilterForm(request.GET)
 
         # if form.is_valid():
         #     newcomer_friendly = form.cleaned_data.get('newcomer_friendly')
@@ -59,7 +86,7 @@ class ProjectList(APIView):
         # }
 
         # return render(request, "backend/project_list.html", context)
-        return Response(project_serializer.data, status=status.HTTP_200_OK)
+        # return Response(project_serializer.data, status=status.HTTP_200_OK)
     
 class UserList(APIView):
     def get(self, reqest, format=None):
