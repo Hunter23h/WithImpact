@@ -11,18 +11,17 @@ async function Projects({
   searchParams,
 }: {
   searchParams?: {
-    query?: string;
+    search?: string;
     page?: string;
   };
 }) {
-  const query = searchParams?.query ?? "";
-  const currentPage = (searchParams?.page as string) ?? "1";
-
-  const res = await fetchProjects(query, currentPage);
+  const search = searchParams?.search ?? "";
+  const currentPage = searchParams?.page as string;
+  const res = await fetchProjects(search, currentPage);
 
   const projects = res.results;
   const count = res.count;
-  const pageCount = Math.ceil(count / 10);
+  const pageCount = Math.ceil(count / 40);
 
   const pageArray = [] as String[];
   for (let i = 1; i < pageCount + 1; i++) {

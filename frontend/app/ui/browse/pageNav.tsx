@@ -31,17 +31,27 @@ function PageNav({ pageArray }: any) {
     let pageList = [];
     const regex = /^[1-9]\d*$/;
 
-    if (!regex.test(pageParam) && parseInt(pageParam) < pageArray.length)
-      return;
-    let left = parseInt(pageParam) - 1;
-    let right = left;
+    // The page number is always 1:string by default
+    let numTypePageParam = parseInt(pageParam);
+    if (
+      isNaN(numTypePageParam) ||
+      numTypePageParam < 1 ||
+      numTypePageParam > pageArray.length
+    ) {
+      pageParam = "1";
+    }
 
+    let left = numTypePageParam - 1;
+    let right = left;
     pageList.push(pageParam);
+
+    let i = 0;
 
     while (
       ((left >= 0 && left < pageArray.length) ||
         (right >= 0 && right < pageArray.length)) &&
-      pageList.length < 3
+      pageList.length < 3 &&
+      i < 3
     ) {
       if (left >= 1) {
         left -= 1;
@@ -51,6 +61,8 @@ function PageNav({ pageArray }: any) {
         right += 1;
         pageList.push(String(pageArray[right]));
       }
+      console.log("fuk");
+      i += 1;
     }
 
     setPages(pageList);

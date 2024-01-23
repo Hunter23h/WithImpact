@@ -13,10 +13,10 @@ function Search() {
     const params = new URLSearchParams(searchParams);
 
     if (term) {
-      params.set("name", term);
+      params.set("search", term);
       params.set("page", "1");
     } else {
-      params.delete("name");
+      params.delete("search");
     }
 
     replace(`${pathname}?${params.toString()}`);
