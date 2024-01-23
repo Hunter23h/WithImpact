@@ -5,6 +5,8 @@ import os
 from dotenv import load_dotenv
 import argparse
 
+# python json_sql.py -f "json file"
+
 load_dotenv()
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, help="JSON file name")
@@ -27,7 +29,15 @@ def insert_into_postgresql(data, table_name, connection_params):
 
         # Insert data into the PostgreSQL table
         for record in data:
-            cursor.execute(
+            repo_url = record['URL']
+
+            # Check if the repository already exists in the database
+            cursor.execute(f"SELECT COUNT(*) FROM {table_name} WHERE repo_url = %s", (repo_url,))
+            count = cursor.fetchone()[0]
+
+            if count == 0:
+                # Repository does not exist, proceed with insertion
+                cursor.execute(
                 f"INSERT INTO {table_name} (name, owner, repo_url, created_date, updated_date, "
                 "description, last_push_date, latest_commit_date, stars, forks, watchers, languages, "
                 "tags, open_prs, open_issues, top_contributors, status, newcomer_friendly)"
@@ -35,10 +45,13 @@ def insert_into_postgresql(data, table_name, connection_params):
                 (record['Name'], record['Owner'],record['URL'], record['Created'],record['Updated'], record['Description'],
                  record['Last Push Date'], record['Latest Commit Date'],record['Stars'], record['Forks'],record['Watchers'], Json(record['Languages']),
                  Json(record['Tags']), record['Open PRs'],record['Open Issues'], Json(record['Top 5 Contributors']),record['Status'], record['Newcomer Friendly'])
-            )
+                )
         # for record in data:
         #     print(record)
-            
+            else:
+                # Repository already exists, skip insertion
+                print(f"Skipped insertion for existing repository with repo_url: {repo_url}")
+
 
         # Commit changes and close the connection
         connection.commit()

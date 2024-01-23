@@ -210,7 +210,7 @@ if __name__ == '__main__':
 
     # url = 'https://github.com/hunter23h/withimpact' #private
     # url = 'https://github.com/google-deepmind/alphageometry' #No description, doesn't pass criteria...
-    url = 'https://github.com/Andre0512/hon' #Should pass criteria
+    url = 'https://github.com/socialincome-san/public' #Should pass criteria
     # url_topics = 'https://github.com/topics/sustainable-development-goals'    
     # repository_url = "https://github.com/octocat/Hello-World"
     api_url, repo = convert_to_api_url(url)

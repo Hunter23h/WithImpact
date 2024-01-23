@@ -12,7 +12,7 @@ class Project(models.Model):
     id = models.AutoField(primary_key=True, serialize=True)
     name = models.TextField()
     owner = models.TextField()
-    repo_url = models.TextField()
+    repo_url = models.TextField(unique=True)
     created_date = models.TextField()
     updated_date = models.TextField()
     description = models.TextField()

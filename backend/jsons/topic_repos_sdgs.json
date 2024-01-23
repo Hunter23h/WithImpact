@@ -1,0 +1,2658 @@
+[
+      {
+            "Name": "trends.earth",
+            "Owner": "ConservationInternational",
+            "URL": "https://github.com/ConservationInternational/trends.earth",
+            "Created": "2017-05-05T16:25:46Z",
+            "Updated": "2024-01-09T14:58:29Z",
+            "Description": "trends.earth - measure land change",
+            "Last Push Date": "2023-12-25T19:10:12Z",
+            "Latest Commit Date": "2023-12-01T20:40:44Z",
+            "Stars": 100,
+            "Forks": 44,
+            "Watchers": 19,
+            "Languages": [
+                  "Python",
+                  "Jupyter Notebook",
+                  "XSLT",
+                  "QMake",
+                  "QML",
+                  "Shell",
+                  "Batchfile",
+                  "Dockerfile"
+            ],
+            "Tags": [
+                  "climate",
+                  "climate-change",
+                  "conservation",
+                  "conservation-international",
+                  "earth",
+                  "gef",
+                  "land",
+                  "land-degradation",
+                  "ldn",
+                  "natural-climate-solutions",
+                  "python",
+                  "qgis-plugin",
+                  "remote-sensing",
+                  "sdgs",
+                  "sustainable-development-goals",
+                  "toolbox",
+                  "trends",
+                  "unccd"
+            ],
+            "Open PRs": 4,
+            "Open Issues": 99,
+            "Top 5 Contributors": [
+                  {
+                        "login": "azvoleff",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/107753?v=4",
+                        "contributions": 2816
+                  },
+                  {
+                        "login": "MLNoon",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/19840094?v=4",
+                        "contributions": 138
+                  },
+                  {
+                        "login": "luipir",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/3344634?v=4",
+                        "contributions": 102
+                  },
+                  {
+                        "login": "Samweli",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/2663775?v=4",
+                        "contributions": 67
+                  },
+                  {
+                        "login": "gkahiu",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/3840267?v=4",
+                        "contributions": 66
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "publicgoods-candidates",
+            "Owner": "DPGAlliance",
+            "URL": "https://github.com/DPGAlliance/publicgoods-candidates",
+            "Created": "2019-02-07T07:39:21Z",
+            "Updated": "2024-01-20T04:36:09Z",
+            "Description": "Registry for Digital Public Goods",
+            "Last Push Date": "2023-11-07T12:10:06Z",
+            "Latest Commit Date": "2023-06-19T04:29:25Z",
+            "Stars": 89,
+            "Forks": 150,
+            "Watchers": 15,
+            "Languages": [
+                  "JavaScript",
+                  "Shell"
+            ],
+            "Tags": [
+                  "public-good",
+                  "public-goods",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 100,
+            "Open Issues": 69,
+            "Top 5 Contributors": [
+                  {
+                        "login": "nathanbaleeta",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/8824104?v=4",
+                        "contributions": 3793
+                  },
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 1351
+                  },
+                  {
+                        "login": "dpgabot",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/96251909?v=4",
+                        "contributions": 231
+                  },
+                  {
+                        "login": "rachita19082",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/55681423?v=4",
+                        "contributions": 86
+                  },
+                  {
+                        "login": "edil-it-them",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/44370635?v=4",
+                        "contributions": 43
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "hummigo",
+            "Owner": "shikhar8434",
+            "URL": "https://github.com/shikhar8434/hummigo",
+            "Created": "2021-03-12T19:24:19Z",
+            "Updated": "2024-01-19T11:56:00Z",
+            "Description": "Hummigo is the one stop solution to prevent and control major chronic illnesses like Diabetes , Parkinson's , High Blood Pressure , Heart Diseases etc by helping the users maintain a healthy lifestyle ",
+            "Last Push Date": "2021-08-20T17:07:41Z",
+            "Latest Commit Date": "2021-08-20T17:07:41Z",
+            "Stars": 64,
+            "Forks": 3,
+            "Watchers": 3,
+            "Languages": [
+                  "Java"
+            ],
+            "Tags": [
+                  "android-device",
+                  "chronic-disorders",
+                  "health",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "shikhar8434",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/60563576?v=4",
+                        "contributions": 65
+                  },
+                  {
+                        "login": "abhineetpandey10",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/54185164?v=4",
+                        "contributions": 25
+                  },
+                  {
+                        "login": "VTG7",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/52850825?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Sehhetna",
+            "Owner": "sha3rawi33",
+            "URL": "https://github.com/sha3rawi33/Sehhetna",
+            "Created": "2019-06-03T16:28:52Z",
+            "Updated": "2024-01-11T17:18:12Z",
+            "Description": "Am writing about \"OUR\" achievement of winning the 2nd place in \"E-sus Mobile Applications Competition\" in which, competitors creates Mobile applications and research ideas for solving the \"SDGs\" sustainable development goals of the UN. Our team's submitted application was named after me \"Healthy Wealthy\"; we worked on the Public Health.  The application uses location services to find the nearest (Hospital, Pharmacy, and even Doctor In the selected specification). Also, it creates a medical profile for each user where you can add all your history, and automatically, the application creates a special QR code for you \"Patient\" that you can scan it to get all data about you. another service in our application was \"Blood bank\" in which you donate/request blood from people near you, offering payment or no. which will make it easier to request and donate blood ! another important service was the \"Ambulance\" in which you click the emergency button and the application calls and sends your Coordinates to the ambulance for Urgent actions. (the government shall support an API for that). one thing else, is that we've created a service for the governmental alerts with notifications for the users. For instance: (all 6 years old children shall be vaccinated against virus C in all the public hospitals, from 17/4 till 24/4). another, is that we've added a service that is specialized in predicting the possible diseases to harm you if your parents had, like those which can be transmitted genetically. another service, is we've created \"ask a doctor\" tab, where you can ask a doctor for Urgent help, supporting image uploading, then the doctor looks at your profile and your restrictions then starts to give you advice. the application will support booking appointments with doctors and hospital, providing the nearest navigation to those hospitals/Doctors. $$ This application was built with #Flutter using #Dart #lang and created a mobile application for #Android and #iOS $$ all the Databases were built by using #FireBase and we used #Google #GMaps #API Am also honored to be the coder for this application, by helping from my researcher friend Abd El-naser and designer friend Mohamed Hesham \u2764\ufe0f Thank you guys \u2764\ufe0f",
+            "Last Push Date": "2019-06-03T16:45:27Z",
+            "Latest Commit Date": "2019-06-03T16:45:26Z",
+            "Stars": 36,
+            "Forks": 24,
+            "Watchers": 7,
+            "Languages": [
+                  "Dart",
+                  "Objective-C",
+                  "Java"
+            ],
+            "Tags": [
+                  "app",
+                  "dart",
+                  "dart-frameworks",
+                  "dartlang",
+                  "flutter",
+                  "flutter-apps",
+                  "flutter-demo",
+                  "flutter-material",
+                  "health",
+                  "sdg",
+                  "sdgs",
+                  "un"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "sha3rawi33",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/36058880?v=4",
+                        "contributions": 7
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "osdg-tool",
+            "Owner": "osdg-ai",
+            "URL": "https://github.com/osdg-ai/osdg-tool",
+            "Created": "2020-12-07T12:52:16Z",
+            "Updated": "2024-01-22T04:23:58Z",
+            "Description": "OSDG is an open-source tool that maps and connects activities to the UN Sustainable Development Goals (SDGs) by identifying SDG-relevant content in any text. The tool is available online at www.osdg.ai. API access available for research purposes. ",
+            "Last Push Date": "2023-02-02T09:38:02Z",
+            "Latest Commit Date": "2023-02-02T09:38:01Z",
+            "Stars": 30,
+            "Forks": 8,
+            "Watchers": 1,
+            "Languages": [
+                  "Python",
+                  "Shell",
+                  "Dockerfile"
+            ],
+            "Tags": [
+                  "machine-learning",
+                  "machine-learning-algorithms",
+                  "machine-translation",
+                  "ml",
+                  "open-source",
+                  "osdg",
+                  "sdg",
+                  "sdg-data",
+                  "sdgs",
+                  "sustainability",
+                  "sustainability-score",
+                  "sustainable-development",
+                  "sustainable-development-goals",
+                  "united-nations"
+            ],
+            "Open PRs": 1,
+            "Open Issues": 2,
+            "Top 5 Contributors": [
+                  {
+                        "login": "SimonasTr",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/45077736?v=4",
+                        "contributions": 5
+                  },
+                  {
+                        "login": "guste55",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/65168660?v=4",
+                        "contributions": 2
+                  },
+                  {
+                        "login": "lukas-pkl",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/64212144?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "osdg-data",
+            "Owner": "osdg-ai",
+            "URL": "https://github.com/osdg-ai/osdg-data",
+            "Created": "2021-07-08T06:41:57Z",
+            "Updated": "2023-12-09T15:26:51Z",
+            "Description": "The OSDG Community Dataset (OSDG-CD) is a public dataset of thousands of text excerpts, validated by OSDG Community Platform (OSDG-CP) citizen scientists with respect to the Sustainable Development Goals (SDGs). The dataset is updated every quarter and published on Zenodo.",
+            "Last Push Date": "2023-10-02T06:33:47Z",
+            "Latest Commit Date": "2023-10-02T06:33:47Z",
+            "Stars": 23,
+            "Forks": 7,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "citizen-science",
+                  "citsci",
+                  "crowdsourcing",
+                  "dataset",
+                  "digital-public-goods",
+                  "machine-learning",
+                  "open-data",
+                  "public-good",
+                  "public-goods",
+                  "sdg",
+                  "sdg-data",
+                  "sdgs",
+                  "sustainability",
+                  "sustainable-development-goals",
+                  "united-nations"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "mykolaskrynnyk",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/45297092?v=4",
+                        "contributions": 5
+                  },
+                  {
+                        "login": "guste55",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/65168660?v=4",
+                        "contributions": 4
+                  },
+                  {
+                        "login": "jonas-nothnagel",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/41116329?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "PPI4SD",
+            "Owner": "oguerrer",
+            "URL": "https://github.com/oguerrer/PPI4SD",
+            "Created": "2019-05-10T14:52:59Z",
+            "Updated": "2023-08-07T16:16:36Z",
+            "Description": "Data and code repository for the project Policy Priority Inference for Sustainable Development",
+            "Last Push Date": "2021-03-09T19:04:12Z",
+            "Latest Commit Date": "2020-05-20T22:44:09Z",
+            "Stars": 20,
+            "Forks": 13,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook",
+                  "Python"
+            ],
+            "Tags": [
+                  "abm",
+                  "alan-turing-institute",
+                  "computational-social-science",
+                  "development",
+                  "development-indicators",
+                  "economics",
+                  "lnpp",
+                  "sdgs",
+                  "sustainable-development-goals",
+                  "undp"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "oguerrer",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1383351?v=4",
+                        "contributions": 117
+                  },
+                  {
+                        "login": "fwchj",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/28578384?v=4",
+                        "contributions": 19
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "safeherven_app",
+            "Owner": "safeherven",
+            "URL": "https://github.com/safeherven/safeherven_app",
+            "Created": "2022-01-17T06:21:34Z",
+            "Updated": "2024-01-16T11:19:57Z",
+            "Description": "A mobile application that supports victims of Gender-Nased Violence, harmful practices and other traumatic experiences.",
+            "Last Push Date": "2022-04-05T12:14:51Z",
+            "Latest Commit Date": "2022-04-05T12:14:51Z",
+            "Stars": 15,
+            "Forks": 6,
+            "Watchers": 1,
+            "Languages": [
+                  "Dart",
+                  "HTML",
+                  "Swift",
+                  "Kotlin",
+                  "Objective-C"
+            ],
+            "Tags": [
+                  "chatbot",
+                  "dart",
+                  "dartlang",
+                  "dialogflow",
+                  "dialogflow-chatbot",
+                  "firebase",
+                  "firebase-auth",
+                  "firestore",
+                  "flutter",
+                  "gender",
+                  "gender-equality",
+                  "health",
+                  "ngos",
+                  "safety",
+                  "sdgs",
+                  "women",
+                  "women-empowerment",
+                  "women-safety"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Idadelveloper",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/56026636?v=4",
+                        "contributions": 36
+                  },
+                  {
+                        "login": "Hawawou",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/71177851?v=4",
+                        "contributions": 5
+                  },
+                  {
+                        "login": "TatianaNsei",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/41069532?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "PetraAG",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/81535499?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "tiles-IoT-inventor-toolkit",
+            "Owner": "tilestoolkit",
+            "URL": "https://github.com/tilestoolkit/tiles-IoT-inventor-toolkit",
+            "Created": "2017-01-02T18:38:16Z",
+            "Updated": "2021-03-10T14:10:15Z",
+            "Description": "The Tiles IoT Inventor Toolkit is a card game to inspire ideas for new IoT products by fostering collaborative and creative thinking. It can be used as a brainstorming tool during design exercises, school courses and participatory design workshops.",
+            "Last Push Date": "2020-11-12T11:15:10Z",
+            "Latest Commit Date": "2020-11-12T11:15:08Z",
+            "Stars": 13,
+            "Forks": 5,
+            "Watchers": 7,
+            "Languages": [],
+            "Tags": [
+                  "card-game",
+                  "cards",
+                  "iot",
+                  "sdgs",
+                  "tiles-cards",
+                  "toolkit"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "simonem",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1089904?v=4",
+                        "contributions": 15
+                  },
+                  {
+                        "login": "gfrancesco",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1057809?v=4",
+                        "contributions": 6
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdg-queries",
+            "Owner": "Aurora-Network-Global",
+            "URL": "https://github.com/Aurora-Network-Global/sdg-queries",
+            "Created": "2020-01-21T11:35:18Z",
+            "Updated": "2023-07-11T10:41:27Z",
+            "Description": "This repository contains machine readable (xml) search queries (crafted from a controlled vocabulary), for the Scopus publication database, to find domain specific research output that are related to the 17 Sustainable Development Goals (SDGs). We invite enyone to improve the SDG queries further in a co-creation process.",
+            "Last Push Date": "2023-04-04T11:36:28Z",
+            "Latest Commit Date": "2023-02-17T14:09:03Z",
+            "Stars": 13,
+            "Forks": 10,
+            "Watchers": 3,
+            "Languages": [
+                  "XSLT",
+                  "HTML"
+            ],
+            "Tags": [
+                  "classification-model",
+                  "controlled-vocabularies",
+                  "queries",
+                  "query-language",
+                  "query-string",
+                  "scopus",
+                  "sdg",
+                  "sdg-queries",
+                  "sdgs",
+                  "search",
+                  "sustainable-development-goals",
+                  "xml"
+            ],
+            "Open PRs": 2,
+            "Open Issues": 4,
+            "Top 5 Contributors": [
+                  {
+                        "login": "mosart",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/4525827?v=4",
+                        "contributions": 46
+                  },
+                  {
+                        "login": "erikkemperman",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/3100637?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "erikkemperman-rsm",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/86837440?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "MaximeRivest",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/10967951?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGdetector",
+            "Owner": "Yingjie4Science",
+            "URL": "https://github.com/Yingjie4Science/SDGdetector",
+            "Created": "2021-11-24T20:31:04Z",
+            "Updated": "2024-01-12T18:24:34Z",
+            "Description": "A novel R package that can identify and visualize 17 Sustainable Development Goals and associated 169 Targets in text",
+            "Last Push Date": "2023-05-23T23:09:10Z",
+            "Latest Commit Date": "2023-05-23T23:09:03Z",
+            "Stars": 11,
+            "Forks": 0,
+            "Watchers": 3,
+            "Languages": [
+                  "R",
+                  "TeX"
+            ],
+            "Tags": [
+                  "cran",
+                  "r",
+                  "r-package",
+                  "sdg",
+                  "sdgs",
+                  "sustainability",
+                  "sustainable-development-goals",
+                  "text-mining"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Yingjie4Science",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40079217?v=4",
+                        "contributions": 303
+                  },
+                  {
+                        "login": "caimeng2",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/51100838?v=4",
+                        "contributions": 27
+                  },
+                  {
+                        "login": "vffrans",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/48561126?v=4",
+                        "contributions": 3
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDG-networks",
+            "Owner": "felix-laumann",
+            "URL": "https://github.com/felix-laumann/SDG-networks",
+            "Created": "2019-02-14T12:31:18Z",
+            "Updated": "2023-08-20T04:23:05Z",
+            "Description": "Finding nonlinear relationships between the Sustainable Development Goals and climate change with partial distance correlations",
+            "Last Push Date": "2022-11-24T12:03:36Z",
+            "Latest Commit Date": "2022-11-24T12:03:36Z",
+            "Stars": 7,
+            "Forks": 2,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook"
+            ],
+            "Tags": [
+                  "climate-change",
+                  "sdg-networks",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "felix-laumann",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/22920497?v=4",
+                        "contributions": 25
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "publicgoods-toolkit",
+            "Owner": "unicef",
+            "URL": "https://github.com/unicef/publicgoods-toolkit",
+            "Created": "2021-02-09T22:37:00Z",
+            "Updated": "2023-11-25T22:08:17Z",
+            "Description": "Digital Public Goods Toolkit",
+            "Last Push Date": "2023-04-28T06:51:11Z",
+            "Latest Commit Date": "2023-04-28T06:48:46Z",
+            "Stars": 7,
+            "Forks": 8,
+            "Watchers": 13,
+            "Languages": [
+                  "Makefile",
+                  "JavaScript",
+                  "CSS",
+                  "TeX"
+            ],
+            "Tags": [
+                  "digitalpublicgoods",
+                  "dpg",
+                  "government-procurement",
+                  "government-tech",
+                  "open-source",
+                  "opensource",
+                  "opensourceforgood",
+                  "sdg",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 2,
+            "Top 5 Contributors": [
+                  {
+                        "login": "kfogel",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/401111?v=4",
+                        "contributions": 72
+                  },
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 62
+                  },
+                  {
+                        "login": "sstruble",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/17969385?v=4",
+                        "contributions": 54
+                  },
+                  {
+                        "login": "jvasile",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/211863?v=4",
+                        "contributions": 34
+                  },
+                  {
+                        "login": "imahgoub",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40152629?v=4",
+                        "contributions": 7
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "HydroSAR",
+            "Owner": "montimaj",
+            "URL": "https://github.com/montimaj/HydroSAR",
+            "Created": "2020-06-01T16:08:18Z",
+            "Updated": "2024-01-12T18:13:31Z",
+            "Description": "Groundwater pumping estimation in Arizona using remote sensing datasets and machine learning",
+            "Last Push Date": "2022-12-02T18:08:02Z",
+            "Latest Commit Date": "2022-12-02T18:07:39Z",
+            "Stars": 7,
+            "Forks": 2,
+            "Watchers": 3,
+            "Languages": [
+                  "Python",
+                  "R"
+            ],
+            "Tags": [
+                  "arizona",
+                  "evapotranspiration",
+                  "groundwater",
+                  "hydrology",
+                  "insar",
+                  "irrigation-data",
+                  "land-use",
+                  "machine-learning",
+                  "nasa-data",
+                  "precipitation-data",
+                  "python3",
+                  "remote-sensing",
+                  "sdgs",
+                  "sentinel-1",
+                  "water-resources",
+                  "water-security"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "montimaj",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/5908368?v=4",
+                        "contributions": 82
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdgs-tools",
+            "Owner": "hexatester",
+            "URL": "https://github.com/hexatester/sdgs-tools",
+            "Created": "2021-05-26T02:42:46Z",
+            "Updated": "2023-02-28T14:34:47Z",
+            "Description": "Alat bantu sdgs-desa kemendesa.",
+            "Last Push Date": "2022-01-30T18:42:04Z",
+            "Latest Commit Date": "2022-01-30T10:52:47Z",
+            "Stars": 6,
+            "Forks": 4,
+            "Watchers": 3,
+            "Languages": [
+                  "Python"
+            ],
+            "Tags": [
+                  "kemendesa",
+                  "sdgs",
+                  "sdgs-kemendesa"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "hexatester",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40712079?v=4",
+                        "contributions": 512
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "incentives",
+            "Owner": "unicef",
+            "URL": "https://github.com/unicef/incentives",
+            "Created": "2020-06-26T18:06:46Z",
+            "Updated": "2023-11-25T22:10:17Z",
+            "Description": "Incentives to contribute to Digital Public Goods",
+            "Last Push Date": "2020-06-29T14:57:00Z",
+            "Latest Commit Date": "2020-06-29T14:56:59Z",
+            "Stars": 5,
+            "Forks": 1,
+            "Watchers": 10,
+            "Languages": [],
+            "Tags": [
+                  "digital-public-goods",
+                  "public-good",
+                  "public-goods",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 10
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "publicgoods-roadmap",
+            "Owner": "unicef",
+            "URL": "https://github.com/unicef/publicgoods-roadmap",
+            "Created": "2020-10-30T17:34:35Z",
+            "Updated": "2023-11-25T22:42:14Z",
+            "Description": "Technical Roadmap for UNICEF's work on Digital Public Goods",
+            "Last Push Date": "2021-05-25T16:52:55Z",
+            "Latest Commit Date": "2021-05-25T16:52:55Z",
+            "Stars": 4,
+            "Forks": 0,
+            "Watchers": 5,
+            "Languages": [],
+            "Tags": [
+                  "digital-public-goods",
+                  "dpg",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 32,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Wele-Course",
+            "Owner": "nandaprasetya",
+            "URL": "https://github.com/nandaprasetya/Wele-Course",
+            "Created": "2022-09-16T07:25:38Z",
+            "Updated": "2023-01-07T06:49:36Z",
+            "Description": "Wele Course is an online course website",
+            "Last Push Date": "2022-09-19T08:43:32Z",
+            "Latest Commit Date": "2022-09-19T08:39:58Z",
+            "Stars": 3,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS"
+            ],
+            "Tags": [
+                  "aos",
+                  "countdown",
+                  "counter-up",
+                  "course",
+                  "css3",
+                  "education",
+                  "flickity",
+                  "font-awesome",
+                  "html5",
+                  "isotope",
+                  "javascript",
+                  "jquery",
+                  "sdgs",
+                  "website"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "mipa",
+            "Owner": "collective-change",
+            "URL": "https://github.com/collective-change/mipa",
+            "Created": "2019-07-29T01:37:15Z",
+            "Updated": "2023-11-25T22:25:16Z",
+            "Description": "\ud83c\udf0d Mipa is the strategic coordination web app from collective-change.org, which aims to help the world achieve sustainablility by 2030. ",
+            "Last Push Date": "2023-01-10T04:07:07Z",
+            "Latest Commit Date": "2021-06-30T07:47:02Z",
+            "Stars": 3,
+            "Forks": 2,
+            "Watchers": 2,
+            "Languages": [
+                  "Vue",
+                  "JavaScript",
+                  "TypeScript",
+                  "HTML",
+                  "Stylus",
+                  "Shell"
+            ],
+            "Tags": [
+                  "climate-change",
+                  "collaboration",
+                  "corporate-social-responsibility",
+                  "decision-support",
+                  "firebase",
+                  "global-warming",
+                  "modeling-and-simulation",
+                  "project-management",
+                  "quasar",
+                  "sdgs",
+                  "strategic-coordination",
+                  "strategic-management",
+                  "sustainable-development-goals",
+                  "system-dynamics",
+                  "todo-list",
+                  "vue"
+            ],
+            "Open PRs": 25,
+            "Open Issues": 10,
+            "Top 5 Contributors": [
+                  {
+                        "login": "tedchwang",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1320502?v=4",
+                        "contributions": 934
+                  },
+                  {
+                        "login": "dependabot[bot]",
+                        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+                        "contributions": 21
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": true
+      },
+      {
+            "Name": "sdg_661_analysis_and_reporting",
+            "Owner": "datasciencecampus",
+            "URL": "https://github.com/datasciencecampus/sdg_661_analysis_and_reporting",
+            "Created": "2020-08-07T09:31:50Z",
+            "Updated": "2023-10-12T12:05:50Z",
+            "Description": "Open-source tool for reporting SDG indicator 6.6.1",
+            "Last Push Date": "2023-04-25T08:36:05Z",
+            "Latest Commit Date": "2022-03-16T10:21:56Z",
+            "Stars": 2,
+            "Forks": 3,
+            "Watchers": 3,
+            "Languages": [
+                  "Jupyter Notebook",
+                  "Python"
+            ],
+            "Tags": [
+                  "dsc-projects",
+                  "sdgs"
+            ],
+            "Open PRs": 1,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "a-cass",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/58216420?v=4",
+                        "contributions": 18
+                  },
+                  {
+                        "login": "g-hannay",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/56255748?v=4",
+                        "contributions": 16
+                  },
+                  {
+                        "login": "ANikolova22",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/72549371?v=4",
+                        "contributions": 2
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "BurdenOff",
+            "Owner": "chrvaskos",
+            "URL": "https://github.com/chrvaskos/BurdenOff",
+            "Created": "2020-05-08T18:15:02Z",
+            "Updated": "2020-10-15T16:45:27Z",
+            "Description": "Burden Off aims to provide a place where someone can freely share their problems to find a solution with the help of volunteer professionals who want to spend their free time to help members of our community.",
+            "Last Push Date": "2022-12-13T18:15:42Z",
+            "Latest Commit Date": "2020-10-15T16:45:25Z",
+            "Stars": 2,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "JavaScript",
+                  "CSS",
+                  "HTML"
+            ],
+            "Tags": [
+                  "burdenoff",
+                  "psychology",
+                  "sdgs",
+                  "volunteering"
+            ],
+            "Open PRs": 8,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "chrvaskos",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/35635270?v=4",
+                        "contributions": 53
+                  },
+                  {
+                        "login": "DimKostakis",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/26416581?v=4",
+                        "contributions": 32
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "projectconnect-game",
+            "Owner": "unicef",
+            "URL": "https://github.com/unicef/projectconnect-game",
+            "Created": "2020-07-27T19:25:30Z",
+            "Updated": "2023-12-07T15:38:35Z",
+            "Description": "Crowdsource and gamify the validation of geolocation data for schools around the world.",
+            "Last Push Date": "2023-12-07T15:58:45Z",
+            "Latest Commit Date": "2023-12-07T15:58:45Z",
+            "Stars": 2,
+            "Forks": 1,
+            "Watchers": 10,
+            "Languages": [],
+            "Tags": [
+                  "schools",
+                  "sdg",
+                  "sdgs",
+                  "social-good",
+                  "social-impact"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 42
+                  },
+                  {
+                        "login": "mehranhydary1",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/4521401?v=4",
+                        "contributions": 7
+                  },
+                  {
+                        "login": "git-devansh",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/72165346?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "mehranhydary",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/2007405?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "proof-of-SDGs-audit-with-NFT",
+            "Owner": "masaun",
+            "URL": "https://github.com/masaun/proof-of-SDGs-audit-with-NFT",
+            "Created": "2022-06-12T07:31:58Z",
+            "Updated": "2022-07-03T03:35:34Z",
+            "Description": "This is a smart contract allow organizations to show a proof of SDGs audit in the form of NFT ( on-chain ) that is associated with SAI reports .",
+            "Last Push Date": "2022-07-03T03:34:30Z",
+            "Latest Commit Date": "2022-07-03T03:34:30Z",
+            "Stars": 2,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "JavaScript",
+                  "TypeScript",
+                  "Solidity",
+                  "Shell"
+            ],
+            "Tags": [
+                  "ethersjs",
+                  "hardhat",
+                  "sdgs",
+                  "solidity",
+                  "typechain"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "masaun",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/19357502?v=4",
+                        "contributions": 80
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SustainabilityResearchFinder",
+            "Owner": "USC-Office-of-Sustainability",
+            "URL": "https://github.com/USC-Office-of-Sustainability/SustainabilityResearchFinder",
+            "Created": "2022-08-05T23:15:17Z",
+            "Updated": "2024-01-12T18:34:32Z",
+            "Description": "R code and datasets related to the mapping of USC research to the United Nations 17 Sustainable Development Goals (SDGs)",
+            "Last Push Date": "2024-01-11T08:01:35Z",
+            "Latest Commit Date": "2024-01-11T08:01:26Z",
+            "Stars": 2,
+            "Forks": 2,
+            "Watchers": 3,
+            "Languages": [
+                  "R",
+                  "CSS"
+            ],
+            "Tags": [
+                  "dashboard",
+                  "research",
+                  "sdgs",
+                  "text2sdg",
+                  "usc"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "chenalison",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/42662469?v=4",
+                        "contributions": 184
+                  },
+                  {
+                        "login": "ricxian",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/96354451?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "juliehopper",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/37647236?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "Aura2024",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/113718104?v=4",
+                        "contributions": 2
+                  },
+                  {
+                        "login": "bhavya-2201",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/112530961?v=4",
+                        "contributions": 2
+                  }
+            ],
+            "Status": "Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGs_many_BERTs",
+            "Owner": "rbrtjwrk",
+            "URL": "https://github.com/rbrtjwrk/SDGs_many_BERTs",
+            "Created": "2021-06-24T12:54:26Z",
+            "Updated": "2023-07-11T10:39:37Z",
+            "Description": "Train multiple mBERT models for binary classification and deploy them for multiclass-multilabel classification. ",
+            "Last Push Date": "2022-10-26T06:30:50Z",
+            "Latest Commit Date": "2022-10-26T06:30:50Z",
+            "Stars": 2,
+            "Forks": 2,
+            "Watchers": 2,
+            "Languages": [
+                  "Python"
+            ],
+            "Tags": [
+                  "bert",
+                  "multiclass-classification",
+                  "multilabel-classification",
+                  "sdgs",
+                  "sustainability",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "rbrtjwrk",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/73638117?v=4",
+                        "contributions": 104
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdg-strings",
+            "Owner": "SDGforskning",
+            "URL": "https://github.com/SDGforskning/sdg-strings",
+            "Created": "2021-09-10T09:53:47Z",
+            "Updated": "2023-11-14T11:02:38Z",
+            "Description": "SDG search strings",
+            "Last Push Date": "2023-11-27T16:27:13Z",
+            "Latest Commit Date": "2023-11-27T16:16:38Z",
+            "Stars": 2,
+            "Forks": 4,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook"
+            ],
+            "Tags": [
+                  "sdg",
+                  "sdgs",
+                  "search-strategies",
+                  "search-string",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 6,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Caroline-A",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/42732381?v=4",
+                        "contributions": 764
+                  },
+                  {
+                        "login": "EliSeland",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/43606293?v=4",
+                        "contributions": 179
+                  },
+                  {
+                        "login": "ingerg",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/91941842?v=4",
+                        "contributions": 57
+                  },
+                  {
+                        "login": "MartaLor",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/56684143?v=4",
+                        "contributions": 50
+                  },
+                  {
+                        "login": "hmbjerkan",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/91989302?v=4",
+                        "contributions": 48
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "proco-map-app",
+            "Owner": "lacabra",
+            "URL": "https://github.com/lacabra/proco-map-app",
+            "Created": "2020-08-15T06:36:56Z",
+            "Updated": "2023-07-18T09:12:31Z",
+            "Description": "Crowdsource and gamify the validation of geolocation data for schools around the world.",
+            "Last Push Date": "2021-11-05T17:20:46Z",
+            "Latest Commit Date": "2021-09-29T20:52:22Z",
+            "Stars": 1,
+            "Forks": 8,
+            "Watchers": 5,
+            "Languages": [
+                  "JavaScript",
+                  "CSS"
+            ],
+            "Tags": [
+                  "schools",
+                  "sdg",
+                  "sdgs",
+                  "social-good",
+                  "social-impact"
+            ],
+            "Open PRs": 2,
+            "Open Issues": 6,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lacabra",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6098973?v=4",
+                        "contributions": 216
+                  },
+                  {
+                        "login": "CallaJune",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6993618?v=4",
+                        "contributions": 76
+                  },
+                  {
+                        "login": "EkkuJ",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/57347734?v=4",
+                        "contributions": 45
+                  },
+                  {
+                        "login": "rachita19082",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/55681423?v=4",
+                        "contributions": 31
+                  },
+                  {
+                        "login": "Msgl",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/11541430?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGStarterPack",
+            "Owner": "SalesforceLabs",
+            "URL": "https://github.com/SalesforceLabs/SDGStarterPack",
+            "Created": "2023-10-06T16:04:27Z",
+            "Updated": "2023-10-30T16:43:22Z",
+            "Description": "Provides integration to UN Statistics Sustainable Development Goals to allow tracking against activity in salesforce",
+            "Last Push Date": "2023-10-31T16:13:46Z",
+            "Latest Commit Date": "2023-10-31T16:13:46Z",
+            "Stars": 1,
+            "Forks": 1,
+            "Watchers": 5,
+            "Languages": [
+                  "Apex"
+            ],
+            "Tags": [
+                  "salesforce",
+                  "sdg",
+                  "sdg-data",
+                  "sdgs",
+                  "sustainable-development-goals",
+                  "united-nations"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "GeekStewie",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/10435285?v=4",
+                        "contributions": 13
+                  },
+                  {
+                        "login": "mtorres2022",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/103686786?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "17-SDGs-UN-Sustainable-Development-Goals",
+            "Owner": "carlpat86",
+            "URL": "https://github.com/carlpat86/17-SDGs-UN-Sustainable-Development-Goals",
+            "Created": "2023-01-03T10:59:16Z",
+            "Updated": "2023-05-18T03:53:54Z",
+            "Description": " A guide to implementing Artificial Intelligence projects for achieving Sustainable Development Goals",
+            "Last Push Date": "2023-01-03T12:56:43Z",
+            "Latest Commit Date": "2023-01-03T12:56:43Z",
+            "Stars": 1,
+            "Forks": 1,
+            "Watchers": 2,
+            "Languages": [],
+            "Tags": [
+                  "17-sdgs",
+                  "artificial-intelligence",
+                  "convolutional-neural-networks",
+                  "deep-learning",
+                  "machine-learning",
+                  "reinforcement-learning",
+                  "sdg",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "carlpat86",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/111691115?v=4",
+                        "contributions": 8
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-policingthepolice",
+            "Owner": "360-info",
+            "URL": "https://github.com/360-info/report-policingthepolice",
+            "Created": "2023-06-09T00:23:05Z",
+            "Updated": "2023-09-18T16:37:38Z",
+            "Description": "Visualises changing trust in the police and other professions globally",
+            "Last Push Date": "2023-06-12T02:25:48Z",
+            "Latest Commit Date": "2023-06-12T02:25:47Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [],
+            "Tags": [
+                  "police",
+                  "police-brutality",
+                  "police-data",
+                  "sdg16",
+                  "sdgs",
+                  "trust"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 9
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "westand",
+            "Owner": "Vortrix5",
+            "URL": "https://github.com/Vortrix5/westand",
+            "Created": "2019-08-03T20:13:30Z",
+            "Updated": "2023-11-25T22:25:25Z",
+            "Description": "\ud83c\udf0d A sustainable development goals (SDGs) educational platform using ReactJS.",
+            "Last Push Date": "2022-11-06T12:35:01Z",
+            "Latest Commit Date": "2022-11-06T12:15:46Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS"
+            ],
+            "Tags": [
+                  "education",
+                  "firebase",
+                  "react",
+                  "reactjs",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Vortrix5",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/30868937?v=4",
+                        "contributions": 6
+                  },
+                  {
+                        "login": "MrVortrix",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/81486731?v=4",
+                        "contributions": 2
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Indicator_11.7.1",
+            "Owner": "n-verde",
+            "URL": "https://github.com/n-verde/Indicator_11.7.1",
+            "Created": "2023-09-19T08:47:09Z",
+            "Updated": "2023-11-25T22:25:31Z",
+            "Description": "mapping urban open spaces and land allocated to streets, using remote sensing, for aiding the calculation of SDG indicator 11.7.1.",
+            "Last Push Date": "2023-09-20T08:05:50Z",
+            "Latest Commit Date": "2023-09-20T08:05:50Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook"
+            ],
+            "Tags": [
+                  "deep-learning",
+                  "earth-observation",
+                  "planetscope",
+                  "remote-sensing",
+                  "roads",
+                  "sdgs",
+                  "sentinel-1",
+                  "urban"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "n-verde",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/24439371?v=4",
+                        "contributions": 14
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "LivingWage.KE",
+            "Owner": "CodeForAfrica",
+            "URL": "https://github.com/CodeForAfrica/LivingWage.KE",
+            "Created": "2019-02-11T09:19:39Z",
+            "Updated": "2020-04-23T12:47:49Z",
+            "Description": "A calculator which takes inputs from users on how much they pay or think they should pay a domestic worker and tells them more about what that amount means to the lives of a domestic worker's household. Accessible at https://livingwage.pd.co.ke/",
+            "Last Push Date": "2023-09-05T11:36:43Z",
+            "Latest Commit Date": "2019-10-15T10:18:04Z",
+            "Stars": 1,
+            "Forks": 4,
+            "Watchers": 10,
+            "Languages": [
+                  "HTML",
+                  "JavaScript",
+                  "CSS",
+                  "Ruby"
+            ],
+            "Tags": [
+                  "africa",
+                  "ancir",
+                  "calculator",
+                  "calorie-calculator",
+                  "data-journalism",
+                  "datadrivenjournalism",
+                  "domestic-workers",
+                  "education",
+                  "health",
+                  "ilab",
+                  "kenya",
+                  "living-wage",
+                  "people-daily",
+                  "sdgs"
+            ],
+            "Open PRs": 1,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "shakermaker",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/8087538?v=4",
+                        "contributions": 77
+                  },
+                  {
+                        "login": "petrus-jvrensburg",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/3660183?v=4",
+                        "contributions": 67
+                  },
+                  {
+                        "login": "fritzjooste",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/8628090?v=4",
+                        "contributions": 55
+                  },
+                  {
+                        "login": "adieyal",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/420786?v=4",
+                        "contributions": 34
+                  },
+                  {
+                        "login": "DavidLemayian",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/877919?v=4",
+                        "contributions": 31
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-sinking-cities",
+            "Owner": "360-info",
+            "URL": "https://github.com/360-info/report-sinking-cities",
+            "Created": "2023-03-23T01:01:26Z",
+            "Updated": "2023-11-25T22:25:43Z",
+            "Description": "Visualises the measured land subsistence (sinking) across dozens of coastal cities.",
+            "Last Push Date": "2023-08-18T04:07:21Z",
+            "Latest Commit Date": "2023-08-18T04:07:21Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 3,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS",
+                  "SCSS"
+            ],
+            "Tags": [
+                  "deck-gl",
+                  "land-subsistence",
+                  "maplibre-gl-js",
+                  "quarto",
+                  "r",
+                  "r-stats",
+                  "sdgs",
+                  "subsistence"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 31
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Build4SocialGood",
+            "Owner": "techrityorg",
+            "URL": "https://github.com/techrityorg/Build4SocialGood",
+            "Created": "2020-11-28T08:20:29Z",
+            "Updated": "2023-07-18T09:03:39Z",
+            "Description": "The repository contains all Build4SocialGood Hackathon relay Projects",
+            "Last Push Date": "2021-11-16T10:01:18Z",
+            "Latest Commit Date": "2021-11-16T10:01:17Z",
+            "Stars": 1,
+            "Forks": 8,
+            "Watchers": 3,
+            "Languages": [
+                  "JavaScript",
+                  "Vue",
+                  "CSS",
+                  "SCSS",
+                  "HTML"
+            ],
+            "Tags": [
+                  "build4socialgood",
+                  "open-source",
+                  "pay-it-forward",
+                  "sdgs",
+                  "social-good",
+                  "social-good-resources",
+                  "tech4good",
+                  "techrity"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 2,
+            "Top 5 Contributors": [
+                  {
+                        "login": "owans",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40341743?v=4",
+                        "contributions": 29
+                  },
+                  {
+                        "login": "Zeeson",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/45487954?v=4",
+                        "contributions": 6
+                  },
+                  {
+                        "login": "Ruth-ikegah",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/62059002?v=4",
+                        "contributions": 4
+                  },
+                  {
+                        "login": "wisdommatt",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40186491?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "Umarmuhd",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/25280783?v=4",
+                        "contributions": 2
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-global-education",
+            "Owner": "360-info",
+            "URL": "https://github.com/360-info/report-global-education",
+            "Created": "2022-03-15T01:24:55Z",
+            "Updated": "2022-05-19T06:53:16Z",
+            "Description": "Visualises the flow of students between countries",
+            "Last Push Date": "2023-01-09T00:21:51Z",
+            "Latest Commit Date": "2023-01-09T00:21:40Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS",
+                  "SCSS"
+            ],
+            "Tags": [
+                  "education",
+                  "international-students",
+                  "observable",
+                  "r",
+                  "rstats",
+                  "sdg",
+                  "sdgs",
+                  "students",
+                  "uis",
+                  "un-institute-statistics"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 43
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SkillBridge",
+            "Owner": "Roht5",
+            "URL": "https://github.com/Roht5/SkillBridge",
+            "Created": "2023-04-01T06:41:53Z",
+            "Updated": "2023-04-16T19:08:41Z",
+            "Description": "This repository contains the source code for an Android app built with Flutter and Firebase. The app connects job providers and seekers to reduce unemployment among unskilled workers. It features an intuitive interface that enables job seekers to search for job opportunities based on location and skills, while job providers can post job listing.",
+            "Last Push Date": "2023-04-02T08:38:34Z",
+            "Latest Commit Date": "2023-04-02T08:38:34Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 0,
+            "Languages": [
+                  "C++",
+                  "CMake",
+                  "Dart",
+                  "HTML",
+                  "C",
+                  "Swift",
+                  "Kotlin",
+                  "Objective-C"
+            ],
+            "Tags": [
+                  "decent-work",
+                  "firebase",
+                  "flutter",
+                  "rural-development",
+                  "sdgs",
+                  "unemployment"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Roht5",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/90822140?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "Vinit-Juikar",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/75153895?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Project-UMEED",
+            "Owner": "m0h4mm3d-bf",
+            "URL": "https://github.com/m0h4mm3d-bf/Project-UMEED",
+            "Created": "2021-10-01T14:28:42Z",
+            "Updated": "2021-10-03T17:16:46Z",
+            "Description": "Project UMEED is an initiative to gather important and relevant Urban Planning geospatial data from ",
+            "Last Push Date": "2021-10-03T17:16:43Z",
+            "Latest Commit Date": "2021-10-03T17:16:43Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "JavaScript",
+                  "CSS",
+                  "HTML",
+                  "SCSS",
+                  "Less",
+                  "Ruby"
+            ],
+            "Tags": [
+                  "2030",
+                  "artificial-intelligence",
+                  "environment",
+                  "geotiff",
+                  "gis",
+                  "machine-learning",
+                  "nasa-data",
+                  "nasa-spaceapps-challenge",
+                  "qgis",
+                  "sdg",
+                  "sdgs",
+                  "shapefiles",
+                  "sustainability",
+                  "sustainable-cities-communities",
+                  "sustainable-development-goals",
+                  "sustainable-software",
+                  "urban-planning"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "m0h4mm3d-bf",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/82308038?v=4",
+                        "contributions": 22
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGs_Global_Trade",
+            "Owner": "Yingjie4Science",
+            "URL": "https://github.com/Yingjie4Science/SDGs_Global_Trade",
+            "Created": "2020-05-07T17:44:24Z",
+            "Updated": "2022-12-09T04:38:35Z",
+            "Description": "Code for our *Nature Sustainability* paper on measuring the impacts of international trade on global SDGs. ",
+            "Last Push Date": "2022-07-24T02:53:38Z",
+            "Latest Commit Date": "2022-07-24T02:53:50Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "R"
+            ],
+            "Tags": [
+                  "r",
+                  "sdgs",
+                  "sustainable-development-goals",
+                  "telecoupling",
+                  "trade"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Yingjie4Science",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40079217?v=4",
+                        "contributions": 18
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdg-15-4-2",
+            "Owner": "ONSgeo",
+            "URL": "https://github.com/ONSgeo/sdg-15-4-2",
+            "Created": "2021-08-03T11:00:41Z",
+            "Updated": "2021-09-17T11:10:59Z",
+            "Description": "Mountain Green Cover Index",
+            "Last Push Date": "2021-09-17T11:10:57Z",
+            "Latest Commit Date": "2021-09-17T11:10:57Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "earth-observation",
+                  "geospatial",
+                  "mountain",
+                  "python",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "ShavaRobert",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/42207210?v=4",
+                        "contributions": 7
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": ".github",
+            "Owner": "spdci",
+            "URL": "https://github.com/spdci/.github",
+            "Created": "2023-03-06T15:16:00Z",
+            "Updated": "2023-03-06T16:17:26Z",
+            "Description": "Special repository only for information about the DCI",
+            "Last Push Date": "2023-08-03T08:09:01Z",
+            "Latest Commit Date": "2023-08-03T08:09:01Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 0,
+            "Languages": [],
+            "Tags": [
+                  "innovation",
+                  "interoperability",
+                  "sdg",
+                  "sdgs",
+                  "social-protection",
+                  "standards"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lenablind",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/49441564?v=4",
+                        "contributions": 14
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "New-RecycleGrabs",
+            "Owner": "slightlybae",
+            "URL": "https://github.com/slightlybae/New-RecycleGrabs",
+            "Created": "2022-02-16T10:26:00Z",
+            "Updated": "2023-10-22T11:47:42Z",
+            "Description": "A Waste Recycling Venture and passoniate community dedicated in helping you recycle your household waste.",
+            "Last Push Date": "2023-10-22T11:46:11Z",
+            "Latest Commit Date": "2023-10-22T11:46:11Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "HTML",
+                  "CSS",
+                  "JavaScript"
+            ],
+            "Tags": [
+                  "environment",
+                  "sdgs",
+                  "waste-management"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "slightlybae",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/45470819?v=4",
+                        "contributions": 84
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Bawat_Patak",
+            "Owner": "Dnzldotexe",
+            "URL": "https://github.com/Dnzldotexe/Bawat_Patak",
+            "Created": "2023-06-15T07:44:16Z",
+            "Updated": "2023-06-27T07:01:47Z",
+            "Description": "Bawat Patak is a web application made with open-source python frameworks and libraries",
+            "Last Push Date": "2023-06-27T10:45:32Z",
+            "Latest Commit Date": "2023-06-27T10:45:32Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook",
+                  "Python"
+            ],
+            "Tags": [
+                  "conservation",
+                  "sdg",
+                  "sdgs",
+                  "water"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Dnzldotexe",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/104302220?v=4",
+                        "contributions": 190
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Indicator_15.4.2",
+            "Owner": "n-verde",
+            "URL": "https://github.com/n-verde/Indicator_15.4.2",
+            "Created": "2023-09-19T08:21:07Z",
+            "Updated": "2023-09-21T07:41:06Z",
+            "Description": "mapping land cover at a national scale, using Sentinel-2 imagery and weak labels from CORINE land cover data",
+            "Last Push Date": "2023-09-20T09:13:55Z",
+            "Latest Commit Date": "2023-09-20T09:13:55Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "Jupyter Notebook",
+                  "JavaScript"
+            ],
+            "Tags": [
+                  "corine-land-cover",
+                  "deep-learning",
+                  "earth-observation",
+                  "gee",
+                  "land-cover",
+                  "remote-sensing",
+                  "sdgs",
+                  "sentinel-2",
+                  "weakly-supervised-learning"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "n-verde",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/24439371?v=4",
+                        "contributions": 9
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "calender",
+            "Owner": "kode28003",
+            "URL": "https://github.com/kode28003/calender",
+            "Created": "2021-11-29T04:01:55Z",
+            "Updated": "2023-01-10T05:10:57Z",
+            "Description": "SDGs & Calendar & ToDo List",
+            "Last Push Date": "2022-02-09T07:33:56Z",
+            "Latest Commit Date": "2022-02-09T07:33:52Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "Dart",
+                  "Swift",
+                  "Kotlin",
+                  "Objective-C"
+            ],
+            "Tags": [
+                  "calendar",
+                  "dart",
+                  "flutter",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "kode28003",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/95200820?v=4",
+                        "contributions": 56
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-antarctic-ice",
+            "Owner": "360-info",
+            "URL": "https://github.com/360-info/report-antarctic-ice",
+            "Created": "2024-01-08T04:16:18Z",
+            "Updated": "2024-01-21T22:45:31Z",
+            "Description": "Visualises the complex layers of ice that make up Antarctica.",
+            "Last Push Date": "2024-01-16T05:35:23Z",
+            "Latest Commit Date": "2024-01-16T05:25:14Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS",
+                  "SCSS",
+                  "Shell"
+            ],
+            "Tags": [
+                  "antarctic",
+                  "antarctica",
+                  "climate-change",
+                  "glacier",
+                  "ice-shelf",
+                  "ice-shelves",
+                  "sdg13",
+                  "sdgs",
+                  "sea-ice"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 24
+                  }
+            ],
+            "Status": "Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "stake-based-booking",
+            "Owner": "masaun",
+            "URL": "https://github.com/masaun/stake-based-booking",
+            "Created": "2020-04-25T02:26:28Z",
+            "Updated": "2020-04-26T14:41:26Z",
+            "Description": "Stake based Booking is a dApp which is one of solution for reducing the problem of \"food loss\" and \"food waste\"",
+            "Last Push Date": "2020-04-26T14:39:07Z",
+            "Latest Commit Date": "2020-04-26T14:39:06Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 3,
+            "Languages": [
+                  "JavaScript",
+                  "CSS",
+                  "HTML"
+            ],
+            "Tags": [
+                  "reactjs",
+                  "sdgs",
+                  "solidity",
+                  "truffle",
+                  "web3js"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "masaun",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/19357502?v=4",
+                        "contributions": 48
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "scouts-por-los-ods",
+            "Owner": "sagudelo1200",
+            "URL": "https://github.com/sagudelo1200/scouts-por-los-ods",
+            "Created": "2024-01-13T01:50:47Z",
+            "Updated": "2024-01-13T01:56:43Z",
+            "Description": "Scouts por los ODS - Cambiar el Mundo",
+            "Last Push Date": "2024-01-13T01:55:10Z",
+            "Latest Commit Date": "2024-01-13T01:54:50Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "asc",
+                  "cambiarelmundo",
+                  "mundomejor",
+                  "ods",
+                  "scout",
+                  "scouts",
+                  "scoutsporlosods",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "sagudelo1200",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/60363274?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "201911_dataset",
+            "Owner": "robertolofaro",
+            "URL": "https://github.com/robertolofaro/201911_dataset",
+            "Created": "2019-12-07T18:59:52Z",
+            "Updated": "2020-01-25T15:28:52Z",
+            "Description": "Supporting material for articles and posts (R, charts, etc)",
+            "Last Push Date": "2019-12-07T19:27:54Z",
+            "Latest Commit Date": "2019-12-07T19:27:53Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "R"
+            ],
+            "Tags": [
+                  "company",
+                  "development",
+                  "italy",
+                  "sdgs",
+                  "size",
+                  "trends"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "robertolofaro",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/7221816?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Air-O-Analysis",
+            "Owner": "The-Open-Source-Club",
+            "URL": "https://github.com/The-Open-Source-Club/Air-O-Analysis",
+            "Created": "2020-01-19T13:45:58Z",
+            "Updated": "2021-03-20T10:47:50Z",
+            "Description": "A web app to find out the most accurate AQI of a location.",
+            "Last Push Date": "2021-09-22T18:26:32Z",
+            "Latest Commit Date": "2021-03-20T10:47:47Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "Python",
+                  "HTML",
+                  "CSS"
+            ],
+            "Tags": [
+                  "air-quality",
+                  "django",
+                  "sdgs",
+                  "sustainability"
+            ],
+            "Open PRs": 1,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "ayushprd",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/11568631?v=4",
+                        "contributions": 19
+                  },
+                  {
+                        "login": "iAmGroot1",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/41311165?v=4",
+                        "contributions": 4
+                  },
+                  {
+                        "login": "Dixita-10",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/56042250?v=4",
+                        "contributions": 3
+                  },
+                  {
+                        "login": "DebDx",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/51295288?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "dependabot[bot]",
+                        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "CLEAN-WATER-AND-SANITATION",
+            "Owner": "Chidinma23",
+            "URL": "https://github.com/Chidinma23/CLEAN-WATER-AND-SANITATION",
+            "Created": "2023-04-21T18:09:27Z",
+            "Updated": "2023-04-21T18:44:08Z",
+            "Description": "EFFECT OF CLEAN WATER AND SANITATION IN DISEASES CONTROL IN AFRICA: SDG GOAL 6: CLEAN WATER & SANITATION",
+            "Last Push Date": "2023-04-21T18:48:43Z",
+            "Latest Commit Date": "2023-04-21T18:48:43Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "cholera",
+                  "cleanwaterandsanitation",
+                  "disease",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Chidinma23",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/115046602?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "dice",
+            "Owner": "edwardoughton",
+            "URL": "https://github.com/edwardoughton/dice",
+            "Created": "2021-12-06T14:53:47Z",
+            "Updated": "2023-05-26T12:56:45Z",
+            "Description": "Digital Infrastructure Cost Estimator (DICE)",
+            "Last Push Date": "2023-10-02T17:18:29Z",
+            "Latest Commit Date": "2023-10-02T17:18:26Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "Python",
+                  "R"
+            ],
+            "Tags": [
+                  "broadband",
+                  "economic-development",
+                  "infrastructure",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "edwardoughton",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/11899151?v=4",
+                        "contributions": 99
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "comunitas",
+            "Owner": "jpaulet",
+            "URL": "https://github.com/jpaulet/comunitas",
+            "Created": "2020-02-24T17:00:20Z",
+            "Updated": "2023-03-25T06:59:07Z",
+            "Description": "comm\u016bnit\u0101s - Blockchain organization creator & manager for affordable housing - BSIC Hackathon: Sustainable Cities and Communities Project",
+            "Last Push Date": "2023-01-05T18:49:45Z",
+            "Latest Commit Date": "2020-08-12T17:30:43Z",
+            "Stars": 0,
+            "Forks": 1,
+            "Watchers": 2,
+            "Languages": [
+                  "Vue",
+                  "CSS",
+                  "JavaScript",
+                  "HTML"
+            ],
+            "Tags": [
+                  "blockchain",
+                  "dao",
+                  "sdg",
+                  "sdgs"
+            ],
+            "Open PRs": 26,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jpaulet",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6894329?v=4",
+                        "contributions": 46
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Hackathon-WarehouseIV",
+            "Owner": "wenwen357951",
+            "URL": "https://github.com/wenwen357951/Hackathon-WarehouseIV",
+            "Created": "2021-07-13T08:34:33Z",
+            "Updated": "2021-07-26T12:04:47Z",
+            "Description": "This is Project of WarehouseIV 2021 Hackathon Cmpetition.",
+            "Last Push Date": "2021-07-26T11:59:37Z",
+            "Latest Commit Date": "2021-07-26T11:59:37Z",
+            "Stars": 0,
+            "Forks": 2,
+            "Watchers": 2,
+            "Languages": [
+                  "PHP",
+                  "Blade",
+                  "Shell",
+                  "Makefile"
+            ],
+            "Tags": [
+                  "hackathon",
+                  "laravel",
+                  "nopoverty",
+                  "php",
+                  "sdgs",
+                  "warehouseiv"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "wenwen357951",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/20616345?v=4",
+                        "contributions": 47
+                  },
+                  {
+                        "login": "4a7g0018",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/72734912?v=4",
+                        "contributions": 6
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "lost-generation",
+            "Owner": "akuroiwa",
+            "URL": "https://github.com/akuroiwa/lost-generation",
+            "Created": "2023-05-13T11:57:41Z",
+            "Updated": "2023-06-01T11:37:34Z",
+            "Description": "The 2023 Election Pledge of the Ice Party, a political party for the employment ice age generation.",
+            "Last Push Date": "2023-12-03T14:13:28Z",
+            "Latest Commit Date": "2023-12-03T14:13:02Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [],
+            "Tags": [
+                  "economics",
+                  "politics",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "akuroiwa",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/8307714?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdg-queries-evaluation-report",
+            "Owner": "Aurora-Network-Global",
+            "URL": "https://github.com/Aurora-Network-Global/sdg-queries-evaluation-report",
+            "Created": "2021-05-31T14:59:14Z",
+            "Updated": "2022-11-27T14:52:26Z",
+            "Description": "In this study we evaluate the accuracy of our Aurora SDG classification model version 5, to match research papers to the Sustainable Development Goals (SDG's) of the United Nations. The aim of this investigation is to be transparent about the accuracy of the model, because this model might get used in reporting and strategy analysis by University leadership. The measurements are based on a baseline, 'golden set', where researchers of the Aurora universities handpicked publications that relate to an SDG. We measured the Precision and Recall of the Aurora model, and relating it to our previous version of the model, and to the Elsevier SDG model.",
+            "Last Push Date": "2021-06-10T14:25:57Z",
+            "Latest Commit Date": "2021-06-10T14:22:56Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 3,
+            "Languages": [
+                  "TeX"
+            ],
+            "Tags": [
+                  "accuracy",
+                  "bibliometrics",
+                  "precision",
+                  "recall",
+                  "sdg",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "mosart",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/4525827?v=4",
+                        "contributions": 16
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-revivingoceans",
+            "Owner": "360-info",
+            "URL": "https://github.com/360-info/report-revivingoceans",
+            "Created": "2022-05-20T03:44:52Z",
+            "Updated": "2022-06-06T02:33:40Z",
+            "Description": "Visualises reported fishing catch globally over the last 70 years, as well as estimates of illegal fishing and discarded fish.",
+            "Last Push Date": "2022-06-07T00:10:39Z",
+            "Latest Commit Date": "2022-06-07T00:10:39Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  "JavaScript",
+                  "HTML",
+                  "CSS",
+                  "SCSS"
+            ],
+            "Tags": [
+                  "fish",
+                  "fishing",
+                  "iuu-fishing",
+                  "quarto",
+                  "r",
+                  "rstats",
+                  "sdg-14",
+                  "sdg-data",
+                  "sdg-life-below-water",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 41
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "DatSciTrain_SDGs_API",
+            "Owner": "lucashertzog",
+            "URL": "https://github.com/lucashertzog/DatSciTrain_SDGs_API",
+            "Created": "2023-09-22T06:32:20Z",
+            "Updated": "2024-01-22T02:56:45Z",
+            "Description": "Functions in R to interact with Global SDG Indicators Database using the UN Stats SDG API",
+            "Last Push Date": "2023-09-22T06:33:25Z",
+            "Latest Commit Date": "2023-09-22T06:33:22Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "R"
+            ],
+            "Tags": [
+                  "api",
+                  "sdgs",
+                  "united-nations"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lucashertzog",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/125840911?v=4",
+                        "contributions": 2
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "MastersThesis",
+            "Owner": "taetscher",
+            "URL": "https://github.com/taetscher/MastersThesis",
+            "Created": "2019-08-23T12:33:59Z",
+            "Updated": "2021-01-05T09:59:26Z",
+            "Description": "Bigger is Better. Or is it? Lessons learned from applying a deep neural network to Twitter posts in order to estimate potentials of using big data to monitor the UN Sustainable Development Goals -- Masters Thesis @GIUB/University of Bern, by Benjamin Sch\u00fcpbach",
+            "Last Push Date": "2020-02-28T14:11:29Z",
+            "Latest Commit Date": "2020-02-28T14:11:28Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [],
+            "Tags": [
+                  "big-data",
+                  "bigdata",
+                  "deep-neural-network",
+                  "research-project",
+                  "sdgs",
+                  "yolov3-tiny"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "taetscher",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/24844442?v=4",
+                        "contributions": 83
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGs_China",
+            "Owner": "Yingjie4Science",
+            "URL": "https://github.com/Yingjie4Science/SDGs_China",
+            "Created": "2021-08-07T19:50:18Z",
+            "Updated": "2022-12-08T01:02:20Z",
+            "Description": "Code and data for the *Nature* cover article on assessing China's SDG progress over time and space. ",
+            "Last Push Date": "2021-08-08T02:21:26Z",
+            "Latest Commit Date": "2021-08-08T02:21:52Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "R"
+            ],
+            "Tags": [
+                  "china",
+                  "sdgs",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Yingjie4Science",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40079217?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sunwise",
+            "Owner": "Hassankassim",
+            "URL": "https://github.com/Hassankassim/sunwise",
+            "Created": "2023-04-01T20:29:14Z",
+            "Updated": "2023-04-02T07:42:45Z",
+            "Description": "SunWise Project Official Website",
+            "Last Push Date": "2023-04-01T21:08:45Z",
+            "Latest Commit Date": "2023-04-01T21:08:45Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  "CSS",
+                  "HTML",
+                  "JavaScript",
+                  "C++"
+            ],
+            "Tags": [
+                  "ardiuno",
+                  "hackathon-project",
+                  "javascript",
+                  "sdgs",
+                  "solvethesdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Hassankassim",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/114056773?v=4",
+                        "contributions": 3
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "TrustSDG",
+            "Owner": "ravivanpong",
+            "URL": "https://github.com/ravivanpong/TrustSDG",
+            "Created": "2023-04-04T14:52:35Z",
+            "Updated": "2023-04-04T14:54:00Z",
+            "Description": "A robustness study of selected SDG classifiers",
+            "Last Push Date": "2023-04-04T14:52:36Z",
+            "Latest Commit Date": "2023-04-04T14:52:36Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "classification",
+                  "nlp",
+                  "robustness",
+                  "sdgs",
+                  "trustworthy-ai"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "ravivanpong",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/55481810?v=4",
+                        "contributions": 1
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "sdg-6-3-1",
+            "Owner": "ONSgeo",
+            "URL": "https://github.com/ONSgeo/sdg-6-3-1",
+            "Created": "2021-08-06T08:16:02Z",
+            "Updated": "2023-07-08T13:12:49Z",
+            "Description": " Proportion of domestic and industrial wastewater flow safely treated",
+            "Last Push Date": "2023-06-30T20:44:40Z",
+            "Latest Commit Date": "2023-06-30T20:44:40Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [],
+            "Tags": [
+                  "geospatial",
+                  "sdg-6-3-1",
+                  "sdgs",
+                  "wastewater"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "MusaChirikeni",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40661273?v=4",
+                        "contributions": 10
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      }
+]
