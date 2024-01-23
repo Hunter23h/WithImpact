@@ -11,14 +11,14 @@ async function Projects({
   searchParams,
 }: {
   searchParams?: {
-    query?: string;
+    search?: string;
     page?: string;
   };
 }) {
-  const query = searchParams?.query ?? "";
+  const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
 
-  const res = await fetchProjects(query, currentPage);
+  const res = await fetchProjects(search, currentPage);
 
   const projects = res.results;
   const count = res.count;
@@ -38,7 +38,7 @@ async function Projects({
             <Project key={key} title={project.name}></Project>
           ))}
       </div>
-      <PageNav pageArray={pageArray} />
+      {/* <PageNav pageArray={pageArray} /> */}
     </Container>
   );
 }

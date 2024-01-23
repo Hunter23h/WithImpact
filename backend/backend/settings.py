@@ -29,6 +29,12 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = []
 
+CRONJOBS = [
+    ('0 0 * * *', 'web-scraping.update_repos.main'), #0 0 * * * = midnight
+]
+
+TIME_ZONE = 'America/New_York'
+
 # Allow all origins during development; you may want to restrict this in production
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # or your Next.js development server
@@ -39,7 +45,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 20,
 }
 
 # Application definition
@@ -54,6 +60,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "backend",
     "corsheaders",
+    "django_crontab",
 ]
 
 MIDDLEWARE = [

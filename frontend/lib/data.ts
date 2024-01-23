@@ -6,7 +6,7 @@ export async function fetchProjects(query: string, page: string) {
   noStore();
   try {
     const res = await fetch(
-      `${BACKEND_URL}/getprojects/?page=${encodeURIComponent(page)}`
+      `${BACKEND_URL}getprojects/?page=${encodeURIComponent(page)}&search=${encodeURIComponent(query)}`
     );
     let data = await res.json();
     return data;
