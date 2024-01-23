@@ -16,13 +16,12 @@ async function Projects({
   };
 }) {
   const search = searchParams?.search ?? "";
-  const currentPage = (searchParams?.page as string) ?? "1";
-
+  const currentPage = searchParams?.page as string;
   const res = await fetchProjects(search, currentPage);
 
   const projects = res.results;
   const count = res.count;
-  const pageCount = Math.ceil(count / 10);
+  const pageCount = Math.ceil(count / 40);
 
   const pageArray = [] as String[];
   for (let i = 1; i < pageCount + 1; i++) {

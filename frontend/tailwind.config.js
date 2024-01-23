@@ -31,7 +31,7 @@ module.exports = {
         sdgs: "clamp(300px, 100%, 400px)",
       },
       gridTemplateColumns: {
-        sdgs: "repeat(auto-fit, minmax(300px, 1fr))",
+        sdgs: "repeat(auto-fit, minmax(300px, max-content))",
         md_sdgs: "repeat(auto-fit, minmax(200px, 1fr))",
         sm_sdgs: "repeat(auto-fit, minmax(150px, 1fr))",
       },
