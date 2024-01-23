@@ -31,14 +31,14 @@ module.exports = {
         sdgs: "clamp(300px, 100%, 400px)",
       },
       gridTemplateColumns: {
-        sdgs: "repeat(auto-fit, minmax(200px, auto))",
-        md_sdgs: "repeat(auto-fit, minmax(150px, auto))",
-        sm_sdgs: "repeat(auto-fit, minmax(100px, auto))",
+        sdgs: "repeat(auto-fit, minmax(300px, 1fr))",
+        md_sdgs: "repeat(auto-fit, minmax(200px, 1fr))",
+        sm_sdgs: "repeat(auto-fit, minmax(150px, 1fr))",
       },
       minHeight: {
-        sdgs: "200px",
-        md_sdgs: "150px",
-        sm_sdgs: "100px",
+        sdgs: "300px",
+        md_sdgs: "200px",
+        sm_sdgs: "150px",
       },
       boxShadow: {
         comments:

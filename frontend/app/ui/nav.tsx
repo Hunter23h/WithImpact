@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import Search from "./nav/Search";
 
 function Nav() {
   const components: { title: string; href: string }[] = [
@@ -57,10 +58,7 @@ function Nav() {
         <p className="font-bold tracking-widest">WITH IMPACT</p>
 
         <div className="w-[100%] max-w-[596px] min-w-[250px] relative flex">
-          <Input
-            placeholder="Search projects, owners, sdg goals, etc..."
-            className=""
-          />
+          <Search />
           <button className="absolute right-0 top-[50%] translate-y-[-50%] h-[100%] w-[50px] flex justify-center bg-secondary rounded-[calc(0.5em-2px)] rounded-l-none border-l-0 border-default">
             <Image
               src={"/icons/search.svg"}

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Projects from "../ui/browse/projects";
 import SidebarActions from "../ui/browse/sidebarActions";
 import Container from "../ui/container";
+import BrowseSkeleton from "../ui/browse/browseSkeleton";
 
-async function Browse() {
+async function Browse({ searchParams }: { searchParams: { page: string } }) {
   return (
     <div className="flex  min-h-[100vh] items-stretch">
       {/* Filter and Sorting */}
@@ -11,7 +12,9 @@ async function Browse() {
         <SidebarActions />
       </div>
       {/* Browse Results */}
-      <Projects />
+      <Suspense fallback={<BrowseSkeleton />}>
+        <Projects searchParams={searchParams} />
+      </Suspense>
     </div>
   );
 }

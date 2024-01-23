@@ -5,7 +5,7 @@ function Container({ children, className }: any) {
   return (
     <div
       className={cn(
-        "py-[60px] px-[30px] max-w-[1400px] 3xl:max-w-[1900px] m-auto",
+        "py-[60px] px-[30px] max-w-[1900px] 3xl:max-w-[1900px] m-auto",
         className
       )}
     >
