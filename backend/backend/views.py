@@ -36,8 +36,9 @@ class ProjectList(APIView):
 
         newcomer_friendly = request.GET.get('newcomer_friendly', None)
         status = request.GET.get('status', None)
-        # SDG = request.GET.get()
+        sdg = request.GET.get('sdg', None)
         languages_list = request.GET.get('languages', None)
+        search_query = request.GET.get('search', None)
 
     
         projects = Project.objects.all().order_by('id')
@@ -47,16 +48,32 @@ class ProjectList(APIView):
         
         if status:
             projects = projects.filter(status=status)
+
+        if sdg:
+
+            goals = [goal.strip() for goal in sdg.split(",")]
+            sdg_filters = Q()
+            for goal in goals:
+                sdg_filters &= Q(sdg_categories__contains=[goal])
+            projects = projects.filter(sdg_filters)
         
         if languages_list:
 
             languages = [language.strip() for language in languages_list.split(",")]
-
-
             language_filters = Q()
             for language in languages:
                 language_filters &= Q(languages__contains=[language])
             projects = projects.filter(language_filters)
+        
+        if search_query:
+            
+            search_filters = (
+                Q(name__icontains=search_query) |
+                Q(owner__icontains=search_query)
+            )
+            projects = projects.filter(search_filters)
+
+        
 
         paginator = self.pagination_class()
         results_proj_page = paginator.paginate_queryset(projects, request)
