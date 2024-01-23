@@ -9,6 +9,11 @@ import urllib.request as ur
 from tqdm import tqdm
 import json
 import time
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", type=str, help="github topics url")
+args = parser.parse_args()
 
 load_dotenv()
 token = os.getenv("GITHUB_TOKEN")
@@ -215,6 +220,16 @@ def check_criteria(url):
         else:
             return True
         
+def get_topic_name(url):
+    substring = "topics/"
+
+    # Find the index of the substring
+    index = url.find(substring)
+
+    # Extract the string after "topics/"
+    result = url[index + len(substring):]
+    return result
+        
 if __name__ == '__main__':
 
     rate_used_start, rate_total = get_rate_limit()
@@ -222,7 +237,9 @@ if __name__ == '__main__':
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
 
     #url = 'https://api.github.com/search/repositories?q=topic:sustainable-development-goals'
-    url_topics = 'https://github.com/topics/sustainable-development-goals'
+    # url_topics = 'https://github.com/topics/sustainable-development-goals'
+    url_topics = args.f
+    topic_name = get_topic_name(url_topics)
 
     num_repos = get_num_repos_from_topics(url_topics)
     if num_repos != 0:
@@ -252,7 +269,7 @@ if __name__ == '__main__':
         else:
             print("Invalid Project")
 
-    out_file = open("../jsons/repos.json", "w") 
+    out_file = open(f"../jsons/topic_repos_{topic_name}.json", "w") 
 
     json.dump(list_of_repos, out_file, indent = 6) 
 

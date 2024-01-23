@@ -37,7 +37,7 @@ async function Projects({
             <Project key={key} title={project.name}></Project>
           ))}
       </div>
-      <PageNav pageArray={pageArray} />
+      {/* <PageNav pageArray={pageArray} /> */}
     </Container>
   );
 }

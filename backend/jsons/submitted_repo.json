@@ -1,59 +1,70 @@
 [
       {
-            "Name": "hon",
-            "Owner": "Andre0512",
-            "URL": "https://github.com/Andre0512/hon",
-            "Created": "2023-02-19T01:48:43Z",
-            "Updated": "2024-01-21T20:22:31Z",
-            "Description": "Home Assistant integration for Haier hOn: support for Haier/Candy/Hoover home appliances like washing machines and air conditioners in 19 languages.",
-            "Last Push Date": "2024-01-21T03:12:15Z",
-            "Latest Commit Date": "2024-01-19T18:02:02Z",
-            "Stars": 767,
-            "Forks": 1932,
-            "Watchers": 20,
+            "Name": "public",
+            "Owner": "socialincome-san",
+            "URL": "https://github.com/socialincome-san/public",
+            "Created": "2022-08-14T15:40:39Z",
+            "Updated": "2024-01-19T09:09:25Z",
+            "Description": "Fighting global poverty with the help of everyday people and your coding skills. Public repository of the NGO and global initiative Social Income.",
+            "Last Push Date": "2024-01-22T10:12:18Z",
+            "Latest Commit Date": "2024-01-22T10:04:15Z",
+            "Stars": 54,
+            "Forks": 19,
+            "Watchers": 12,
             "Languages": [
-                  "Python"
+                  "TypeScript",
+                  "Dart",
+                  "Handlebars",
+                  "CSS",
+                  "MDX",
+                  "Ruby",
+                  "HTML",
+                  "Shell",
+                  "JavaScript",
+                  "Swift",
+                  "Kotlin",
+                  "Objective-C"
             ],
             "Tags": [
-                  "candy",
-                  "haier",
-                  "haier-hon",
-                  "home-assistant",
-                  "home-assistant-integration",
-                  "homeassistant",
-                  "hoover",
-                  "python"
+                  "css",
+                  "firebase",
+                  "firestore",
+                  "open-source",
+                  "opensourceforgood",
+                  "react",
+                  "storybook",
+                  "vite"
             ],
-            "Open PRs": 2,
-            "Open Issues": 37,
+            "Open PRs": 4,
+            "Open Issues": 70,
             "Top 5 Contributors": [
                   {
-                        "login": "Andre0512",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/20325077?v=4",
-                        "contributions": 213
+                        "login": "MDikkii",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6149761?v=4",
+                        "contributions": 170
                   },
                   {
-                        "login": "drudgebg",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/11229872?v=4",
-                        "contributions": 10
+                        "login": "mkue",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/3518809?v=4",
+                        "contributions": 154
                   },
                   {
-                        "login": "MiguelAngelLV",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/638110?v=4",
-                        "contributions": 7
+                        "login": "novas1r1",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/2575205?v=4",
+                        "contributions": 108
                   },
                   {
-                        "login": "alexandre-leites",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/1256013?v=4",
-                        "contributions": 1
+                        "login": "ssandino",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6095849?v=4",
+                        "contributions": 100
                   },
                   {
-                        "login": "cylonbrain",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/441892?v=4",
-                        "contributions": 1
+                        "login": "andrashee",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1204548?v=4",
+                        "contributions": 82
                   }
             ],
             "Status": "Active",
-            "Newcomer Friendly": false
+            "Newcomer Friendly": true
       }
 ]
