@@ -2,6 +2,7 @@
       {
             "Name": "trends.earth",
             "Owner": "ConservationInternational",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/6778872?v=4",
             "URL": "https://github.com/ConservationInternational/trends.earth",
             "Created": "2017-05-05T16:25:46Z",
             "Updated": "2024-01-09T14:58:29Z",
@@ -12,14 +13,16 @@
             "Forks": 44,
             "Watchers": 19,
             "Languages": [
-                  "Python",
-                  "Jupyter Notebook",
-                  "XSLT",
-                  "QMake",
-                  "QML",
-                  "Shell",
-                  "Batchfile",
-                  "Dockerfile"
+                  {
+                        "Python": 92.5,
+                        "Jupyter Notebook": 5.0,
+                        "XSLT": 2.0,
+                        "QMake": 0.3,
+                        "QML": 0.1,
+                        "Shell": 0.1,
+                        "Batchfile": 0.0,
+                        "Dockerfile": 0.0
+                  }
             ],
             "Tags": [
                   "climate",
@@ -76,6 +79,7 @@
       {
             "Name": "publicgoods-candidates",
             "Owner": "DPGAlliance",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/67749530?v=4",
             "URL": "https://github.com/DPGAlliance/publicgoods-candidates",
             "Created": "2019-02-07T07:39:21Z",
             "Updated": "2024-01-20T04:36:09Z",
@@ -86,8 +90,10 @@
             "Forks": 150,
             "Watchers": 15,
             "Languages": [
-                  "JavaScript",
-                  "Shell"
+                  {
+                        "JavaScript": 92.5,
+                        "Shell": 7.5
+                  }
             ],
             "Tags": [
                   "public-good",
@@ -130,6 +136,7 @@
       {
             "Name": "hummigo",
             "Owner": "shikhar8434",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/60563576?v=4",
             "URL": "https://github.com/shikhar8434/hummigo",
             "Created": "2021-03-12T19:24:19Z",
             "Updated": "2024-01-19T11:56:00Z",
@@ -140,7 +147,9 @@
             "Forks": 3,
             "Watchers": 3,
             "Languages": [
-                  "Java"
+                  {
+                        "Java": 100.0
+                  }
             ],
             "Tags": [
                   "android-device",
@@ -173,6 +182,7 @@
       {
             "Name": "Sehhetna",
             "Owner": "sha3rawi33",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/36058880?v=4",
             "URL": "https://github.com/sha3rawi33/Sehhetna",
             "Created": "2019-06-03T16:28:52Z",
             "Updated": "2024-01-11T17:18:12Z",
@@ -183,9 +193,11 @@
             "Forks": 24,
             "Watchers": 7,
             "Languages": [
-                  "Dart",
-                  "Objective-C",
-                  "Java"
+                  {
+                        "Dart": 97.4,
+                        "Objective-C": 1.5,
+                        "Java": 1.1
+                  }
             ],
             "Tags": [
                   "app",
@@ -216,6 +228,7 @@
       {
             "Name": "osdg-tool",
             "Owner": "osdg-ai",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/74975722?v=4",
             "URL": "https://github.com/osdg-ai/osdg-tool",
             "Created": "2020-12-07T12:52:16Z",
             "Updated": "2024-01-22T04:23:58Z",
@@ -226,9 +239,11 @@
             "Forks": 8,
             "Watchers": 1,
             "Languages": [
-                  "Python",
-                  "Shell",
-                  "Dockerfile"
+                  {
+                        "Python": 92.0,
+                        "Shell": 4.4,
+                        "Dockerfile": 3.6
+                  }
             ],
             "Tags": [
                   "machine-learning",
@@ -271,6 +286,7 @@
       {
             "Name": "osdg-data",
             "Owner": "osdg-ai",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/74975722?v=4",
             "URL": "https://github.com/osdg-ai/osdg-data",
             "Created": "2021-07-08T06:41:57Z",
             "Updated": "2023-12-09T15:26:51Z",
@@ -280,7 +296,9 @@
             "Stars": 23,
             "Forks": 7,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "citizen-science",
                   "citsci",
@@ -323,6 +341,7 @@
       {
             "Name": "PPI4SD",
             "Owner": "oguerrer",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/1383351?v=4",
             "URL": "https://github.com/oguerrer/PPI4SD",
             "Created": "2019-05-10T14:52:59Z",
             "Updated": "2023-08-07T16:16:36Z",
@@ -333,8 +352,10 @@
             "Forks": 13,
             "Watchers": 1,
             "Languages": [
-                  "Jupyter Notebook",
-                  "Python"
+                  {
+                        "Jupyter Notebook": 96.8,
+                        "Python": 3.2
+                  }
             ],
             "Tags": [
                   "abm",
@@ -368,6 +389,7 @@
       {
             "Name": "safeherven_app",
             "Owner": "safeherven",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/97735462?v=4",
             "URL": "https://github.com/safeherven/safeherven_app",
             "Created": "2022-01-17T06:21:34Z",
             "Updated": "2024-01-16T11:19:57Z",
@@ -378,11 +400,13 @@
             "Forks": 6,
             "Watchers": 1,
             "Languages": [
-                  "Dart",
-                  "HTML",
-                  "Swift",
-                  "Kotlin",
-                  "Objective-C"
+                  {
+                        "Dart": 94.0,
+                        "HTML": 5.3,
+                        "Swift": 0.5,
+                        "Kotlin": 0.2,
+                        "Objective-C": 0.1
+                  }
             ],
             "Tags": [
                   "chatbot",
@@ -434,6 +458,7 @@
       {
             "Name": "tiles-IoT-inventor-toolkit",
             "Owner": "tilestoolkit",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/35257517?v=4",
             "URL": "https://github.com/tilestoolkit/tiles-IoT-inventor-toolkit",
             "Created": "2017-01-02T18:38:16Z",
             "Updated": "2021-03-10T14:10:15Z",
@@ -443,7 +468,9 @@
             "Stars": 13,
             "Forks": 5,
             "Watchers": 7,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "card-game",
                   "cards",
@@ -472,6 +499,7 @@
       {
             "Name": "sdg-queries",
             "Owner": "Aurora-Network-Global",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/43465456?v=4",
             "URL": "https://github.com/Aurora-Network-Global/sdg-queries",
             "Created": "2020-01-21T11:35:18Z",
             "Updated": "2023-07-11T10:41:27Z",
@@ -482,8 +510,10 @@
             "Forks": 10,
             "Watchers": 3,
             "Languages": [
-                  "XSLT",
-                  "HTML"
+                  {
+                        "XSLT": 89.2,
+                        "HTML": 10.8
+                  }
             ],
             "Tags": [
                   "classification-model",
@@ -529,6 +559,7 @@
       {
             "Name": "SDGdetector",
             "Owner": "Yingjie4Science",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/40079217?v=4",
             "URL": "https://github.com/Yingjie4Science/SDGdetector",
             "Created": "2021-11-24T20:31:04Z",
             "Updated": "2024-01-12T18:24:34Z",
@@ -539,8 +570,10 @@
             "Forks": 0,
             "Watchers": 3,
             "Languages": [
-                  "R",
-                  "TeX"
+                  {
+                        "R": 90.0,
+                        "TeX": 10.0
+                  }
             ],
             "Tags": [
                   "cran",
@@ -575,40 +608,9 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "SDG-networks",
-            "Owner": "felix-laumann",
-            "URL": "https://github.com/felix-laumann/SDG-networks",
-            "Created": "2019-02-14T12:31:18Z",
-            "Updated": "2023-08-20T04:23:05Z",
-            "Description": "Finding nonlinear relationships between the Sustainable Development Goals and climate change with partial distance correlations",
-            "Last Push Date": "2022-11-24T12:03:36Z",
-            "Latest Commit Date": "2022-11-24T12:03:36Z",
-            "Stars": 7,
-            "Forks": 2,
-            "Watchers": 1,
-            "Languages": [
-                  "Jupyter Notebook"
-            ],
-            "Tags": [
-                  "climate-change",
-                  "sdg-networks",
-                  "sdgs"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "felix-laumann",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/22920497?v=4",
-                        "contributions": 25
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
             "Name": "publicgoods-toolkit",
             "Owner": "unicef",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/175849?v=4",
             "URL": "https://github.com/unicef/publicgoods-toolkit",
             "Created": "2021-02-09T22:37:00Z",
             "Updated": "2023-11-25T22:08:17Z",
@@ -619,10 +621,12 @@
             "Forks": 8,
             "Watchers": 13,
             "Languages": [
-                  "Makefile",
-                  "JavaScript",
-                  "CSS",
-                  "TeX"
+                  {
+                        "Makefile": 47.0,
+                        "JavaScript": 42.3,
+                        "CSS": 8.3,
+                        "TeX": 2.3
+                  }
             ],
             "Tags": [
                   "digitalpublicgoods",
@@ -668,8 +672,44 @@
             "Newcomer Friendly": false
       },
       {
+            "Name": "SDG-networks",
+            "Owner": "felix-laumann",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/22920497?v=4",
+            "URL": "https://github.com/felix-laumann/SDG-networks",
+            "Created": "2019-02-14T12:31:18Z",
+            "Updated": "2023-08-20T04:23:05Z",
+            "Description": "Finding nonlinear relationships between the Sustainable Development Goals and climate change with partial distance correlations",
+            "Last Push Date": "2022-11-24T12:03:36Z",
+            "Latest Commit Date": "2022-11-24T12:03:36Z",
+            "Stars": 7,
+            "Forks": 2,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "Jupyter Notebook": 100.0
+                  }
+            ],
+            "Tags": [
+                  "climate-change",
+                  "sdg-networks",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "felix-laumann",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/22920497?v=4",
+                        "contributions": 25
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
             "Name": "HydroSAR",
             "Owner": "montimaj",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/5908368?v=4",
             "URL": "https://github.com/montimaj/HydroSAR",
             "Created": "2020-06-01T16:08:18Z",
             "Updated": "2024-01-12T18:13:31Z",
@@ -680,8 +720,10 @@
             "Forks": 2,
             "Watchers": 3,
             "Languages": [
-                  "Python",
-                  "R"
+                  {
+                        "Python": 88.3,
+                        "R": 11.7
+                  }
             ],
             "Tags": [
                   "arizona",
@@ -716,6 +758,7 @@
       {
             "Name": "sdgs-tools",
             "Owner": "hexatester",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/40712079?v=4",
             "URL": "https://github.com/hexatester/sdgs-tools",
             "Created": "2021-05-26T02:42:46Z",
             "Updated": "2023-02-28T14:34:47Z",
@@ -726,7 +769,9 @@
             "Forks": 4,
             "Watchers": 3,
             "Languages": [
-                  "Python"
+                  {
+                        "Python": 100.0
+                  }
             ],
             "Tags": [
                   "kemendesa",
@@ -748,6 +793,7 @@
       {
             "Name": "incentives",
             "Owner": "unicef",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/175849?v=4",
             "URL": "https://github.com/unicef/incentives",
             "Created": "2020-06-26T18:06:46Z",
             "Updated": "2023-11-25T22:10:17Z",
@@ -757,7 +803,9 @@
             "Stars": 5,
             "Forks": 1,
             "Watchers": 10,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "digital-public-goods",
                   "public-good",
@@ -780,6 +828,7 @@
       {
             "Name": "publicgoods-roadmap",
             "Owner": "unicef",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/175849?v=4",
             "URL": "https://github.com/unicef/publicgoods-roadmap",
             "Created": "2020-10-30T17:34:35Z",
             "Updated": "2023-11-25T22:42:14Z",
@@ -789,7 +838,9 @@
             "Stars": 4,
             "Forks": 0,
             "Watchers": 5,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "digital-public-goods",
                   "dpg",
@@ -811,6 +862,7 @@
       {
             "Name": "Wele-Course",
             "Owner": "nandaprasetya",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/98160920?v=4",
             "URL": "https://github.com/nandaprasetya/Wele-Course",
             "Created": "2022-09-16T07:25:38Z",
             "Updated": "2023-01-07T06:49:36Z",
@@ -821,9 +873,11 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS"
+                  {
+                        "JavaScript": 82.8,
+                        "HTML": 11.8,
+                        "CSS": 5.4
+                  }
             ],
             "Tags": [
                   "aos",
@@ -850,6 +904,7 @@
       {
             "Name": "mipa",
             "Owner": "collective-change",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/72839893?v=4",
             "URL": "https://github.com/collective-change/mipa",
             "Created": "2019-07-29T01:37:15Z",
             "Updated": "2023-11-25T22:25:16Z",
@@ -860,12 +915,14 @@
             "Forks": 2,
             "Watchers": 2,
             "Languages": [
-                  "Vue",
-                  "JavaScript",
-                  "TypeScript",
-                  "HTML",
-                  "Stylus",
-                  "Shell"
+                  {
+                        "Vue": 61.9,
+                        "JavaScript": 37.3,
+                        "TypeScript": 0.4,
+                        "HTML": 0.3,
+                        "Stylus": 0.1,
+                        "Shell": 0.0
+                  }
             ],
             "Tags": [
                   "climate-change",
@@ -905,6 +962,7 @@
       {
             "Name": "sdg_661_analysis_and_reporting",
             "Owner": "datasciencecampus",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/25666867?v=4",
             "URL": "https://github.com/datasciencecampus/sdg_661_analysis_and_reporting",
             "Created": "2020-08-07T09:31:50Z",
             "Updated": "2023-10-12T12:05:50Z",
@@ -915,8 +973,10 @@
             "Forks": 3,
             "Watchers": 3,
             "Languages": [
-                  "Jupyter Notebook",
-                  "Python"
+                  {
+                        "Jupyter Notebook": 78.3,
+                        "Python": 21.7
+                  }
             ],
             "Tags": [
                   "dsc-projects",
@@ -947,6 +1007,7 @@
       {
             "Name": "BurdenOff",
             "Owner": "chrvaskos",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/35635270?v=4",
             "URL": "https://github.com/chrvaskos/BurdenOff",
             "Created": "2020-05-08T18:15:02Z",
             "Updated": "2020-10-15T16:45:27Z",
@@ -957,9 +1018,11 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "JavaScript",
-                  "CSS",
-                  "HTML"
+                  {
+                        "JavaScript": 96.2,
+                        "CSS": 2.1,
+                        "HTML": 1.6
+                  }
             ],
             "Tags": [
                   "burdenoff",
@@ -987,6 +1050,7 @@
       {
             "Name": "projectconnect-game",
             "Owner": "unicef",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/175849?v=4",
             "URL": "https://github.com/unicef/projectconnect-game",
             "Created": "2020-07-27T19:25:30Z",
             "Updated": "2023-12-07T15:38:35Z",
@@ -996,7 +1060,9 @@
             "Stars": 2,
             "Forks": 1,
             "Watchers": 10,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "schools",
                   "sdg",
@@ -1034,6 +1100,7 @@
       {
             "Name": "proof-of-SDGs-audit-with-NFT",
             "Owner": "masaun",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/19357502?v=4",
             "URL": "https://github.com/masaun/proof-of-SDGs-audit-with-NFT",
             "Created": "2022-06-12T07:31:58Z",
             "Updated": "2022-07-03T03:35:34Z",
@@ -1044,10 +1111,12 @@
             "Forks": 0,
             "Watchers": 2,
             "Languages": [
-                  "JavaScript",
-                  "TypeScript",
-                  "Solidity",
-                  "Shell"
+                  {
+                        "JavaScript": 44.2,
+                        "TypeScript": 41.3,
+                        "Solidity": 13.6,
+                        "Shell": 0.9
+                  }
             ],
             "Tags": [
                   "ethersjs",
@@ -1071,6 +1140,7 @@
       {
             "Name": "SustainabilityResearchFinder",
             "Owner": "USC-Office-of-Sustainability",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/107232020?v=4",
             "URL": "https://github.com/USC-Office-of-Sustainability/SustainabilityResearchFinder",
             "Created": "2022-08-05T23:15:17Z",
             "Updated": "2024-01-12T18:34:32Z",
@@ -1081,8 +1151,10 @@
             "Forks": 2,
             "Watchers": 3,
             "Languages": [
-                  "R",
-                  "CSS"
+                  {
+                        "R": 98.9,
+                        "CSS": 1.1
+                  }
             ],
             "Tags": [
                   "dashboard",
@@ -1126,6 +1198,7 @@
       {
             "Name": "SDGs_many_BERTs",
             "Owner": "rbrtjwrk",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/73638117?v=4",
             "URL": "https://github.com/rbrtjwrk/SDGs_many_BERTs",
             "Created": "2021-06-24T12:54:26Z",
             "Updated": "2023-07-11T10:39:37Z",
@@ -1136,7 +1209,9 @@
             "Forks": 2,
             "Watchers": 2,
             "Languages": [
-                  "Python"
+                  {
+                        "Python": 100.0
+                  }
             ],
             "Tags": [
                   "bert",
@@ -1161,6 +1236,7 @@
       {
             "Name": "sdg-strings",
             "Owner": "SDGforskning",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/90448089?v=4",
             "URL": "https://github.com/SDGforskning/sdg-strings",
             "Created": "2021-09-10T09:53:47Z",
             "Updated": "2023-11-14T11:02:38Z",
@@ -1171,7 +1247,9 @@
             "Forks": 4,
             "Watchers": 1,
             "Languages": [
-                  "Jupyter Notebook"
+                  {
+                        "Jupyter Notebook": 100.0
+                  }
             ],
             "Tags": [
                   "sdg",
@@ -1215,6 +1293,7 @@
       {
             "Name": "proco-map-app",
             "Owner": "lacabra",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/6098973?v=4",
             "URL": "https://github.com/lacabra/proco-map-app",
             "Created": "2020-08-15T06:36:56Z",
             "Updated": "2023-07-18T09:12:31Z",
@@ -1225,8 +1304,10 @@
             "Forks": 8,
             "Watchers": 5,
             "Languages": [
-                  "JavaScript",
-                  "CSS"
+                  {
+                        "JavaScript": 92.4,
+                        "CSS": 7.6
+                  }
             ],
             "Tags": [
                   "schools",
@@ -1270,6 +1351,7 @@
       {
             "Name": "SDGStarterPack",
             "Owner": "SalesforceLabs",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/632441?v=4",
             "URL": "https://github.com/SalesforceLabs/SDGStarterPack",
             "Created": "2023-10-06T16:04:27Z",
             "Updated": "2023-10-30T16:43:22Z",
@@ -1280,7 +1362,9 @@
             "Forks": 1,
             "Watchers": 5,
             "Languages": [
-                  "Apex"
+                  {
+                        "Apex": 100.0
+                  }
             ],
             "Tags": [
                   "salesforce",
@@ -1310,6 +1394,7 @@
       {
             "Name": "17-SDGs-UN-Sustainable-Development-Goals",
             "Owner": "carlpat86",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/111691115?v=4",
             "URL": "https://github.com/carlpat86/17-SDGs-UN-Sustainable-Development-Goals",
             "Created": "2023-01-03T10:59:16Z",
             "Updated": "2023-05-18T03:53:54Z",
@@ -1319,7 +1404,9 @@
             "Stars": 1,
             "Forks": 1,
             "Watchers": 2,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "17-sdgs",
                   "artificial-intelligence",
@@ -1346,6 +1433,7 @@
       {
             "Name": "report-policingthepolice",
             "Owner": "360-info",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/94821953?v=4",
             "URL": "https://github.com/360-info/report-policingthepolice",
             "Created": "2023-06-09T00:23:05Z",
             "Updated": "2023-09-18T16:37:38Z",
@@ -1355,7 +1443,9 @@
             "Stars": 1,
             "Forks": 0,
             "Watchers": 2,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "police",
                   "police-brutality",
@@ -1379,6 +1469,7 @@
       {
             "Name": "westand",
             "Owner": "Vortrix5",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/30868937?v=4",
             "URL": "https://github.com/Vortrix5/westand",
             "Created": "2019-08-03T20:13:30Z",
             "Updated": "2023-11-25T22:25:25Z",
@@ -1389,9 +1480,11 @@
             "Forks": 0,
             "Watchers": 2,
             "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS"
+                  {
+                        "JavaScript": 96.1,
+                        "HTML": 3.1,
+                        "CSS": 0.8
+                  }
             ],
             "Tags": [
                   "education",
@@ -1420,6 +1513,7 @@
       {
             "Name": "Indicator_11.7.1",
             "Owner": "n-verde",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/24439371?v=4",
             "URL": "https://github.com/n-verde/Indicator_11.7.1",
             "Created": "2023-09-19T08:47:09Z",
             "Updated": "2023-11-25T22:25:31Z",
@@ -1430,7 +1524,9 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "Jupyter Notebook"
+                  {
+                        "Jupyter Notebook": 100.0
+                  }
             ],
             "Tags": [
                   "deep-learning",
@@ -1457,6 +1553,7 @@
       {
             "Name": "LivingWage.KE",
             "Owner": "CodeForAfrica",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/2786364?v=4",
             "URL": "https://github.com/CodeForAfrica/LivingWage.KE",
             "Created": "2019-02-11T09:19:39Z",
             "Updated": "2020-04-23T12:47:49Z",
@@ -1467,10 +1564,12 @@
             "Forks": 4,
             "Watchers": 10,
             "Languages": [
-                  "HTML",
-                  "JavaScript",
-                  "CSS",
-                  "Ruby"
+                  {
+                        "HTML": 65.8,
+                        "JavaScript": 23.4,
+                        "CSS": 8.4,
+                        "Ruby": 2.4
+                  }
             ],
             "Tags": [
                   "africa",
@@ -1523,6 +1622,7 @@
       {
             "Name": "report-sinking-cities",
             "Owner": "360-info",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/94821953?v=4",
             "URL": "https://github.com/360-info/report-sinking-cities",
             "Created": "2023-03-23T01:01:26Z",
             "Updated": "2023-11-25T22:25:43Z",
@@ -1533,10 +1633,12 @@
             "Forks": 0,
             "Watchers": 3,
             "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS",
-                  "SCSS"
+                  {
+                        "JavaScript": 80.5,
+                        "HTML": 17.3,
+                        "CSS": 2.1,
+                        "SCSS": 0.1
+                  }
             ],
             "Tags": [
                   "deck-gl",
@@ -1563,6 +1665,7 @@
       {
             "Name": "Build4SocialGood",
             "Owner": "techrityorg",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/71650669?v=4",
             "URL": "https://github.com/techrityorg/Build4SocialGood",
             "Created": "2020-11-28T08:20:29Z",
             "Updated": "2023-07-18T09:03:39Z",
@@ -1573,11 +1676,13 @@
             "Forks": 8,
             "Watchers": 3,
             "Languages": [
-                  "JavaScript",
-                  "Vue",
-                  "CSS",
-                  "SCSS",
-                  "HTML"
+                  {
+                        "JavaScript": 68.6,
+                        "Vue": 17.2,
+                        "CSS": 9.1,
+                        "SCSS": 3.8,
+                        "HTML": 1.3
+                  }
             ],
             "Tags": [
                   "build4socialgood",
@@ -1624,6 +1729,7 @@
       {
             "Name": "report-global-education",
             "Owner": "360-info",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/94821953?v=4",
             "URL": "https://github.com/360-info/report-global-education",
             "Created": "2022-03-15T01:24:55Z",
             "Updated": "2022-05-19T06:53:16Z",
@@ -1634,10 +1740,12 @@
             "Forks": 0,
             "Watchers": 2,
             "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS",
-                  "SCSS"
+                  {
+                        "JavaScript": 73.8,
+                        "HTML": 24.6,
+                        "CSS": 1.6,
+                        "SCSS": 0.1
+                  }
             ],
             "Tags": [
                   "education",
@@ -1666,6 +1774,7 @@
       {
             "Name": "SkillBridge",
             "Owner": "Roht5",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/90822140?v=4",
             "URL": "https://github.com/Roht5/SkillBridge",
             "Created": "2023-04-01T06:41:53Z",
             "Updated": "2023-04-16T19:08:41Z",
@@ -1676,14 +1785,16 @@
             "Forks": 0,
             "Watchers": 0,
             "Languages": [
-                  "C++",
-                  "CMake",
-                  "Dart",
-                  "HTML",
-                  "C",
-                  "Swift",
-                  "Kotlin",
-                  "Objective-C"
+                  {
+                        "C++": 44.0,
+                        "CMake": 36.4,
+                        "Dart": 10.7,
+                        "HTML": 3.6,
+                        "C": 2.8,
+                        "Swift": 2.2,
+                        "Kotlin": 0.2,
+                        "Objective-C": 0.1
+                  }
             ],
             "Tags": [
                   "decent-work",
@@ -1713,6 +1824,7 @@
       {
             "Name": "Project-UMEED",
             "Owner": "m0h4mm3d-bf",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/82308038?v=4",
             "URL": "https://github.com/m0h4mm3d-bf/Project-UMEED",
             "Created": "2021-10-01T14:28:42Z",
             "Updated": "2021-10-03T17:16:46Z",
@@ -1723,12 +1835,14 @@
             "Forks": 0,
             "Watchers": 2,
             "Languages": [
-                  "JavaScript",
-                  "CSS",
-                  "HTML",
-                  "SCSS",
-                  "Less",
-                  "Ruby"
+                  {
+                        "JavaScript": 61.3,
+                        "CSS": 16.4,
+                        "HTML": 13.8,
+                        "SCSS": 4.4,
+                        "Less": 4.0,
+                        "Ruby": 0.1
+                  }
             ],
             "Tags": [
                   "2030",
@@ -1764,6 +1878,7 @@
       {
             "Name": "SDGs_Global_Trade",
             "Owner": "Yingjie4Science",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/40079217?v=4",
             "URL": "https://github.com/Yingjie4Science/SDGs_Global_Trade",
             "Created": "2020-05-07T17:44:24Z",
             "Updated": "2022-12-09T04:38:35Z",
@@ -1774,7 +1889,9 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "R"
+                  {
+                        "R": 100.0
+                  }
             ],
             "Tags": [
                   "r",
@@ -1798,6 +1915,7 @@
       {
             "Name": "sdg-15-4-2",
             "Owner": "ONSgeo",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/61699468?v=4",
             "URL": "https://github.com/ONSgeo/sdg-15-4-2",
             "Created": "2021-08-03T11:00:41Z",
             "Updated": "2021-09-17T11:10:59Z",
@@ -1807,7 +1925,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "earth-observation",
                   "geospatial",
@@ -1831,6 +1951,7 @@
       {
             "Name": ".github",
             "Owner": "spdci",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/126883677?v=4",
             "URL": "https://github.com/spdci/.github",
             "Created": "2023-03-06T15:16:00Z",
             "Updated": "2023-03-06T16:17:26Z",
@@ -1840,7 +1961,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 0,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "innovation",
                   "interoperability",
@@ -1864,6 +1987,7 @@
       {
             "Name": "New-RecycleGrabs",
             "Owner": "slightlybae",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/45470819?v=4",
             "URL": "https://github.com/slightlybae/New-RecycleGrabs",
             "Created": "2022-02-16T10:26:00Z",
             "Updated": "2023-10-22T11:47:42Z",
@@ -1874,9 +1998,11 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "HTML",
-                  "CSS",
-                  "JavaScript"
+                  {
+                        "HTML": 83.5,
+                        "CSS": 16.1,
+                        "JavaScript": 0.4
+                  }
             ],
             "Tags": [
                   "environment",
@@ -1898,6 +2024,7 @@
       {
             "Name": "Bawat_Patak",
             "Owner": "Dnzldotexe",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/104302220?v=4",
             "URL": "https://github.com/Dnzldotexe/Bawat_Patak",
             "Created": "2023-06-15T07:44:16Z",
             "Updated": "2023-06-27T07:01:47Z",
@@ -1908,8 +2035,10 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "Jupyter Notebook",
-                  "Python"
+                  {
+                        "Jupyter Notebook": 72.5,
+                        "Python": 27.5
+                  }
             ],
             "Tags": [
                   "conservation",
@@ -1932,6 +2061,7 @@
       {
             "Name": "Indicator_15.4.2",
             "Owner": "n-verde",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/24439371?v=4",
             "URL": "https://github.com/n-verde/Indicator_15.4.2",
             "Created": "2023-09-19T08:21:07Z",
             "Updated": "2023-09-21T07:41:06Z",
@@ -1942,8 +2072,10 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "Jupyter Notebook",
-                  "JavaScript"
+                  {
+                        "Jupyter Notebook": 81.3,
+                        "JavaScript": 18.7
+                  }
             ],
             "Tags": [
                   "corine-land-cover",
@@ -1969,86 +2101,9 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "calender",
-            "Owner": "kode28003",
-            "URL": "https://github.com/kode28003/calender",
-            "Created": "2021-11-29T04:01:55Z",
-            "Updated": "2023-01-10T05:10:57Z",
-            "Description": "SDGs & Calendar & ToDo List",
-            "Last Push Date": "2022-02-09T07:33:56Z",
-            "Latest Commit Date": "2022-02-09T07:33:52Z",
-            "Stars": 0,
-            "Forks": 0,
-            "Watchers": 1,
-            "Languages": [
-                  "Dart",
-                  "Swift",
-                  "Kotlin",
-                  "Objective-C"
-            ],
-            "Tags": [
-                  "calendar",
-                  "dart",
-                  "flutter",
-                  "sdgs"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "kode28003",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/95200820?v=4",
-                        "contributions": 56
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "report-antarctic-ice",
-            "Owner": "360-info",
-            "URL": "https://github.com/360-info/report-antarctic-ice",
-            "Created": "2024-01-08T04:16:18Z",
-            "Updated": "2024-01-21T22:45:31Z",
-            "Description": "Visualises the complex layers of ice that make up Antarctica.",
-            "Last Push Date": "2024-01-16T05:35:23Z",
-            "Latest Commit Date": "2024-01-16T05:25:14Z",
-            "Stars": 0,
-            "Forks": 0,
-            "Watchers": 1,
-            "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS",
-                  "SCSS",
-                  "Shell"
-            ],
-            "Tags": [
-                  "antarctic",
-                  "antarctica",
-                  "climate-change",
-                  "glacier",
-                  "ice-shelf",
-                  "ice-shelves",
-                  "sdg13",
-                  "sdgs",
-                  "sea-ice"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "jimjam-slam",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
-                        "contributions": 24
-                  }
-            ],
-            "Status": "Active",
-            "Newcomer Friendly": false
-      },
-      {
             "Name": "stake-based-booking",
             "Owner": "masaun",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/19357502?v=4",
             "URL": "https://github.com/masaun/stake-based-booking",
             "Created": "2020-04-25T02:26:28Z",
             "Updated": "2020-04-26T14:41:26Z",
@@ -2059,9 +2114,11 @@
             "Forks": 0,
             "Watchers": 3,
             "Languages": [
-                  "JavaScript",
-                  "CSS",
-                  "HTML"
+                  {
+                        "JavaScript": 77.9,
+                        "CSS": 18.0,
+                        "HTML": 4.2
+                  }
             ],
             "Tags": [
                   "reactjs",
@@ -2085,6 +2142,7 @@
       {
             "Name": "scouts-por-los-ods",
             "Owner": "sagudelo1200",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/60363274?v=4",
             "URL": "https://github.com/sagudelo1200/scouts-por-los-ods",
             "Created": "2024-01-13T01:50:47Z",
             "Updated": "2024-01-13T01:56:43Z",
@@ -2094,7 +2152,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "asc",
                   "cambiarelmundo",
@@ -2118,8 +2178,130 @@
             "Newcomer Friendly": false
       },
       {
+            "Name": "calender",
+            "Owner": "kode28003",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/95200820?v=4",
+            "URL": "https://github.com/kode28003/calender",
+            "Created": "2021-11-29T04:01:55Z",
+            "Updated": "2023-01-10T05:10:57Z",
+            "Description": "SDGs & Calendar & ToDo List",
+            "Last Push Date": "2022-02-09T07:33:56Z",
+            "Latest Commit Date": "2022-02-09T07:33:52Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "Dart": 99.0,
+                        "Swift": 0.7,
+                        "Kotlin": 0.2,
+                        "Objective-C": 0.1
+                  }
+            ],
+            "Tags": [
+                  "calendar",
+                  "dart",
+                  "flutter",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "kode28003",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/95200820?v=4",
+                        "contributions": 56
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-antarctic-ice",
+            "Owner": "360-info",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/94821953?v=4",
+            "URL": "https://github.com/360-info/report-antarctic-ice",
+            "Created": "2024-01-08T04:16:18Z",
+            "Updated": "2024-01-21T22:45:31Z",
+            "Description": "Visualises the complex layers of ice that make up Antarctica.",
+            "Last Push Date": "2024-01-23T03:30:04Z",
+            "Latest Commit Date": "2024-01-23T03:30:04Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "JavaScript": 83.1,
+                        "HTML": 14.9,
+                        "CSS": 1.9,
+                        "SCSS": 0.0,
+                        "Shell": 0.0
+                  }
+            ],
+            "Tags": [
+                  "antarctic",
+                  "antarctica",
+                  "climate-change",
+                  "glacier",
+                  "ice-shelf",
+                  "ice-shelves",
+                  "sdg13",
+                  "sdgs",
+                  "sea-ice"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 26
+                  }
+            ],
+            "Status": "Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "dice",
+            "Owner": "edwardoughton",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/11899151?v=4",
+            "URL": "https://github.com/edwardoughton/dice",
+            "Created": "2021-12-06T14:53:47Z",
+            "Updated": "2023-05-26T12:56:45Z",
+            "Description": "Digital Infrastructure Cost Estimator (DICE)",
+            "Last Push Date": "2023-10-02T17:18:29Z",
+            "Latest Commit Date": "2023-10-02T17:18:26Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "Python": 66.9,
+                        "R": 33.1
+                  }
+            ],
+            "Tags": [
+                  "broadband",
+                  "economic-development",
+                  "infrastructure",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "edwardoughton",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/11899151?v=4",
+                        "contributions": 99
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
             "Name": "201911_dataset",
             "Owner": "robertolofaro",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/7221816?v=4",
             "URL": "https://github.com/robertolofaro/201911_dataset",
             "Created": "2019-12-07T18:59:52Z",
             "Updated": "2020-01-25T15:28:52Z",
@@ -2130,7 +2312,9 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "R"
+                  {
+                        "R": 100.0
+                  }
             ],
             "Tags": [
                   "company",
@@ -2155,6 +2339,7 @@
       {
             "Name": "Air-O-Analysis",
             "Owner": "The-Open-Source-Club",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/59640059?v=4",
             "URL": "https://github.com/The-Open-Source-Club/Air-O-Analysis",
             "Created": "2020-01-19T13:45:58Z",
             "Updated": "2021-03-20T10:47:50Z",
@@ -2165,9 +2350,11 @@
             "Forks": 0,
             "Watchers": 2,
             "Languages": [
-                  "Python",
-                  "HTML",
-                  "CSS"
+                  {
+                        "Python": 41.3,
+                        "HTML": 37.5,
+                        "CSS": 21.1
+                  }
             ],
             "Tags": [
                   "air-quality",
@@ -2210,6 +2397,7 @@
       {
             "Name": "CLEAN-WATER-AND-SANITATION",
             "Owner": "Chidinma23",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/115046602?v=4",
             "URL": "https://github.com/Chidinma23/CLEAN-WATER-AND-SANITATION",
             "Created": "2023-04-21T18:09:27Z",
             "Updated": "2023-04-21T18:44:08Z",
@@ -2219,7 +2407,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "cholera",
                   "cleanwaterandsanitation",
@@ -2239,34 +2429,118 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "dice",
-            "Owner": "edwardoughton",
-            "URL": "https://github.com/edwardoughton/dice",
-            "Created": "2021-12-06T14:53:47Z",
-            "Updated": "2023-05-26T12:56:45Z",
-            "Description": "Digital Infrastructure Cost Estimator (DICE)",
-            "Last Push Date": "2023-10-02T17:18:29Z",
-            "Latest Commit Date": "2023-10-02T17:18:26Z",
+            "Name": "sdg-queries-evaluation-report",
+            "Owner": "Aurora-Network-Global",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/43465456?v=4",
+            "URL": "https://github.com/Aurora-Network-Global/sdg-queries-evaluation-report",
+            "Created": "2021-05-31T14:59:14Z",
+            "Updated": "2022-11-27T14:52:26Z",
+            "Description": "In this study we evaluate the accuracy of our Aurora SDG classification model version 5, to match research papers to the Sustainable Development Goals (SDG's) of the United Nations. The aim of this investigation is to be transparent about the accuracy of the model, because this model might get used in reporting and strategy analysis by University leadership. The measurements are based on a baseline, 'golden set', where researchers of the Aurora universities handpicked publications that relate to an SDG. We measured the Precision and Recall of the Aurora model, and relating it to our previous version of the model, and to the Elsevier SDG model.",
+            "Last Push Date": "2021-06-10T14:25:57Z",
+            "Latest Commit Date": "2021-06-10T14:22:56Z",
             "Stars": 0,
             "Forks": 0,
-            "Watchers": 1,
+            "Watchers": 3,
             "Languages": [
-                  "Python",
-                  "R"
+                  {
+                        "TeX": 100.0
+                  }
             ],
             "Tags": [
-                  "broadband",
-                  "economic-development",
-                  "infrastructure",
+                  "accuracy",
+                  "bibliometrics",
+                  "precision",
+                  "recall",
+                  "sdg",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 1,
+            "Top 5 Contributors": [
+                  {
+                        "login": "mosart",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/4525827?v=4",
+                        "contributions": 16
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "report-revivingoceans",
+            "Owner": "360-info",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/94821953?v=4",
+            "URL": "https://github.com/360-info/report-revivingoceans",
+            "Created": "2022-05-20T03:44:52Z",
+            "Updated": "2022-06-06T02:33:40Z",
+            "Description": "Visualises reported fishing catch globally over the last 70 years, as well as estimates of illegal fishing and discarded fish.",
+            "Last Push Date": "2022-06-07T00:10:39Z",
+            "Latest Commit Date": "2022-06-07T00:10:39Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  {
+                        "JavaScript": 94.8,
+                        "HTML": 4.0,
+                        "CSS": 1.2,
+                        "SCSS": 0.1
+                  }
+            ],
+            "Tags": [
+                  "fish",
+                  "fishing",
+                  "iuu-fishing",
+                  "quarto",
+                  "r",
+                  "rstats",
+                  "sdg-14",
+                  "sdg-data",
+                  "sdg-life-below-water",
                   "sdgs"
             ],
             "Open PRs": 0,
             "Open Issues": 0,
             "Top 5 Contributors": [
                   {
-                        "login": "edwardoughton",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/11899151?v=4",
-                        "contributions": 99
+                        "login": "jimjam-slam",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
+                        "contributions": 41
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "DatSciTrain_SDGs_API",
+            "Owner": "lucashertzog",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/125840911?v=4",
+            "URL": "https://github.com/lucashertzog/DatSciTrain_SDGs_API",
+            "Created": "2023-09-22T06:32:20Z",
+            "Updated": "2024-01-22T02:56:45Z",
+            "Description": "Functions in R to interact with Global SDG Indicators Database using the UN Stats SDG API",
+            "Last Push Date": "2023-09-22T06:33:25Z",
+            "Latest Commit Date": "2023-09-22T06:33:22Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "R": 100.0
+                  }
+            ],
+            "Tags": [
+                  "api",
+                  "sdgs",
+                  "united-nations"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "lucashertzog",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/125840911?v=4",
+                        "contributions": 2
                   }
             ],
             "Status": "Not Active",
@@ -2275,6 +2549,7 @@
       {
             "Name": "comunitas",
             "Owner": "jpaulet",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/6894329?v=4",
             "URL": "https://github.com/jpaulet/comunitas",
             "Created": "2020-02-24T17:00:20Z",
             "Updated": "2023-03-25T06:59:07Z",
@@ -2285,10 +2560,12 @@
             "Forks": 1,
             "Watchers": 2,
             "Languages": [
-                  "Vue",
-                  "CSS",
-                  "JavaScript",
-                  "HTML"
+                  {
+                        "Vue": 82.6,
+                        "CSS": 13.5,
+                        "JavaScript": 3.8,
+                        "HTML": 0.2
+                  }
             ],
             "Tags": [
                   "blockchain",
@@ -2311,6 +2588,7 @@
       {
             "Name": "Hackathon-WarehouseIV",
             "Owner": "wenwen357951",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/20616345?v=4",
             "URL": "https://github.com/wenwen357951/Hackathon-WarehouseIV",
             "Created": "2021-07-13T08:34:33Z",
             "Updated": "2021-07-26T12:04:47Z",
@@ -2321,10 +2599,12 @@
             "Forks": 2,
             "Watchers": 2,
             "Languages": [
-                  "PHP",
-                  "Blade",
-                  "Shell",
-                  "Makefile"
+                  {
+                        "PHP": 76.1,
+                        "Blade": 22.7,
+                        "Shell": 0.8,
+                        "Makefile": 0.4
+                  }
             ],
             "Tags": [
                   "hackathon",
@@ -2354,6 +2634,7 @@
       {
             "Name": "lost-generation",
             "Owner": "akuroiwa",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/8307714?v=4",
             "URL": "https://github.com/akuroiwa/lost-generation",
             "Created": "2023-05-13T11:57:41Z",
             "Updated": "2023-06-01T11:37:34Z",
@@ -2363,7 +2644,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 2,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "economics",
                   "politics",
@@ -2382,117 +2665,9 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "sdg-queries-evaluation-report",
-            "Owner": "Aurora-Network-Global",
-            "URL": "https://github.com/Aurora-Network-Global/sdg-queries-evaluation-report",
-            "Created": "2021-05-31T14:59:14Z",
-            "Updated": "2022-11-27T14:52:26Z",
-            "Description": "In this study we evaluate the accuracy of our Aurora SDG classification model version 5, to match research papers to the Sustainable Development Goals (SDG's) of the United Nations. The aim of this investigation is to be transparent about the accuracy of the model, because this model might get used in reporting and strategy analysis by University leadership. The measurements are based on a baseline, 'golden set', where researchers of the Aurora universities handpicked publications that relate to an SDG. We measured the Precision and Recall of the Aurora model, and relating it to our previous version of the model, and to the Elsevier SDG model.",
-            "Last Push Date": "2021-06-10T14:25:57Z",
-            "Latest Commit Date": "2021-06-10T14:22:56Z",
-            "Stars": 0,
-            "Forks": 0,
-            "Watchers": 3,
-            "Languages": [
-                  "TeX"
-            ],
-            "Tags": [
-                  "accuracy",
-                  "bibliometrics",
-                  "precision",
-                  "recall",
-                  "sdg",
-                  "sdgs"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 1,
-            "Top 5 Contributors": [
-                  {
-                        "login": "mosart",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/4525827?v=4",
-                        "contributions": 16
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "report-revivingoceans",
-            "Owner": "360-info",
-            "URL": "https://github.com/360-info/report-revivingoceans",
-            "Created": "2022-05-20T03:44:52Z",
-            "Updated": "2022-06-06T02:33:40Z",
-            "Description": "Visualises reported fishing catch globally over the last 70 years, as well as estimates of illegal fishing and discarded fish.",
-            "Last Push Date": "2022-06-07T00:10:39Z",
-            "Latest Commit Date": "2022-06-07T00:10:39Z",
-            "Stars": 0,
-            "Forks": 0,
-            "Watchers": 2,
-            "Languages": [
-                  "JavaScript",
-                  "HTML",
-                  "CSS",
-                  "SCSS"
-            ],
-            "Tags": [
-                  "fish",
-                  "fishing",
-                  "iuu-fishing",
-                  "quarto",
-                  "r",
-                  "rstats",
-                  "sdg-14",
-                  "sdg-data",
-                  "sdg-life-below-water",
-                  "sdgs"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "jimjam-slam",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
-                        "contributions": 41
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "DatSciTrain_SDGs_API",
-            "Owner": "lucashertzog",
-            "URL": "https://github.com/lucashertzog/DatSciTrain_SDGs_API",
-            "Created": "2023-09-22T06:32:20Z",
-            "Updated": "2024-01-22T02:56:45Z",
-            "Description": "Functions in R to interact with Global SDG Indicators Database using the UN Stats SDG API",
-            "Last Push Date": "2023-09-22T06:33:25Z",
-            "Latest Commit Date": "2023-09-22T06:33:22Z",
-            "Stars": 0,
-            "Forks": 0,
-            "Watchers": 1,
-            "Languages": [
-                  "R"
-            ],
-            "Tags": [
-                  "api",
-                  "sdgs",
-                  "united-nations"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "lucashertzog",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/125840911?v=4",
-                        "contributions": 2
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
             "Name": "MastersThesis",
             "Owner": "taetscher",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/24844442?v=4",
             "URL": "https://github.com/taetscher/MastersThesis",
             "Created": "2019-08-23T12:33:59Z",
             "Updated": "2021-01-05T09:59:26Z",
@@ -2502,7 +2677,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 2,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "big-data",
                   "bigdata",
@@ -2526,6 +2703,7 @@
       {
             "Name": "SDGs_China",
             "Owner": "Yingjie4Science",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/40079217?v=4",
             "URL": "https://github.com/Yingjie4Science/SDGs_China",
             "Created": "2021-08-07T19:50:18Z",
             "Updated": "2022-12-08T01:02:20Z",
@@ -2536,7 +2714,9 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "R"
+                  {
+                        "R": 100.0
+                  }
             ],
             "Tags": [
                   "china",
@@ -2558,6 +2738,7 @@
       {
             "Name": "sunwise",
             "Owner": "Hassankassim",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/114056773?v=4",
             "URL": "https://github.com/Hassankassim/sunwise",
             "Created": "2023-04-01T20:29:14Z",
             "Updated": "2023-04-02T07:42:45Z",
@@ -2568,10 +2749,12 @@
             "Forks": 0,
             "Watchers": 1,
             "Languages": [
-                  "CSS",
-                  "HTML",
-                  "JavaScript",
-                  "C++"
+                  {
+                        "CSS": 95.0,
+                        "HTML": 4.1,
+                        "JavaScript": 0.4,
+                        "C++": 0.4
+                  }
             ],
             "Tags": [
                   "ardiuno",
@@ -2595,6 +2778,7 @@
       {
             "Name": "TrustSDG",
             "Owner": "ravivanpong",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/55481810?v=4",
             "URL": "https://github.com/ravivanpong/TrustSDG",
             "Created": "2023-04-04T14:52:35Z",
             "Updated": "2023-04-04T14:54:00Z",
@@ -2604,7 +2788,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "classification",
                   "nlp",
@@ -2627,6 +2813,7 @@
       {
             "Name": "sdg-6-3-1",
             "Owner": "ONSgeo",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/61699468?v=4",
             "URL": "https://github.com/ONSgeo/sdg-6-3-1",
             "Created": "2021-08-06T08:16:02Z",
             "Updated": "2023-07-08T13:12:49Z",
@@ -2636,7 +2823,9 @@
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
-            "Languages": [],
+            "Languages": [
+                  {}
+            ],
             "Tags": [
                   "geospatial",
                   "sdg-6-3-1",

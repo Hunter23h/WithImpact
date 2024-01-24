@@ -63,7 +63,7 @@ class ProjectList(APIView):
             languages = [language.strip() for language in languages_list.split(",")]
             language_filters = Q()
             for language in languages:
-                language_filters &= Q(languages__contains=[language])
+                language_filters &= Q(languages__0__has_key=language)
             projects = projects.filter(language_filters)
         
         if search_query:

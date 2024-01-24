@@ -2,28 +2,31 @@
       {
             "Name": "public",
             "Owner": "socialincome-san",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/62818972?v=4",
             "URL": "https://github.com/socialincome-san/public",
             "Created": "2022-08-14T15:40:39Z",
-            "Updated": "2024-01-19T09:09:25Z",
+            "Updated": "2024-01-23T12:17:53Z",
             "Description": "Fighting global poverty with the help of everyday people and your coding skills. Public repository of the NGO and global initiative Social Income.",
-            "Last Push Date": "2024-01-22T10:12:18Z",
+            "Last Push Date": "2024-01-23T09:07:58Z",
             "Latest Commit Date": "2024-01-22T10:04:15Z",
-            "Stars": 54,
-            "Forks": 19,
+            "Stars": 55,
+            "Forks": 20,
             "Watchers": 12,
             "Languages": [
-                  "TypeScript",
-                  "Dart",
-                  "Handlebars",
-                  "CSS",
-                  "MDX",
-                  "Ruby",
-                  "HTML",
-                  "Shell",
-                  "JavaScript",
-                  "Swift",
-                  "Kotlin",
-                  "Objective-C"
+                  {
+                        "TypeScript": 68.0,
+                        "Dart": 27.2,
+                        "Handlebars": 3.7,
+                        "CSS": 0.3,
+                        "MDX": 0.2,
+                        "Ruby": 0.2,
+                        "HTML": 0.1,
+                        "Shell": 0.1,
+                        "JavaScript": 0.1,
+                        "Swift": 0.0,
+                        "Kotlin": 0.0,
+                        "Objective-C": 0.0
+                  }
             ],
             "Tags": [
                   "css",
@@ -35,8 +38,8 @@
                   "storybook",
                   "vite"
             ],
-            "Open PRs": 4,
-            "Open Issues": 70,
+            "Open PRs": 5,
+            "Open Issues": 71,
             "Top 5 Contributors": [
                   {
                         "login": "MDikkii",

@@ -80,7 +80,7 @@ def update_database_from_json(cursor, filename, connection):
             for repo_data in data:
                 update_query = """
                     UPDATE backend_project 
-                    SET name = %s, owner = %s, repo_url = %s, created_date = %s, 
+                    SET name = %s, owner = %s, repo_url = %s, owner_avatar = %s, created_date = %s, 
                         updated_date = %s, description = %s, last_push_date = %s, 
                         latest_commit_date = %s, stars = %s, forks = %s, watchers = %s, 
                         languages = %s, tags = %s, open_prs = %s, open_issues = %s, 
@@ -89,7 +89,7 @@ def update_database_from_json(cursor, filename, connection):
                 """
 
                 cursor.execute(update_query,
-                (repo_data['Name'], repo_data['Owner'],repo_data['URL'], repo_data['Created'],repo_data['Updated'], repo_data['Description'],
+                (repo_data['Name'], repo_data['Owner'],repo_data['URL'], repo_data['Owner Avatar'], repo_data['Created'],repo_data['Updated'], repo_data['Description'],
                  repo_data['Last Push Date'], repo_data['Latest Commit Date'],repo_data['Stars'], repo_data['Forks'],repo_data['Watchers'], Json(repo_data['Languages']),
                  Json(repo_data['Tags']), repo_data['Open PRs'],repo_data['Open Issues'], Json(repo_data['Top 5 Contributors']),repo_data['Status'], repo_data['Newcomer Friendly'], repo_data['URL']))
 

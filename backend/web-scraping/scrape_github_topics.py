@@ -24,9 +24,9 @@ def get_languages(url):
     response = requests.get(url, headers=headers)
     resp_dict = response.json()
     languages = []
-    #print(resp_dict) # prints language and how many bytes of code for each (can use to make the metric)
-    for key in (resp_dict.keys()):
-        languages.append(key)
+    total = sum(resp_dict.values())
+    lang_percent_dict = {key: round((value / total) * 100, 1) for key, value in resp_dict.items()}
+    languages.append(lang_percent_dict)
     return languages
 
 def get_latest_commit(url):
@@ -136,6 +136,7 @@ def check_newcomer_friendly_status(repo_name): #uses community standards for now
 def print_repo_metrics(repo_dict, repo):
     print('Name:', repo_dict['name'])  #print the project's name
     print('Owner:', repo_dict['owner']['login'])  #use the key owner and the the key login to get the dictionary describing the owner and the owner’s login name respectively.
+    print('Owner Avatar', repo_dict['owner']['avatar_url'])
     print('Stars:', repo_dict['stargazers_count'])  #print how many stars the project has earned
     print('Forks:', repo_dict['forks_count'])
     print('Watchers:', repo_dict['subscribers_count'])
@@ -169,6 +170,7 @@ def repo_metrics_to_dict(repo_dict, repo):
     all_repos_dict = {}
     all_repos_dict["Name"] = repo_dict['name']
     all_repos_dict["Owner"] = repo_dict['owner']['login']
+    all_repos_dict["Owner Avatar"] = repo_dict['owner']['avatar_url']
     all_repos_dict["URL"] = repo_dict['html_url']
     all_repos_dict["Created"] = repo_dict['created_at']
     all_repos_dict["Updated"] = repo_dict['updated_at']

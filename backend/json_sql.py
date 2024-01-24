@@ -38,11 +38,11 @@ def insert_into_postgresql(data, table_name, connection_params):
             if count == 0:
                 # Repository does not exist, proceed with insertion
                 cursor.execute(
-                f"INSERT INTO {table_name} (name, owner, repo_url, created_date, updated_date, "
+                f"INSERT INTO {table_name} (name, owner, repo_url, owner_avatar, created_date, updated_date, "
                 "description, last_push_date, latest_commit_date, stars, forks, watchers, languages, "
                 "tags, open_prs, open_issues, top_contributors, status, newcomer_friendly)"
-                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
-                (record['Name'], record['Owner'],record['URL'], record['Created'],record['Updated'], record['Description'],
+                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", 
+                (record['Name'], record['Owner'],record['URL'], record['Owner Avatar'], record['Created'],record['Updated'], record['Description'],
                  record['Last Push Date'], record['Latest Commit Date'],record['Stars'], record['Forks'],record['Watchers'], Json(record['Languages']),
                  Json(record['Tags']), record['Open PRs'],record['Open Issues'], Json(record['Top 5 Contributors']),record['Status'], record['Newcomer Friendly'])
                 )
