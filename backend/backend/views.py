@@ -32,6 +32,7 @@ class ProjectList(APIView):
 
     def get(self, request, format=None):
 
+
         #Filters
 
         newcomer_friendly = request.GET.get('newcomer_friendly', None)
@@ -72,6 +73,24 @@ class ProjectList(APIView):
                 Q(owner__icontains=search_query)
             )
             projects = projects.filter(search_filters)
+
+        #Sorting
+
+        sort_param = request.GET.get('sort', None)
+        if sort_param == 'popularity-desc':
+            projects = projects.order_by('-stars', '-forks', '-watchers')
+
+        if sort_param == 'popularity-asc':
+            projects = projects.order_by('stars', 'forks', 'watchers', 'id')
+
+        if sort_param == 'last-updated-desc':
+            projects = projects.order_by('-last_push_date')
+                                        
+        if sort_param == 'last-updated-asc':
+            projects = projects.order_by('last_push_date')
+        
+        if sort_param == 'alphabetical':
+            projects = projects.order_by('name', 'owner')
 
         
 
