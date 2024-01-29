@@ -11,6 +11,49 @@ from .serializers import ProjectsSerializer, UsersSerializer
 from rest_framework.pagination import PageNumberPagination
 from django.db.models import Q
 
+# views.py
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Project, User
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def toggle_favorite(request, name, owner):
+    project = get_object_or_404(Project, name=name, owner=owner)
+    user_profile = User.objects.get(username=request.user)
+
+    if request.method == 'POST':
+        # Handle like/unlike request
+        if 'like_button' in request.POST:
+            # Check if the JSONB field is null
+            if user_profile.favourite_projects is None:
+                user_profile.favourite_projects = [] # Initialize with an empty dictionary if it's null
+
+            value = project.repo_url
+            # Add data to the JSONB field
+
+            if value in user_profile.favourite_projects:
+                user_profile.favourite_projects.remove(project.repo_url)
+            else:
+                user_profile.favourite_projects.append(project.repo_url)
+
+            # Save the object
+            user_profile.save()
+
+            # if user_profile.favourite_projects is None:
+            #     user_profile.favourite_projects.create(project)
+            # elif project in user_profile.favourite_projects.all():
+            #     user_profile.favourite_projects.remove(project)
+            # else:
+            #     user_profile.favourite_projects.add(project)
+            # return redirect('project_detail', name=name, owner=owner)
+            print(project.repo_url)
+            print(user_profile.favourite_projects)
+            print(user_profile.username)
+
+    # return redirect('project_detail', name=name, owner=owner)
+    return render(request, 'backend/project_detail.html', {'project': project, 'user': user_profile})
+
+
 
 # class MyModelList(APIView):
 #     def get(self, request, format=None):
@@ -131,6 +174,9 @@ class UserList(APIView):
         user_serializer = UsersSerializer(users, many=True)
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
+    
+
+
     
 class Projects(APIView):
     def get(self, request, name, owner, format=None):

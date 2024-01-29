@@ -11,7 +11,7 @@
 
     </style>
 </head>
-
+{% load account %}
 <body>
     <h1>Project Detail</h1>
 
@@ -27,9 +27,9 @@
 
     <h3>SDG Categories:</h3>
     <ul>
-        {% for category in project.sdg_categories %}
-        <li>{{ category }}</li>
-        {% endfor %}
+        
+        <li>{{ project.sdg_categories }}</li>
+       
     </ul>
 
     <h3>Additional Details:</h3>
@@ -69,6 +69,21 @@
     </ul>
 
     <!-- Add any additional details you want to display -->
+    <h2>Favorite</h2>
+    {% if request.user.is_authenticated %}
+    <form method="post" action="{% url 'project_detail' owner=project.owner name=project.name %}">
+        {% csrf_token %}
+        <button type="submit" name="like_button">
+            {% if project.repo_url in user.favourite_projects %}
+            Unlike
+            {% else %}
+            Like
+            {% endif %}
+        </button>
+    </form>
+    {% else %}
+    <p>Login to like this project.</p>
+    {% endif %}
 </body>
 
 </html>
