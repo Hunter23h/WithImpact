@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -18,6 +18,16 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        title: "76px",
+        headings: "32px",
+        subheadings: "24px",
+        body: "18px",
+        labels: "12px",
+      },
+      fontFamily: {
+        outfit: ["var(--font-outfit)"],
+      },
       borderColor: {
         default: "#e5e7eb",
       },
@@ -31,12 +41,12 @@ module.exports = {
         sdgs: "clamp(300px, 100%, 400px)",
       },
       gridTemplateColumns: {
-        sdgs: "repeat(auto-fit, minmax(300px, max-content))",
+        sdgs: "repeat(auto-fit, minmax(180px, max-content))",
         md_sdgs: "repeat(auto-fit, minmax(200px, 1fr))",
         sm_sdgs: "repeat(auto-fit, minmax(150px, 1fr))",
       },
       minHeight: {
-        sdgs: "300px",
+        sdgs: "180px",
         md_sdgs: "200px",
         sm_sdgs: "150px",
       },
@@ -51,6 +61,7 @@ module.exports = {
           "box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset",
       },
       colors: {
+        primary2: "#094067",
         filters: "black",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -26,7 +26,7 @@ function Search() {
     <>
       <Input
         placeholder="Search projects, owners, sdg goals, etc..."
-        className=""
+        className="text-body"
         onChange={(e) => {
           handleSearch(e.target.value);
         }}

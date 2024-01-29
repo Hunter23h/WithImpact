@@ -11,6 +11,7 @@ export async function fetchProjects(search: string, page: string) {
       )}&search=${encodeURIComponent(search)}`
     );
     let data = await res.json();
+    console.log(data);
     return data;
   } catch (e) {
     console.log("fetch users error:", e);

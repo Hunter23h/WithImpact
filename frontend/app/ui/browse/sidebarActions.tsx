@@ -9,10 +9,10 @@ import Image from "next/image";
 function SidebarActions() {
   return (
     <>
-      <Container className="border-b-solid border-b-[2px] border-b-[white] flex flex-col gap-[30px] ">
+      <div className="border-b-solid border-b-[2px] border-b-[white] flex flex-col gap-[30px] ">
         <Sort />
         <Filters />
-      </Container>
+      </div>
     </>
   );
 }

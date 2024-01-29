@@ -85,7 +85,7 @@ function PageNav({ pageArray }: any) {
   }, [searchParams]);
 
   return (
-    <Pagination>
+    <Pagination className="py-[32px]">
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious onClick={() => btnPageChange(-1)} />
