@@ -1,38 +1,20 @@
 from django.dispatch import receiver
 from allauth.socialaccount.signals import social_account_added
-import psycopg2 
-import os
-@receiver(social_account_added)
-def on_social_account_added(sender, request, sociallogin, **kwargs):
-    if sociallogin.account.provider == 'github':
-        user = sociallogin.account.user
+from allauth.account.signals import user_signed_up
+from .models import User
 
-        dbname = os.getenv("DB_NAME")
-        dbuser = os.getenv("DB_USER")
-        dbpass = os.getenv("DB_PASS")
-        dbhost = os.getenv("DB_HOST")
-        dbport = os.getenv("DB_PORT")
+@receiver(user_signed_up)
+def on_user_sign_up(sender, request, user, **kwargs):
+    User.objects.create(username=user)
+    print("USED ADDED TO DB")
+    
+# @receiver(social_account_added)
+# def on_social_account_added(sender, request, sociallogin, **kwargs):
+#     if sociallogin.account.provider == 'github':
+#         # Extract the GitHub username from the social account data
+#         github_username = sociallogin.account.extra_data.get('login')
 
-    # Replace these values with your actual database connection details
-        connection_params = {
-        'dbname': dbname,
-        'user': dbuser,
-        'password': dbpass,
-        'host': dbhost,
-        'port': dbport
-        }
-        # Establish a connection to PostgreSQL
-        connection = psycopg2.connect(**connection_params)
-
-        # Create a cursor
-        cursor = connection.cursor()
-
-        # Repository does not exist, proceed with insertion
-        cursor.execute(
-        # f"INSERT into backend_user select username from auth_user where is_staff = false")
-            "INSERT INTO backend_user (username) VALUES (%s)", user)
-
-        # Commit changes and close the connection
-        connection.commit()
-        connection.close()
-        # print("Data inserted successfully.")
+#         # Create a new user with the GitHub username
+#         if github_username:
+#             User.objects.create(username=github_username)
+#             print("User created with GitHub username:", github_username)
