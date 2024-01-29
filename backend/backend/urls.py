@@ -26,4 +26,6 @@ urlpatterns = [
     path("getusers/", views.UserList.as_view(), name='user_list'),
     path("projects/<str:owner>/<str:name>", views.Projects.as_view(), name='project_detail'),
     path("users/<str:pk>/", views.Users.as_view(), name='user_detail'),
+    path("accounts/", include("allauth.urls")),
+    path("accounts/", include("allauth.socialaccount.urls"))
 ]

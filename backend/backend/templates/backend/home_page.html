@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+{% load account %}
 <head>
     <title>WithImpact</title>
 </head>
@@ -10,6 +10,13 @@
     <h2>
     <a href="{% url 'project_list' %}">Projects</a>
     </h2>
+
+    {% if request.user.is_authenticated %}
+
+        <h1>Welcome {% user_display user%}</h1>
+        
+
+    {%endif%}
 
 
     <!-- Add any additional details you want to display -->

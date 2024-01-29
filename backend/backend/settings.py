@@ -27,13 +27,17 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
+#GITHUB SECRETS
+GITHUB_CLIENT_ID = os.getenv("GITHUB_CLIENT_ID")
+GITHUB_SECRET = os.getenv("GITHUB_SECRET")
+
 ALLOWED_HOSTS = []
 
 CRONJOBS = [
-    ('0 0 * * *', 'web-scraping.update_repos.main'), #0 0 * * * = midnight
+    ("0 0 * * *", "web-scraping.update_repos.main"),  # 0 0 * * * = midnight
 ]
 
-TIME_ZONE = 'America/New_York'
+TIME_ZONE = "America/New_York"
 
 # Allow all origins during development; you may want to restrict this in production
 CORS_ALLOWED_ORIGINS = [
@@ -44,8 +48,8 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 40,
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 40,
 }
 
 # Application definition
@@ -61,7 +65,25 @@ INSTALLED_APPS = [
     "backend",
     "corsheaders",
     "django_crontab",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
 ]
+
+AUTHENTICATION_BACKENDS = ["allauth.account.auth_backends.AuthenticationBackend"]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'APP': {
+            'client_id': GITHUB_CLIENT_ID,
+            'secret': GITHUB_SECRET,
+            'key': '',
+        }
+    }
+}
+
+LOGIN_REDIRECT_URL = 'http://localhost:3000'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -71,7 +93,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware"
+    "corsheaders.middleware.CorsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 ROOT_URLCONF = "backend.urls"
 
@@ -102,7 +125,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
         "USER": "Kevin",
-        "PASSWORD": "3DEr>FM='YuZxefD", #TODO: have to put this in .env eventually
+        "PASSWORD": "3DEr>FM='YuZxefD",  # TODO: have to put this in .env eventually
         "HOST": "34.130.132.146",
         "PORT": "5432",
         "OPTIONS": {

@@ -11,7 +11,7 @@ from .models import User, Project
 class ProjectsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ["name", "owner", "repo_url", "created_date", "updated_date", "description",
+        fields = ["name", "owner", "owner_avatar", "repo_url", "created_date", "updated_date", "description",
                   "last_push_date", "latest_commit_date", "stars", "forks", "watchers",
                   "languages", "tags", "open_prs", "open_issues", "top_contributors",
                   "status", "newcomer_friendly", "sdg_categories", "readme"]

@@ -6,7 +6,7 @@ import Container from "./ui/container";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center h-[100%]">
-      <Container className="flex justify-between gap-[60px] w-[100%] relative ">
+      <Container className="flex justify-between gap-[60px] w-[100%] relative max-w-[1200px] ">
         <div className="flex flex-col items-start justify-start gap-[40px] h-[100%] ">
           <div>
             <h1 className="font-bold text-left text-title text-primary2">

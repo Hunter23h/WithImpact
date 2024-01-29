@@ -16,7 +16,6 @@ function PageNav({ pageArray }: any) {
   const { replace } = useRouter();
 
   const [pages, setPages] = useState<any>([]);
-
   const [curPage, setCurPage] = useState("1");
 
   const handlePageChange = (page: string) => {

@@ -35,8 +35,8 @@ class Project(models.Model):
 
 class User(models.Model):
     #id = models.AutoField(primary_key=True, serialize=True)
-    email = models.EmailField()
+    # email = models.EmailField()
     username = models.TextField(unique=True, primary_key=True)
-    favourite_projects = models.JSONField()
+    favourite_projects = models.JSONField(null=True)
 
 
