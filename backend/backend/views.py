@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import render, get_object_or_404
 from .models import User, Project
-from .forms import ProjectFilterForm
+from .forms import CommentForm
 
 # from .serializers import MyModelSerializer
 from django.http import HttpResponse, JsonResponse
@@ -13,13 +13,15 @@ from django.db.models import Q
 
 # views.py
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Project, User
+from .models import Project, User, Comment
 from django.contrib.auth.decorators import login_required
 
 @login_required
 def toggle_favorite(request, name, owner):
     project = get_object_or_404(Project, name=name, owner=owner)
     user_profile = User.objects.get(username=request.user)
+    comment_form = CommentForm()
+    comments = Comment.objects.filter(project_url=project.repo_url)
 
     if request.method == 'POST':
         # Handle like/unlike request
@@ -32,26 +34,24 @@ def toggle_favorite(request, name, owner):
             # Add data to the JSONB field
 
             if value in user_profile.favourite_projects:
-                user_profile.favourite_projects.remove(project.repo_url)
+                user_profile.favourite_projects.remove(value)
             else:
-                user_profile.favourite_projects.append(project.repo_url)
+                user_profile.favourite_projects.append(value)
 
             # Save the object
             user_profile.save()
+    
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.username_id = request.user
+            comment.project_url = project.repo_url
+            comment.save()
+            form = CommentForm()
 
-            # if user_profile.favourite_projects is None:
-            #     user_profile.favourite_projects.create(project)
-            # elif project in user_profile.favourite_projects.all():
-            #     user_profile.favourite_projects.remove(project)
-            # else:
-            #     user_profile.favourite_projects.add(project)
-            # return redirect('project_detail', name=name, owner=owner)
-            print(project.repo_url)
-            print(user_profile.favourite_projects)
-            print(user_profile.username)
 
     # return redirect('project_detail', name=name, owner=owner)
-    return render(request, 'backend/project_detail.html', {'project': project, 'user': user_profile})
+    return render(request, 'backend/project_detail.html', {'project': project, 'user': user_profile, 'project_comments': comments, 'comment_form': comment_form})
 
 
 

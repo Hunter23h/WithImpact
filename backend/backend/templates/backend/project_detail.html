@@ -18,6 +18,22 @@
     <h2>{{ project.owner }} / {{ project.name }}</h2>
     <p>Description: {{ project.description }}</p>
 
+    <h2>Favorite</h2>
+    {% if request.user.is_authenticated %}
+    <form method="post" action="{% url 'project_detail' owner=project.owner name=project.name %}">
+        {% csrf_token %}
+        <button type="submit" name="like_button">
+            {% if project.repo_url in user.favourite_projects %}
+            Unlike
+            {% else %}
+            Like
+            {% endif %}
+        </button>
+    </form>
+    {% else %}
+    <p>Login to like this project.</p>
+    {% endif %}
+
     <h3>Tags:</h3>
     <ul>
         {% for tag in project.tags %}
@@ -68,22 +84,22 @@
         <li>Newcomer Friendly: {{ project.newcomer_friendly }} </li>
     </ul>
 
-    <!-- Add any additional details you want to display -->
-    <h2>Favorite</h2>
+    <h2>Comments</h2>
+    {% for comment in project_comments %}
+    <p>{{ comment.username_id }} ({{ comment.created_date }}): {{ comment.text }}</p>
+    {% endfor %}
+    
     {% if request.user.is_authenticated %}
-    <form method="post" action="{% url 'project_detail' owner=project.owner name=project.name %}">
-        {% csrf_token %}
-        <button type="submit" name="like_button">
-            {% if project.repo_url in user.favourite_projects %}
-            Unlike
-            {% else %}
-            Like
-            {% endif %}
-        </button>
-    </form>
+        <h2>Add a Comment</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit">Add Comment</button>
+        </form>
     {% else %}
-    <p>Login to like this project.</p>
+    <p>Login to comment on this project.</p>
     {% endif %}
+    <!-- Add any additional details you want to display -->
 </body>
 
 </html>
