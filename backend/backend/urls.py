@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from .views import toggle_favorite
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,7 +25,7 @@ urlpatterns = [
     #path("mymodel/", views.MyModelList.as_view()),
     path("getprojects/", views.ProjectList.as_view(), name='project_list'),
     path("getusers/", views.UserList.as_view(), name='user_list'),
-    path("projects/<str:owner>/<str:name>", views.Projects.as_view(), name='project_detail'),
+    path("projects/<str:owner>/<str:name>", toggle_favorite, name='project_detail'),
     path("users/<str:pk>/", views.Users.as_view(), name='user_detail'),
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("allauth.socialaccount.urls"))

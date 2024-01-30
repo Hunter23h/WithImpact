@@ -39,4 +39,11 @@ class User(models.Model):
     username = models.TextField(unique=True, primary_key=True)
     favourite_projects = models.JSONField(null=True)
 
+class Comment(models.Model):
+    id = models.AutoField(primary_key=True, serialize=True)
+    project_url = models.TextField()
+    username = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_date = models.DateTimeField(auto_now_add=True)
+
 
