@@ -125,9 +125,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
-        "USER": "Kevin",
-        "PASSWORD": "3DEr>FM='YuZxefD",  # TODO: have to put this in .env eventually
-        "HOST": "34.130.132.146",
+        "USER": "postgres",
+        "PASSWORD": "N/A()^km8qJSL]fq",  # TODO: have to put this in .env eventually
+        "HOST": "34.130.238.218",
         "PORT": "5432",
         "OPTIONS": {
             "sslmode": "require",

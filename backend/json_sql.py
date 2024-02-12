@@ -7,7 +7,6 @@ import argparse
 
 # python json_sql.py -f "json file"
 
-load_dotenv()
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, help="JSON file name")
 args = parser.parse_args()
@@ -34,6 +33,7 @@ def insert_into_postgresql(data, table_name, connection_params):
             # Check if the repository already exists in the database
             cursor.execute(f"SELECT COUNT(*) FROM {table_name} WHERE repo_url = %s", (repo_url,))
             count = cursor.fetchone()[0]
+            # print(count)
 
             if count == 0:
                 # Repository does not exist, proceed with insertion
@@ -61,6 +61,7 @@ def insert_into_postgresql(data, table_name, connection_params):
     #     print(f"Error: {e}")
 
 if __name__ == "__main__":
+    load_dotenv()
     dbname = os.getenv("DB_NAME")
     dbuser = os.getenv("DB_USER")
     dbpass = os.getenv("DB_PASS")
@@ -75,6 +76,8 @@ if __name__ == "__main__":
         'host': dbhost,
         'port': dbport
     }
+    print(connection_params)
+
 
     # Replace 'your_table' with your actual table name
     table_name = 'backend_project'

@@ -5,11 +5,11 @@
             "Owner Avatar": "https://avatars.githubusercontent.com/u/6778872?v=4",
             "URL": "https://github.com/ConservationInternational/trends.earth",
             "Created": "2017-05-05T16:25:46Z",
-            "Updated": "2024-01-09T14:58:29Z",
+            "Updated": "2024-02-01T11:23:13Z",
             "Description": "trends.earth - measure land change",
-            "Last Push Date": "2023-12-25T19:10:12Z",
-            "Latest Commit Date": "2023-12-01T20:40:44Z",
-            "Stars": 100,
+            "Last Push Date": "2024-02-02T04:02:46Z",
+            "Latest Commit Date": "2024-02-01T20:17:04Z",
+            "Stars": 101,
             "Forks": 44,
             "Watchers": 19,
             "Languages": [
@@ -50,7 +50,7 @@
                   {
                         "login": "azvoleff",
                         "avatar_url": "https://avatars.githubusercontent.com/u/107753?v=4",
-                        "contributions": 2816
+                        "contributions": 2817
                   },
                   {
                         "login": "MLNoon",
@@ -73,7 +73,7 @@
                         "contributions": 66
                   }
             ],
-            "Status": "Not Active",
+            "Status": "Active",
             "Newcomer Friendly": false
       },
       {
@@ -87,7 +87,7 @@
             "Last Push Date": "2023-11-07T12:10:06Z",
             "Latest Commit Date": "2023-06-19T04:29:25Z",
             "Stars": 89,
-            "Forks": 150,
+            "Forks": 149,
             "Watchers": 15,
             "Languages": [
                   {
@@ -139,11 +139,11 @@
             "Owner Avatar": "https://avatars.githubusercontent.com/u/60563576?v=4",
             "URL": "https://github.com/shikhar8434/hummigo",
             "Created": "2021-03-12T19:24:19Z",
-            "Updated": "2024-01-19T11:56:00Z",
+            "Updated": "2024-02-02T10:34:30Z",
             "Description": "Hummigo is the one stop solution to prevent and control major chronic illnesses like Diabetes , Parkinson's , High Blood Pressure , Heart Diseases etc by helping the users maintain a healthy lifestyle ",
             "Last Push Date": "2021-08-20T17:07:41Z",
             "Latest Commit Date": "2021-08-20T17:07:41Z",
-            "Stars": 64,
+            "Stars": 65,
             "Forks": 3,
             "Watchers": 3,
             "Languages": [
@@ -231,11 +231,11 @@
             "Owner Avatar": "https://avatars.githubusercontent.com/u/74975722?v=4",
             "URL": "https://github.com/osdg-ai/osdg-tool",
             "Created": "2020-12-07T12:52:16Z",
-            "Updated": "2024-01-22T04:23:58Z",
+            "Updated": "2024-02-12T16:36:04Z",
             "Description": "OSDG is an open-source tool that maps and connects activities to the UN Sustainable Development Goals (SDGs) by identifying SDG-relevant content in any text. The tool is available online at www.osdg.ai. API access available for research purposes. ",
             "Last Push Date": "2023-02-02T09:38:02Z",
             "Latest Commit Date": "2023-02-02T09:38:01Z",
-            "Stars": 30,
+            "Stars": 32,
             "Forks": 8,
             "Watchers": 1,
             "Languages": [
@@ -289,11 +289,11 @@
             "Owner Avatar": "https://avatars.githubusercontent.com/u/74975722?v=4",
             "URL": "https://github.com/osdg-ai/osdg-data",
             "Created": "2021-07-08T06:41:57Z",
-            "Updated": "2023-12-09T15:26:51Z",
+            "Updated": "2024-02-08T12:28:53Z",
             "Description": "The OSDG Community Dataset (OSDG-CD) is a public dataset of thousands of text excerpts, validated by OSDG Community Platform (OSDG-CP) citizen scientists with respect to the Sustainable Development Goals (SDGs). The dataset is updated every quarter and published on Zenodo.",
             "Last Push Date": "2023-10-02T06:33:47Z",
             "Latest Commit Date": "2023-10-02T06:33:47Z",
-            "Stars": 23,
+            "Stars": 24,
             "Forks": 7,
             "Watchers": 1,
             "Languages": [
@@ -349,7 +349,7 @@
             "Last Push Date": "2021-03-09T19:04:12Z",
             "Latest Commit Date": "2020-05-20T22:44:09Z",
             "Stars": 20,
-            "Forks": 13,
+            "Forks": 14,
             "Watchers": 1,
             "Languages": [
                   {
@@ -456,41 +456,51 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "tiles-IoT-inventor-toolkit",
-            "Owner": "tilestoolkit",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/35257517?v=4",
-            "URL": "https://github.com/tilestoolkit/tiles-IoT-inventor-toolkit",
-            "Created": "2017-01-02T18:38:16Z",
-            "Updated": "2021-03-10T14:10:15Z",
-            "Description": "The Tiles IoT Inventor Toolkit is a card game to inspire ideas for new IoT products by fostering collaborative and creative thinking. It can be used as a brainstorming tool during design exercises, school courses and participatory design workshops.",
-            "Last Push Date": "2020-11-12T11:15:10Z",
-            "Latest Commit Date": "2020-11-12T11:15:08Z",
+            "Name": "SDGdetector",
+            "Owner": "Yingjie4Science",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/40079217?v=4",
+            "URL": "https://github.com/Yingjie4Science/SDGdetector",
+            "Created": "2021-11-24T20:31:04Z",
+            "Updated": "2024-01-29T03:28:42Z",
+            "Description": "A novel R package that can identify and visualize 17 Sustainable Development Goals and associated 169 Targets in text",
+            "Last Push Date": "2023-05-23T23:09:10Z",
+            "Latest Commit Date": "2023-05-23T23:09:03Z",
             "Stars": 13,
-            "Forks": 5,
-            "Watchers": 7,
+            "Forks": 0,
+            "Watchers": 3,
             "Languages": [
-                  {}
+                  {
+                        "R": 90.0,
+                        "TeX": 10.0
+                  }
             ],
             "Tags": [
-                  "card-game",
-                  "cards",
-                  "iot",
+                  "cran",
+                  "r",
+                  "r-package",
+                  "sdg",
                   "sdgs",
-                  "tiles-cards",
-                  "toolkit"
+                  "sustainability",
+                  "sustainable-development-goals",
+                  "text-mining"
             ],
             "Open PRs": 0,
             "Open Issues": 0,
             "Top 5 Contributors": [
                   {
-                        "login": "simonem",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/1089904?v=4",
-                        "contributions": 15
+                        "login": "Yingjie4Science",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/40079217?v=4",
+                        "contributions": 303
                   },
                   {
-                        "login": "gfrancesco",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/1057809?v=4",
-                        "contributions": 6
+                        "login": "caimeng2",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/51100838?v=4",
+                        "contributions": 27
+                  },
+                  {
+                        "login": "vffrans",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/48561126?v=4",
+                        "contributions": 3
                   }
             ],
             "Status": "Not Active",
@@ -557,51 +567,76 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "SDGdetector",
-            "Owner": "Yingjie4Science",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/40079217?v=4",
-            "URL": "https://github.com/Yingjie4Science/SDGdetector",
-            "Created": "2021-11-24T20:31:04Z",
-            "Updated": "2024-01-12T18:24:34Z",
-            "Description": "A novel R package that can identify and visualize 17 Sustainable Development Goals and associated 169 Targets in text",
-            "Last Push Date": "2023-05-23T23:09:10Z",
-            "Latest Commit Date": "2023-05-23T23:09:03Z",
-            "Stars": 11,
-            "Forks": 0,
-            "Watchers": 3,
+            "Name": "tiles-IoT-inventor-toolkit",
+            "Owner": "tilestoolkit",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/35257517?v=4",
+            "URL": "https://github.com/tilestoolkit/tiles-IoT-inventor-toolkit",
+            "Created": "2017-01-02T18:38:16Z",
+            "Updated": "2021-03-10T14:10:15Z",
+            "Description": "The Tiles IoT Inventor Toolkit is a card game to inspire ideas for new IoT products by fostering collaborative and creative thinking. It can be used as a brainstorming tool during design exercises, school courses and participatory design workshops.",
+            "Last Push Date": "2020-11-12T11:15:10Z",
+            "Latest Commit Date": "2020-11-12T11:15:08Z",
+            "Stars": 13,
+            "Forks": 5,
+            "Watchers": 7,
             "Languages": [
-                  {
-                        "R": 90.0,
-                        "TeX": 10.0
-                  }
+                  {}
             ],
             "Tags": [
-                  "cran",
-                  "r",
-                  "r-package",
-                  "sdg",
+                  "card-game",
+                  "cards",
+                  "iot",
                   "sdgs",
-                  "sustainability",
-                  "sustainable-development-goals",
-                  "text-mining"
+                  "tiles-cards",
+                  "toolkit"
             ],
             "Open PRs": 0,
             "Open Issues": 0,
             "Top 5 Contributors": [
                   {
-                        "login": "Yingjie4Science",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/40079217?v=4",
-                        "contributions": 303
+                        "login": "simonem",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1089904?v=4",
+                        "contributions": 15
                   },
                   {
-                        "login": "caimeng2",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/51100838?v=4",
-                        "contributions": 27
-                  },
+                        "login": "gfrancesco",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/1057809?v=4",
+                        "contributions": 6
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDG-networks",
+            "Owner": "felix-laumann",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/22920497?v=4",
+            "URL": "https://github.com/felix-laumann/SDG-networks",
+            "Created": "2019-02-14T12:31:18Z",
+            "Updated": "2024-02-12T16:43:08Z",
+            "Description": "Finding nonlinear relationships between the Sustainable Development Goals and climate change with partial distance correlations",
+            "Last Push Date": "2024-02-12T19:04:33Z",
+            "Latest Commit Date": "2022-11-24T12:03:36Z",
+            "Stars": 8,
+            "Forks": 2,
+            "Watchers": 1,
+            "Languages": [
                   {
-                        "login": "vffrans",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/48561126?v=4",
-                        "contributions": 3
+                        "Jupyter Notebook": 100.0
+                  }
+            ],
+            "Tags": [
+                  "climate-change",
+                  "sdg-networks",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "felix-laumann",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/22920497?v=4",
+                        "contributions": 25
                   }
             ],
             "Status": "Not Active",
@@ -666,41 +701,6 @@
                         "login": "imahgoub",
                         "avatar_url": "https://avatars.githubusercontent.com/u/40152629?v=4",
                         "contributions": 7
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "SDG-networks",
-            "Owner": "felix-laumann",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/22920497?v=4",
-            "URL": "https://github.com/felix-laumann/SDG-networks",
-            "Created": "2019-02-14T12:31:18Z",
-            "Updated": "2023-08-20T04:23:05Z",
-            "Description": "Finding nonlinear relationships between the Sustainable Development Goals and climate change with partial distance correlations",
-            "Last Push Date": "2022-11-24T12:03:36Z",
-            "Latest Commit Date": "2022-11-24T12:03:36Z",
-            "Stars": 7,
-            "Forks": 2,
-            "Watchers": 1,
-            "Languages": [
-                  {
-                        "Jupyter Notebook": 100.0
-                  }
-            ],
-            "Tags": [
-                  "climate-change",
-                  "sdg-networks",
-                  "sdgs"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "felix-laumann",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/22920497?v=4",
-                        "contributions": 25
                   }
             ],
             "Status": "Not Active",
@@ -860,58 +860,16 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "Wele-Course",
-            "Owner": "nandaprasetya",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/98160920?v=4",
-            "URL": "https://github.com/nandaprasetya/Wele-Course",
-            "Created": "2022-09-16T07:25:38Z",
-            "Updated": "2023-01-07T06:49:36Z",
-            "Description": "Wele Course is an online course website",
-            "Last Push Date": "2022-09-19T08:43:32Z",
-            "Latest Commit Date": "2022-09-19T08:39:58Z",
-            "Stars": 3,
-            "Forks": 0,
-            "Watchers": 1,
-            "Languages": [
-                  {
-                        "JavaScript": 82.8,
-                        "HTML": 11.8,
-                        "CSS": 5.4
-                  }
-            ],
-            "Tags": [
-                  "aos",
-                  "countdown",
-                  "counter-up",
-                  "course",
-                  "css3",
-                  "education",
-                  "flickity",
-                  "font-awesome",
-                  "html5",
-                  "isotope",
-                  "javascript",
-                  "jquery",
-                  "sdgs",
-                  "website"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
             "Name": "mipa",
             "Owner": "collective-change",
             "Owner Avatar": "https://avatars.githubusercontent.com/u/72839893?v=4",
             "URL": "https://github.com/collective-change/mipa",
             "Created": "2019-07-29T01:37:15Z",
-            "Updated": "2023-11-25T22:25:16Z",
+            "Updated": "2024-02-12T02:49:28Z",
             "Description": "\ud83c\udf0d Mipa is the strategic coordination web app from collective-change.org, which aims to help the world achieve sustainablility by 2030. ",
             "Last Push Date": "2023-01-10T04:07:07Z",
             "Latest Commit Date": "2021-06-30T07:47:02Z",
-            "Stars": 3,
+            "Stars": 4,
             "Forks": 2,
             "Watchers": 2,
             "Languages": [
@@ -958,6 +916,48 @@
             ],
             "Status": "Not Active",
             "Newcomer Friendly": true
+      },
+      {
+            "Name": "Wele-Course",
+            "Owner": "nandaprasetya",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/98160920?v=4",
+            "URL": "https://github.com/nandaprasetya/Wele-Course",
+            "Created": "2022-09-16T07:25:38Z",
+            "Updated": "2023-01-07T06:49:36Z",
+            "Description": "Wele Course is an online course website",
+            "Last Push Date": "2022-09-19T08:43:32Z",
+            "Latest Commit Date": "2022-09-19T08:39:58Z",
+            "Stars": 3,
+            "Forks": 0,
+            "Watchers": 1,
+            "Languages": [
+                  {
+                        "JavaScript": 82.8,
+                        "HTML": 11.8,
+                        "CSS": 5.4
+                  }
+            ],
+            "Tags": [
+                  "aos",
+                  "countdown",
+                  "counter-up",
+                  "course",
+                  "css3",
+                  "education",
+                  "flickity",
+                  "font-awesome",
+                  "html5",
+                  "isotope",
+                  "javascript",
+                  "jquery",
+                  "sdgs",
+                  "website"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
       },
       {
             "Name": "sdg_661_analysis_and_reporting",
@@ -1192,44 +1192,6 @@
                         "contributions": 2
                   }
             ],
-            "Status": "Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "SDGs_many_BERTs",
-            "Owner": "rbrtjwrk",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/73638117?v=4",
-            "URL": "https://github.com/rbrtjwrk/SDGs_many_BERTs",
-            "Created": "2021-06-24T12:54:26Z",
-            "Updated": "2023-07-11T10:39:37Z",
-            "Description": "Train multiple mBERT models for binary classification and deploy them for multiclass-multilabel classification. ",
-            "Last Push Date": "2022-10-26T06:30:50Z",
-            "Latest Commit Date": "2022-10-26T06:30:50Z",
-            "Stars": 2,
-            "Forks": 2,
-            "Watchers": 2,
-            "Languages": [
-                  {
-                        "Python": 100.0
-                  }
-            ],
-            "Tags": [
-                  "bert",
-                  "multiclass-classification",
-                  "multilabel-classification",
-                  "sdgs",
-                  "sustainability",
-                  "sustainable-development-goals"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "rbrtjwrk",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/73638117?v=4",
-                        "contributions": 104
-                  }
-            ],
             "Status": "Not Active",
             "Newcomer Friendly": false
       },
@@ -1285,6 +1247,44 @@
                         "login": "hmbjerkan",
                         "avatar_url": "https://avatars.githubusercontent.com/u/91989302?v=4",
                         "contributions": 48
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SDGs_many_BERTs",
+            "Owner": "rbrtjwrk",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/73638117?v=4",
+            "URL": "https://github.com/rbrtjwrk/SDGs_many_BERTs",
+            "Created": "2021-06-24T12:54:26Z",
+            "Updated": "2023-07-11T10:39:37Z",
+            "Description": "Train multiple mBERT models for binary classification and deploy them for multiclass-multilabel classification. ",
+            "Last Push Date": "2022-10-26T06:30:50Z",
+            "Latest Commit Date": "2022-10-26T06:30:50Z",
+            "Stars": 2,
+            "Forks": 2,
+            "Watchers": 2,
+            "Languages": [
+                  {
+                        "Python": 100.0
+                  }
+            ],
+            "Tags": [
+                  "bert",
+                  "multiclass-classification",
+                  "multilabel-classification",
+                  "sdgs",
+                  "sustainability",
+                  "sustainable-development-goals"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "rbrtjwrk",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/73638117?v=4",
+                        "contributions": 104
                   }
             ],
             "Status": "Not Active",
@@ -1442,7 +1442,7 @@
             "Latest Commit Date": "2023-06-12T02:25:47Z",
             "Stars": 1,
             "Forks": 0,
-            "Watchers": 2,
+            "Watchers": 1,
             "Languages": [
                   {}
             ],
@@ -1631,7 +1631,7 @@
             "Latest Commit Date": "2023-08-18T04:07:21Z",
             "Stars": 1,
             "Forks": 0,
-            "Watchers": 3,
+            "Watchers": 2,
             "Languages": [
                   {
                         "JavaScript": 80.5,
@@ -1738,7 +1738,7 @@
             "Latest Commit Date": "2023-01-09T00:21:40Z",
             "Stars": 1,
             "Forks": 0,
-            "Watchers": 2,
+            "Watchers": 1,
             "Languages": [
                   {
                         "JavaScript": 73.8,
@@ -1766,56 +1766,6 @@
                         "login": "jimjam-slam",
                         "avatar_url": "https://avatars.githubusercontent.com/u/6520659?v=4",
                         "contributions": 43
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "SkillBridge",
-            "Owner": "Roht5",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/90822140?v=4",
-            "URL": "https://github.com/Roht5/SkillBridge",
-            "Created": "2023-04-01T06:41:53Z",
-            "Updated": "2023-04-16T19:08:41Z",
-            "Description": "This repository contains the source code for an Android app built with Flutter and Firebase. The app connects job providers and seekers to reduce unemployment among unskilled workers. It features an intuitive interface that enables job seekers to search for job opportunities based on location and skills, while job providers can post job listing.",
-            "Last Push Date": "2023-04-02T08:38:34Z",
-            "Latest Commit Date": "2023-04-02T08:38:34Z",
-            "Stars": 1,
-            "Forks": 0,
-            "Watchers": 0,
-            "Languages": [
-                  {
-                        "C++": 44.0,
-                        "CMake": 36.4,
-                        "Dart": 10.7,
-                        "HTML": 3.6,
-                        "C": 2.8,
-                        "Swift": 2.2,
-                        "Kotlin": 0.2,
-                        "Objective-C": 0.1
-                  }
-            ],
-            "Tags": [
-                  "decent-work",
-                  "firebase",
-                  "flutter",
-                  "rural-development",
-                  "sdgs",
-                  "unemployment"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "Roht5",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/90822140?v=4",
-                        "contributions": 1
-                  },
-                  {
-                        "login": "Vinit-Juikar",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/75153895?v=4",
-                        "contributions": 1
                   }
             ],
             "Status": "Not Active",
@@ -1870,6 +1820,56 @@
                         "login": "m0h4mm3d-bf",
                         "avatar_url": "https://avatars.githubusercontent.com/u/82308038?v=4",
                         "contributions": 22
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "SkillBridge",
+            "Owner": "Roht5",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/90822140?v=4",
+            "URL": "https://github.com/Roht5/SkillBridge",
+            "Created": "2023-04-01T06:41:53Z",
+            "Updated": "2023-04-16T19:08:41Z",
+            "Description": "This repository contains the source code for an Android app built with Flutter and Firebase. The app connects job providers and seekers to reduce unemployment among unskilled workers. It features an intuitive interface that enables job seekers to search for job opportunities based on location and skills, while job providers can post job listing.",
+            "Last Push Date": "2023-04-02T08:38:34Z",
+            "Latest Commit Date": "2023-04-02T08:38:34Z",
+            "Stars": 1,
+            "Forks": 0,
+            "Watchers": 0,
+            "Languages": [
+                  {
+                        "C++": 44.0,
+                        "CMake": 36.4,
+                        "Dart": 10.7,
+                        "HTML": 3.6,
+                        "C": 2.8,
+                        "Swift": 2.2,
+                        "Kotlin": 0.2,
+                        "Objective-C": 0.1
+                  }
+            ],
+            "Tags": [
+                  "decent-work",
+                  "firebase",
+                  "flutter",
+                  "rural-development",
+                  "sdgs",
+                  "unemployment"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "Roht5",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/90822140?v=4",
+                        "contributions": 1
+                  },
+                  {
+                        "login": "Vinit-Juikar",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/75153895?v=4",
+                        "contributions": 1
                   }
             ],
             "Status": "Not Active",
@@ -2299,6 +2299,124 @@
             "Newcomer Friendly": false
       },
       {
+            "Name": "comunitas",
+            "Owner": "jpaulet",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/6894329?v=4",
+            "URL": "https://github.com/jpaulet/comunitas",
+            "Created": "2020-02-24T17:00:20Z",
+            "Updated": "2023-03-25T06:59:07Z",
+            "Description": "comm\u016bnit\u0101s - Blockchain organization creator & manager for affordable housing - BSIC Hackathon: Sustainable Cities and Communities Project",
+            "Last Push Date": "2023-01-05T18:49:45Z",
+            "Latest Commit Date": "2020-08-12T17:30:43Z",
+            "Stars": 0,
+            "Forks": 1,
+            "Watchers": 2,
+            "Languages": [
+                  {
+                        "Vue": 82.6,
+                        "CSS": 13.5,
+                        "JavaScript": 3.8,
+                        "HTML": 0.2
+                  }
+            ],
+            "Tags": [
+                  "blockchain",
+                  "dao",
+                  "sdg",
+                  "sdgs"
+            ],
+            "Open PRs": 26,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "jpaulet",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6894329?v=4",
+                        "contributions": 46
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "Hackathon-WarehouseIV",
+            "Owner": "wenwen357951",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/20616345?v=4",
+            "URL": "https://github.com/wenwen357951/Hackathon-WarehouseIV",
+            "Created": "2021-07-13T08:34:33Z",
+            "Updated": "2021-07-26T12:04:47Z",
+            "Description": "This is Project of WarehouseIV 2021 Hackathon Cmpetition.",
+            "Last Push Date": "2021-07-26T11:59:37Z",
+            "Latest Commit Date": "2021-07-26T11:59:37Z",
+            "Stars": 0,
+            "Forks": 2,
+            "Watchers": 2,
+            "Languages": [
+                  {
+                        "PHP": 76.1,
+                        "Blade": 22.7,
+                        "Shell": 0.8,
+                        "Makefile": 0.4
+                  }
+            ],
+            "Tags": [
+                  "hackathon",
+                  "laravel",
+                  "nopoverty",
+                  "php",
+                  "sdgs",
+                  "warehouseiv"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "wenwen357951",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/20616345?v=4",
+                        "contributions": 47
+                  },
+                  {
+                        "login": "4a7g0018",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/72734912?v=4",
+                        "contributions": 6
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
+            "Name": "lost-generation",
+            "Owner": "akuroiwa",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/8307714?v=4",
+            "URL": "https://github.com/akuroiwa/lost-generation",
+            "Created": "2023-05-13T11:57:41Z",
+            "Updated": "2023-06-01T11:37:34Z",
+            "Description": "The 2023 Election Pledge of the Ice Party, a political party for the employment ice age generation.",
+            "Last Push Date": "2023-12-03T14:13:28Z",
+            "Latest Commit Date": "2023-12-03T14:13:02Z",
+            "Stars": 0,
+            "Forks": 0,
+            "Watchers": 2,
+            "Languages": [
+                  {}
+            ],
+            "Tags": [
+                  "economics",
+                  "politics",
+                  "sdgs"
+            ],
+            "Open PRs": 0,
+            "Open Issues": 0,
+            "Top 5 Contributors": [
+                  {
+                        "login": "akuroiwa",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/8307714?v=4",
+                        "contributions": 4
+                  }
+            ],
+            "Status": "Not Active",
+            "Newcomer Friendly": false
+      },
+      {
             "Name": "201911_dataset",
             "Owner": "robertolofaro",
             "Owner Avatar": "https://avatars.githubusercontent.com/u/7221816?v=4",
@@ -2478,7 +2596,7 @@
             "Latest Commit Date": "2022-06-07T00:10:39Z",
             "Stars": 0,
             "Forks": 0,
-            "Watchers": 2,
+            "Watchers": 1,
             "Languages": [
                   {
                         "JavaScript": 94.8,
@@ -2547,118 +2665,35 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "comunitas",
-            "Owner": "jpaulet",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/6894329?v=4",
-            "URL": "https://github.com/jpaulet/comunitas",
-            "Created": "2020-02-24T17:00:20Z",
-            "Updated": "2023-03-25T06:59:07Z",
-            "Description": "comm\u016bnit\u0101s - Blockchain organization creator & manager for affordable housing - BSIC Hackathon: Sustainable Cities and Communities Project",
-            "Last Push Date": "2023-01-05T18:49:45Z",
-            "Latest Commit Date": "2020-08-12T17:30:43Z",
-            "Stars": 0,
-            "Forks": 1,
-            "Watchers": 2,
-            "Languages": [
-                  {
-                        "Vue": 82.6,
-                        "CSS": 13.5,
-                        "JavaScript": 3.8,
-                        "HTML": 0.2
-                  }
-            ],
-            "Tags": [
-                  "blockchain",
-                  "dao",
-                  "sdg",
-                  "sdgs"
-            ],
-            "Open PRs": 26,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "jpaulet",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/6894329?v=4",
-                        "contributions": 46
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "Hackathon-WarehouseIV",
-            "Owner": "wenwen357951",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/20616345?v=4",
-            "URL": "https://github.com/wenwen357951/Hackathon-WarehouseIV",
-            "Created": "2021-07-13T08:34:33Z",
-            "Updated": "2021-07-26T12:04:47Z",
-            "Description": "This is Project of WarehouseIV 2021 Hackathon Cmpetition.",
-            "Last Push Date": "2021-07-26T11:59:37Z",
-            "Latest Commit Date": "2021-07-26T11:59:37Z",
-            "Stars": 0,
-            "Forks": 2,
-            "Watchers": 2,
-            "Languages": [
-                  {
-                        "PHP": 76.1,
-                        "Blade": 22.7,
-                        "Shell": 0.8,
-                        "Makefile": 0.4
-                  }
-            ],
-            "Tags": [
-                  "hackathon",
-                  "laravel",
-                  "nopoverty",
-                  "php",
-                  "sdgs",
-                  "warehouseiv"
-            ],
-            "Open PRs": 0,
-            "Open Issues": 0,
-            "Top 5 Contributors": [
-                  {
-                        "login": "wenwen357951",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/20616345?v=4",
-                        "contributions": 47
-                  },
-                  {
-                        "login": "4a7g0018",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/72734912?v=4",
-                        "contributions": 6
-                  }
-            ],
-            "Status": "Not Active",
-            "Newcomer Friendly": false
-      },
-      {
-            "Name": "lost-generation",
-            "Owner": "akuroiwa",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/8307714?v=4",
-            "URL": "https://github.com/akuroiwa/lost-generation",
-            "Created": "2023-05-13T11:57:41Z",
-            "Updated": "2023-06-01T11:37:34Z",
-            "Description": "The 2023 Election Pledge of the Ice Party, a political party for the employment ice age generation.",
-            "Last Push Date": "2023-12-03T14:13:28Z",
-            "Latest Commit Date": "2023-12-03T14:13:02Z",
+            "Name": "TrustSDG",
+            "Owner": "ravivanpong",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/55481810?v=4",
+            "URL": "https://github.com/ravivanpong/TrustSDG",
+            "Created": "2023-04-04T14:52:35Z",
+            "Updated": "2023-04-04T14:54:00Z",
+            "Description": "A robustness study of selected SDG classifiers",
+            "Last Push Date": "2023-04-04T14:52:36Z",
+            "Latest Commit Date": "2023-04-04T14:52:36Z",
             "Stars": 0,
             "Forks": 0,
-            "Watchers": 2,
+            "Watchers": 1,
             "Languages": [
                   {}
             ],
             "Tags": [
-                  "economics",
-                  "politics",
-                  "sdgs"
+                  "classification",
+                  "nlp",
+                  "robustness",
+                  "sdgs",
+                  "trustworthy-ai"
             ],
             "Open PRs": 0,
             "Open Issues": 0,
             "Top 5 Contributors": [
                   {
-                        "login": "akuroiwa",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/8307714?v=4",
-                        "contributions": 4
+                        "login": "ravivanpong",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/55481810?v=4",
+                        "contributions": 1
                   }
             ],
             "Status": "Not Active",
@@ -2776,15 +2811,15 @@
             "Newcomer Friendly": false
       },
       {
-            "Name": "TrustSDG",
-            "Owner": "ravivanpong",
-            "Owner Avatar": "https://avatars.githubusercontent.com/u/55481810?v=4",
-            "URL": "https://github.com/ravivanpong/TrustSDG",
-            "Created": "2023-04-04T14:52:35Z",
-            "Updated": "2023-04-04T14:54:00Z",
-            "Description": "A robustness study of selected SDG classifiers",
-            "Last Push Date": "2023-04-04T14:52:36Z",
-            "Latest Commit Date": "2023-04-04T14:52:36Z",
+            "Name": "project-adnanwijayarso",
+            "Owner": "ds4owd-001",
+            "Owner Avatar": "https://avatars.githubusercontent.com/u/145611207?v=4",
+            "URL": "https://github.com/ds4owd-001/project-adnanwijayarso",
+            "Created": "2024-01-20T02:01:35Z",
+            "Updated": "2024-02-12T17:30:25Z",
+            "Description": "This report attempts to analyze if there's any correlation between drinking water access level and GDP per capita in the ASEAN region compared to other SDG regions. This project report was prepared for the data science for openwashdata course.",
+            "Last Push Date": "2024-02-12T16:43:23Z",
+            "Latest Commit Date": "2024-02-12T16:43:03Z",
             "Stars": 0,
             "Forks": 0,
             "Watchers": 1,
@@ -2792,22 +2827,22 @@
                   {}
             ],
             "Tags": [
-                  "classification",
-                  "nlp",
-                  "robustness",
+                  "drinking-water",
+                  "gdppercapita",
+                  "sdg-6",
                   "sdgs",
-                  "trustworthy-ai"
+                  "water-service"
             ],
             "Open PRs": 0,
-            "Open Issues": 0,
+            "Open Issues": 1,
             "Top 5 Contributors": [
                   {
-                        "login": "ravivanpong",
-                        "avatar_url": "https://avatars.githubusercontent.com/u/55481810?v=4",
-                        "contributions": 1
+                        "login": "adnanwijayarso",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/69031663?v=4",
+                        "contributions": 8
                   }
             ],
-            "Status": "Not Active",
+            "Status": "Active",
             "Newcomer Friendly": false
       },
       {
