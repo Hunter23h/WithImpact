@@ -1,0 +1,10 @@
+python scrape_github_topics.py -f https://github.com/topics/sustainable-development-goals
+# takes 5 mins
+python scrape_github_topics.py -f https://github.com/topics/sdgs
+# takes 2.5 mins
+
+# to insert data into db from json:
+python json_sql.py -f (filename)
+
+# to update info in the db:
+python update_repos.py
