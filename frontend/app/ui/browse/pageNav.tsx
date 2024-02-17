@@ -28,7 +28,6 @@ function PageNav({ pageArray }: any) {
 
   const getPaginationNums = (pageParam: string) => {
     let pageList = [];
-    const regex = /^[1-9]\d*$/;
 
     // The page number is always 1:string by default
     let numTypePageParam = parseInt(pageParam);
@@ -60,7 +59,6 @@ function PageNav({ pageArray }: any) {
         right += 1;
         pageList.push(String(pageArray[right]));
       }
-      console.log("fuk");
       i += 1;
     }
 
@@ -80,6 +78,7 @@ function PageNav({ pageArray }: any) {
   //Updates the pagination when url changes
   useEffect(() => {
     let query = searchParams.get("page") ?? "1";
+    console.log("query", query);
     getPaginationNums(query);
   }, [searchParams]);
 

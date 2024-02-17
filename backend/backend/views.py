@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from .models import User, Project
 from .forms import ProjectFilterForm
 
@@ -10,6 +10,17 @@ from django.http import HttpResponse, JsonResponse
 from .serializers import ProjectsSerializer, UsersSerializer
 from rest_framework.pagination import PageNumberPagination
 from django.db.models import Q
+
+# views.py
+from django.http import JsonResponse
+from django.middleware.csrf import get_token
+
+
+def github_login(request):
+    return redirect('socialaccount_signup')  # Redirects to the Allauth GitHub login 
+
+def get_csrf_token(request):
+    return JsonResponse({"csrfToken": get_token(request)})
 
 
 # class MyModelList(APIView):
@@ -123,7 +134,7 @@ class ProjectList(APIView):
 
         # return render(request, "backend/project_list.html", context)
         # return Response(project_serializer.data, status=status.HTTP_200_OK)
-    
+
 class UserList(APIView):
     def get(self, reqest, format=None):
         
@@ -131,7 +142,7 @@ class UserList(APIView):
         user_serializer = UsersSerializer(users, many=True)
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
-    
+
 class Projects(APIView):
     def get(self, request, name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)

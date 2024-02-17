@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-#GITHUB SECRETS
+# GITHUB SECRETS
 GITHUB_CLIENT_ID = os.getenv("GITHUB_CLIENT_ID")
 GITHUB_SECRET = os.getenv("GITHUB_SECRET")
 
@@ -44,8 +44,16 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # or your Next.js development server
 ]
 
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    # Add other origins as needed
+]
+
 # Allow credentials (cookies, Authorization headers, etc.) to be included in the CORS requests
 CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = ["http://*.127.0.0.1"]
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
@@ -124,9 +132,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
-        "USER": "Kevin",
-        "PASSWORD": "3DEr>FM='YuZxefD",  # TODO: have to put this in .env eventually
-        "HOST": "34.130.132.146",
+        "USER": "postgres",
+        "PASSWORD": "N/A()^km8qJSL]fq",  # TODO: have to put this in .env eventually
+        "HOST": "34.130.238.218",
         "PORT": "5432",
         "OPTIONS": {
             "sslmode": "require",
@@ -142,7 +150,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
