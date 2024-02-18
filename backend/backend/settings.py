@@ -53,7 +53,11 @@ CORS_ORIGIN_WHITELIST = [
 # Allow credentials (cookies, Authorization headers, etc.) to be included in the CORS requests
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ["http://*.127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["http://*.127.0.0.1", "http://localhost"]
+
+REST_USE_JWT = True
+
+SITE_ID = 1
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
@@ -70,6 +74,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
     # "backend",
     "backend.apps.BackendConfig",
     "corsheaders",
@@ -78,9 +83,14 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
+    "dj_rest_auth",
 ]
 
-AUTHENTICATION_BACKENDS = ["allauth.account.auth_backends.AuthenticationBackend"]
+AUTHENTICATION_BACKENDS = [
+
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
@@ -93,6 +103,11 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 LOGIN_REDIRECT_URL = 'http://localhost:3000'
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGOUT_ON_GET = True
+
+
+LOGOUT_REDIRECT_URL = "http://localhost:3000"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

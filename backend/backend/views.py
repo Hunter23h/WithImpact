@@ -14,16 +14,12 @@ from django.db.models import Q
 # views.py
 from django.http import JsonResponse
 from django.middleware.csrf import get_token
-
-
-def github_login(request):
-    return redirect('socialaccount_signup')  # Redirects to the Allauth GitHub login 
-
-def get_csrf_token(request):
-    return JsonResponse({"csrfToken": get_token(request)})
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Project, User, Comment
 from django.contrib.auth.decorators import login_required
+
+def get_csrf_token(request):
+    return JsonResponse({"csrfToken": get_token(request)})
 
 @login_required
 def toggle_favorite(request, name, owner):
