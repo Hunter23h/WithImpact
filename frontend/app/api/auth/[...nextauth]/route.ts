@@ -4,10 +4,7 @@ import { session } from "@/lib/session";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
 
-const GOOGLE_CLIENT_ID = process.env.GITHUB_CLIENT_ID!;
-const GOOGLE_CLIENT_SECRET = process.env.GITHUB_SECRET!;
-
-const authOption: NextAuthOptions = {
+export const authOption: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },

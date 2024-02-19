@@ -54,8 +54,8 @@ function Nav() {
       pathName: "/submission-criteria",
     },
   ];
-  // const { data: session, status } = useSession();
-  // console.log(session, status);
+  const { data: session, status } = useSession();
+  console.log(session, status);
   const pathname = usePathname();
   return (
     <nav className="bg-primary2 ">
