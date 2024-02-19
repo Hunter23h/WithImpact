@@ -1,6 +1,11 @@
 import { User, getServerSession } from "next-auth";
 export const session = async ({ session, token }: any) => {
-  session.user.id = token.id;
+  // session.user.id = token.id;
+  // session.user.username = token.username;
+  if (session?.user) {
+        session.user.id = token.sub;
+        session.user.username = token.username;
+      }
   return session;
 };
 
@@ -15,3 +20,5 @@ export const getUserSession = async (): Promise<User> => {
 
   return authUserSession?.user;
 };
+
+

@@ -19,12 +19,12 @@ from .models import Project, User, Comment
 from django.contrib.auth.decorators import login_required
 
 from dj_rest_auth.registration.views import SocialLoginView
-from allauth.socialaccount.providers.github.views import GithubOAuth2Adapter
+from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 
 
 class GithubLogin(SocialLoginView):
-    adapter_class = GithubOAuth2Adapter
+    adapter_class = GitHubOAuth2Adapter
     callback_url = "http://127.0.0.1:3000/"
     client_class = OAuth2Client
 

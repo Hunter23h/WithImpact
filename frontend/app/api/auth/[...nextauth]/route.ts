@@ -12,6 +12,15 @@ export const authOption: NextAuthOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID || "",
       clientSecret: process.env.GITHUB_SECRET || "",
+      profile(profile) {
+        return {
+          id: profile.id.toString(),
+          name: profile.name,
+          userName: profile.login,
+          email: profile.email,
+          image: profile.avatar_url,
+        };
+      },
     }),
   ],
   pages: {
@@ -23,18 +32,28 @@ export const authOption: NextAuthOptions = {
       if (!profile?.email) {
         throw new Error("No profile");
       }
-
+      // console.log(profile)
       return true;
     },
     async redirect({ url, baseUrl }) {
       return baseUrl;
     },
-    session,
-    async jwt({ token, user, account, profile }) {
+    session: async ({ session, token }) => {
+      if (session?.user) {
+        session.user.id = token.sub;
+        session.user.username = token.username;
+      }
+      return session;
+    },
+    jwt: async ({ user, token, profile }) => {
+      if (user) {
+        token.sub = user.id;
+        token.username = profile.login
+      }
       return token;
     },
   },
-};
+  };
 
 const handler = NextAuth(authOption);
 export { handler as GET, handler as POST };
