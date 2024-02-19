@@ -18,10 +18,77 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Project, User, Comment
 from django.contrib.auth.decorators import login_required
 
+from dj_rest_auth.registration.views import SocialLoginView
+from allauth.socialaccount.providers.github.views import GithubOAuth2Adapter
+from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+
+
+class GithubLogin(SocialLoginView):
+    adapter_class = GithubOAuth2Adapter
+    callback_url = "http://127.0.0.1:3000/"
+    client_class = OAuth2Client
+
+
 def get_csrf_token(request):
     return JsonResponse({"csrfToken": get_token(request)})
 
-@login_required
+
+# @login_required
+def user_info(request):
+    user = request.user
+    data = {
+        "username": user.username,
+        # Add more user information as needed
+    }
+    return JsonResponse(data)
+
+
+def project_detail(request, name, owner):
+    project = get_object_or_404(Project, name=name, owner=owner)
+    comments = Comment.objects.filter(project_url=project.repo_url)
+    comment_form = CommentForm()
+
+    if request.method == "POST" and request.user.is_authenticated:
+        # If POST request and user is authenticated, handle like and comment
+        user_profile = User.objects.get(username=request.user)
+        # Handle like/unlike request
+        if "like_button" in request.POST:
+            if user_profile.favourite_projects is None:
+                user_profile.favourite_projects = []
+
+            value = project.repo_url
+
+            if value in user_profile.favourite_projects:
+                user_profile.favourite_projects.remove(value)
+            else:
+                user_profile.favourite_projects.append(value)
+
+            user_profile.save()
+
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.username_id = request.user
+            comment.project_url = project.repo_url
+            comment.save()
+            form = CommentForm()
+
+        # Redirect to avoid duplicate form submissions
+        return redirect("project_detail", name=name, owner=owner)
+
+    return render(
+        request,
+        "backend/project_detail.html",
+        {
+            "project": project,
+            # "user": user_profile,
+            "project_comments": comments,
+            "comment_form": comment_form,
+        },
+    )
+
+
+@login_required #only works in logged in, have to fix
 def toggle_favorite(request, name, owner):
     project = get_object_or_404(Project, name=name, owner=owner)
     user_profile = User.objects.get(username=request.user)
@@ -57,7 +124,6 @@ def toggle_favorite(request, name, owner):
 
     # return redirect('project_detail', name=name, owner=owner)
     return render(request, 'backend/project_detail.html', {'project': project, 'user': user_profile, 'project_comments': comments, 'comment_form': comment_form})
-
 
 
 # class MyModelList(APIView):

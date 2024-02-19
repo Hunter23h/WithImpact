@@ -22,9 +22,9 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
 import Search from "./nav/Search";
 import { cn } from "@/lib/utils";
+import { useSession } from "next-auth/react";
 
 function Nav() {
   const Links: { title: string; href: string; pathName: string }[] = [
@@ -54,7 +54,8 @@ function Nav() {
       pathName: "/submission-criteria",
     },
   ];
-
+  // const { data: session, status } = useSession();
+  // console.log(session, status);
   const pathname = usePathname();
   return (
     <nav className="bg-primary2 ">
@@ -103,9 +104,9 @@ function Nav() {
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenu>
-          <Button>
-            <Link href={"login"}>Login</Link>
-          </Button>
+          <Link href={"auth/signin"}>
+            <Button>login</Button>
+          </Link>
         </div>
       </Container>
     </nav>

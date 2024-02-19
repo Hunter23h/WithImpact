@@ -2,8 +2,12 @@ import Image from "next/image";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
 import Container from "./ui/container";
+import { useEffect, useState } from "react";
+import { getUserSession } from "@/lib/session";
 
-export default function Home() {
+export default async function Home() {
+  const user = await getUserSession();
+
   return (
     <main className="flex flex-col items-center justify-center h-[100%]">
       <Container className="flex justify-between gap-[60px] w-[100%] relative max-w-[1200px] ">
@@ -16,6 +20,7 @@ export default function Home() {
               Discover and contribute to Open Source Projects Related to the
               United Nations Sustainable Development Goals...
             </p>
+            <div>{JSON.stringify(user || "no user")}</div>
           </div>
 
           <Link href={"/browse"}>

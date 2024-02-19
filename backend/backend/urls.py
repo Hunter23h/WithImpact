@@ -23,12 +23,16 @@ from .views import toggle_favorite
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.Home.as_view()),
-    #path("mymodel/", views.MyModelList.as_view()),
-    path("getprojects/", views.ProjectList.as_view(), name='project_list'),
-    path("getusers/", views.UserList.as_view(), name='user_list'),
-    path("projects/<str:owner>/<str:name>", toggle_favorite, name='project_detail'),
-    path("users/<str:pk>/", views.Users.as_view(), name='user_detail'),
+    # path("mymodel/", views.MyModelList.as_view()),
+    path("getprojects/", views.ProjectList.as_view(), name="project_list"),
+    path("getusers/", views.UserList.as_view(), name="user_list"),
+    path(
+        "projects/<str:owner>/<str:name>", views.project_detail, name="project_detail"
+    ),
+    path("users/<str:pk>/", views.Users.as_view(), name="user_detail"),
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("allauth.socialaccount.urls")),
     path("csrf/", views.get_csrf_token, name="get_csrf_token"),
+    path("api/user-info/", views.user_info, name="user_info"),
+    path("github/", views.GithubLogin.as_view(), name="github_login"),
 ]

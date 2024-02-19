@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useDebouncedCallback } from "use-debounce";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,8 +12,27 @@ import {
 } from "../../../components/ui/dropdown-menu";
 import { Button } from "../../../components/ui/button";
 import Image from "next/image";
+import { usePathname, useSearchParams } from "next/navigation";
+// import { useRouter } from "next/router";
 
 function Sort() {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  // const { replace } = useRouter();
+
+  // const handleSearch = useDebouncedCallback((term: any) => {
+  //   const params = new URLSearchParams(searchParams);
+
+  //   params.set("page", "1");
+  //   if (term) {
+  //     params.set("search", term);
+  //   } else {
+  //     params.delete("search");
+  //   }
+
+  //   replace(`${pathname}?${params.toString()}`);
+  // }, 300);
+
   return (
     <div>
       <div className="flex justify-start items-center gap-[5px]">
