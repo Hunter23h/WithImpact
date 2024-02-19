@@ -3,15 +3,17 @@ import React from "react";
 import { getProviders, signIn } from "next-auth/react";
 import { getServerSession } from "next-auth/next";
 import { AuthOptions } from "next-auth";
+import Container from "@/app/ui/container";
+import { Button } from "@/components/ui/button";
 function SigninProviders({ providers }: any) {
   return (
-    <div>
+    <Container>
       {Object.values(providers).map((provider) => (
-        <button key={provider.name} onClick={() => signIn(provider.id)}>
+        <Button key={provider.name} onClick={() => signIn(provider.id)}>
           {provider?.name}
-        </button>
+        </Button>
       ))}
-    </div>
+    </Container>
   );
 }
 
