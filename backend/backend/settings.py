@@ -64,6 +64,10 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 40,
 }
 
+# REST_AUTH_SERIALIZERS = {
+#     'TOKEN_SERIALIZER': 'backend.serializers.TokenSerializer'
+# }
+
 # Application definition
 
 INSTALLED_APPS = [

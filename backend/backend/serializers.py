@@ -1,5 +1,9 @@
 from rest_framework import serializers
 from .models import User, Project
+from rest_auth.models import TokenModel
+# from rest_auth.utils import import_callable
+# from rest_auth.serializers import UserDetailsSerializer
+
 
 
 # class MyModelSerializer(serializers.ModelSerializer):
@@ -20,3 +24,10 @@ class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["email", "username", "favourite_projects"]
+
+# class TokenSerializer(serializers.ModelSerializer):
+#     user = UsersSerializer(read_only=True)
+
+#     class Meta:
+#         model = TokenModel
+#         fields = ('key', 'user', )

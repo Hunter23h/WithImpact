@@ -3,6 +3,7 @@ import { NextAuthOptions } from "next-auth";
 import { session } from "@/lib/session";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
+import axios from 'axios';
 
 export const authOption: NextAuthOptions = {
   session: {
@@ -28,9 +29,28 @@ export const authOption: NextAuthOptions = {
     signOut: "/auth/signout",
   },
   callbacks: {
-    async signIn({ account, profile }) {
+    async signIn({ account, profile, user }) {
       if (!profile?.email) {
         throw new Error("No profile");
+      }
+      if (account.provider === "github") {
+        // console.log("account info: ", account)
+        const { access_token, providerAccountId } = account;
+
+        try {
+          const response = await axios.post(
+            "http://localhost:8000/github/",
+            {
+              access_token: access_token,
+              id_token: providerAccountId,
+            },
+          );
+          const { key } = response.data;
+          user.key = key;
+          return true;
+        } catch (error) {
+          return false;
+        }
       }
       // console.log(profile)
       return true;

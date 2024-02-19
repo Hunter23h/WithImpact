@@ -25,22 +25,29 @@ from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 
 class GithubLogin(SocialLoginView):
     adapter_class = GitHubOAuth2Adapter
-    callback_url = "http://127.0.0.1:3000/"
+    callback_url = "http://127.0.0.1:3000/api/auth/callback/github"
+    # callback_url = "http://"
     client_class = OAuth2Client
 
 
-def get_csrf_token(request):
-    return JsonResponse({"csrfToken": get_token(request)})
+# def get_csrf_token(request):
+#     return JsonResponse({"csrfToken": get_token(request)})
 
 
 # @login_required
-def user_info(request):
-    user = request.user
-    data = {
-        "username": user.username,
-        # Add more user information as needed
-    }
-    return JsonResponse(data)
+# def save_user(request):
+#     if request.method == 'POST':
+#         data = request.POST  # Assuming user data is sent in the request body
+#         # Save user data to the database
+#         user = User.objects.create(
+#             username=data['username'],
+#             favourite_projects=data.get('favourite_projects', []),
+#             # Add other fields as needed
+#         )
+#         user.save()
+#         return JsonResponse({'message': 'User saved successfully'})
+#     else:
+#         return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
 
 
 def project_detail(request, name, owner):

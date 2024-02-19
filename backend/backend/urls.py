@@ -32,7 +32,7 @@ urlpatterns = [
     path("users/<str:pk>/", views.Users.as_view(), name="user_detail"),
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("allauth.socialaccount.urls")),
-    path("csrf/", views.get_csrf_token, name="get_csrf_token"),
-    path("api/user-info/", views.user_info, name="user_info"),
+    # path("csrf/", views.get_csrf_token, name="get_csrf_token"),
+    # path("api/save-user/", views.save_user, name="save_user"),
     path("github/", views.GithubLogin.as_view(), name="github_login"),
 ]

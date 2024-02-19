@@ -105,7 +105,7 @@ function Nav() {
             </NavigationMenuItem>
           </NavigationMenu>
           <Link href={"auth/signin"}>
-            <Button>login</Button>
+            <Button>Login</Button>
           </Link>
         </div>
       </Container>
