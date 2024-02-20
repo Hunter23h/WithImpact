@@ -1,23 +1,34 @@
 import React, { useEffect, useRef, useState } from "react";
-import Project from "./project";
+import ProjectCard from "./projectCard";
 import Container from "../container";
 import { useGlobalContext } from "@/app/context";
 import BrowseSkeleton from "./browseSkeleton";
 import LoadMoreProjects from "./intersectionObserver";
 import { fetchProjects } from "@/lib/data";
 import PageNav from "./pageNav";
+import Link from "next/link";
 
 async function Projects({
   searchParams,
+  projectsType,
 }: {
   searchParams?: {
     search?: string;
     page?: string;
   };
+  projectsType: string;
 }) {
   const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
-  const res = await fetchProjects(search, currentPage);
+
+  let res = [];
+  if (projectsType === "browse") {
+    res = await fetchProjects(search, currentPage);
+    console.log("HERERRE");
+    console.log(res);
+  } else if (projectsType === "favourites") {
+    res = await fetchProjects(search, currentPage);
+  }
 
   const projects = res.results;
   const count = res.count;
@@ -34,7 +45,9 @@ async function Projects({
       <div className="grid grid-cols-1 gap-[10px] w-[100%] self-start">
         {projects?.length > 0 &&
           projects.map((project: any, key: any) => (
-            <Project key={key} project={project}></Project>
+            <Link href={`project/${project.name}`}>
+              <ProjectCard key={key} project={project}></ProjectCard>
+            </Link>
           ))}
       </div>
       <PageNav pageArray={pageArray} />

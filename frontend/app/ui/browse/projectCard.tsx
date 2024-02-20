@@ -4,6 +4,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "lucide-react";
 
 function Project({ project }: any) {
   return (

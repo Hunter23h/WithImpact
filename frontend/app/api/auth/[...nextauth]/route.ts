@@ -3,7 +3,7 @@ import { NextAuthOptions } from "next-auth";
 import { session } from "@/lib/session";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
-import axios from 'axios';
+import axios from "axios";
 
 export const authOption: NextAuthOptions = {
   session: {
@@ -34,7 +34,7 @@ export const authOption: NextAuthOptions = {
         throw new Error("No profile");
       }
       if (account.provider === "github") {
-        // console.log("account info: ", account)
+        console.log("account info: ", account);
         const { access_token, providerAccountId } = account;
 
         try {
@@ -68,12 +68,12 @@ export const authOption: NextAuthOptions = {
     jwt: async ({ user, token, profile }) => {
       if (user) {
         token.sub = user.id;
-        token.username = profile.login
+        token.username = profile.login;
       }
       return token;
     },
   },
-  };
+};
 
 const handler = NextAuth(authOption);
 export { handler as GET, handler as POST };

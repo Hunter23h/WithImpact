@@ -3,23 +3,36 @@ import React, { useEffect, useState } from "react";
 import { Checkbox } from "../../../components/ui/checkbox";
 import { useRouter } from "next/router";
 import { usePathname, useSearchParams } from "next/navigation";
+import { useDebouncedCallback } from "use-debounce";
 
 function Filters() {
-  // const searchParams = useSearchParams();
-  // const pathname = usePathname();
+  const FILTERS = {};
+  const [filters, setFilters] = useState([]);
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
   // const { replace } = useRouter();
 
-  // const [isNewcomerFriendly, setIsNewcomerFriendly] = useState<boolean>(false);
+  const handleFilter = useDebouncedCallback((newFilter: any) => {
+    console.log(newFilter);
+    // setFilters([...filters, newFilter]);
+    // const params = new URLSearchParams(searchParams);
 
-  // const handleIsNewcomerFriendly = () => {
-  //   const params = new URLSearchParams(searchParams);
-  //   searchParams.get("page");
+    // // If no filters set
+    // if (!params.get("filter")) {
+    //   params.delete("filter");
+    // }
 
-  //   replace(`${pathname}?${params.toString()}`);
-  // };
+    // // If filter is added
+    // if (newFilter) {
+    //   params.set("filter", filters.join(","));
+    // }
+
+    // replace(`${pathname}?${params.toString()}`);
+  }, 300);
 
   // useEffect(() => {
-  //   setIsNewcomerFriendly(searchParams.get("newcomer_friendly") == "true");
+  //   const params = new URLSearchParams(searchParams);
+  //   if (params.get("filter")) params.set("filter", params.get("filter") || "");
   // }, []);
   return (
     <div className="flex flex-col gap-[30px]">
@@ -32,22 +45,6 @@ function Filters() {
             <label>{filter}</label>
           </div>
         ))}
-      </div>
-
-      {/* Newcomer Friendly*/}
-      <div>
-        {/* <h3>Newcomer Friendly</h3> */}
-        {/* {["Beginner Friendly", "Hard"].map((filter, key) => (
-          <div className="flex justify-start gap-[10px] items-center" key={key}>
-            <Checkbox
-              checked={isNewcomerFriendly}
-              onCheckedChange={() => {
-                // handleIsNewcomerFriendly();
-              }}
-            />
-            <label>{filter}</label>
-          </div>
-        ))} */}
       </div>
     </div>
   );

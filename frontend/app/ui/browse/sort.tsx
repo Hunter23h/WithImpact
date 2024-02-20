@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import {
   DropdownMenu,
@@ -13,25 +13,36 @@ import {
 import { Button } from "../../../components/ui/button";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 function Sort() {
+  const SORT_OPTIONS = [
+    "Name: a to z",
+    "Name: z to a",
+    "Stars: lowest to highest",
+    "Stars: highest to lowest",
+  ];
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  // const { replace } = useRouter();
+  const { replace } = useRouter();
+  const [currentSort, setCurrentSort] = useState(SORT_OPTIONS[0]);
 
-  // const handleSearch = useDebouncedCallback((term: any) => {
-  //   const params = new URLSearchParams(searchParams);
+  const handleSort = useDebouncedCallback((term: any) => {
+    setCurrentSort(term);
+    const params = new URLSearchParams(searchParams);
 
-  //   params.set("page", "1");
-  //   if (term) {
-  //     params.set("search", term);
-  //   } else {
-  //     params.delete("search");
-  //   }
+    if (term) {
+      params.set("sort", term);
+    }
 
-  //   replace(`${pathname}?${params.toString()}`);
-  // }, 300);
+    replace(`${pathname}?${params.toString()}`);
+  }, 300);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    if (params.get("sort")) params.set("sort", params.get("sort") || "");
+  }, []);
 
   return (
     <div>
@@ -44,9 +55,11 @@ function Sort() {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className="h-auto  flex items-center justify-between gap-[30px]"
+            className="h-auto  flex items-center justify-between gap-[30px] w-[218px]"
           >
-            <span>Most Popular</span>
+            <span className="max-w-[160px] overflow-hidden text-ellipsis">
+              {currentSort}
+            </span>
             <Image
               src="/icons/dropdown.svg"
               height={10}
@@ -55,11 +68,25 @@ function Sort() {
             />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuRadioGroup value={"name"} onValueChange={() => {}}>
-            <DropdownMenuRadioItem value={"name"}>Name</DropdownMenuRadioItem>
-            <DropdownMenuRadioItem value={"Keivn"}>Name</DropdownMenuRadioItem>
-          </DropdownMenuRadioGroup>
+        <DropdownMenuContent className="w-[218px]">
+          <RadioGroup
+            value={currentSort}
+            onValueChange={handleSort}
+            defaultValue={SORT_OPTIONS[0]}
+            className="flex flex-col items-start p-[5px] "
+          >
+            {SORT_OPTIONS.map((option, key) => (
+              <div
+                className="flex items-center space-x-2 cursor-pointer"
+                key={key}
+              >
+                <RadioGroupItem value={option} id={`${key}`} />
+                <label htmlFor={`${key}`} className="cursor-pointer">
+                  {option}
+                </label>
+              </div>
+            ))}
+          </RadioGroup>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

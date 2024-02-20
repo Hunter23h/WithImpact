@@ -17,7 +17,7 @@ function ProjectComments() {
         </Button>
       </div>
 
-      <div className="flex flex-col gap-[20px] my-[20px]">
+      <div className="comment-container relative flex flex-col gap-[20px] mt-[40px] mb-[20px] max-h-[70vh] overflow-auto px-[20px]">
         {[
           { author: "Kevin", msg: "You don't know me son!" },
           { author: "Sam", msg: "You don't know me son!" },

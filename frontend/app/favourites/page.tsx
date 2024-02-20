@@ -4,19 +4,23 @@ import SidebarActions from "../ui/browse/sidebarActions";
 import BrowseSkeleton from "../ui/browse/browseSkeleton";
 import Container from "../ui/container";
 
-async function Browse({ searchParams }: { searchParams: { page: string } }) {
+async function Favourites({
+  searchParams,
+}: {
+  searchParams: { page: string };
+}) {
   return (
     <Container className="flex min-h-[100vh] items-stretch w-[100%]">
       {/* Filter and Sorting */}
       <div className="min-w-[300px] w-[100%] max-w-[15vw]">
         <SidebarActions />
       </div>
-      {/* Browse Results */}
+      {/* Favourites Results */}
       <Suspense fallback={<BrowseSkeleton />}>
-        <Projects searchParams={searchParams} projectsType="browse" />
+        <Projects searchParams={searchParams} projectsType="favourites" />
       </Suspense>
     </Container>
   );
 }
 
-export default Browse;
+export default Favourites;

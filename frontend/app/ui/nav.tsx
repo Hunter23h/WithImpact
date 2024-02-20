@@ -6,13 +6,12 @@ import Link from "next/link";
 import PrimaryLink from "../../components/ui/NavLink";
 import { Input } from "../../components/ui/input";
 import { Button } from "@/components/ui/button";
-import { DropdownMenu } from "@/components/ui/dropdown-menu";
 import {
-  DropdownMenuContent,
+  DropdownMenu,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
+  DropdownMenuContent,
+} from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -25,9 +24,19 @@ import { usePathname } from "next/navigation";
 import Search from "./nav/Search";
 import { cn } from "@/lib/utils";
 import { useSession } from "next-auth/react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { AvatarImage } from "@/components/ui/avatar";
 
 function Nav() {
-  const Links: { title: string; href: string; pathName: string }[] = [
+  const PROFILE_LINKS = [
+    {
+      title: "Favourited Projects",
+      href: "/favourites",
+      pathName: "profile/favourites",
+    },
+  ];
+
+  const MENU_LINKS: { title: string; href: string; pathName: string }[] = [
     {
       title: "Home",
       href: "/",
@@ -53,16 +62,21 @@ function Nav() {
       href: "submission-criteria",
       pathName: "/submission-criteria",
     },
+    {
+      title: "Favourited Projects",
+      href: "/favourites",
+      pathName: "/favourites",
+    },
   ];
   const { data: session, status } = useSession();
-  console.log(session, status);
   const pathname = usePathname();
   return (
     <nav className="bg-primary2 ">
       <Container className="flex justify-between items-center py-[15px] px-[30px]">
         <Link
-          className="font-bold tracking-widest text-white text-body"
-          href={Links[0].href}
+          className="font-PROFILE_LINKS = []
+          bold tracking-widest text-white text-body"
+          href={MENU_LINKS[0].href}
         >
           WITH IMPACT
         </Link>
@@ -82,31 +96,39 @@ function Nav() {
         <div className="grid grid-cols-2 gap-[20px] items-center">
           <NavigationMenu>
             <NavigationMenuItem className="">
-              <NavigationMenuTrigger className="">Menu</NavigationMenuTrigger>
-              <NavigationMenuContent className="flex flex-col gap-[5px] p-[10px]">
-                {Links.map((item, key) => (
+              <NavigationMenuTrigger className="" showArrow={true}>
+                Menu
+              </NavigationMenuTrigger>
+
+              <NavigationMenuContent className="flex flex-col gap-[5px] p-[10px] !w-[220px]">
+                {MENU_LINKS.map((item, key) => (
                   <Link href={item.href} key={key}>
-                    <NavigationMenuLink>
-                      <Button
-                        variant={"default"}
-                        className={cn(
-                          "w-[100%] justify-start bg-white text-black hover:bg-primary hover:text-white",
-                          {
-                            "bg-primary text-white": pathname === item.pathName,
-                          }
-                        )}
-                      >
-                        {item.title}
-                      </Button>
-                    </NavigationMenuLink>
+                    <Button
+                      variant={"default"}
+                      className={cn(
+                        "w-[100%] justify-start bg-white text-black hover:bg-primary hover:text-white",
+                        {
+                          "bg-primary text-white": pathname === item.pathName,
+                        }
+                      )}
+                    >
+                      {item.title}
+                    </Button>
                   </Link>
                 ))}
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenu>
-          <Link href={"auth/signin"}>
-            <Button>Login</Button>
-          </Link>
+          {status === "authenticated" ? (
+            <Avatar>
+              <AvatarImage src={session?.user?.image || ""} />
+              <AvatarFallback>KY</AvatarFallback>
+            </Avatar>
+          ) : (
+            <Link href={"auth/signin"}>
+              <Button>Login</Button>
+            </Link>
+          )}
         </div>
       </Container>
     </nav>
