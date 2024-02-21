@@ -44,22 +44,22 @@ function Nav() {
     },
     {
       title: "Browse",
-      href: "browse",
+      href: "/browse",
       pathName: "/browse",
     },
     {
       title: "SDGs",
-      href: "sdgs",
+      href: "/sdgs",
       pathName: "/sdgs",
     },
     {
       title: "Project Submission",
-      href: "project-submission",
+      href: "/project-submission",
       pathName: "/project-submission",
     },
     {
       title: "Submission Criteria",
-      href: "submission-criteria",
+      href: "/submission-criteria",
       pathName: "/submission-criteria",
     },
     {
@@ -125,7 +125,7 @@ function Nav() {
               <AvatarFallback>KY</AvatarFallback>
             </Avatar>
           ) : (
-            <Link href={"auth/signin"}>
+            <Link href={"/auth/signin"}>
               <Button>Login</Button>
             </Link>
           )}

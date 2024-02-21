@@ -20,8 +20,8 @@ async function Project({ params }: any) {
   console.log(res);
 
   return (
-    <>
-      <Container>
+    <Container>
+      <div>
         {/* Header */}
         <div>
           <div className="flex justify-between items-center">
@@ -50,13 +50,13 @@ async function Project({ params }: any) {
           <ProjectSummary projectData={res} />
           <ProjectDetails projectData={res}/>
         </div>
-      </Container>
+      </div>
 
       {/* Comment Section */}
       <Container>
         <ProjectComments projectData={res} />
       </Container>
-    </>
+    </Container>
   );
 }
 

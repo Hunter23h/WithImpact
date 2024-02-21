@@ -24,8 +24,6 @@ async function Projects({
   let res = [];
   if (projectsType === "browse") {
     res = await fetchProjects(search, currentPage);
-    console.log("HERERRE");
-    console.log(res);
   } else if (projectsType === "favourites") {
     res = await fetchProjects(search, currentPage);
   }
