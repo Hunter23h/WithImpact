@@ -7,7 +7,7 @@ from .forms import CommentForm
 
 # from .serializers import MyModelSerializer
 from django.http import HttpResponse, JsonResponse
-from .serializers import ProjectsSerializer, UsersSerializer
+from .serializers import ProjectsSerializer, UsersSerializer, CommentsSerializer
 from rest_framework.pagination import PageNumberPagination
 from django.db.models import Q
 
@@ -222,28 +222,6 @@ class ProjectList(APIView):
             project_serializer.data
         )
     
-        # project_obj = Project.objects.all()
-        # context = {
-        #     "projects": project_obj
-        # }
-        # form = ProjectFilterForm(request.GET)
-
-        # if form.is_valid():
-        #     newcomer_friendly = form.cleaned_data.get('newcomer_friendly')
-        #     if newcomer_friendly:
-        #         projects = projects.filter(newcomer_friendly=newcomer_friendly == 'True')
-
-        #     status = form.cleaned_data.get('status')
-        #     if status:
-        #         projects = projects.filter(status=status)
-
-        # context = {
-        #     'projects': projects,
-        #     # 'form': form,
-        # }
-
-        # return render(request, "backend/project_list.html", context)
-        # return Response(project_serializer.data, status=status.HTTP_200_OK)
 
 class UserList(APIView):
     def get(self, request, format=None):
@@ -253,12 +231,28 @@ class UserList(APIView):
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
     
+# class Comments(APIView):
+#     def get(self, request, name, owner, format=None):
+#         repo_url = "https://github.com/{owner}/{name}"
+#         comments_obj = Comment.objects.filter(project_url=repo_url)
+#         comment_serializer = CommentsSerializer(comments_obj)
+
+#         return Response(comment_serializer.data, status=status.HTTP_200_OK)
+    
 class ProjectInfo(APIView):
     def get(self, request, name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)
         proj_serializer = ProjectsSerializer(project_obj)
+        # repo_url = "https://github.com/{owner}/{name}"
+        comments_obj = Comment.objects.filter(project_url=project_obj.repo_url)
+        comment_serializer = CommentsSerializer(comments_obj, many=True)
 
-        return Response(proj_serializer.data, status=status.HTTP_200_OK)
+        data = {
+            'project': proj_serializer.data,
+            'comments': comment_serializer.data
+        }
+
+        return Response(data, status=status.HTTP_200_OK)
     
 class Projects(APIView):
     def get(self, request, name, owner, format=None):

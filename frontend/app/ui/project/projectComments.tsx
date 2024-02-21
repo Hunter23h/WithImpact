@@ -5,7 +5,8 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 function ProjectComments({ projectData }: { projectData: any}) {
-  const comments = [] as any;
+  // const comments = [] as any;
+  const comments = projectData.comments
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
       <h2>Comments</h2>
@@ -37,10 +38,7 @@ function ProjectComments({ projectData }: { projectData: any}) {
                 )}
               ></div>
               <p className="px-[30px]">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Similique modi doloremque porro delectus deleniti velit
-                architecto qui aut tenetur tempora optio incidunt minima
-                blanditiis officiis, beatae quos iste eum quisquam.
+                {comment.text}
               </p>
             </div>
           ))

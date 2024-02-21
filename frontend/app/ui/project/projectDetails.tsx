@@ -8,6 +8,18 @@ function ProjectDetails({ projectData }: { projectData: any}) {
     return isFriendly ? "Newcomer Friendly" : "Not Newcomer Friendly";
   };
 
+function parseDate(dateString: string) {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1; // Months are zero-based (0 for January)
+  const day = date.getDate();
+
+  // Construct the date string in the format "YYYY-MM-DD"
+  const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+  
+  return formattedDate;
+}
+
 
   return (
     <>
@@ -16,7 +28,7 @@ function ProjectDetails({ projectData }: { projectData: any}) {
         {/* Content Updated */}
         <div>
           <p className="font-bold">Content Updated</p>
-          <p>{projectData.updated_date} </p>
+          <p>{parseDate(projectData.last_push_date)} </p>
         </div>
         {/* Tags */}
         <div>
@@ -40,7 +52,7 @@ function ProjectDetails({ projectData }: { projectData: any}) {
         {/* Latest Commit */}
         <div>
           <p className="font-bold">Latest Commit</p>
-          <p>{projectData.latest_commit_date}</p>
+          <p>{parseDate(projectData.latest_commit_date)}</p>
         </div>
         {/* Languages */}
         <div>
@@ -76,17 +88,37 @@ function ProjectDetails({ projectData }: { projectData: any}) {
               ))} */}
               <PercentageBar />
             </div>
-            {[
-              { language: "JavaScript", percentage: "10" },
+            {/* {[
+              { language: "Test", percentage: "10" },
               { language: "Python", percentage: "30" },
               { language: "HTML", percentage: "40" },
               { language: "CSS", percentage: "20" },
             ].map((item, key) => (
               <div className="flex items-center gap-[10px]" key={key}>
                 <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
-                <span>{item.language}</span>
+                <span>{item.language}{item.percentage}</span>
               </div>
-            ))}
+            ))} */}
+            {projectData.languages.map((languageObject: any, key) => {
+              // Convert each key-value pair into an object with language and percentage properties
+              const languageEntries = Object.entries(languageObject);
+              const languageItems = languageEntries.map(([language, percentage]) => ({
+                language,
+                percentage: parseFloat(percentage), // Assuming percentages are represented as decimals in the original data
+              }));
+
+              // Sort the language items based on percentage (descending order)
+              languageItems.sort((a, b) => b.percentage - a.percentage);
+
+              // Render each language item
+              return languageItems.map((item, index) => (
+                <div className="flex items-center gap-[10px]" key={index}>
+                  <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
+                  <span>{item.language}: {item.percentage}</span>
+                </div>
+              ));
+            })}
+
           </div>
         </div>
         {/* Contributors */}

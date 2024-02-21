@@ -47,8 +47,8 @@ async function Project({ params }: any) {
 
         {/* Content */}
         <div className="flex mt-[30px] w-[100%] h-[100%] gap-[60px] justify-center place-items-stretch">
-          <ProjectSummary projectData={res} />
-          <ProjectDetails projectData={res}/>
+          <ProjectSummary projectData={res.project} />
+          <ProjectDetails projectData={res.project}/>
         </div>
       </div>
 
