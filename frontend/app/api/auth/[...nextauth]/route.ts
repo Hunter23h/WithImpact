@@ -58,22 +58,22 @@ export const authOption: NextAuthOptions = {
 
           // Include the CSRF token in the request header
           // axios.defaults.headers.common['X-CSRFToken'] = getCSRFToken();
-          try {
-          await axios.post(
-            "http://localhost:8000/addavatar/",
-            {
-              avatar_url: profile.avatar_url,
-              username: profile.login,
-            },
-            // {
-            //   headers: {
-            //     'X-CSRFToken': getCSRFToken(),
-            //   }
-            // }
-          );
-        } catch (error) {
-          console.error("Error updating avatar in Django:", error);
-        }
+        //   try {
+        //   await axios.post(
+        //     "http://localhost:8000/addavatar/",
+        //     {
+        //       avatar_url: profile.avatar_url,
+        //       username: profile.login,
+        //     },
+        //     // {
+        //     //   headers: {
+        //     //     'X-CSRFToken': getCSRFToken(),
+        //     //   }
+        //     // }
+        //   );
+        // } catch (error) {
+        //   console.error("Error updating avatar in Django:", error);
+        // }
           return true;
         } catch (error) {
           return false;
