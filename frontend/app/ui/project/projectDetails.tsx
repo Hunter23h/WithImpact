@@ -22,9 +22,11 @@ function ProjectDetails({ projectData }: { projectData: any}) {
         <div>
           <p className="font-bold">Tags</p>
           <div className=" flex gap-[7px]">
-            {[1, 2, 3].map((tag, key) => (
-              <Badge key={key}>tag {tag} </Badge>
-            ))}
+            {projectData.tags
+                .filter((_: any, i: any) => i < 3)
+                .map((tag: any, key: any) => (
+                  <Badge key={key}>{tag}</Badge>
+                ))}
           </div>
         </div>
         {/* Status */}
@@ -91,12 +93,20 @@ function ProjectDetails({ projectData }: { projectData: any}) {
         <div>
           <p className="font-bold">Contributors</p>
           <div className="flex gap-[10px]">
-            {[1, 2, 3, 4].map((_, key) => (
+            {/* {[1, 2, 3, 4].map((_, key) => (
               <div
                 className="w-[30px] h-[30px] rounded-[50%] border-border border-[1px]"
                 key={key}
               ></div>
-            ))}
+            ))} */}
+            {projectData.top_contributors
+                .filter((_: any, i: any) => i < 5)
+                .map((tag: any, key: any) => (
+                  // <img key={key} src={tag.avatar_url} alt={`Avatar ${key}`} className="w-8 h-8 rounded-full" />
+                  <a key={key} href={`http://github.com/${tag.login}`} target="_blank" rel="noopener noreferrer">
+                    <img src={tag.avatar_url} alt={`Avatar ${key}`} className="w-8 h-8 rounded-full" />
+                  </a>
+                ))}
           </div>
         </div>
         {/* Open Issues */}
