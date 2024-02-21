@@ -5,7 +5,7 @@ from .models import User
 
 @receiver(user_signed_up)
 def on_user_sign_up(sender, request, user, **kwargs):
-    User.objects.create(username=user)
+    # User.objects.create(username=user)
     print("USED ADDED TO DB")
     
 # @receiver(social_account_added)

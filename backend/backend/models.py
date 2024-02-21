@@ -45,5 +45,6 @@ class Comment(models.Model):
     username = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
+    avatar_url = models.TextField()
 
 

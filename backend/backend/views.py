@@ -4,6 +4,7 @@ from rest_framework import status
 from django.shortcuts import render, get_object_or_404,redirect
 from .models import User, Project
 from .forms import CommentForm
+import json
 
 # from .serializers import MyModelSerializer
 from django.http import HttpResponse, JsonResponse
@@ -21,6 +22,7 @@ from django.contrib.auth.decorators import login_required
 from dj_rest_auth.registration.views import SocialLoginView
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
+from django.views.decorators.csrf import csrf_exempt
 
 
 class GithubLogin(SocialLoginView):
@@ -29,6 +31,31 @@ class GithubLogin(SocialLoginView):
     # callback_url = "http://"
     client_class = OAuth2Client
 
+@csrf_exempt
+def add_avatar_to_comments(request):
+    if request.method == 'POST':
+        # Get the avatar URL and username from the request data
+        print("in post")
+        data = json.loads(request.body)
+        avatar_url = data.get('avatar_url')
+        username = data.get('username')
+        # print("avatar: ", avatar_url)
+        # print("username: ", username)
+
+        # Validate input
+        if not avatar_url or not username:
+            return JsonResponse({'error': 'Missing required fields'}, status=400)
+
+        # Update comments with matching username
+        try:
+            comments = Comment.objects.filter(username=username)
+            comments.update(avatar_url=avatar_url)
+            return JsonResponse({'success': True})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
 
 # def get_csrf_token(request):
 #     return JsonResponse({"csrfToken": get_token(request)})
@@ -346,3 +373,5 @@ class Users(APIView):
         project_obj = Project.objects.filter(repo_url__in=user_obj.favourite_projects)
         context = {"users": user_obj, "project": project_obj}
         return render(request, "backend/user_info.html", context)
+    
+

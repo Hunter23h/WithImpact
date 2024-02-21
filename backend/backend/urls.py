@@ -27,6 +27,7 @@ urlpatterns = [
     path("getprojects/", views.ProjectList.as_view(), name="project_list"),
     path("getusers/", views.UserList.as_view(), name="user_list"),
     path("getfavourites/<str:username>", views.FavouriteList.as_view(), name="favourite_list"),
+    path('addavatar/', views.add_avatar_to_comments, name='add_avatar_to_comments'),
     # path(
     #     "projects/<str:owner>/<str:name>", views.project_detail, name="project_detail"
     # ),

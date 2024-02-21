@@ -28,8 +28,7 @@ class UsersSerializer(serializers.ModelSerializer):
 class CommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ["id", "project_url", "username", "text", "created_date"]
-
+        fields = ["id", "project_url", "username", "text", "created_date", "avatar_url"]
 # class TokenSerializer(serializers.ModelSerializer):
 #     user = UsersSerializer(read_only=True)
 

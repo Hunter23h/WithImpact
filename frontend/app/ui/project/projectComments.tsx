@@ -7,6 +7,7 @@ import React from "react";
 function ProjectComments({ projectData }: { projectData: any}) {
   // const comments = [] as any;
   const comments = projectData.comments
+  const project = projectData.project
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
       <h2>Comments</h2>
@@ -33,10 +34,17 @@ function ProjectComments({ projectData }: { projectData: any}) {
                 className={cn(
                   "w-[50px] h-[50px] border-border border-[1px] rounded-[50%]",
                   {
-                    "self-end bg-border": comment?.author === "Kevin",
+                    "self-end bg-border": comment?.username === "KevinYuCode",
                   }
                 )}
-              ></div>
+              ><img src={comment.avatar_url} alt="Avatar" className="w-full h-full rounded-full" />
+              </div>
+              <div className="flex flex-col gap-2">
+                {/* Display the username */}
+                <span className="text-sm font-bold">{comment.username}</span>
+                {/* Display the date */}
+                <span className="text-xs text-gray-500">{comment.created_date}</span>
+              </div>
               <p className="px-[30px]">
                 {comment.text}
               </p>
