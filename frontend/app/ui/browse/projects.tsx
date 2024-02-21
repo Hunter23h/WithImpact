@@ -4,19 +4,21 @@ import Container from "../container";
 import { useGlobalContext } from "@/app/context";
 import BrowseSkeleton from "./browseSkeleton";
 import LoadMoreProjects from "./intersectionObserver";
-import { fetchProjects } from "@/lib/data";
+import { fetchFavourites, fetchProjects } from "@/lib/data";
 import PageNav from "./pageNav";
 import Link from "next/link";
 
 async function Projects({
   searchParams,
   projectsType,
+  user,
 }: {
   searchParams?: {
     search?: string;
     page?: string;
   };
   projectsType: string;
+  user: any;
 }) {
   const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
@@ -25,7 +27,7 @@ async function Projects({
   if (projectsType === "browse") {
     res = await fetchProjects(search, currentPage);
   } else if (projectsType === "favourites") {
-    res = await fetchProjects(search, currentPage);
+    res = await fetchFavourites(search, currentPage, user.username);
   }
 
   const projects = res.results;

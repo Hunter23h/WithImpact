@@ -3,12 +3,18 @@ import Projects from "../ui/browse/projects";
 import SidebarActions from "../ui/browse/sidebarActions";
 import BrowseSkeleton from "../ui/browse/browseSkeleton";
 import Container from "../ui/container";
+import { getUserSession } from "@/lib/session";
 
 async function Favourites({
   searchParams,
 }: {
   searchParams: { page: string };
 }) {
+  const user = await getUserSession();
+  if (user) {
+    console.log(user)
+  }
+
   return (
     <Container className="flex min-h-[100vh] items-stretch w-[100%]">
       {/* Filter and Sorting */}
@@ -17,7 +23,7 @@ async function Favourites({
       </div>
       {/* Favourites Results */}
       <Suspense fallback={<BrowseSkeleton />}>
-        <Projects searchParams={searchParams} projectsType="favourites" />
+        <Projects searchParams={searchParams} projectsType="favourites" user={user} />
       </Suspense>
     </Container>
   );

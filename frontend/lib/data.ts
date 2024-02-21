@@ -21,7 +21,6 @@ export async function fetchProjects(search: string, page: string) {
   }
 }
 
-
 /**
  * Fetch a single project and its corresponding comments
  * @param projectName 
@@ -49,13 +48,14 @@ export async function fetchProject(owner: string, repo: string) {
  * @param username session
  * @returns 
  */
-export async function fetchFavourites(username: string) {
+export async function fetchFavourites(search: string, page: string, username: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
-
+  
   try {
-    const response = await axios.get(`${BACKEND_URL}getFavourites/`, {
+    const response = await axios.get(`${BACKEND_URL}getfavourites/${username}`, {
       params: {
-        username: encodeURIComponent(username),
+        page: encodeURIComponent(page),
+        search: encodeURIComponent(search),
       },
     });
     let data = response.data; // Axios automatically handles the JSON parsing

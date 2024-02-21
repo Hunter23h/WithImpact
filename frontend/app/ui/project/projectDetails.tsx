@@ -99,7 +99,7 @@ function parseDate(dateString: string) {
                 <span>{item.language}{item.percentage}</span>
               </div>
             ))} */}
-            {projectData.languages.map((languageObject: any, key) => {
+            {projectData.languages.map((languageObject: any, key: any) => {
               // Convert each key-value pair into an object with language and percentage properties
               const languageEntries = Object.entries(languageObject);
               const languageItems = languageEntries.map(([language, percentage]) => ({

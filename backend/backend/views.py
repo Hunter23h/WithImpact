@@ -146,6 +146,85 @@ class Home(APIView):
         #     "Welcome to WithImpact RESTFUL API Server.",
         # )
         return render(request, "backend/home_page.html")
+    
+class FavouriteList(APIView):
+    pagination_class = PageNumberPagination
+
+    def get(self, request, username, format=None):
+
+
+        #Filters
+
+        newcomer_friendly = request.GET.get('newcomer_friendly', None)
+        status = request.GET.get('status', None)
+        sdg = request.GET.get('sdg', None)
+        languages_list = request.GET.get('languages', None)
+        search_query = request.GET.get('search', None)
+
+        user = get_object_or_404(User, username__iexact=username.lower())
+
+        favourites = user.favourite_projects
+        if not favourites:
+            return Response([])
+    
+        projects = Project.objects.filter(repo_url__in=favourites).order_by('id')
+
+        if newcomer_friendly:
+            projects = projects.filter(newcomer_friendly=newcomer_friendly)
+        
+        if status:
+            projects = projects.filter(status=status)
+
+        if sdg:
+
+            goals = [goal.strip() for goal in sdg.split(",")]
+            sdg_filters = Q()
+            for goal in goals:
+                sdg_filters &= Q(sdg_categories__contains=[goal])
+            projects = projects.filter(sdg_filters)
+        
+        if languages_list:
+
+            languages = [language.strip() for language in languages_list.split(",")]
+            language_filters = Q()
+            for language in languages:
+                language_filters &= Q(languages__0__has_key=language)
+            projects = projects.filter(language_filters)
+        
+        if search_query:
+            
+            search_filters = (
+                Q(name__icontains=search_query) |
+                Q(owner__icontains=search_query)
+            )
+            projects = projects.filter(search_filters)
+
+        #Sorting
+
+        sort_param = request.GET.get('sort', None)
+        if sort_param == 'popularity-desc':
+            projects = projects.order_by('-stars', '-forks', '-watchers')
+
+        if sort_param == 'popularity-asc':
+            projects = projects.order_by('stars', 'forks', 'watchers', 'id')
+
+        if sort_param == 'last-updated-desc':
+            projects = projects.order_by('-last_push_date')
+                                        
+        if sort_param == 'last-updated-asc':
+            projects = projects.order_by('last_push_date')
+        
+        if sort_param == 'alphabetical':
+            projects = projects.order_by('name', 'owner')
+
+        
+
+        paginator = self.pagination_class()
+        results_proj_page = paginator.paginate_queryset(projects, request)
+        project_serializer = ProjectsSerializer(results_proj_page, many=True)
+        return paginator.get_paginated_response(
+            project_serializer.data
+        )
 
 
 class ProjectList(APIView):
