@@ -23,18 +23,21 @@ export async function fetchProjects(search: string, page: string) {
 
 /**
  * Fetch a single project and its corresponding comments
- * @param projectName 
+ * @param projectName
  * @returns { Project {}, Comments:[]}
  */
 export async function fetchProject(owner: string, repo: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(`${BACKEND_URL}projects/${owner}/${repo}`, {
-      params: {
-        // projectName: encodeURIComponent(projectName),
-      },
-    });
+    const response = await axios.get(
+      `${BACKEND_URL}projects/${owner}/${repo}`,
+      {
+        params: {
+          // projectName: encodeURIComponent(projectName),
+        },
+      }
+    );
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;
   } catch (e) {
@@ -46,18 +49,25 @@ export async function fetchProject(owner: string, repo: string) {
 /**
  * Fetch favourite projects associated with a user
  * @param username session
- * @returns 
+ * @returns
  */
-export async function fetchFavourites(search: string, page: string, username: string) {
+export async function fetchFavourites(
+  search: string,
+  page: string,
+  username: string
+) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
-  
+
   try {
-    const response = await axios.get(`${BACKEND_URL}getfavourites/${username}`, {
-      params: {
-        page: encodeURIComponent(page),
-        search: encodeURIComponent(search),
-      },
-    });
+    const response = await axios.get(
+      `${BACKEND_URL}getfavourites/${username}`,
+      {
+        params: {
+          page: encodeURIComponent(page),
+          search: encodeURIComponent(search),
+        },
+      }
+    );
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;
   } catch (e) {
