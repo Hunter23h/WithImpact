@@ -28,13 +28,15 @@ urlpatterns = [
     path("getusers/", views.UserList.as_view(), name="user_list"),
     path("getfavourites/<str:username>", views.FavouriteList.as_view(), name="favourite_list"),
     path('addavatar/', views.add_avatar_to_comments, name='add_avatar_to_comments'),
+    path('likeproject/', views.like_project, name='like_project'),
+    path('addcomment/', views.add_comment, name='add_comment'),
     # path(
     #     "projects/<str:owner>/<str:name>", views.project_detail, name="project_detail"
     # ),
     path(
         "projects/<str:owner>/<str:name>", views.ProjectInfo.as_view(), name="project_info"
     ),
-    path("users/<str:pk>/", views.Users.as_view(), name="user_detail"),
+    path("users/<str:username>/", views.UserInfo.as_view(), name="user_detail"),
     path("accounts/", include("allauth.urls")),
     path("accounts/", include("allauth.socialaccount.urls")),
     # path("csrf/", views.get_csrf_token, name="get_csrf_token"),

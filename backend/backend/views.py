@@ -56,6 +56,76 @@ def add_avatar_to_comments(request):
 
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
+    
+
+@csrf_exempt
+def like_project(request):
+    if request.method == 'POST':
+        # Assuming the request body contains JSON data with projectOwner and projectName
+        data = json.loads(request.body)
+        print(data)
+        # print(request.POST)
+        url = data.get('repo_url')
+        user = data.get('username')
+
+        if not url or not user:
+            return JsonResponse({'error': 'Missing required fields'}, status=400)
+
+        # Assuming you have a User model with a field to store starred projects
+        # print(request.user)
+        user_profile = User.objects.get(username=user)
+        # print(user_profile)
+        # if doesnt work, just pass username into body of post request
+        # if not user_profile:
+        #     return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+        # Here you can update the user's model to add the starred project
+        try:
+            # Add logic to update the user's model with the starred project
+            # For example:
+
+            if url in user_profile.favourite_projects:
+                user_profile.favourite_projects.remove(url)
+            else:
+                user_profile.favourite_projects.append(url)
+
+            user_profile.save()
+            return JsonResponse({'success': True})
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+    
+@csrf_exempt
+def add_comment(request):
+    if request.method == 'POST':
+        # Assuming the request body contains JSON data with username, repo_url, and text
+        data = json.loads(request.body)
+        print(data)
+        text = data.get('text')
+        username = data.get('username')
+        repo_url = data.get('repo_url')
+        avatar_url = data.get('avatar')
+
+        if not repo_url or not username or not text:
+            return JsonResponse({'error': 'Missing required fields'}, status=400)
+
+        try:
+            # Create a new comment object
+            comment = Comment.objects.create(
+                project_url=repo_url,
+                username= User.objects.get(username=username),
+                text=text,
+                avatar_url=avatar_url  # You need to replace this with the actual URL or logic to get the avatar URL
+            )
+            # Optionally, you can return the ID of the newly created comment
+            return JsonResponse({'success': True, 'comment_id': comment.id}, status=201)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+
 
 # def get_csrf_token(request):
 #     return JsonResponse({"csrfToken": get_token(request)})
@@ -367,11 +437,18 @@ class Projects(APIView):
         return render(request, "backend/project_detail.html", context)
 
 
-class Users(APIView):
-    def get(self, request, pk, format=None):
-        user_obj = User.objects.get(pk=pk)
+class UserInfo(APIView):
+    def get(self, request, username, format=None):
+        user_obj = get_object_or_404(User, username=username)
         project_obj = Project.objects.filter(repo_url__in=user_obj.favourite_projects)
-        context = {"users": user_obj, "project": project_obj}
-        return render(request, "backend/user_info.html", context)
+        proj_serializer = ProjectsSerializer(project_obj, many=True)
+        user_serializer = UsersSerializer(user_obj)
+
+        data = {
+            'user': user_serializer.data,
+            'project': proj_serializer.data
+        }
+
+        return Response(data, status=status.HTTP_200_OK)
     
 
