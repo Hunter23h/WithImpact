@@ -75,3 +75,64 @@ export async function fetchFavourites(
     throw new Error("Failed to fetch project");
   }
 }
+
+/**
+ * Fetch user favourite projects and project info
+ * @param username session
+ * @returns
+ */
+export async function fetchUser(username: string) {
+  noStore(); // Assuming this is a custom function you've defined elsewhere
+
+  try {
+    const response = await axios.get(`${BACKEND_URL}users/${username}`, {
+      params: {},
+    });
+    let data = response.data; // Axios automatically handles the JSON parsing
+    return data;
+  } catch (e) {
+    console.log("fetch users error:", e);
+    throw new Error("Failed to fetch project");
+  }
+}
+
+/**
+ * Liking a project
+ */
+export async function likeProject(repo_url: string, username: string) {
+  try {
+    const response = await axios.post(`${BACKEND_URL}likeproject/`, {
+      repo_url: repo_url,
+      username: encodeURIComponent(username),
+    });
+    let data = response.data; // Axios automatically handles the JSON parsing
+    return data;
+  } catch (e) {
+    console.log("fetch users error:", e);
+    throw new Error("Failed to fetch project");
+  }
+}
+
+/**
+ * Adding a comment
+ */
+export async function addComment(
+  repo_url: string,
+  username: string,
+  text: string,
+  avatar: string
+) {
+  try {
+    const response = await axios.post(`${BACKEND_URL}addcomment/`, {
+      repo_url: repo_url,
+      username: encodeURIComponent(username),
+      text: text,
+      avatar: avatar,
+    });
+    let data = response.data; // Axios automatically handles the JSON parsing
+    return data;
+  } catch (e) {
+    console.log("add comments error:", e);
+    throw new Error("Failed to add comment");
+  }
+}

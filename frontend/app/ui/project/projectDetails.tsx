@@ -2,24 +2,26 @@ import { Badge } from "@/components/ui/badge";
 import PercentageBar from "@/components/ui/percentageBar";
 import { cn } from "@/lib/utils";
 import React from "react";
-
-function ProjectDetails({ projectData }: { projectData: any}) {
+import Link from "next/link";
+import Image from "next/image";
+function ProjectDetails({ projectData }: { projectData: any }) {
   const getNewcomerFriendlyText = (isFriendly: boolean) => {
     return isFriendly ? "Newcomer Friendly" : "Not Newcomer Friendly";
   };
 
-function parseDate(dateString: string) {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1; // Months are zero-based (0 for January)
-  const day = date.getDate();
+  function parseDate(dateString: string) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // Months are zero-based (0 for January)
+    const day = date.getDate();
 
-  // Construct the date string in the format "YYYY-MM-DD"
-  const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
-  
-  return formattedDate;
-}
+    // Construct the date string in the format "YYYY-MM-DD"
+    const formattedDate = `${year}-${month < 10 ? "0" + month : month}-${
+      day < 10 ? "0" + day : day
+    }`;
 
+    return formattedDate;
+  }
 
   return (
     <>
@@ -35,10 +37,10 @@ function parseDate(dateString: string) {
           <p className="font-bold">Tags</p>
           <div className=" flex gap-[7px]">
             {projectData.tags
-                .filter((_: any, i: any) => i < 3)
-                .map((tag: any, key: any) => (
-                  <Badge key={key}>{tag}</Badge>
-                ))}
+              .filter((_: any, i: any) => i < 3)
+              .map((tag: any, key: any) => (
+                <Badge key={key}>{tag}</Badge>
+              ))}
           </div>
         </div>
         {/* Status */}
@@ -59,53 +61,17 @@ function parseDate(dateString: string) {
           <p className="font-bold">Languages</p>
           <div className="grid grid-cols-2 justify-start gap-[20px] ">
             <div className="flex  w-[100%] col-span-2 rounded-[20px] overflow-hidden">
-              {/* {[
-                {
-                  language: "JavaScript",
-                  percentage: "w-[40%]",
-                  color: "bg-[#3981ED]",
-                },
-                {
-                  language: "Python",
-                  percentage: "w-[30%]",
-                  color: "bg-[#1D3D6D]",
-                },
-                {
-                  language: "HTML",
-                  percentage: "w-[20%]",
-                  color: "bg-[#0B182D]",
-                },
-                {
-                  language: "CSS",
-                  percentage: "w-[10%]",
-                  color: "bg-[#081221]",
-                },
-              ].map((item, key) => (
-                <div
-                  key={key}
-                  className={cn("h-[100%]", item.color, `${item.percentage}`)}
-                ></div>
-              ))} */}
               <PercentageBar />
             </div>
-            {/* {[
-              { language: "Test", percentage: "10" },
-              { language: "Python", percentage: "30" },
-              { language: "HTML", percentage: "40" },
-              { language: "CSS", percentage: "20" },
-            ].map((item, key) => (
-              <div className="flex items-center gap-[10px]" key={key}>
-                <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
-                <span>{item.language}{item.percentage}</span>
-              </div>
-            ))} */}
             {projectData.languages.map((languageObject: any, key: any) => {
               // Convert each key-value pair into an object with language and percentage properties
               const languageEntries = Object.entries(languageObject);
-              const languageItems = languageEntries.map(([language, percentage]) => ({
-                language,
-                percentage: parseFloat(percentage), // Assuming percentages are represented as decimals in the original data
-              }));
+              const languageItems = languageEntries.map(
+                ([language, percentage]) => ({
+                  language,
+                  percentage: parseFloat(percentage), // Assuming percentages are represented as decimals in the original data
+                })
+              );
 
               // Sort the language items based on percentage (descending order)
               languageItems.sort((a, b) => b.percentage - a.percentage);
@@ -114,31 +80,36 @@ function parseDate(dateString: string) {
               return languageItems.map((item, index) => (
                 <div className="flex items-center gap-[10px]" key={index}>
                   <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
-                  <span>{item.language}: {item.percentage}</span>
+                  <span>
+                    {item.language}: {item.percentage}
+                  </span>
                 </div>
               ));
             })}
-
           </div>
         </div>
         {/* Contributors */}
         <div>
           <p className="font-bold">Contributors</p>
           <div className="flex gap-[10px]">
-            {/* {[1, 2, 3, 4].map((_, key) => (
-              <div
-                className="w-[30px] h-[30px] rounded-[50%] border-border border-[1px]"
-                key={key}
-              ></div>
-            ))} */}
             {projectData.top_contributors
-                .filter((_: any, i: any) => i < 5)
-                .map((tag: any, key: any) => (
-                  // <img key={key} src={tag.avatar_url} alt={`Avatar ${key}`} className="w-8 h-8 rounded-full" />
-                  <a key={key} href={`http://github.com/${tag.login}`} target="_blank" rel="noopener noreferrer">
-                    <img src={tag.avatar_url} alt={`Avatar ${key}`} className="w-8 h-8 rounded-full" />
-                  </a>
-                ))}
+              .filter((_: any, i: any) => i < 5)
+              .map((tag: any, key: any) => (
+                // <img key={key} src={tag.avatar_url} alt={`Avatar ${key}`} className="w-8 h-8 rounded-full" />
+                <Link
+                  key={key}
+                  href={`http://github.com/${tag.login}`}
+                  target="_blank"
+                >
+                  <Image
+                    src={tag.avatar_url}
+                    alt={`Avatar ${key}`}
+                    width={30}
+                    height={30}
+                    className="rounded-[50%]"
+                  />
+                </Link>
+              ))}
           </div>
         </div>
         {/* Open Issues */}
@@ -162,7 +133,9 @@ function parseDate(dateString: string) {
           <p className="font-bold">Project Difficulty</p>
           <div className="flex items-center gap-[10px] ">
             <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
-            <span>{getNewcomerFriendlyText(projectData.newcomer_friendly)}</span>
+            <span>
+              {getNewcomerFriendlyText(projectData.newcomer_friendly)}
+            </span>
           </div>
         </div>
       </div>

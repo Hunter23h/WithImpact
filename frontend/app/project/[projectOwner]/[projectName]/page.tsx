@@ -4,20 +4,40 @@ import ProjectDetails from "@/app/ui/project/projectDetails";
 import ProjectSummary from "@/app/ui/project/projectSummary";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { fetchProject } from "@/lib/data";
+import { fetchProject, fetchUser } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
+import { getUserSession } from "@/lib/session";
+import { url } from "inspector";
+import StarProject from "@/app/ui/starProject/page";
+import { revalidatePath } from "next/cache";
+import { likeProject } from "@/lib/data";
 
 async function Project({ params }: any) {
-  console.log(params)
   const projectName = params.projectName;
   const projectOwner = params.projectOwner;
-  // const project = fetchProject(projectOwner, projectName);
-  // console.log(project)
-  let res = {}
+  const user = await getUserSession();
+
+  let res = {};
+  let userInfo = {};
+
   res = await fetchProject(projectOwner, projectName);
-  console.log(res);
+  userInfo = await fetchUser(user?.username);
+
+  function checkLiked(repo_url: string, project: any) {
+    return project.includes(repo_url);
+  }
+
+  const isLiked = checkLiked(
+    res?.project.repo_url,
+    userInfo?.user.favourite_projects
+  );
+
+  const handleLike = async () => {
+    const res = await likeProject(repo_url, username);
+    revalidatePath(pathName);
+  };
 
   return (
     <Container>
@@ -26,18 +46,11 @@ async function Project({ params }: any) {
         <div>
           <div className="flex justify-between items-center">
             <h1>{projectOwner + "/" + projectName}</h1>
-            <Button
-              variant={"outline"}
-              className="flex gap-[10px]  h-[100%] tracking-tight py-[5px]"
-            >
-              <Image
-                src="/icons/star_outline.svg"
-                height={15}
-                width={15}
-                alt="star"
-              />
-              <span className="flex gap-[10px]">Starred</span>
-            </Button>
+            <StarProject
+              isLiked={isLiked}
+              repo_url={res.project.repo_url}
+              username={user.username}
+            />
           </div>
           <div className="bg-[white] h-[2px] w-[100%]"></div>
         </div>
@@ -48,7 +61,7 @@ async function Project({ params }: any) {
         {/* Content */}
         <div className="flex mt-[30px] w-[100%] h-[100%] gap-[60px] justify-center place-items-stretch">
           <ProjectSummary projectData={res.project} />
-          <ProjectDetails projectData={res.project}/>
+          <ProjectDetails projectData={res.project} />
         </div>
       </div>
 
