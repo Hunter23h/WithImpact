@@ -25,7 +25,7 @@ from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 
 class GithubLogin(SocialLoginView):
     adapter_class = GitHubOAuth2Adapter
-    callback_url = "http://127.0.0.1:3000/api/auth/callback/github"
+    callback_url = "http://localhost:3000/api/auth/callback/github"
     # callback_url = "http://"
     client_class = OAuth2Client
 
@@ -246,12 +246,20 @@ class ProjectList(APIView):
         # return Response(project_serializer.data, status=status.HTTP_200_OK)
 
 class UserList(APIView):
-    def get(self, reqest, format=None):
+    def get(self, request, format=None):
         
         users = User.objects.all()
         user_serializer = UsersSerializer(users, many=True)
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
+    
+class ProjectInfo(APIView):
+    def get(self, request, name, owner, format=None):
+        project_obj = get_object_or_404(Project, name=name, owner=owner)
+        proj_serializer = ProjectsSerializer(project_obj)
+
+        return Response(proj_serializer.data, status=status.HTTP_200_OK)
+    
 class Projects(APIView):
     def get(self, request, name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)

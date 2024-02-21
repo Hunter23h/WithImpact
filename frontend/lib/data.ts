@@ -27,13 +27,13 @@ export async function fetchProjects(search: string, page: string) {
  * @param projectName 
  * @returns { Project {}, Comments:[]}
  */
-export async function fetchProject(projectName: string) {
+export async function fetchProject(owner: string, repo: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(`${BACKEND_URL}getprojects/`, {
+    const response = await axios.get(`${BACKEND_URL}projects/${owner}/${repo}`, {
       params: {
-        projectName: encodeURIComponent(projectName),
+        // projectName: encodeURIComponent(projectName),
       },
     });
     let data = response.data; // Axios automatically handles the JSON parsing

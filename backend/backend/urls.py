@@ -26,8 +26,11 @@ urlpatterns = [
     # path("mymodel/", views.MyModelList.as_view()),
     path("getprojects/", views.ProjectList.as_view(), name="project_list"),
     path("getusers/", views.UserList.as_view(), name="user_list"),
+    # path(
+    #     "projects/<str:owner>/<str:name>", views.project_detail, name="project_detail"
+    # ),
     path(
-        "projects/<str:owner>/<str:name>", views.project_detail, name="project_detail"
+        "projects/<str:owner>/<str:name>", views.ProjectInfo.as_view(), name="project_info"
     ),
     path("users/<str:pk>/", views.Users.as_view(), name="user_detail"),
     path("accounts/", include("allauth.urls")),

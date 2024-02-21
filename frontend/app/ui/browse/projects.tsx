@@ -45,7 +45,7 @@ async function Projects({
       <div className="grid grid-cols-1 gap-[10px] w-[100%] self-start">
         {projects?.length > 0 &&
           projects.map((project: any, key: any) => (
-            <Link href={`project/${project.name}`}>
+            <Link href={`project/${project.owner}/${project.name}`}>
               <ProjectCard key={key} project={project}></ProjectCard>
             </Link>
           ))}

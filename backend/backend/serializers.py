@@ -23,7 +23,7 @@ class ProjectsSerializer(serializers.ModelSerializer):
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["email", "username", "favourite_projects"]
+        fields = ["username", "favourite_projects"]
 
 # class TokenSerializer(serializers.ModelSerializer):
 #     user = UsersSerializer(read_only=True)

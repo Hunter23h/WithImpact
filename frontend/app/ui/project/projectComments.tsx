@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-function ProjectComments() {
+function ProjectComments({ projectData }: { projectData: any}) {
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
       <h2>Comments</h2>

@@ -2,7 +2,12 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import React from "react";
 
-function ProjectDetails() {
+function ProjectDetails({ projectData }: { projectData: any}) {
+  const getNewcomerFriendlyText = (isFriendly: boolean) => {
+    return isFriendly ? "Newcomer Friendly" : "Not Newcomer Friendly";
+  };
+
+
   return (
     <>
       {/* Metadata */}
@@ -10,7 +15,7 @@ function ProjectDetails() {
         {/* Content Updated */}
         <div>
           <p className="font-bold">Content Updated</p>
-          <p>2023-11-12</p>
+          <p>{projectData.updated_date} </p>
         </div>
         {/* Tags */}
         <div>
@@ -26,13 +31,13 @@ function ProjectDetails() {
           <p className="font-bold">Status</p>
           <div className="flex items-center gap-[10px] ">
             <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
-            <span>Active</span>
+            <span>{projectData.status}</span>
           </div>
         </div>
         {/* Latest Commit */}
         <div>
           <p className="font-bold">Latest Commit</p>
-          <p>2023-11-12</p>
+          <p>{projectData.latest_commit_date}</p>
         </div>
         {/* Languages */}
         <div>
@@ -97,7 +102,7 @@ function ProjectDetails() {
           <p className="font-bold">Open Issues</p>
           <div className="flex items-center gap-[10px] ">
             <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
-            <span>Active</span>
+            <span>{projectData.open_issues}</span>
           </div>
         </div>
         {/* Open PRs */}
@@ -105,7 +110,7 @@ function ProjectDetails() {
           <p className="font-bold">Open PRs</p>
           <div className="flex items-center gap-[10px] ">
             <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
-            <span>Active</span>
+            <span>{projectData.open_prs}</span>
           </div>
         </div>
         {/* Project Difficulty */}
@@ -113,7 +118,7 @@ function ProjectDetails() {
           <p className="font-bold">Project Difficulty</p>
           <div className="flex items-center gap-[10px] ">
             <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
-            <span>Active</span>
+            <span>{getNewcomerFriendlyText(projectData.newcomer_friendly)}</span>
           </div>
         </div>
       </div>

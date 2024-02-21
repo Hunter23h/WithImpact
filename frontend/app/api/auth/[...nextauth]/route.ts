@@ -34,7 +34,7 @@ export const authOption: NextAuthOptions = {
         throw new Error("No profile");
       }
       if (account.provider === "github") {
-        console.log("account info: ", account);
+        // console.log("account info: ", account);
         const { access_token, providerAccountId } = account;
 
         try {
