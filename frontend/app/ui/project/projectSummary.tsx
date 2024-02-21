@@ -7,7 +7,7 @@ function Summary() {
       {/* Read Me */}
       <div className="flex flex-col justify-between">
         <div>
-          <h2>Summary READ.md:</h2>
+          <h2>Description</h2>
           <p>
             Industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

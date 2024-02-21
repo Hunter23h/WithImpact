@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import PercentageBar from "@/components/ui/percentageBar";
 import { cn } from "@/lib/utils";
 import React from "react";
 
@@ -38,8 +39,8 @@ function ProjectDetails() {
         <div>
           <p className="font-bold">Languages</p>
           <div className="grid grid-cols-2 justify-start gap-[20px] ">
-            <div className="flex h-[10px] w-[100%] col-span-2 rounded-[20px] overflow-hidden">
-              {[
+            <div className="flex  w-[100%] col-span-2 rounded-[20px] overflow-hidden">
+              {/* {[
                 {
                   language: "JavaScript",
                   percentage: "w-[40%]",
@@ -65,7 +66,8 @@ function ProjectDetails() {
                   key={key}
                   className={cn("h-[100%]", item.color, `${item.percentage}`)}
                 ></div>
-              ))}
+              ))} */}
+              <PercentageBar />
             </div>
             {[
               { language: "JavaScript", percentage: "10" },

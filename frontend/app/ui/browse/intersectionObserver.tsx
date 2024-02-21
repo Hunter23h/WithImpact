@@ -12,8 +12,6 @@ function LoadMoreProjects() {
     let data = await res.json();
     setProjects([...projects, ...data.results]);
     setNextUrl(data.next);
-    console.log("here");
-    console.log(data.next);
   };
   useEffect(() => {
     const observer = new IntersectionObserver(

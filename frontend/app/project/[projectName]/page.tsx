@@ -14,8 +14,8 @@ async function Project({ params }: any) {
   const project = fetchProject(params.projectName);
 
   return (
-    <>
-      <Container>
+    <Container>
+      <div>
         {/* Header */}
         <div>
           <div className="flex justify-between items-center">
@@ -44,13 +44,11 @@ async function Project({ params }: any) {
           <ProjectSummary />
           <ProjectDetails />
         </div>
-      </Container>
+      </div>
 
       {/* Comment Section */}
-      <Container>
-        <ProjectComments />
-      </Container>
-    </>
+      <ProjectComments />
+    </Container>
   );
 }
 
