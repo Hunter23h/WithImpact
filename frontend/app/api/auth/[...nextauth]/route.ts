@@ -46,6 +46,7 @@ export const authOption: NextAuthOptions = {
             },
           );
           const { key } = response.data;
+          console.log(response.data)
           user.key = key;
           
           // const getCSRFToken = () => {

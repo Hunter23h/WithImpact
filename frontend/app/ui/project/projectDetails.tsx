@@ -76,8 +76,10 @@ function ProjectDetails({ projectData }: { projectData: any }) {
               // Sort the language items based on percentage (descending order)
               languageItems.sort((a, b) => b.percentage - a.percentage);
 
+              const topFourLanguages = languageItems.slice(0,4);
+
               // Render each language item
-              return languageItems.map((item, index) => (
+              return topFourLanguages.map((item, index) => (
                 <div className="flex items-center gap-[10px]" key={index}>
                   <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
                   <span>
