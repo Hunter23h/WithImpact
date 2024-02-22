@@ -56,6 +56,21 @@ function ProjectDetails({ projectData }: { projectData: any }) {
           <p className="font-bold">Latest Commit</p>
           <p>{parseDate(projectData.latest_commit_date)}</p>
         </div>
+        {/* Stars */}
+        <div>
+          <p className="font-bold">Stars</p>
+          <p>{projectData.stars}</p>
+        </div>
+        {/* Watchers */}
+        <div>
+          <p className="font-bold">Watchers</p>
+          <p>{projectData.watchers}</p>
+        </div>
+        {/* Forks */}
+        <div>
+          <p className="font-bold">Forks</p>
+          <p>{projectData.forks}</p>
+        </div>
         {/* Languages */}
         <div>
           <p className="font-bold">Languages</p>

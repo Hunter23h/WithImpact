@@ -203,6 +203,53 @@ def check_criteria(url):
             return False
         else:
             return True
+        
+def main(url):
+    rate_used_start, rate_total = get_rate_limit()
+    # print("Start:")
+    print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
+
+    # url = 'https://github.com/hunter23h/withimpact' #private
+    # url = 'https://github.com/google-deepmind/alphageometry' #No description, doesn't pass criteria...
+    # url = 'https://github.com/socialincome-san/public' #Should pass criteria
+    # url_topics = 'https://github.com/topics/sustainable-development-goals'    
+    # repository_url = "https://github.com/octocat/Hello-World"
+    api_url, repo = convert_to_api_url(url)
+    # print(f"GitHub API URL: {api_url}")
+    # start_time = time.time()
+    list_repo = []
+    # print(f"Start time: {time.ctime()}")
+    valid_project = check_criteria(api_url)
+    if valid_project:
+        repo_dict = requests.get(api_url, headers=headers).json()
+        # print_repo_metrics(repo_dict, repo)
+        repo_info = repo_metrics_to_dict(repo_dict, repo)
+        # pp(repo_info)
+        list_repo.append(repo_info)
+
+        
+        # out_file = open("../jsons/submitted_repo.json", "w") # run from /web-scraping
+  
+        # json.dump(list_repo, out_file, indent = 6) 
+  
+        # out_file.close()
+        # print(list_repo[0])
+        # print(type(list_repo))
+        return list_repo[0]
+
+        # print("End:")
+        # rate_used_end, rate_total = get_rate_limit()
+        # print_rate_limit(rate_used=rate_used_end, rate_limit=rate_total)
+        # print(f"Used {rate_used_end-rate_used_start}")
+
+        # end_time = time.time()
+        # total_time = end_time - start_time
+        # print(f"End time: {time.ctime()}, time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
+
+    else:
+        print("Project does not match the criteria!")
+        return None
+        #needs manual review
 
 if __name__ == '__main__':
 

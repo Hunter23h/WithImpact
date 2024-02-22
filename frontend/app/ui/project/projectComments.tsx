@@ -1,23 +1,47 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useState } from "react";
+import { addComment } from "@/lib/data";
 
-function ProjectComments({ projectData }: { projectData: any}) {
-  // const comments = [] as any;
-  const comments = projectData.comments
-  const project = projectData.project
+function ProjectComments({
+  projectData,
+  user,
+}: {
+  projectData: any;
+  user: any;
+}) {
+  const comments = projectData.comments;
+  const project = projectData.project;
+  // const user = await getUserSession();
+  const [text, setText] = useState("");
+  const handleComment = async () => {
+    const commentResponse = await addComment(
+      project.repo_url,
+      user.username,
+      text,
+      user.image
+    );
+    if (!commentResponse.success) return;
+    setText("");
+  };
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
       <h2>Comments</h2>
-      <div className="grid s">
+      <div className="grid">
         <Textarea
           placeholder="Comment on project"
           className="max-h-[400px] min-h-[150px] text-black text-[20px]"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         />
         <div className="w-[100%] flex justify-end">
-          <Button className="h-auto mt-[10px] text-lg w-[200px] ">
+          <Button
+            className="h-auto mt-[20px] text-lg w-[200px]"
+            onClick={handleComment}
+          >
             Comment{" "}
           </Button>
         </div>
@@ -37,17 +61,22 @@ function ProjectComments({ projectData }: { projectData: any}) {
                     "self-end bg-border": comment?.username === "KevinYuCode",
                   }
                 )}
-              ><img src={comment.avatar_url} alt="Avatar" className="w-full h-full rounded-full" />
+              >
+                <img
+                  src={comment.avatar_url}
+                  alt="Avatar"
+                  className="w-full h-full rounded-full"
+                />
               </div>
               <div className="flex flex-col gap-2">
                 {/* Display the username */}
                 <span className="text-sm font-bold">{comment.username}</span>
                 {/* Display the date */}
-                <span className="text-xs text-gray-500">{comment.created_date}</span>
+                <span className="text-xs text-gray-500">
+                  {comment.created_date}
+                </span>
               </div>
-              <p className="px-[30px]">
-                {comment.text}
-              </p>
+              <p className="px-[30px]">{comment.text}</p>
             </div>
           ))
         ) : (

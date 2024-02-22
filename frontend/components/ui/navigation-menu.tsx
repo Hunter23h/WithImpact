@@ -54,6 +54,7 @@ const NavigationMenuTrigger = React.forwardRef<
     {...props}
   >
     {children}{" "}
+    {/* @ts-ignore */}
     {props.showArrow && (
       <ChevronDown
         className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
+import GithubUrl from "@/components/githubUrl";
 
 function ProjectSubmission() {
   return (
@@ -12,15 +13,11 @@ function ProjectSubmission() {
           <b>WITH IMPACT</b>
         </span>
       </h2>
-      <Input
-        className="border-border max-w-[700px] h-[55px] text-center"
-        placeholder="Enter GitHub Repository URL"
-      />
-      <Button className="px-[50px]">Submit</Button>
+      <GithubUrl />
       <p>
         Ensure your project meets all of the requirements before submitting.
         View the requirements{" "}
-        <Link href="/project-check-list" className="text-[skyblue]">
+        <Link href="/submission-criteria" className="text-primary">
           here.
         </Link>
       </p>

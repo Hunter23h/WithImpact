@@ -42,4 +42,5 @@ urlpatterns = [
     # path("csrf/", views.get_csrf_token, name="get_csrf_token"),
     # path("api/save-user/", views.save_user, name="save_user"),
     path("github/", views.GithubLogin.as_view(), name="github_login"),
+    path("submiturl/", views.submit_url, name='submit_url'),
 ]

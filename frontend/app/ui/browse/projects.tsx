@@ -29,10 +29,10 @@ async function Projects({
   } else if (projectsType === "favourites") {
     res = await fetchFavourites(search, currentPage, user.username);
   }
-
+  const PROJECTS_PER_PAGE = 20;
   const projects = res.results;
   const count = res.count;
-  const pageCount = Math.ceil(count / 40);
+  const pageCount = Math.ceil(count / PROJECTS_PER_PAGE);
 
   const pageArray = [] as String[];
   for (let i = 1; i < pageCount + 1; i++) {
