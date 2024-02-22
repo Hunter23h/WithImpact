@@ -83,14 +83,16 @@ def like_project(request):
         try:
             # Add logic to update the user's model with the starred project
             # For example:
-
+            liked = False
             if url in user_profile.favourite_projects:
                 user_profile.favourite_projects.remove(url)
+                liked = False
             else:
                 user_profile.favourite_projects.append(url)
+                liked = True
 
             user_profile.save()
-            return JsonResponse({'success': True})
+            return JsonResponse({'success': True, 'likeStatus': liked})
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
     else:
