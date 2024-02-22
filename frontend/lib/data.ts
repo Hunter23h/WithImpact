@@ -81,19 +81,13 @@ export async function fetchFavourites(
  * @param username session
  * @returns
  */
-export async function fetchUser(
-  username: string
-) {
+export async function fetchUser(username: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(
-      `${BACKEND_URL}users/${username}`,
-      {
-        params: {
-        },
-      }
-    );
+    const response = await axios.get(`${BACKEND_URL}users/${username}`, {
+      params: {},
+    });
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;
   } catch (e) {
@@ -106,11 +100,10 @@ export async function fetchUser(
  * Liking a project
  */
 export async function likeProject(repo_url: string, username: string) {
-
   try {
     const response = await axios.post(`${BACKEND_URL}likeproject/`, {
-        repo_url: repo_url,
-        username: encodeURIComponent(username),
+      repo_url: repo_url,
+      username: encodeURIComponent(username),
     });
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;
@@ -123,14 +116,18 @@ export async function likeProject(repo_url: string, username: string) {
 /**
  * Adding a comment
  */
-export async function addComment(repo_url: string, username: string, text: string, avatar: string) {
-
+export async function addComment(
+  repo_url: string,
+  username: string,
+  text: string,
+  avatar: string
+) {
   try {
     const response = await axios.post(`${BACKEND_URL}addcomment/`, {
-        repo_url: repo_url,
-        username: encodeURIComponent(username),
-        text: text,
-        avatar: avatar,
+      repo_url: repo_url,
+      username: encodeURIComponent(username),
+      text: text,
+      avatar: avatar,
     });
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;
@@ -139,10 +136,3 @@ export async function addComment(repo_url: string, username: string, text: strin
     throw new Error("Failed to add comment");
   }
 }
-
-
-
-
-
-
-

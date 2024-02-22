@@ -21,23 +21,21 @@ async function Project({ params }: any) {
 
   let res = {};
   let userInfo = {};
+  let isLiked;
 
   res = await fetchProject(projectOwner, projectName);
-  userInfo = await fetchUser(user?.username);
+  if (user) {
+    userInfo = await fetchUser(user?.username);
 
-  function checkLiked(repo_url: string, project: any) {
-    return project.includes(repo_url);
+    function checkLiked(repo_url: string, project: any) {
+      return project.includes(repo_url);
+    }
+
+    isLiked = checkLiked(
+      res?.project.repo_url,
+      userInfo?.user.favourite_projects
+    );
   }
-
-  const isLiked = checkLiked(
-    res?.project.repo_url,
-    userInfo?.user.favourite_projects
-  );
-
-  const handleLike = async () => {
-    const res = await likeProject(repo_url, username);
-    revalidatePath(pathName);
-  };
 
   return (
     <Container>
@@ -46,11 +44,13 @@ async function Project({ params }: any) {
         <div>
           <div className="flex justify-between items-center">
             <h1>{projectOwner + "/" + projectName}</h1>
-            <StarProject
-              isLiked={isLiked}
-              repo_url={res.project.repo_url}
-              username={user.username}
-            />
+            {user && (
+              <StarProject
+                isLiked={isLiked}
+                repo_url={res.project.repo_url}
+                username={user.username}
+              />
+            )}
           </div>
           <div className="bg-[white] h-[2px] w-[100%]"></div>
         </div>

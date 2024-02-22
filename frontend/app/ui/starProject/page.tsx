@@ -1,10 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { likeProject } from "@/lib/data";
 
-function StarProject({ isLiked, username, repo_url, handleLike }: any) {
+function StarProject({ isLiked, username, repo_url }: any) {
+  const router = useRouter();
+  const [likedProject, setLikedProject] = useState(isLiked);
+  const handleLike = async () => {
+    const res = await likeProject(repo_url, username);
+    console.log(res.likeStatus);
+    setLikedProject(res.likeStatus);
+  };
+
   return (
     <Button
       onClick={() => handleLike()}
@@ -13,7 +22,9 @@ function StarProject({ isLiked, username, repo_url, handleLike }: any) {
     >
       <Image
         src={
-          isLiked ? "/icons/star_outline_gold.svg" : "/icons/star_outline.svg"
+          likedProject
+            ? "/icons/star_outline_gold.svg"
+            : "/icons/star_outline.svg"
         }
         height={15}
         width={15}
