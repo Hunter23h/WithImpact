@@ -23,6 +23,7 @@ from dj_rest_auth.registration.views import SocialLoginView
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from django.views.decorators.csrf import csrf_exempt
+from webscraping.scrape_github_repo import main
 
 
 class GithubLogin(SocialLoginView):
@@ -30,6 +31,55 @@ class GithubLogin(SocialLoginView):
     callback_url = "http://localhost:3000/api/auth/callback/github"
     # callback_url = "http://"
     client_class = OAuth2Client
+
+@csrf_exempt
+def submit_url(request):
+    if request.method == 'POST':
+        # Get the URL from the request data
+        data = json.loads(request.body)
+        url = data.get('url')
+
+        if url:
+            try:
+                # Call the main function with the URL
+                output = main(url)
+                if output is None:
+                    return JsonResponse({'error': 'URL NOT VALID'}, status=400)
+                
+                # Create a new Project object
+                project = Project(
+                    name=output['Name'],
+                    owner=output['Owner'],
+                    owner_avatar=output['Owner Avatar'],
+                    repo_url=output['URL'],
+                    created_date=output['Created'],
+                    updated_date=output['Updated'],
+                    description=output['Description'],
+                    last_push_date=output['Last Push Date'],
+                    latest_commit_date=output['Latest Commit Date'],
+                    stars=output['Stars'],
+                    forks=output['Forks'],
+                    watchers=output['Watchers'],
+                    languages=output['Languages'],
+                    tags=output['Tags'],
+                    open_prs=output['Open PRs'],
+                    open_issues=output['Open Issues'],
+                    top_contributors=output['Top 5 Contributors'],
+                    status=output['Status'],
+                    newcomer_friendly=output['Newcomer Friendly']
+                )
+
+                # Save the new Project object
+                project.save()
+
+                return JsonResponse({'success': 'Project created successfully'}, status=200)
+            except Exception as e:
+                return JsonResponse({'error': str(e)}, status=500)
+        else:
+            return JsonResponse({'error': 'URL is required'}, status=400)
+    else:
+        return JsonResponse({'error': 'Method not allowed'}, status=405)
+
 
 @csrf_exempt
 def add_avatar_to_comments(request):
@@ -417,12 +467,15 @@ class UserList(APIView):
 
 #         return Response(comment_serializer.data, status=status.HTTP_200_OK)
     
+
+    
+    
 class ProjectInfo(APIView):
     def get(self, request, name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)
         proj_serializer = ProjectsSerializer(project_obj)
         # repo_url = "https://github.com/{owner}/{name}"
-        comments_obj = Comment.objects.filter(project_url=project_obj.repo_url)
+        comments_obj = Comment.objects.filter(project_url=project_obj.repo_url).order_by('-created_date')
         comment_serializer = CommentsSerializer(comments_obj, many=True)
 
         data = {

@@ -5,15 +5,13 @@ import BrowseSkeleton from "../ui/browse/browseSkeleton";
 import Container from "../ui/container";
 import { getUserSession } from "@/lib/session";
 
+
 async function Favourites({
   searchParams,
 }: {
   searchParams: { page: string };
 }) {
   const user = await getUserSession();
-  if (user) {
-    console.log(user)
-  }
 
   return (
     <Container className="flex min-h-[100vh] items-stretch w-[100%]">

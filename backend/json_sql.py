@@ -59,6 +59,37 @@ def insert_into_postgresql(data, table_name, connection_params):
         print("Data inserted successfully.")
     # except Exception as e:
     #     print(f"Error: {e}")
+        
+def main():
+    load_dotenv()
+    dbname = os.getenv("DB_NAME")
+    dbuser = os.getenv("DB_USER")
+    dbpass = os.getenv("DB_PASS")
+    dbhost = os.getenv("DB_HOST")
+    dbport = os.getenv("DB_PORT")
+
+    # Replace these values with your actual database connection details
+    connection_params = {
+        'dbname': dbname,
+        'user': dbuser,
+        'password': dbpass,
+        'host': dbhost,
+        'port': dbport
+    }
+    # print(connection_params)
+
+
+    # Replace 'your_table' with your actual table name
+    table_name = 'backend_project'
+
+    # Replace 'your_file.json' with your actual JSON file path
+    json_file_path = './jsons/submitted_repo.json'
+
+    # Read JSON data
+    data = read_json(json_file_path)
+
+    # Insert data into PostgreSQL table
+    insert_into_postgresql(data, table_name, connection_params)
 
 if __name__ == "__main__":
     load_dotenv()

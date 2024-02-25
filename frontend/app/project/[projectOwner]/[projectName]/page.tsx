@@ -10,9 +10,10 @@ import Image from "next/image";
 import React from "react";
 import { getUserSession } from "@/lib/session";
 import { url } from "inspector";
-import StarProject from "@/app/ui/starProject/page";
+import StarProject from "@/app/ui/starProject/starProject";
 import { revalidatePath } from "next/cache";
-import { likeProject } from "@/lib/data";
+
+export const revalidate = false
 
 async function Project({ params }: any) {
   const projectName = params.projectName;
@@ -24,7 +25,9 @@ async function Project({ params }: any) {
   let isLiked;
 
   res = await fetchProject(projectOwner, projectName);
+
   if (user) {
+    console.log("USER");
     userInfo = await fetchUser(user?.username);
 
     function checkLiked(repo_url: string, project: any) {
@@ -67,7 +70,7 @@ async function Project({ params }: any) {
 
       {/* Comment Section */}
       <Container>
-        <ProjectComments projectData={res} />
+        <ProjectComments projectData={res} user={user} />
       </Container>
     </Container>
   );

@@ -78,7 +78,6 @@ function PageNav({ pageArray }: any) {
   //Updates the pagination when url changes
   useEffect(() => {
     let query = searchParams.get("page") ?? "1";
-    console.log("query", query);
     getPaginationNums(query);
   }, [searchParams]);
 

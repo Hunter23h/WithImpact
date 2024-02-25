@@ -56,6 +56,21 @@ function ProjectDetails({ projectData }: { projectData: any }) {
           <p className="font-bold">Latest Commit</p>
           <p>{parseDate(projectData.latest_commit_date)}</p>
         </div>
+        {/* Stars */}
+        <div>
+          <p className="font-bold">Stars</p>
+          <p>{projectData.stars}</p>
+        </div>
+        {/* Watchers */}
+        <div>
+          <p className="font-bold">Watchers</p>
+          <p>{projectData.watchers}</p>
+        </div>
+        {/* Forks */}
+        <div>
+          <p className="font-bold">Forks</p>
+          <p>{projectData.forks}</p>
+        </div>
         {/* Languages */}
         <div>
           <p className="font-bold">Languages</p>
@@ -76,8 +91,10 @@ function ProjectDetails({ projectData }: { projectData: any }) {
               // Sort the language items based on percentage (descending order)
               languageItems.sort((a, b) => b.percentage - a.percentage);
 
+              const topFourLanguages = languageItems.slice(0,4);
+
               // Render each language item
-              return languageItems.map((item, index) => (
+              return topFourLanguages.map((item, index) => (
                 <div className="flex items-center gap-[10px]" key={index}>
                   <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
                   <span>

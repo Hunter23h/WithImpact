@@ -61,7 +61,7 @@ SITE_ID = 1
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 40,
+    "PAGE_SIZE": 20,
 }
 
 # REST_AUTH_SERIALIZERS = {

@@ -7,16 +7,19 @@ export async function fetchProjects(search: string, page: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(`${BACKEND_URL}getprojects/`, {
-      params: {
-        page: encodeURIComponent(page),
-        search: encodeURIComponent(search),
-      },
-    });
-    let data = response.data; // Axios automatically handles the JSON parsing
+    const response = await fetch(
+      `${BACKEND_URL}getprojects/?page=${encodeURIComponent(
+        page
+      )}&search=${encodeURIComponent(search)}`,
+      { cache: "no-store", next: { revalidate: 0 } }
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    let data = await response.json(); // Manually parsing the JSON
     return data;
   } catch (e) {
-    console.log("fetch users error:", e);
+    console.log("fetch projects error:", e);
     throw new Error("Failed to fetch project data");
   }
 }
@@ -30,18 +33,27 @@ export async function fetchProject(owner: string, repo: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(
-      `${BACKEND_URL}projects/${owner}/${repo}`,
-      {
-        params: {
-          // projectName: encodeURIComponent(projectName),
-        },
-      }
-    );
-    let data = response.data; // Axios automatically handles the JSON parsing
+    // Construct the URL with template literals to include the owner and repo in the path
+    const url = `${BACKEND_URL}projects/${owner}/${repo}`;
+
+    // Make the fetch request
+    const response = await fetch(url, {
+      cache: "no-store",
+      next: { revalidate: 0 },
+    });
+
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
+    }
+
+    // Parse the JSON from the response
+    const data = await response.json();
+
+    // Return the parsed data
     return data;
   } catch (e) {
-    console.log("fetch users error:", e);
+    console.log("fetch project error:", e);
     throw new Error("Failed to fetch project");
   }
 }
@@ -59,20 +71,32 @@ export async function fetchFavourites(
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
-    const response = await axios.get(
-      `${BACKEND_URL}getfavourites/${username}`,
+    // Construct the query parameters
+    const queryParams = new URLSearchParams({
+      page: encodeURIComponent(page),
+      search: encodeURIComponent(search),
+    });
+
+    // Use fetch API to perform the request
+    const response = await fetch(
+      `${BACKEND_URL}getfavourites/${username}?${queryParams.toString()}`,
       {
-        params: {
-          page: encodeURIComponent(page),
-          search: encodeURIComponent(search),
-        },
+        cache: "no-store",
+        next: { revalidate: 0 },
       }
     );
-    let data = response.data; // Axios automatically handles the JSON parsing
+
+    // Check if the response is ok (status in the range 200-299)
+    if (!response.ok) {
+      throw new Error("Failed to fetch project");
+    }
+
+    // Parse the JSON response body
+    const data = await response.json();
     return data;
   } catch (e) {
-    console.log("fetch users error:", e);
-    throw new Error("Failed to fetch project");
+    console.error("fetch users error:", e);
+    throw e; // Rethrow the caught error or handle it as needed
   }
 }
 
@@ -82,17 +106,25 @@ export async function fetchFavourites(
  * @returns
  */
 export async function fetchUser(username: string) {
-  noStore(); // Assuming this is a custom function you've defined elsewhere
+  noStore(); // Retain original side-effect function call
 
   try {
-    const response = await axios.get(`${BACKEND_URL}users/${username}`, {
-      params: {},
+    // Use fetch API to perform the GET request
+    const response = await fetch(`${BACKEND_URL}users/${username}`, {
+      method: "GET", // GET is the default method, this line is optional
     });
-    let data = response.data; // Axios automatically handles the JSON parsing
+
+    // Check if the response is ok (status in the range 200-299)
+    if (!response.ok) {
+      throw new Error("Failed to fetch user");
+    }
+
+    // Parse the JSON response body
+    const data = await response.json();
     return data;
   } catch (e) {
-    console.log("fetch users error:", e);
-    throw new Error("Failed to fetch project");
+    console.error("fetch users error:", e);
+    throw e; // Rethrow the caught error or handle it as needed
   }
 }
 
@@ -128,6 +160,19 @@ export async function addComment(
       username: encodeURIComponent(username),
       text: text,
       avatar: avatar,
+    });
+    let data = response.data; // Axios automatically handles the JSON parsing
+    return data;
+  } catch (e) {
+    console.log("add comments error:", e);
+    throw new Error("Failed to add comment");
+  }
+}
+
+export async function submitUrl(url: string) {
+  try {
+    const response = await axios.post(`${BACKEND_URL}submiturl/`, {
+      url,
     });
     let data = response.data; // Axios automatically handles the JSON parsing
     return data;

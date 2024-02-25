@@ -38,13 +38,17 @@ export const authOption: NextAuthOptions = {
         const { access_token, providerAccountId } = account;
 
         try {
-          const response = await axios.post("http://localhost:8000/github/", {
-            access_token: access_token,
-            id_token: providerAccountId,
-          });
+          const response = await axios.post(
+            "http://localhost:8000/github/",
+            {
+              access_token: access_token,
+              id_token: providerAccountId,
+            },
+          );
           const { key } = response.data;
+          console.log(response.data)
           user.key = key;
-
+          
           // const getCSRFToken = () => {
           //   const csrfToken = document.cookie
           //     .split("; ")
