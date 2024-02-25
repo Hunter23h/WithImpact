@@ -17,7 +17,7 @@ export const authOption: NextAuthOptions = {
         return {
           id: profile.id.toString(),
           name: profile.name,
-          userName: profile.login,
+          username: profile.login,
           email: profile.email,
           image: profile.avatar_url,
         };
@@ -34,49 +34,33 @@ export const authOption: NextAuthOptions = {
         throw new Error("No profile");
       }
       if (account.provider === "github") {
-        // console.log("account info: ", account);
-        const { access_token, providerAccountId } = account;
-
+        // console.log(user)
         try {
           const response = await axios.post(
-            "http://localhost:8000/github/",
+            "http://localhost:8000/adduser/",
             {
-              access_token: access_token,
-              id_token: providerAccountId,
+              username: user.username
             },
           );
-          const { key } = response.data;
           console.log(response.data)
-          user.key = key;
-          
-          // const getCSRFToken = () => {
-          //   const csrfToken = document.cookie
-          //     .split('; ')
-          //     .find(row => row.startsWith('csrftoken'))
-          //     ?.split('=')[1];
-          //   return csrfToken;
-          // };
+        // console.log("account info: ", account);
+        // const { access_token, providerAccountId } = account;
 
-          // Include the CSRF token in the request header
-          // axios.defaults.headers.common['X-CSRFToken'] = getCSRFToken();
-          //   try {
-          //   await axios.post(
-          //     "http://localhost:8000/addavatar/",
-          //     {
-          //       avatar_url: profile.avatar_url,
-          //       username: profile.login,
-          //     },
-          //     // {
-          //     //   headers: {
-          //     //     'X-CSRFToken': getCSRFToken(),
-          //     //   }
-          //     // }
-          //   );
-          // } catch (error) {
-          //   console.error("Error updating avatar in Django:", error);
-          // }
+        // try {
+        //   const response = await axios.post(
+        //     "http://localhost:8000/github/",
+        //     {
+        //       access_token: access_token,
+        //       id_token: providerAccountId,
+        //     },
+        //   );
+        //   const { key } = response.data;
+        //   console.log(response.data)
+        //   user.key = key;
+          
           return true;
         } catch (error) {
+          // console.log(error)
           return false;
         }
       }

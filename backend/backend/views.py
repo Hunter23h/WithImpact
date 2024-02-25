@@ -33,6 +33,31 @@ class GithubLogin(SocialLoginView):
     client_class = OAuth2Client
 
 @csrf_exempt
+def add_user(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        username = data.get('username')
+
+        # Check if username is provided
+        if not username:
+            return JsonResponse({'error': 'Username is required'}, status=400)
+
+        # Check if the user already exists
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({'message': 'User already exists'}, status=200)
+
+        # Create a new user instance with favourite_projects set to None (or null in the database)
+        user = User(username=username)
+        try:
+            user.save()
+            return JsonResponse({'message': 'User created successfully'}, status=201)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+    # Return an error response if request method is not POST
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_exempt
 def submit_url(request):
     if request.method == 'POST':
         # Get the URL from the request data

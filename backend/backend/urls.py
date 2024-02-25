@@ -43,4 +43,5 @@ urlpatterns = [
     # path("api/save-user/", views.save_user, name="save_user"),
     path("github/", views.GithubLogin.as_view(), name="github_login"),
     path("submiturl/", views.submit_url, name='submit_url'),
+    path("adduser/", views.add_user, name='add_user'),
 ]
