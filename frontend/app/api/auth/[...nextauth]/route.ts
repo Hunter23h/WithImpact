@@ -38,30 +38,30 @@ export const authOption: NextAuthOptions = {
         const { access_token, providerAccountId } = account;
 
         try {
-          // const response = await axios.post("http://localhost:8000/github/", {
-          //   access_token: access_token,
-          //   id_token: providerAccountId,
-          // });
-          // const { key } = response.data;
-          // user.key = key;
+          const response = await axios.post("http://localhost:8000/github/", {
+            access_token: access_token,
+            id_token: providerAccountId,
+          });
+          const { key } = response.data;
+          user.key = key;
 
           // const getCSRFToken = () => {
           //   const csrfToken = document.cookie
-          //     .split('; ')
-          //     .find(row => row.startsWith('csrftoken'))
-          //     ?.split('=')[1];
+          //     .split("; ")
+          //     .find((row) => row.startsWith("csrftoken"))
+          //     ?.split("=")[1];
           //   return csrfToken;
           // };
 
-          // Include the CSRF token in the request header
-          // axios.defaults.headers.common['X-CSRFToken'] = getCSRFToken();
-          //   try {
+          // // Include the CSRF token in the request header
+          // axios.defaults.headers.common["X-CSRFToken"] = getCSRFToken();
+          // try {
           //   await axios.post(
           //     "http://localhost:8000/addavatar/",
           //     {
           //       avatar_url: profile.avatar_url,
           //       username: profile.login,
-          //     },
+          //     }
           //     // {
           //     //   headers: {
           //     //     'X-CSRFToken': getCSRFToken(),
