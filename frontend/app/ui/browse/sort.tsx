@@ -18,22 +18,24 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 function Sort() {
   const SORT_OPTIONS = [
-    "Name: a to z",
-    "Name: z to a",
-    "Stars: lowest to highest",
-    "Stars: highest to lowest",
+    { label: "Recently Updated", value: 'last-updated-desc' },
+    { label: "Least Recently Updated", value: 'last-updated-asc' },
+    { label: "Stars: High to Low", value: 'popularity-asc' },
+    { label: "Stars: Low to High", value: 'popularity-desc' },
+    { label: "Alphabetical", value: 'alphabetical' },
   ];
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const [currentSort, setCurrentSort] = useState(SORT_OPTIONS[0]);
+  const [currentSort, setCurrentSort] = useState(SORT_OPTIONS[0].label);
 
   const handleSort = useDebouncedCallback((term: any) => {
     setCurrentSort(term);
     const params = new URLSearchParams(searchParams);
+    const val = SORT_OPTIONS.find(option => option.label === term)
 
     if (term) {
-      params.set("sort", term);
+      params.set("sort", val.value);
     }
 
     replace(`${pathname}?${params.toString()}`);
@@ -72,7 +74,7 @@ function Sort() {
           <RadioGroup
             value={currentSort}
             onValueChange={handleSort}
-            defaultValue={SORT_OPTIONS[0]}
+            defaultValue={SORT_OPTIONS[0].label}
             className="flex flex-col items-start p-[5px] "
           >
             {SORT_OPTIONS.map((option, key) => (
@@ -80,9 +82,9 @@ function Sort() {
                 className="flex items-center space-x-2 cursor-pointer"
                 key={key}
               >
-                <RadioGroupItem value={option} id={`${key}`} />
+                <RadioGroupItem value={option.label} id={`${key}`} />
                 <label htmlFor={`${key}`} className="cursor-pointer">
-                  {option}
+                  {option.label}
                 </label>
               </div>
             ))}
