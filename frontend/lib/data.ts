@@ -83,6 +83,7 @@ export async function fetchFavourites(
   search: string,
   page: string,
   sort: string,
+  sdg: string, languages: string, status: string, newcomer_friendly: string,
   username: string
 ) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
@@ -90,10 +91,14 @@ export async function fetchFavourites(
   try {
     // Construct the query parameters
     const queryParams = new URLSearchParams({
-      page: encodeURIComponent(page),
-      search: encodeURIComponent(search),
-      sort: encodeURIComponent(sort),
-    });
+    page: page,
+    search: search,
+    sort: sort,
+    sdg: sdg, // Assuming sdg is not already encoded
+    languages: languages,
+    status: status,
+    newcomer_friendly: newcomer_friendly,
+  });
 
     // Use fetch API to perform the request
     const response = await fetch(

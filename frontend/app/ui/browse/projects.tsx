@@ -38,7 +38,7 @@ async function Projects({
   if (projectsType === "browse") {
     res = await fetchProjects(search, currentPage, sort, sdg, language, status, newcomer_friendly);
   } else if (projectsType === "favourites") {
-    res = await fetchFavourites(search, currentPage, sort, user.username);
+    res = await fetchFavourites(search, currentPage, sort, sdg, language, status, newcomer_friendly, user.username);
   }
   const PROJECTS_PER_PAGE = 20;
   const projects = res.results;
