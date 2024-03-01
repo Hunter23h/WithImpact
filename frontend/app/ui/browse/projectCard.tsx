@@ -88,7 +88,7 @@ function Project({ project }: any) {
                   />
                 </div>
                 <div className="flex gap-[5px] text-labels">
-                  <span>{project.stars}</span>
+                  <span>{project.forks}</span>
                   <span>Forks</span>
                 </div>
               </div>
@@ -103,7 +103,7 @@ function Project({ project }: any) {
                   />
                 </div>
                 <div className="flex gap-[5px] text-labels">
-                  <span>{project.stars}</span>
+                  <span>{project.watchers}</span>
                   <span>Commits</span>
                 </div>
               </div>

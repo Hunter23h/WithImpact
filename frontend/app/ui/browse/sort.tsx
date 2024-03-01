@@ -20,14 +20,14 @@ function Sort() {
   const SORT_OPTIONS = [
     { label: "Recently Updated", value: 'last-updated-desc' },
     { label: "Least Recently Updated", value: 'last-updated-asc' },
-    { label: "Stars: High to Low", value: 'popularity-asc' },
-    { label: "Stars: Low to High", value: 'popularity-desc' },
+    { label: "Stars: High to Low", value: 'popularity-desc' },
+    { label: "Stars: Low to High", value: 'popularity-asc' },
     { label: "Alphabetical", value: 'alphabetical' },
   ];
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const [currentSort, setCurrentSort] = useState(SORT_OPTIONS[0].label);
+  const [currentSort, setCurrentSort] = useState("");
 
   const handleSort = useDebouncedCallback((term: any) => {
     setCurrentSort(term);
@@ -74,7 +74,7 @@ function Sort() {
           <RadioGroup
             value={currentSort}
             onValueChange={handleSort}
-            defaultValue={SORT_OPTIONS[0].label}
+            defaultValue={""}
             className="flex flex-col items-start p-[5px] "
           >
             {SORT_OPTIONS.map((option, key) => (

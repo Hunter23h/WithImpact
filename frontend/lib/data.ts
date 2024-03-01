@@ -3,14 +3,15 @@ import { unstable_noStore as noStore } from "next/cache";
 
 const BACKEND_URL = "http://127.0.0.1:8000/";
 
-export async function fetchProjects(search: string, page: string) {
+export async function fetchProjects(search: string, page: string, sort: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
   try {
     const response = await fetch(
       `${BACKEND_URL}getprojects/?page=${encodeURIComponent(
         page
-      )}&search=${encodeURIComponent(search)}`,
+      )}&search=${encodeURIComponent(search
+      )}&sort=${encodeURIComponent(sort)}`,
       { cache: "no-store", next: { revalidate: 0 } }
     );
     if (!response.ok) {
@@ -66,6 +67,7 @@ export async function fetchProject(owner: string, repo: string) {
 export async function fetchFavourites(
   search: string,
   page: string,
+  sort: string,
   username: string
 ) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
@@ -75,6 +77,7 @@ export async function fetchFavourites(
     const queryParams = new URLSearchParams({
       page: encodeURIComponent(page),
       search: encodeURIComponent(search),
+      sort: encodeURIComponent(sort),
     });
 
     // Use fetch API to perform the request

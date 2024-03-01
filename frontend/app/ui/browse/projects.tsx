@@ -16,18 +16,20 @@ async function Projects({
   searchParams?: {
     search?: string;
     page?: string;
+    sort?: string
   };
   projectsType: string;
   user: any;
 }) {
   const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
+  const sort = searchParams?.sort ?? "";
 
   let res = [];
   if (projectsType === "browse") {
-    res = await fetchProjects(search, currentPage);
+    res = await fetchProjects(search, currentPage, sort);
   } else if (projectsType === "favourites") {
-    res = await fetchFavourites(search, currentPage, user.username);
+    res = await fetchFavourites(search, currentPage, sort, user.username);
   }
   const PROJECTS_PER_PAGE = 20;
   const projects = res.results;
