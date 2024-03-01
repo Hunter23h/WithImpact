@@ -16,7 +16,11 @@ async function Projects({
   searchParams?: {
     search?: string;
     page?: string;
-    sort?: string
+    sort?: string;
+    sdg?: string;
+    languages?: string;
+    status?: string;
+    newcomer_friendly?: string;
   };
   projectsType: string;
   user: any;
@@ -24,10 +28,15 @@ async function Projects({
   const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
   const sort = searchParams?.sort ?? "";
+  const sdg = searchParams?.sdg ?? ""; // Extract filter values from searchParams
+  const language = searchParams?.languages ?? "";
+  const status = searchParams?.status ?? "";
+  const newcomer_friendly = searchParams?.newcomer_friendly ?? "";
+
 
   let res = [];
   if (projectsType === "browse") {
-    res = await fetchProjects(search, currentPage, sort);
+    res = await fetchProjects(search, currentPage, sort, sdg, language, status, newcomer_friendly);
   } else if (projectsType === "favourites") {
     res = await fetchFavourites(search, currentPage, sort, user.username);
   }

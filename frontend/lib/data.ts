@@ -3,16 +3,31 @@ import { unstable_noStore as noStore } from "next/cache";
 
 const BACKEND_URL = "http://127.0.0.1:8000/";
 
-export async function fetchProjects(search: string, page: string, sort: string) {
+export async function fetchProjects(search: string, page: string, sort: string,
+  sdg: string, languages: string, status: string, newcomer_friendly: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
 
+
   try {
+    const queryParams = new URLSearchParams({
+    page: page,
+    search: search,
+    sort: sort,
+    sdg: sdg, // Assuming sdg is not already encoded
+    languages: languages,
+    status: status,
+    newcomer_friendly: newcomer_friendly,
+  });
+
+    console.log(queryParams)
+
+    // Use fetch API to perform the request
     const response = await fetch(
-      `${BACKEND_URL}getprojects/?page=${encodeURIComponent(
-        page
-      )}&search=${encodeURIComponent(search
-      )}&sort=${encodeURIComponent(sort)}`,
-      { cache: "no-store", next: { revalidate: 0 } }
+      `${BACKEND_URL}getprojects/?${queryParams.toString()}`,
+      {
+        cache: "no-store",
+        next: { revalidate: 0 },
+      }
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");

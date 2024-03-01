@@ -126,7 +126,7 @@ function Project({ project }: any) {
                 className={cn(
                   "flex justify-start gap-[6px] items-center h-auto",
                   {
-                    hidden: project.newcomer_friendly,
+                    hidden: !project.newcomer_friendly,
                   }
                 )}
               >
