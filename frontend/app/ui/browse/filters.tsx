@@ -41,7 +41,6 @@ function Filters() {
     "JavaScript",
     "Jupyter Notebook",
     "Kotlin",
-    "Less",
     "Makefile",
     "Objective-C",
     "PHP",
