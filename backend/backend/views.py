@@ -24,6 +24,7 @@ from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from django.views.decorators.csrf import csrf_exempt
 from webscraping.scrape_github_repo import main
+from webscraping.predict import TextClassifier
 
 
 class GithubLogin(SocialLoginView):
@@ -70,6 +71,12 @@ def submit_url(request):
                 output = main(url)
                 if output is None:
                     return JsonResponse({'error': 'URL NOT VALID'}, status=400)
+                    
+                desc = output['Description']
+                classifier = TextClassifier()
+                pred_sdg = classifier.predict(desc)
+                print(pred_sdg)
+
                 
                 # Create a new Project object
                 project = Project(
@@ -91,7 +98,8 @@ def submit_url(request):
                     open_issues=output['Open Issues'],
                     top_contributors=output['Top 5 Contributors'],
                     status=output['Status'],
-                    newcomer_friendly=output['Newcomer Friendly']
+                    newcomer_friendly=output['Newcomer Friendly'],
+                    sdg_categories=int(pred_sdg)
                 )
 
                 # Save the new Project object
@@ -426,11 +434,15 @@ class ProjectList(APIView):
 
         if sdg:
 
-            goals = [goal.strip() for goal in sdg.split(",")]
-            sdg_filters = Q()
+            # goals = [goal.strip() for goal in sdg.split(",")]
+            goals = sdg.split(',')
+            # print(goals)
+            sdg_filter = Q()
             for goal in goals:
-                sdg_filters &= Q(sdg_categories__contains=[goal])
-            projects = projects.filter(sdg_filters)
+                # sdg_filters |= Q(sdg_categories__contains=goal)
+                sdg_filter |= Q(sdg_categories=int(goal))
+            # print(sdg_filter)
+            projects = projects.filter(sdg_filter)
         
         if languages_list:
 
@@ -438,6 +450,7 @@ class ProjectList(APIView):
             language_filters = Q()
             for language in languages:
                 language_filters &= Q(languages__0__has_key=language)
+            print(language_filters)
             projects = projects.filter(language_filters)
         
         if search_query:

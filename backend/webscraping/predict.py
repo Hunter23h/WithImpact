@@ -21,9 +21,9 @@ import joblib
 class TextClassifier:
     def __init__(self):
         # Load the pre-trained model
-        self.model = joblib.load('backend/model.joblib')
-        self.vectorizer = joblib.load('backend/vectorizer.joblib')
-        self.selector = joblib.load('backend/selector.joblib')
+        self.model = joblib.load('./webscraping/model.joblib')
+        self.vectorizer = joblib.load('./webscraping/vectorizer.joblib')
+        self.selector = joblib.load('./webscraping/selector.joblib')
 
     def predict(self, input_text):
         # Vectorize the input text
@@ -41,4 +41,5 @@ classifier = TextClassifier()
 
 input_text = "Saving the climate one tree at a time with digital seeds"
 result = classifier.predict(input_text)
-print(f"The predicted class is: {result}")
+# print(f"The predicted class is: {result}")
+# print(type(result))

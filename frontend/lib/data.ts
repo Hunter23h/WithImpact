@@ -19,7 +19,7 @@ export async function fetchProjects(search: string, page: string, sort: string,
     newcomer_friendly: newcomer_friendly,
   });
 
-    console.log(queryParams)
+    // console.log(queryParams)
 
     // Use fetch API to perform the request
     const response = await fetch(
