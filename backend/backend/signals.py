@@ -3,10 +3,10 @@ from allauth.socialaccount.signals import social_account_added
 from allauth.account.signals import user_signed_up
 from .models import User
 
-@receiver(user_signed_up)
-def on_user_sign_up(sender, request, user, **kwargs):
-    # User.objects.create(username=user)
-    print("USED ADDED TO DB")
+# @receiver(user_signed_up)
+# def on_user_sign_up(sender, request, user, **kwargs):
+#     # User.objects.create(username=user)
+#     print("USED ADDED TO DB")
     
 # @receiver(social_account_added)
 # def on_social_account_added(sender, request, sociallogin, **kwargs):
