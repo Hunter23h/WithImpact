@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { addComment } from "@/lib/data";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function ProjectComments({
   projectData,
@@ -15,17 +17,26 @@ function ProjectComments({
 }) {
   const comments = projectData.comments;
   const project = projectData.project;
-  // const user = await getUserSession();
+  const router = useRouter();
   const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleComment = async () => {
+    setLoading(true);
     const commentResponse = await addComment(
       project.repo_url,
       user.username,
       text,
       user.image
     );
-    if (!commentResponse.success) return;
+
+    if (!commentResponse || !commentResponse.success) {
+      setLoading(false);
+      return;
+    }
+    router.refresh();
     setText("");
+    setLoading(false);
   };
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
@@ -41,6 +52,7 @@ function ProjectComments({
           <Button
             className="h-auto mt-[20px] text-lg w-[200px]"
             onClick={handleComment}
+            disabled={loading}
           >
             Comment{" "}
           </Button>
@@ -52,20 +64,22 @@ function ProjectComments({
           comments.map((comment: any, key: any) => (
             <div
               key={key}
-              className="flex flex-col gap-[30px] p-[30px] border-solid border-[2px] border-white rounded-[10px] shadow-comments"
+              className="flex flex-col gap-[30px] p-[30px] border-solid border-[2px] border-white rounded-[10px] shadow-comments relative"
             >
               <div
                 className={cn(
-                  "w-[50px] h-[50px] border-border border-[1px] rounded-[50%]",
+                  "w-[50px] h-[50px] border-border border-[1px] rounded-[50%] absolute top-[10px] right-[10px] shadow-lg",
                   {
                     "self-end bg-border": comment?.username === "KevinYuCode",
                   }
                 )}
               >
-                <img
+                <Image
                   src={comment.avatar_url}
                   alt="Avatar"
                   className="w-full h-full rounded-full"
+                  width={50}
+                  height={50}
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -76,7 +90,7 @@ function ProjectComments({
                   {comment.created_date}
                 </span>
               </div>
-              <p className="px-[30px]">{comment.text}</p>
+              <p className="">{comment.text}</p>
             </div>
           ))
         ) : (

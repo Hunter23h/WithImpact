@@ -7,11 +7,12 @@ import { likeProject } from "@/lib/data";
 
 function StarProject({ isLiked, username, repo_url }: any) {
   const router = useRouter();
-  const [likedProject, setLikedProject] = useState(isLiked);
   const handleLike = async () => {
     const res = await likeProject(repo_url, username);
-    console.log(res.likeStatus);
-    setLikedProject(res.likeStatus);
+
+    console.log(res);
+    if (!res || !res?.success) return;
+    router.refresh();
   };
 
   return (
@@ -22,9 +23,7 @@ function StarProject({ isLiked, username, repo_url }: any) {
     >
       <Image
         src={
-          likedProject
-            ? "/icons/star_outline_gold.svg"
-            : "/icons/star_outline.svg"
+          isLiked ? "/icons/star_outline_gold.svg" : "/icons/star_outline.svg"
         }
         height={15}
         width={15}

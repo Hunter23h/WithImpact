@@ -7,9 +7,6 @@ import { getUserSession } from "@/lib/session";
 
 export default async function Home() {
   const user = await getUserSession();
-  if (user) {
-    console.log(user)
-  }
 
   return (
     <main className="flex flex-col items-center justify-center h-[100%]">

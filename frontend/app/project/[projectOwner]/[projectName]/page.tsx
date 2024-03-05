@@ -41,8 +41,8 @@ async function Project({ params }: any) {
   }
 
   return (
-    <Container>
-      <div>
+    <Container className="w-full">
+      <div className="w-full">
         {/* Header */}
         <div>
           <div className="flex justify-between items-center">

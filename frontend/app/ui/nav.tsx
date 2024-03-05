@@ -44,7 +44,7 @@ function Nav() {
     },
     {
       title: "Browse",
-      href: "/browse",
+      href: "/browse?page=1",
       pathName: "/browse",
     },
     {
@@ -93,7 +93,7 @@ function Nav() {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-[20px] items-center">
+        <div className="flex gap-[20px] items-center">
           <NavigationMenu>
             <NavigationMenuItem className="">
               <NavigationMenuTrigger className="" showArrow={true}>

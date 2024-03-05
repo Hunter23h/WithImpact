@@ -21,6 +21,13 @@ body {
   /* border: solid 1px #e5e7eb; */
 }
 
+.description-ellipses {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines to display before applying ellipsis */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

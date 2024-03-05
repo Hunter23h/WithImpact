@@ -31,7 +31,9 @@ function Project({ project }: any) {
                   </Avatar>
                   <span className="">{project.owner}</span>
                 </div>
-                <p className="text-body ">{project.description}</p>
+                <p className="text-body description-ellipses">
+                  {project.description}
+                </p>
               </div>
             </div>
 

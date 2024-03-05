@@ -6,7 +6,7 @@ function Summary({ projectData }: { projectData: any }) {
   return (
     <>
       {/* Read Me */}
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col justify-between w-full">
         <div>
           <h2>Description</h2>
           <p>{projectData.description}</p>

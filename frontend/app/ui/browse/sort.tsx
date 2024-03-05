@@ -18,21 +18,21 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 function Sort() {
   const SORT_OPTIONS = [
-    { label: "Recently Updated", value: 'last-updated-desc' },
-    { label: "Least Recently Updated", value: 'last-updated-asc' },
-    { label: "Stars: High to Low", value: 'popularity-desc' },
-    { label: "Stars: Low to High", value: 'popularity-asc' },
-    { label: "Alphabetical", value: 'alphabetical' },
+    { label: "Recently Updated", value: "last-updated-desc" },
+    { label: "Least Recently Updated", value: "last-updated-asc" },
+    { label: "Stars: High to Low", value: "popularity-desc" },
+    { label: "Stars: Low to High", value: "popularity-asc" },
+    { label: "Alphabetical", value: "alphabetical" },
   ];
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const [currentSort, setCurrentSort] = useState("");
+  const [currentSort, setCurrentSort] = useState("Select Option");
 
   const handleSort = useDebouncedCallback((term: any) => {
     setCurrentSort(term);
     const params = new URLSearchParams(searchParams);
-    const val = SORT_OPTIONS.find(option => option.label === term)
+    const val = SORT_OPTIONS.find((option) => option.label === term);
 
     if (term) {
       params.set("sort", val.value);
@@ -43,8 +43,14 @@ function Sort() {
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
-    if (params.get("sort")) params.set("sort", params.get("sort") || "");
-  }, []);
+
+    // Populating Sort Option
+    if (params.get("sort")) {
+      params.set("sort", params.get("sort") || "");
+      console.log(params.get("sort"));
+      setCurrentSort(params.get("sort"));
+    }
+  }, [pathname]);
 
   return (
     <div>

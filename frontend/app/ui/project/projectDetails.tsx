@@ -35,7 +35,7 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         {/* Tags */}
         <div>
           <p className="font-bold">Tags</p>
-          <div className=" flex gap-[7px]">
+          <div className=" flex flex-wrap gap-[7px]">
             {projectData.tags
               .filter((_: any, i: any) => i < 3)
               .map((tag: any, key: any) => (
@@ -47,7 +47,7 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">Status</p>
           <div className="flex items-center gap-[10px] ">
-            <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
+            <span className="w-[10px] h-[10px] bg-[lightgreen] rounded-[50%]" />{" "}
             <span>{projectData.status}</span>
           </div>
         </div>
@@ -59,17 +59,41 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         {/* Stars */}
         <div>
           <p className="font-bold">Stars</p>
-          <p>{projectData.stars}</p>
+          <div className="flex items-center gap-[10px] ">
+            <Image
+              src={"/icons/star_black.png"}
+              alt={`fork`}
+              width={20}
+              height={20}
+            />
+            <p>{projectData.stars}</p>
+          </div>
         </div>
         {/* Watchers */}
         <div>
           <p className="font-bold">Watchers</p>
-          <p>{projectData.watchers}</p>
+          <div className="flex items-center gap-[10px] ">
+            <Image
+              src={"/icons/watch.png"}
+              alt={`fork`}
+              width={20}
+              height={20}
+            />
+            <p>{projectData.watchers}</p>
+          </div>
         </div>
         {/* Forks */}
         <div>
           <p className="font-bold">Forks</p>
-          <p>{projectData.forks}</p>
+          <div className="flex items-center gap-[10px] ">
+            <Image
+              src={"/icons/fork.png"}
+              alt={`fork`}
+              width={20}
+              height={20}
+            />
+            <p>{projectData.forks}</p>
+          </div>
         </div>
         {/* Languages */}
         <div>
@@ -91,7 +115,7 @@ function ProjectDetails({ projectData }: { projectData: any }) {
               // Sort the language items based on percentage (descending order)
               languageItems.sort((a, b) => b.percentage - a.percentage);
 
-              const topFourLanguages = languageItems.slice(0,4);
+              const topFourLanguages = languageItems.slice(0, 4);
 
               // Render each language item
               return topFourLanguages.map((item, index) => (
@@ -133,7 +157,12 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">Open Issues</p>
           <div className="flex items-center gap-[10px] ">
-            <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
+            <Image
+              src={"/icons/pull-request.png"}
+              height={20}
+              width={20}
+              alt="difficulty"
+            />
             <span>{projectData.open_issues}</span>
           </div>
         </div>
@@ -141,7 +170,12 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">Open PRs</p>
           <div className="flex items-center gap-[10px] ">
-            <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
+            <Image
+              src={"/icons/pull-request.png"}
+              height={20}
+              width={20}
+              alt="difficulty"
+            />
             <span>{projectData.open_prs}</span>
           </div>
         </div>
@@ -149,7 +183,12 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">Project Difficulty</p>
           <div className="flex items-center gap-[10px] ">
-            <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />{" "}
+            <Image
+              src={"/icons/newcomer.png"}
+              height={20}
+              width={20}
+              alt="difficulty"
+            />
             <span>
               {getNewcomerFriendlyText(projectData.newcomer_friendly)}
             </span>
