@@ -1,13 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
-
-# Template Model for the database
-# class MyModel(models.Model):
-#     name = models.CharField(max_length=100)
-#     description = models.TextField()
-
-
 class Project(models.Model):
     id = models.AutoField(primary_key=True, serialize=True)
     name = models.TextField()
@@ -34,8 +27,6 @@ class Project(models.Model):
 
 
 class User(models.Model):
-    #id = models.AutoField(primary_key=True, serialize=True)
-    # email = models.EmailField()
     username = models.TextField(unique=True, primary_key=True)
     favourite_projects = models.JSONField(null=True)
 
