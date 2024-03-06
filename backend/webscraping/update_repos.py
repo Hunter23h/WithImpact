@@ -56,11 +56,14 @@ def scrape_data(url):
     # end_time = time.time()
     # total_time = end_time - start_time
     # print(f"Time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
-    desc = repo_info['Description']
 
-    sdg_class = TextClassifier().predict(desc)
+    #-----------------------------------
+    # desc = repo_info['Description']
 
-    repo_info['SDG'] = int(sdg_class)
+    # sdg_class = TextClassifier().predict(desc)
+
+    # repo_info['SDG'] = int(sdg_class)
+    #--------------------------------------
     return repo_info
 
 def write_to_json(list_repo):
@@ -89,15 +92,17 @@ def update_database_from_json(cursor, filename, connection):
                         updated_date = %s, description = %s, last_push_date = %s, 
                         latest_commit_date = %s, stars = %s, forks = %s, watchers = %s, 
                         languages = %s, tags = %s, open_prs = %s, open_issues = %s, 
-                        top_contributors = %s, status = %s, newcomer_friendly = %s, sdg_categories = %s
+                        top_contributors = %s, status = %s, newcomer_friendly = %s, 
                     WHERE repo_url = %s
                 """
+            
 
                 cursor.execute(update_query,
                 (repo_data['Name'], repo_data['Owner'],repo_data['URL'], repo_data['Owner Avatar'], repo_data['Created'],repo_data['Updated'], repo_data['Description'],
                  repo_data['Last Push Date'], repo_data['Latest Commit Date'],repo_data['Stars'], repo_data['Forks'],repo_data['Watchers'], Json(repo_data['Languages']),
                  Json(repo_data['Tags']), repo_data['Open PRs'],repo_data['Open Issues'], Json(repo_data['Top 5 Contributors']),repo_data['Status'], repo_data['Newcomer Friendly'], 
-                 Json(repo_data['SDG']), repo_data['URL']))
+                #  Json(repo_data['SDG']), 
+                 repo_data['URL']))
 
         # Commit changes
         connection.commit()

@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SDGS } from "@/lib/constants";
 function ProjectDetails({ projectData }: { projectData: any }) {
   const getNewcomerFriendlyText = (isFriendly: boolean) => {
     return isFriendly ? "Newcomer Friendly" : "Not Newcomer Friendly";
@@ -32,6 +33,13 @@ function ProjectDetails({ projectData }: { projectData: any }) {
           <p className="font-bold">Content Updated</p>
           <p>{parseDate(projectData.last_push_date)} </p>
         </div>
+        <div>
+           <p className="font-bold">SDG</p>
+                <div className="flex gap-[5px] text-labels">
+                  <Badge>{SDGS[projectData.sdg_categories]}</Badge>
+                  {/* <span>SDG</span> */}
+                </div>
+              </div>
         {/* Tags */}
         <div>
           <p className="font-bold">Tags</p>

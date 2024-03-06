@@ -17,10 +17,10 @@ export default async function Home() {
               WITH IMPACT
             </h1>
             <p className="font-[400] text-subheadings relative left-[10px] max-w-[700px] text-[#5F6C7B]">
-              Discover and contribute to Open Source Projects Related to the
-              United Nations Sustainable Development Goals...
+              Discover and contribute to open source projects related to the
+              United Nations Sustainable Development Goals
             </p>
-            <div>{JSON.stringify(user || "no user")}</div>
+            {/* <div>{JSON.stringify(user || "no user")}</div> */}
           </div>
 
           <Link href={"/browse"}>

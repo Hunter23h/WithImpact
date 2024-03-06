@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "lucide-react";
+import { SDGS } from "@/lib/constants";
 
 function Project({ project }: any) {
   return (
@@ -36,6 +37,13 @@ function Project({ project }: any) {
                 </p>
               </div>
             </div>
+
+            <div className="flex gap-[10px] mt-[30px]">
+                <div className="flex gap-[5px] text-labels">
+                  <Badge>{SDGS[project.sdg_categories]}</Badge>
+                  {/* <span>SDG</span> */}
+                </div>
+              </div>
 
             <div className="flex gap-[10px] mt-[30px]">
               {project.tags
