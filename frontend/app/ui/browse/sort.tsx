@@ -27,7 +27,7 @@ function Sort() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
-  const [currentSort, setCurrentSort] = useState("Select Option");
+  const [currentSort, setCurrentSort] = useState<any>("Select Option");
 
   const handleSort = useDebouncedCallback((term: any) => {
     setCurrentSort(term);
@@ -47,7 +47,6 @@ function Sort() {
     // Populating Sort Option
     if (params.get("sort")) {
       params.set("sort", params.get("sort") || "");
-      console.log(params.get("sort"));
       setCurrentSort(params.get("sort"));
     }
   }, [pathname]);

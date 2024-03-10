@@ -6,9 +6,9 @@ function Summary({ projectData }: { projectData: any }) {
   return (
     <>
       {/* Read Me */}
-      <div className="flex flex-col justify-between w-full">
-        <div>
-          <h2>Description</h2>
+      <div className="flex flex-col justify-between h-fit min-h-[75vh] w-full">
+        <div className="mb-[40px]">
+          <h2 className="text-3xl md:text-4xl">Description</h2>
           <p>{projectData.description}</p>
         </div>
 
@@ -17,7 +17,7 @@ function Summary({ projectData }: { projectData: any }) {
           variant={"default"}
           size="default"
           aria-expanded={false}
-          className="px-[40px] relative left-[10px]"
+          className="px-[40px]"
           asChild
         >
           <Link href={projectData.repo_url} target="no_referrer">

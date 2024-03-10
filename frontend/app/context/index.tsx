@@ -16,19 +16,31 @@ interface ContextProps {
   setProjects: any;
 }
 
-const GlobalContext = createContext<ContextProps>({
+const GlobalContext = createContext<any>({
   user: {},
   setUser: () => {},
   projects: [],
   setProjects: () => {},
+  showFilters: false,
+  setShowFilters: () => {},
 });
 
 export const GlobalContextProvider = ({ children }: any) => {
   const [user, setUser] = useState();
   const [projects, setProjects] = useState([]);
+  const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <GlobalContext.Provider value={{ user, setUser, projects, setProjects }}>
+    <GlobalContext.Provider
+      value={{
+        user,
+        setUser,
+        projects,
+        setProjects,
+        showFilters,
+        setShowFilters,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );

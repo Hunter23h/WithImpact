@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Container from "@/app/ui/container";
 import ProjectComments from "@/app/ui/project/projectComments";
 import ProjectDetails from "@/app/ui/project/projectDetails";
@@ -13,7 +14,7 @@ import { url } from "inspector";
 import StarProject from "@/app/ui/starProject/starProject";
 import { revalidatePath } from "next/cache";
 
-export const revalidate = false
+export const revalidate = false;
 
 async function Project({ params }: any) {
   const projectName = params.projectName;
@@ -27,12 +28,12 @@ async function Project({ params }: any) {
   res = await fetchProject(projectOwner, projectName);
 
   if (user) {
-    console.log("USER");
+    // @ts-ignore
     userInfo = await fetchUser(user?.username);
 
-    function checkLiked(repo_url: string, project: any) {
+    const checkLiked = (repo_url: string, project: any) => {
       return project.includes(repo_url);
-    }
+    };
 
     isLiked = checkLiked(
       res?.project.repo_url,
@@ -46,7 +47,7 @@ async function Project({ params }: any) {
         {/* Header */}
         <div>
           <div className="flex justify-between items-center">
-            <h1>{projectOwner + "/" + projectName}</h1>
+            <h1 className="text-3xl md:text-5xl">{projectOwner + "/" + projectName}</h1>
             {user && (
               <StarProject
                 isLiked={isLiked}
@@ -62,7 +63,7 @@ async function Project({ params }: any) {
         <div className="h-[1px] w-[100%] bg-border" />
 
         {/* Content */}
-        <div className="flex mt-[30px] w-[100%] h-[100%] gap-[60px] justify-center place-items-stretch">
+        <div className="flex flex-col md:flex-row mt-[30px] w-[100%] h-[100%] gap-[60px] justify-center place-items-stretch">
           <ProjectSummary projectData={res.project} />
           <ProjectDetails projectData={res.project} />
         </div>

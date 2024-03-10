@@ -98,16 +98,15 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         {/* Languages */}
         <div>
           <p className="font-bold">Languages</p>
+          <PercentageBar projectData={projectData} />
           <div className="grid grid-cols-2 justify-start gap-[20px] ">
-            <div className="flex  w-[100%] col-span-2 rounded-[20px] overflow-hidden">
-              <PercentageBar />
-            </div>
             {projectData.languages.map((languageObject: any, key: any) => {
               // Convert each key-value pair into an object with language and percentage properties
               const languageEntries = Object.entries(languageObject);
               const languageItems = languageEntries.map(
                 ([language, percentage]) => ({
                   language,
+                  // @ts-ignore
                   percentage: parseFloat(percentage), // Assuming percentages are represented as decimals in the original data
                 })
               );
@@ -120,9 +119,25 @@ function ProjectDetails({ projectData }: { projectData: any }) {
               // Render each language item
               return topFourLanguages.map((item, index) => (
                 <div className="flex items-center gap-[10px]" key={index}>
-                  <span className="w-[6px] h-[6px] bg-[lightgreen] rounded-[50%]" />
+                  <span
+                    className={cn(
+                      `w-[6px] h-[6px] rounded-[50%]`,
+                      {
+                        "bg-[#3981ED]": index == 0,
+                      },
+                      {
+                        "bg-[#1D3D6D]": index == 1,
+                      },
+                      {
+                        "bg-[#0B182D]": index == 2,
+                      },
+                      {
+                        "bg-[#081221]": index == 3,
+                      }
+                    )}
+                  />
                   <span>
-                    {item.language}: {item.percentage}
+                    {item.language}: {item.percentage}%
                   </span>
                 </div>
               ));

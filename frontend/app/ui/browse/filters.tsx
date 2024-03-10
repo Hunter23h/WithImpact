@@ -51,7 +51,6 @@ function Filters() {
         // Parse the query parameters into an object representing the selected filters
         updatedFilters[type] = value.split(",");
       }
-      console.log(updatedFilters);
 
       if (isChecked) {
         // Add the filter value to the array of selected filters for the given type
@@ -60,7 +59,6 @@ function Filters() {
           filterValue,
         ];
 
-        // console.log("Filter value", filterValue);
       } else {
         // Remove the filter value from the array of selected filters for the given type
         updatedFilters[filterType] = (updatedFilters[filterType] || []).filter(

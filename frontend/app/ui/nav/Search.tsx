@@ -1,32 +1,32 @@
 "use client";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
-function Search() {
+function Search({ className }:any) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const { replace } = useRouter();
-
-  const handleSearch = useDebouncedCallback((term: any) => {
+  const router = useRouter();
+  const handleSearch = useDebouncedCallback((value) => {
     const params = new URLSearchParams(searchParams);
 
     params.set("page", "1");
-    if (term) {
-      params.set("search", term);
+    if (value) {
+      params.set("search", value);
     } else {
       params.delete("search");
     }
 
-    replace(`${pathname}?${params.toString()}`);
+    router.replace(`/browse?${params.toString()}`);
   }, 300);
 
   return (
     <>
       <Input
         placeholder="Search projects, owners, sdg goals, etc..."
-        className="text-body"
+        className={cn(`text-body`, className)}
         onChange={(e) => {
           handleSearch(e.target.value);
         }}

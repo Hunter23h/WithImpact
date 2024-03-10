@@ -5,47 +5,35 @@ import ChecklistItem from "../ui/project-check-list/checklistItem";
 function SubmissionCriteria() {
   const OBJECTIVES = [
     {
-      title: "Barrier to Entry",
+      title: "Make Repository Public",
       flowRight: true,
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam, vel dicta aspernatur rem recusandae illo laboriosam iste quam quisquam a inventore asperiores explicabo fugiat atque ducimus quis distinctio tempora?",
+        "We cannot scrape private repos on GitHub. Therefore, if you want your project listed on WithImpact, please make your project Public by going to settings and configuring the following setting:",
       image: {
-        src: "/illustrations/barrier_to_entry.png",
+        src: "/illustrations/public.png",
         width: 500,
         height: 500,
         alt: "barrier to entry",
       },
     },
     {
-      title: "Barrier to Entry",
+      title: "Add description",
       flowRight: false,
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam, vel dicta aspernatur rem recusandae illo laboriosam iste quam quisquam a inventore asperiores explicabo fugiat atque ducimus quis distinctio tempora?",
+        "Please add a description to your SDG related project or else our WithImpact will not be able to classify your project under an SDG category",
       image: {
-        src: "/illustrations/barrier_to_entry.png",
+        src: "/illustrations/description.png",
         width: 500,
         height: 500,
-        alt: "barrier to entry",
-      },
-    },
-    {
-      title: "Barrier to Entry",
-      flowRight: true,
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic totam, vel dicta aspernatur rem recusandae illo laboriosam iste quam quisquam a inventore asperiores explicabo fugiat atque ducimus quis distinctio tempora?",
-      image: {
-        src: "/illustrations/barrier_to_entry.png",
-        width: 500,
-        height: 500,
-        alt: "barrier to entry",
+        alt: "Desscription",
       },
     },
   ];
   return (
     <Container>
       <div className="flex flex-col items-center">
-        <h1>Approval Checklist</h1>
-        <p>
+        <h1 className="text-center md:text-left text-5xl font-semibold">Approval Checklist</h1>
+        <p className="text-[grey] text-center md:text-left mt-[10px]">
           Make sure the following steps are finished before submitting your
           project:
         </p>

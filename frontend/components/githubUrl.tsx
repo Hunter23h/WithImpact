@@ -1,21 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { submitUrl } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 function GithubUrl() {
   const [githubUrl, setGithubUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const handleSubmit = async () => {
     setLoading(true);
     const urlRes = await submitUrl(githubUrl);
-    console.log(urlRes);
     if (!(urlRes.success === "Project created successfully"))
       alert("Error Submitting Project");
     setLoading(false);
     setGithubUrl("");
   };
+  const urlRef = useRef(null);
+  useEffect(() => {
+    // @ts-ignore
+    if (urlRef) urlRef?.current?.focus();
+  }, []);
   return (
     <>
       <Input
@@ -25,8 +30,21 @@ function GithubUrl() {
         onChange={(e) => {
           setGithubUrl(e.target.value);
         }}
+        ref={urlRef}
       />
-      <Button className="px-[50px]" onClick={handleSubmit} disabled={loading}>
+      <p className="text-center md:text-left">
+        Ensure your project meets all of the requirements before submitting.
+        View the requirements{" "}
+        <Link href="/submission-criteria" className="text-primary">
+          here.
+        </Link>
+      </p>
+      <Button
+        variant="default"
+        className="px-[50px]"
+        onClick={handleSubmit}
+        disabled={loading}
+      >
         {loading ? (
           <svg
             className="animate-spin h-5 w-5 text-white"

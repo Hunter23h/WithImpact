@@ -43,12 +43,12 @@ module.exports = {
       gridTemplateColumns: {
         sdgs: "repeat(auto-fit, minmax(180px, max-content))",
         md_sdgs: "repeat(auto-fit, minmax(200px, 1fr))",
-        sm_sdgs: "repeat(auto-fit, minmax(150px, 1fr))",
+        sm_sdgs: "repeat(auto-fit, minmax(100px, 1fr))",
       },
       minHeight: {
         sdgs: "180px",
         md_sdgs: "200px",
-        sm_sdgs: "150px",
+        sm_sdgs: "100px",
       },
       boxShadow: {
         comments:

@@ -10,7 +10,6 @@ function StarProject({ isLiked, username, repo_url }: any) {
   const handleLike = async () => {
     const res = await likeProject(repo_url, username);
 
-    console.log(res);
     if (!res || !res?.success) return;
     router.refresh();
   };

@@ -50,7 +50,7 @@ function ProjectComments({
         />
         <div className="w-[100%] flex justify-end">
           <Button
-            className="h-auto mt-[20px] text-lg w-[200px]"
+            className="h-auto mt-[20px] text-lg w-full md:w-[200px]"
             onClick={handleComment}
             disabled={loading}
           >

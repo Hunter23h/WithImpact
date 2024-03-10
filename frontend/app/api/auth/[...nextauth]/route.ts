@@ -33,19 +33,6 @@ export const authOption: NextAuthOptions = {
       if (!profile?.email) {
         throw new Error("No profile");
       }
-      // if (account.provider === "github") {
-      //   // console.log(user)
-      //   try {
-      //     const response = await axios.post("http://localhost:8000/adduser/", {
-      //       username: user.username,
-      //     });
-      //     return true;
-      //   } catch (error) {
-      //     // console.log(error)
-      //     return false;
-      //   }
-      // }
-      // console.log(profile)
       return true;
     },
     async redirect({ url, baseUrl }) {

@@ -8,6 +8,7 @@ import { fetchFavourites, fetchProjects } from "@/lib/data";
 import PageNav from "./pageNav";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
+import ShowFilters from "../showFilters/showFilters";
 
 async function Projects({
   searchParams,
@@ -24,7 +25,7 @@ async function Projects({
     newcomer_friendly?: string;
   };
   projectsType: string;
-  user: any;
+  user?: any;
 }) {
   const search = searchParams?.search ?? "";
   const currentPage = (searchParams?.page as string) ?? "1";
@@ -86,6 +87,7 @@ async function Projects({
         )}
       </div>
       <PageNav pageArray={pageArray} />
+      <ShowFilters />
     </div>
   );
 }

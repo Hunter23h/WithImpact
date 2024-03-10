@@ -4,7 +4,7 @@ import SidebarActions from "../ui/browse/sidebarActions";
 import BrowseSkeleton from "../ui/browse/browseSkeleton";
 import Container from "../ui/container";
 import { getUserSession } from "@/lib/session";
-
+import { redirect } from "next/navigation";
 
 async function Favourites({
   searchParams,
@@ -12,6 +12,8 @@ async function Favourites({
   searchParams: { page: string };
 }) {
   const user = await getUserSession();
+
+  if (!user) redirect("/");
 
   return (
     <Container className="flex min-h-[100vh] items-stretch w-[100%]">
@@ -21,7 +23,11 @@ async function Favourites({
       </div>
       {/* Favourites Results */}
       <Suspense fallback={<BrowseSkeleton />}>
-        <Projects searchParams={searchParams} projectsType="favourites" user={user} />
+        <Projects
+          searchParams={searchParams}
+          projectsType="favourites"
+          user={user}
+        />
       </Suspense>
     </Container>
   );
