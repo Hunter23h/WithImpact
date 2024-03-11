@@ -46,7 +46,6 @@ def add_user(request):
         if User.objects.filter(username=username).exists():
             return JsonResponse({'message': 'User already exists'}, status=200)
 
-        # Create a new user instance with favourite_projects set to None (or null in the database)
         user = User(username=username)
         try:
             user.save()
@@ -74,7 +73,6 @@ def submit_url(request):
                 desc = output['Description']
                 classifier = TextClassifier()
                 pred_sdg = classifier.predict(desc)
-                # print(pred_sdg)
 
                 
                 # Create a new Project object
@@ -121,8 +119,6 @@ def add_avatar_to_comments(request):
         data = json.loads(request.body)
         avatar_url = data.get('avatar_url')
         username = data.get('username')
-        # print("avatar: ", avatar_url)
-        # print("username: ", username)
 
         # Validate input
         if not avatar_url or not username:
@@ -188,9 +184,9 @@ def add_comment(request):
                 project_url=repo_url,
                 username= User.objects.get(username=username),
                 text=text,
-                avatar_url=avatar_url
+                avatar_url=avatar_url  # You need to replace this with the actual URL or logic to get the avatar URL
             )
-    
+            # Optionally, you can return the ID of the newly created comment
             return JsonResponse({'success': True, 'comment_id': comment.id}, status=201)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
@@ -414,6 +410,7 @@ class UserList(APIView):
         user_serializer = UsersSerializer(users, many=True)
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
+    
 
     
     

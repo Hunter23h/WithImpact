@@ -1,26 +1,23 @@
 import requests
+from pprint import pprint as pp
+from bs4 import BeautifulSoup
 import re
 import datetime
 from dotenv import load_dotenv
 import os
+import urllib.request as ur
+from tqdm import tqdm
 import json
 import time
-import argparse
+
 
 #--------------------------------------------------------------------
 # Used to scrape github repository information using the GitHub API
 #--------------------------------------------------------------------
 
-
-parser = argparse.ArgumentParser()
-parser.add_argument("-f", type=str, help="github repo url")
-args = parser.parse_args()
-
 load_dotenv()
 token = os.getenv("GITHUB_TOKEN")
 headers = {'Authorization': 'token ' + token}
-
-
 
 def get_languages(url):
     response = requests.get(url, headers=headers)
@@ -236,7 +233,7 @@ if __name__ == '__main__':
     print("Start:")
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
 
-    url = args.f #Should pass criteria
+    url = 'https://github.com/socialincome-san/public' #Should pass criteria
 
     api_url, repo = convert_to_api_url(url)
     # print(f"GitHub API URL: {api_url}")
@@ -268,7 +265,7 @@ if __name__ == '__main__':
         print(f"End time: {time.ctime()}, time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
     else:
         print("Project does not match the criteria!")
-        #needs manual review
+        # needs manual review
         
     #------------------------------------------------------------------------------ --
 

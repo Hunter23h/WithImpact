@@ -37,8 +37,11 @@ class TextClassifier:
 
         # Return predictions if there is one
         return predictions[0] if len(predictions) > 0 else None
+    
+if __name__ == '__main__':
 
-classifier = TextClassifier()
+    classifier = TextClassifier()
 
-input_text = "Saving the climate one tree at a time with digital seeds"
-result = classifier.predict(input_text)
+    input_text = "Saving the climate one tree at a time with digital seeds"
+    result = classifier.predict(input_text)
+    print("The predicted SDG is:", result)
