@@ -8,6 +8,11 @@ from datetime import datetime
 from psycopg2.extras import Json
 from predict import TextClassifier
 
+
+#-------------------------------------------
+# Used to update database repo information 
+# with new scraped data
+#-------------------------------------------
 load_dotenv()
 
 def connect_to_database():
