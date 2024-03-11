@@ -24,7 +24,7 @@ function Project({ project }: any) {
             <div>
               {/* SDG Goal */}
               <div className="mt-[10px]">
-                <Badge className="bg-primary text-white border-none shadow-md">
+                <Badge className="bg-primary text-white border-none shadow-md text-center">
                   SDG #{project.sdg_categories}: {SDGS[project.sdg_categories]}
                 </Badge>
               </div>
@@ -47,7 +47,7 @@ function Project({ project }: any) {
             {project.tags
               .filter((_: any, i: any) => i < 5)
               .map((tag: any, key: any) => (
-                <Badge key={key}>{tag}</Badge>
+                <Badge key={key} className="text-center">{tag}</Badge>
               ))}
           </div>
         </div>

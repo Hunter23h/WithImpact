@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { addComment } from "@/lib/data";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { getUserSession } from "@/lib/session";
 
 function ProjectComments({
   projectData,
@@ -41,23 +42,26 @@ function ProjectComments({
   return (
     <div className="flex flex-col gap-[20px] mt-[60px]">
       <h2>Comments</h2>
-      <div className="grid">
-        <Textarea
-          placeholder="Comment on project"
-          className="max-h-[400px] min-h-[150px] text-black text-[20px]"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <div className="w-[100%] flex justify-end">
-          <Button
-            className="h-auto mt-[20px] text-lg w-full md:w-[200px]"
-            onClick={handleComment}
-            disabled={loading}
-          >
-            Comment{" "}
-          </Button>
+
+      {user && (
+        <div className="grid">
+          <Textarea
+            placeholder="Comment on project"
+            className="max-h-[400px] min-h-[150px] text-black text-[20px]"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <div className="w-[100%] flex justify-end">
+            <Button
+              className="h-auto mt-[20px] text-lg w-full md:w-[200px]"
+              onClick={handleComment}
+              disabled={loading}
+            >
+              Comment{" "}
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="comment-container relative flex flex-col gap-[20px] mt-[40px] mb-[20px]">
         {comments.length > 0 ? (
