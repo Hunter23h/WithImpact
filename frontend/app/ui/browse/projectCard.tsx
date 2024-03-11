@@ -178,16 +178,16 @@ function Project({ project }: any) {
                     className={cn(
                       `w-[6px] h-[6px] rounded-[50%]`,
                       {
-                        "bg-[#3981ED]": index == 0,
+                        "bg-[#8ecae6]": index == 0,
                       },
                       {
-                        "bg-[#1D3D6D]": index == 1,
+                        "bg-[#219ebc]": index == 1,
                       },
                       {
-                        "bg-[#0B182D]": index == 2,
+                        "bg-[#023047]": index == 2,
                       },
                       {
-                        "bg-[#081221]": index == 3,
+                        "bg-[#ffb703]": index == 3,
                       }
                     )}
                   />
