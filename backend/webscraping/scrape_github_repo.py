@@ -1,18 +1,25 @@
 import requests
-from pprint import pprint as pp
-from bs4 import BeautifulSoup
 import re
 import datetime
 from dotenv import load_dotenv
 import os
-import urllib.request as ur
-from tqdm import tqdm
 import json
 import time
+import argparse
+
+#--------------------------------------------------------------------
+# Used to scrape github repository information using the GitHub API
+#--------------------------------------------------------------------
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", type=str, help="github repo url")
+args = parser.parse_args()
 
 load_dotenv()
 token = os.getenv("GITHUB_TOKEN")
 headers = {'Authorization': 'token ' + token}
+
 
 
 def get_languages(url):
@@ -166,12 +173,9 @@ def repo_metrics_to_dict(repo_dict, repo):
 def get_rate_limit():
     response = requests.get("https://api.github.com/rate_limit", headers=headers)
     rate_status_dict = response.json()
-        #pp(rate_status_dict)    #show how status of rate limit 
 
     rate_used = rate_status_dict["resources"]["core"]["used"]
     rate_limit = rate_status_dict["resources"]["core"]["limit"]
-    # rate_remaining = rate_status_dict["resources"]["core"]["remaining"]
-    # print(f"Rate Status: {rate_used}/{rate_limit} used")
     return rate_used, rate_limit
 
 def print_rate_limit(rate_used, rate_limit):
@@ -208,15 +212,7 @@ def scrape(url):
     rate_used_start, rate_total = get_rate_limit()
     # print("Start:")
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
-
-    # url = 'https://github.com/hunter23h/withimpact' #private
-    # url = 'https://github.com/google-deepmind/alphageometry' #No description, doesn't pass criteria...
-    # url = 'https://github.com/socialincome-san/public' #Should pass criteria
-    # url_topics = 'https://github.com/topics/sustainable-development-goals'    
-    # repository_url = "https://github.com/octocat/Hello-World"
     api_url, repo = convert_to_api_url(url)
-    # print(f"GitHub API URL: {api_url}")
-    # start_time = time.time()
     list_repo = []
     # print(f"Start time: {time.ctime()}")
     valid_project = check_criteria(api_url)
@@ -227,24 +223,7 @@ def scrape(url):
         # pp(repo_info)
         list_repo.append(repo_info)
 
-        
-        # out_file = open("../jsons/submitted_repo.json", "w") # run from /web-scraping
-  
-        # json.dump(list_repo, out_file, indent = 6) 
-  
-        # out_file.close()
-        # print(list_repo[0])
-        # print(type(list_repo))
         return list_repo[0]
-
-        # print("End:")
-        # rate_used_end, rate_total = get_rate_limit()
-        # print_rate_limit(rate_used=rate_used_end, rate_limit=rate_total)
-        # print(f"Used {rate_used_end-rate_used_start}")
-
-        # end_time = time.time()
-        # total_time = end_time - start_time
-        # print(f"End time: {time.ctime()}, time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
 
     else:
         print("Project does not match the criteria!")
@@ -257,11 +236,8 @@ if __name__ == '__main__':
     print("Start:")
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
 
-    # url = 'https://github.com/hunter23h/withimpact' #private
-    # url = 'https://github.com/google-deepmind/alphageometry' #No description, doesn't pass criteria...
-    url = 'https://github.com/socialincome-san/public' #Should pass criteria
-    # url_topics = 'https://github.com/topics/sustainable-development-goals'    
-    # repository_url = "https://github.com/octocat/Hello-World"
+    url = args.f #Should pass criteria
+
     api_url, repo = convert_to_api_url(url)
     # print(f"GitHub API URL: {api_url}")
     start_time = time.time()

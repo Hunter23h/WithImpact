@@ -7,7 +7,6 @@ import React, { useState } from "react";
 import { addComment } from "@/lib/data";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { getUserSession } from "@/lib/session";
 
 function ProjectComments({
   projectData,

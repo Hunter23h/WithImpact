@@ -35,6 +35,11 @@ function Nav() {
       pathName: "/",
     },
     {
+      title: "About Us",
+      href: "/aboutUs",
+      pathName: "/aboutUs",
+    },
+    {
       title: "Browse",
       href: "/browse?page=1",
       pathName: "/browse",

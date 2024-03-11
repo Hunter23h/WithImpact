@@ -1,4 +1,10 @@
 import { cn } from "@/lib/utils"
+/**
+ * Skeleton Loading animation for project list
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
 
 function Skeleton({
   className,

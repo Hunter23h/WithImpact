@@ -1,9 +1,14 @@
+// @ts-nocheck
 "use client";
+/**
+ * List of sign-in providers for logging in
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
+
 import React from "react";
-import { getProviders, signIn } from "next-auth/react";
-import { getServerSession } from "next-auth/next";
-import { AuthOptions } from "next-auth";
-import Container from "@/app/ui/container";
+import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 function SigninProviders({ providers }: any) {

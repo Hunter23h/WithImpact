@@ -3,6 +3,8 @@ python scrape_github_topics.py -f https://github.com/topics/sustainable-developm
 python scrape_github_topics.py -f https://github.com/topics/sdgs
 # takes 2.5 mins
 
+python scrape_github_repo.py -f https://github.com/socialincome-san/public
+
 # to insert data into db from a json file:
 python json_sql.py -f (filename)
 

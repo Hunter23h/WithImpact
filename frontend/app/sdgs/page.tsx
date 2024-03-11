@@ -1,5 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+/**
+ * /sdgs route
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
 import React from "react";
 import Container from "../ui/container";
 import SDGCards from "../ui/sdgs/sdgCards";

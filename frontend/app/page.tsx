@@ -1,13 +1,16 @@
+/**
+ * / route
+ *
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
 import Image from "next/image";
 import { Button } from "../components/ui/button";
 import Link from "next/link";
 import Container from "./ui/container";
-import { useEffect, useState } from "react";
-import { getUserSession } from "@/lib/session";
 
 export default async function Home() {
-  const user = await getUserSession();
-
   return (
     <main className="flex flex-col items-center justify-center h-[100%]">
       <Container className="flex flex-col xl:flex-row justify-start xl:justify-between items-center xl:items-start gap-[60px] w-[100%] h-full relative">

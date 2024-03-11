@@ -2,15 +2,17 @@
 
 # Database Setup
 
-This project uses Google Cloud Platform (GCP) to host our PostgreSQL database. Use the link below for instructions how to set it up.
+This project uses Google Cloud Platform (GCP) to host our PostgreSQL database. Use the link below for instructions on how to set it up.
 https://cloud.google.com/sql/docs/postgres/create-manage-databases
 
-To scrape data using the scripts provided in this repo, you must setup a GITHUB_TOKEN. You can read the documentation below for more information:
+To scrape data using the scripts provided in this repo (in backend/webscraping), you must setup a GITHUB_TOKEN. You can read the documentation below for more information:
 https://docs.github.com/en/rest/authentication/keeping-your-api-credentials-secure?apiVersion=2022-11-28
 
 For more information about scraping using the provided scripts, read backend/webscraping/scrape.txt
 
 Your .env file should contain the following variables:
+
+```bash
 GITHUB_TOKEN = ''
 DATABASE_URL = True
 DEBUG = True
@@ -22,8 +24,9 @@ DB_HOST = ''
 DB_PORT = ''
 GITHUB_CLIENT_ID = ''
 GITHUB_SECRET = ''
+```
 
-The DB variables should come straight from GCP, and the SECRET KEY is for Django.
+The DB variables should come straight from GCP, and the SECRET_KEY is for Django.
 
 # Backend Setup
 
@@ -84,6 +87,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 # Classification
 
 Three models were selected to be used in an ensemble method utilizng a voting classifier:
+
 1. Random Forest - Versatility and Robustness
 2. Logisitic Regression - Margin Maximization and High-Dimensional Space Interpretability
 3. Support Vector Classifier - Interpretability and Well-Separated Classes

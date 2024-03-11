@@ -34,12 +34,12 @@ function ProjectDetails({ projectData }: { projectData: any }) {
           <p>{parseDate(projectData.last_push_date)} </p>
         </div>
         <div>
-           <p className="font-bold">SDG</p>
-                <div className="flex gap-[5px] text-labels">
-                  <Badge>{SDGS[projectData.sdg_categories]}</Badge>
-                  {/* <span>SDG</span> */}
-                </div>
-              </div>
+          <p className="font-bold">SDG</p>
+          <div className="flex gap-[5px] text-labels">
+            <Badge>{SDGS[projectData.sdg_categories]}</Badge>
+            {/* <span>SDG</span> */}
+          </div>
+        </div>
         {/* Tags */}
         <div>
           <p className="font-bold">Tags</p>
@@ -55,7 +55,12 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">Status</p>
           <div className="flex items-center gap-[10px] ">
-            <span className="w-[10px] h-[10px] bg-[lightgreen] rounded-[50%]" />{" "}
+            <span
+              className={cn(
+                `w-[10px] h-[10px] bg-[lightgreen] rounded-[50%] `,
+                { "bg-destructive": projectData.status === "Not Active" }
+              )}
+            />{" "}
             <span>{projectData.status}</span>
           </div>
         </div>

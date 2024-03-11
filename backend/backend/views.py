@@ -30,7 +30,6 @@ from webscraping.predict import TextClassifier
 class GithubLogin(SocialLoginView):
     adapter_class = GitHubOAuth2Adapter
     callback_url = "http://localhost:3000/api/auth/callback/github"
-    # callback_url = "http://"
     client_class = OAuth2Client
 
 @csrf_exempt
@@ -75,7 +74,7 @@ def submit_url(request):
                 desc = output['Description']
                 classifier = TextClassifier()
                 pred_sdg = classifier.predict(desc)
-                print(pred_sdg)
+                # print(pred_sdg)
 
                 
                 # Create a new Project object
@@ -144,7 +143,6 @@ def add_avatar_to_comments(request):
 @csrf_exempt
 def like_project(request):
     if request.method == 'POST':
-        # Assuming the request body contains JSON data with projectOwner and projectName
         data = json.loads(request.body)
         print(data)
         # print(request.POST)
@@ -154,18 +152,8 @@ def like_project(request):
         if not url or not user:
             return JsonResponse({'error': 'Missing required fields'}, status=400)
 
-        # Assuming you have a User model with a field to store starred projects
-        # print(request.user)
         user_profile = User.objects.get(username=user)
-        # print(user_profile)
-        # if doesnt work, just pass username into body of post request
-        # if not user_profile:
-        #     return JsonResponse({'error': 'User not authenticated'}, status=401)
-
-        # Here you can update the user's model to add the starred project
         try:
-            # Add logic to update the user's model with the starred project
-            # For example:
             liked = False
             if url in user_profile.favourite_projects:
                 user_profile.favourite_projects.remove(url)
@@ -184,7 +172,6 @@ def like_project(request):
 @csrf_exempt
 def add_comment(request):
     if request.method == 'POST':
-        # Assuming the request body contains JSON data with username, repo_url, and text
         data = json.loads(request.body)
         print(data)
         text = data.get('text')
@@ -201,36 +188,14 @@ def add_comment(request):
                 project_url=repo_url,
                 username= User.objects.get(username=username),
                 text=text,
-                avatar_url=avatar_url  # You need to replace this with the actual URL or logic to get the avatar URL
+                avatar_url=avatar_url
             )
-            # Optionally, you can return the ID of the newly created comment
+    
             return JsonResponse({'success': True, 'comment_id': comment.id}, status=201)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
-
-
-
-# def get_csrf_token(request):
-#     return JsonResponse({"csrfToken": get_token(request)})
-
-
-# @login_required
-# def save_user(request):
-#     if request.method == 'POST':
-#         data = request.POST  # Assuming user data is sent in the request body
-#         # Save user data to the database
-#         user = User.objects.create(
-#             username=data['username'],
-#             favourite_projects=data.get('favourite_projects', []),
-#             # Add other fields as needed
-#         )
-#         user.save()
-#         return JsonResponse({'message': 'User saved successfully'})
-#     else:
-#         return JsonResponse({'error': 'Only POST requests are allowed'}, status=405)
-
 
 def project_detail(request, name, owner):
     project = get_object_or_404(Project, name=name, owner=owner)
@@ -277,56 +242,9 @@ def project_detail(request, name, owner):
     )
 
 
-@login_required #only works in logged in, have to fix
-def toggle_favorite(request, name, owner):
-    project = get_object_or_404(Project, name=name, owner=owner)
-    user_profile = User.objects.get(username=request.user)
-    comment_form = CommentForm()
-    comments = Comment.objects.filter(project_url=project.repo_url)
-
-    if request.method == 'POST':
-        # Handle like/unlike request
-        if 'like_button' in request.POST:
-            # Check if the JSONB field is null
-            if user_profile.favourite_projects is None:
-                user_profile.favourite_projects = [] # Initialize with an empty dictionary if it's null
-
-            value = project.repo_url
-            # Add data to the JSONB field
-
-            if value in user_profile.favourite_projects:
-                user_profile.favourite_projects.remove(value)
-            else:
-                user_profile.favourite_projects.append(value)
-
-            # Save the object
-            user_profile.save()
-    
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.username_id = request.user
-            comment.project_url = project.repo_url
-            comment.save()
-            form = CommentForm()
-
-
-    # return redirect('project_detail', name=name, owner=owner)
-    return render(request, 'backend/project_detail.html', {'project': project, 'user': user_profile, 'project_comments': comments, 'comment_form': comment_form})
-
-
-# class MyModelList(APIView):
-#     def get(self, request, format=None):
-#         items = MyModel.objects.all()
-#         serializer = MyModelSerializer(items, many=True)
-#         return Response(serializer.data)
-
 
 class Home(APIView):
     def get(self, request, format=None):
-        # return HttpResponse(
-        #     "Welcome to WithImpact RESTFUL API Server.",
-        # )
         return render(request, "backend/home_page.html")
     
 class FavouriteList(APIView):
@@ -496,15 +414,6 @@ class UserList(APIView):
         user_serializer = UsersSerializer(users, many=True)
 
         return Response(user_serializer.data, status=status.HTTP_200_OK)
-    
-# class Comments(APIView):
-#     def get(self, request, name, owner, format=None):
-#         repo_url = "https://github.com/{owner}/{name}"
-#         comments_obj = Comment.objects.filter(project_url=repo_url)
-#         comment_serializer = CommentsSerializer(comments_obj)
-
-#         return Response(comment_serializer.data, status=status.HTTP_200_OK)
-    
 
     
     
@@ -512,7 +421,6 @@ class ProjectInfo(APIView):
     def get(self, request, name, owner, format=None):
         project_obj = get_object_or_404(Project, name=name, owner=owner)
         proj_serializer = ProjectsSerializer(project_obj)
-        # repo_url = "https://github.com/{owner}/{name}"
         comments_obj = Comment.objects.filter(project_url=project_obj.repo_url).order_by('-created_date')
         comment_serializer = CommentsSerializer(comments_obj, many=True)
 
