@@ -2,7 +2,7 @@
 
 # Database Setup
 
-This project uses Google Cloud Platform (GCP) to host our PostgreSQL database. Use the link below for instructions how to set it up.
+This project uses Google Cloud Platform (GCP) to host our PostgreSQL database. Use the link below for instructions on how to set it up.
 https://cloud.google.com/sql/docs/postgres/create-manage-databases
 
 To scrape data using the scripts provided in this repo (in backend/webscraping), you must setup a GITHUB_TOKEN. You can read the documentation below for more information:

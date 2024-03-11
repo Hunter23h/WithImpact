@@ -74,7 +74,7 @@ def submit_url(request):
                 desc = output['Description']
                 classifier = TextClassifier()
                 pred_sdg = classifier.predict(desc)
-                print(pred_sdg)
+                # print(pred_sdg)
 
                 
                 # Create a new Project object
