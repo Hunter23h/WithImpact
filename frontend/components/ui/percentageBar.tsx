@@ -1,5 +1,12 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+/**
+ * Language Percentage Bar for GitHub Projects
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
+
 
 function PercentageBar({ projectData }: any) {
   return (
@@ -22,7 +29,6 @@ function PercentageBar({ projectData }: any) {
           0
         );
 
-        console.log("Sum", languageSum);
         // Render each language item
         return (
           <div className="flex items-center rounded-[1rem] overflow-hidden shadown-lg bg-[green]">

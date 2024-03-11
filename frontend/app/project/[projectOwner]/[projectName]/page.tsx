@@ -1,20 +1,18 @@
 // @ts-nocheck
+/**
+ * /project/[projectOwner]/[projectName] route
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
 import Container from "@/app/ui/container";
 import ProjectComments from "@/app/ui/project/projectComments";
 import ProjectDetails from "@/app/ui/project/projectDetails";
 import ProjectSummary from "@/app/ui/project/projectSummary";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { fetchProject, fetchUser } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React from "react";
 import { getUserSession } from "@/lib/session";
-import { url } from "inspector";
 import StarProject from "@/app/ui/starProject/starProject";
-import { revalidatePath } from "next/cache";
-
-export const revalidate = false;
 
 async function Project({ params }: any) {
   const projectName = params.projectName;

@@ -4,13 +4,8 @@ import "./globals.css";
 import Nav from "./ui/nav";
 import { cn } from "@/lib/utils";
 import { GlobalContextProvider } from "./context";
-import { SessionProvider } from "next-auth/react";
-import { getServerSession } from "next-auth";
-import { authOption } from "./api/auth/[...nextauth]/route";
-import AuthContext from "./context/AuthContext";
 import AuthContextProvider from "./context/AuthContext";
 
-const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
@@ -26,7 +21,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const session = await getServerSession(authOption);
   return (
     <>
       <html lang="en">

@@ -1,9 +1,14 @@
-import { Github } from "lucide-react";
+// @ts-nocheck
+/**
+ * Next Auth Setup: https://next-auth.js.org/getting-started/example
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
+
 import { NextAuthOptions } from "next-auth";
-import { session } from "@/lib/session";
 import NextAuth from "next-auth/next";
 import GithubProvider from "next-auth/providers/github";
-import axios from "axios";
 
 export const authOption: NextAuthOptions = {
   session: {

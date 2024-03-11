@@ -3,22 +3,38 @@ import { unstable_noStore as noStore } from "next/cache";
 
 const BACKEND_URL = "http://127.0.0.1:8000/";
 
-export async function fetchProjects(search: string, page: string, sort: string,
-  sdg: string, languages: string, status: string, newcomer_friendly: string) {
+/**
+ * Fetches the projects from the database
+ * @param search
+ * @param page
+ * @param sort
+ * @param sdg
+ * @param languages
+ * @param status
+ * @param newcomer_friendly
+ * @returns List of projects based on the specified search query params
+ */
+export async function fetchProjects(
+  search: string,
+  page: string,
+  sort: string,
+  sdg: string,
+  languages: string,
+  status: string,
+  newcomer_friendly: string
+) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
-
 
   try {
     const queryParams = new URLSearchParams({
-    page: page,
-    search: search,
-    sort: sort,
-    sdg: sdg, // Assuming sdg is not already encoded
-    languages: languages,
-    status: status,
-    newcomer_friendly: newcomer_friendly,
-  });
-
+      page: page,
+      search: search,
+      sort: sort,
+      sdg: sdg, // Assuming sdg is not already encoded
+      languages: languages,
+      status: status,
+      newcomer_friendly: newcomer_friendly,
+    });
 
     // Use fetch API to perform the request
     const response = await fetch(
@@ -42,7 +58,7 @@ export async function fetchProjects(search: string, page: string, sort: string,
 /**
  * Fetch a single project and its corresponding comments
  * @param projectName
- * @returns { Project {}, Comments:[]}
+ * @returns { project: {}, comments: []}
  */
 export async function fetchProject(owner: string, repo: string) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
@@ -76,13 +92,16 @@ export async function fetchProject(owner: string, repo: string) {
 /**
  * Fetch favourite projects associated with a user
  * @param username session
- * @returns
+ * @returns List of projects based on the specified search query params
  */
 export async function fetchFavourites(
   search: string,
   page: string,
   sort: string,
-  sdg: string, languages: string, status: string, newcomer_friendly: string,
+  sdg: string,
+  languages: string,
+  status: string,
+  newcomer_friendly: string,
   username: string
 ) {
   noStore(); // Assuming this is a custom function you've defined elsewhere
@@ -90,14 +109,14 @@ export async function fetchFavourites(
   try {
     // Construct the query parameters
     const queryParams = new URLSearchParams({
-    page: page,
-    search: search,
-    sort: sort,
-    sdg: sdg, // Assuming sdg is not already encoded
-    languages: languages,
-    status: status,
-    newcomer_friendly: newcomer_friendly,
-  });
+      page: page,
+      search: search,
+      sort: sort,
+      sdg: sdg, // Assuming sdg is not already encoded
+      languages: languages,
+      status: status,
+      newcomer_friendly: newcomer_friendly,
+    });
 
     // Use fetch API to perform the request
     const response = await fetch(
@@ -123,9 +142,9 @@ export async function fetchFavourites(
 }
 
 /**
- * Fetch user favourite projects and project info
+ * Fetches the user profile that we have stored on the backend (used specifically for commenting and starred projects)
  * @param username session
- * @returns
+ * @returns {user: {username: string, favouriteProjects {}}}
  */
 export async function fetchUser(username: string) {
   noStore(); // Retain original side-effect function call
@@ -151,7 +170,10 @@ export async function fetchUser(username: string) {
 }
 
 /**
- * Liking a project
+ * Changes the state of whether the project is liked or not
+ * @param repo_url
+ * @param username
+ * @returns {success: Boolean}
  */
 export async function likeProject(repo_url: string, username: string) {
   try {
@@ -168,7 +190,12 @@ export async function likeProject(repo_url: string, username: string) {
 }
 
 /**
- * Adding a comment
+ * Adds a comment under a specific project
+ * @param repo_url
+ * @param username
+ * @param text
+ * @param avatar
+ * @returns {success: Boolean}
  */
 export async function addComment(
   repo_url: string,
@@ -191,6 +218,11 @@ export async function addComment(
   }
 }
 
+/**
+ * Submits URL to backend to get scraped and classified
+ * @param url
+ * @returns {success: Boolean}
+ */
 export async function submitUrl(url: string) {
   try {
     const response = await axios.post(`${BACKEND_URL}submiturl/`, {

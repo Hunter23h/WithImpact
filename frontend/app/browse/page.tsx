@@ -1,9 +1,15 @@
+/**
+ * /browse route
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
+
 import React, { Suspense } from "react";
 import Projects from "../ui/browse/projects";
 import SidebarActions from "../ui/browse/sidebarActions";
 import BrowseSkeleton from "../ui/browse/browseSkeleton";
 import Container from "../ui/container";
-import { cn } from "@/lib/utils";
 
 async function Browse({ searchParams }: { searchParams: { page: string } }) {
   return (

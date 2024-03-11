@@ -1,9 +1,15 @@
 "use client";
+/**
+ * Project Submission Link Input
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
+
 import React, { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { submitUrl } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
 function GithubUrl() {
   const [githubUrl, setGithubUrl] = useState("");

@@ -1,13 +1,18 @@
 "use client";
-
+/**
+ * global context to share any client-side state
+ *
+ * @author  Kevin Yu <yu.kevin2002@gmail.com>
+ * @date    March 2024
+ */
 import {
   createContext,
   useContext,
   Dispatch,
   SetStateAction,
   useState,
-  useEffect,
 } from "react";
+
 
 interface ContextProps {
   user: any;
