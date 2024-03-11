@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 import argparse
 
 # python json_sql.py -f "json file"
+# e.g. `python json_sql.py -f jsons/submitted_repo.json`
+
+# Used to import data into the database from a JSON file
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, help="JSON file name")
@@ -46,8 +49,6 @@ def insert_into_postgresql(data, table_name, connection_params):
                  record['Last Push Date'], record['Latest Commit Date'],record['Stars'], record['Forks'],record['Watchers'], Json(record['Languages']),
                  Json(record['Tags']), record['Open PRs'],record['Open Issues'], Json(record['Top 5 Contributors']),record['Status'], record['Newcomer Friendly'])
                 )
-        # for record in data:
-        #     print(record)
             else:
                 # Repository already exists, skip insertion
                 print(f"Skipped insertion for existing repository with repo_url: {repo_url}")
@@ -57,8 +58,6 @@ def insert_into_postgresql(data, table_name, connection_params):
         connection.commit()
         connection.close()
         print("Data inserted successfully.")
-    # except Exception as e:
-    #     print(f"Error: {e}")
         
 def main():
     load_dotenv()
@@ -78,38 +77,6 @@ def main():
     }
     # print(connection_params)
 
-
-    # Replace 'your_table' with your actual table name
-    table_name = 'backend_project'
-
-    # Replace 'your_file.json' with your actual JSON file path
-    json_file_path = './jsons/submitted_repo.json'
-
-    # Read JSON data
-    data = read_json(json_file_path)
-
-    # Insert data into PostgreSQL table
-    insert_into_postgresql(data, table_name, connection_params)
-
-if __name__ == "__main__":
-    load_dotenv()
-    dbname = os.getenv("DB_NAME")
-    dbuser = os.getenv("DB_USER")
-    dbpass = os.getenv("DB_PASS")
-    dbhost = os.getenv("DB_HOST")
-    dbport = os.getenv("DB_PORT")
-
-    # Replace these values with your actual database connection details
-    connection_params = {
-        'dbname': dbname,
-        'user': dbuser,
-        'password': dbpass,
-        'host': dbhost,
-        'port': dbport
-    }
-    print(connection_params)
-
-
     # Replace 'your_table' with your actual table name
     table_name = 'backend_project'
 
@@ -121,3 +88,6 @@ if __name__ == "__main__":
 
     # Insert data into PostgreSQL table
     insert_into_postgresql(data, table_name, connection_params)
+
+if __name__ == "__main__":
+    main()

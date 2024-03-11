@@ -11,6 +11,11 @@ import json
 import time
 import argparse
 
+#--------------------------------------------------------------------
+# Used to scrape GitHub repository information from a GitHub topics 
+# page using the GitHub API
+#--------------------------------------------------------------------
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, help="github topics url")
 args = parser.parse_args()
@@ -118,8 +123,6 @@ def get_repos_from_topics(num_repos, in_url): # used to get repo names and owner
 
 def check_newcomer_friendly_status(repo_name): #uses community standards for now
     owner, repo = repo_name.split("/")
-   # https://raw.githubusercontent.com/octokit/octokit.rb/master/README.md
-    # readme_url = "https://raw.githubusercontent.com/" + owner + "/" + repo + "/" + branch_name + "/README.md"
     comm_stds_url = f"https://api.github.com/repos/{owner}/{repo}/community/profile"
     comm_stds_resp = requests.get(comm_stds_url, headers=headers)
     comm_stds_dict = comm_stds_resp.json()
@@ -162,8 +165,6 @@ def print_repo_metrics(repo_dict, repo):
     newcomer = check_newcomer_friendly_status(repo_name=repo)
     print("Newcomer Status:", newcomer)
     print()
-
-        #print(repo_dict["commits_url"])
     print("------------------------------------------------\n")
 
 def repo_metrics_to_dict(repo_dict, repo):
@@ -199,12 +200,9 @@ def repo_metrics_to_dict(repo_dict, repo):
 def get_rate_limit():
     response = requests.get("https://api.github.com/rate_limit", headers=headers)
     rate_status_dict = response.json()
-        #pp(rate_status_dict)    #show how status of rate limit 
 
     rate_used = rate_status_dict["resources"]["core"]["used"]
     rate_limit = rate_status_dict["resources"]["core"]["limit"]
-    # rate_remaining = rate_status_dict["resources"]["core"]["remaining"]
-    # print(f"Rate Status: {rate_used}/{rate_limit} used")
     return rate_used, rate_limit
 
 def print_rate_limit(rate_used, rate_limit):
@@ -238,8 +236,6 @@ if __name__ == '__main__':
     print("Start:")
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
 
-    #url = 'https://api.github.com/search/repositories?q=topic:sustainable-development-goals'
-    # url_topics = 'https://github.com/topics/sustainable-development-goals'
     url_topics = args.f
     topic_name = get_topic_name(url_topics)
 
@@ -277,8 +273,6 @@ if __name__ == '__main__':
 
     out_file.close()  
 
-    # print(f"Number of active repos: {active_count}")
-
     print("End:")
     rate_used_end, rate_total = get_rate_limit()
     print_rate_limit(rate_used=rate_used_end, rate_limit=rate_total)
@@ -288,28 +282,6 @@ if __name__ == '__main__':
     total_time = end_time - start_time
     print(f"End time: {time.ctime()}, time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
         
-    #------------------------------------------------------------------------------ --
-
-   # response = requests.get(url)
-    # print("Status code: ", response.status_code)
-    # # In a variable, save the API response.
-    # response_dict = response.json()
-    # print(response_dict)
-    # # Evaluate the results.
-    # print("Total repos:", response_dict['total_count'])
-    # # find total number of repositories
-    # repos_dicts = response_dict['items']
-    # print("Repos found:", len(repos_dicts))
-
-    # examine the first repository
-    # repo_dict = repos_dicts[1]
-    # url = 'https://api.github.com/repos/coronasafe/care'
-    # repo_dict = requests.get(url, headers=headers).json()
-    # print("Keys:", len(repo_dict))
-    # for key in sorted(repo_dict.keys()):
-    #     print(key)
-
-    # pp(repo_dict)
 
 
     
