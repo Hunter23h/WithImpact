@@ -80,3 +80,14 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+# Classification
+
+Three models were selected to be used in an ensemble method utilizng a voting classifier:
+1. Random Forest - Versatility and Robustness
+2. Logisitic Regression - Margin Maximization and High-Dimensional Space Interpretability
+3. Support Vector Classifier - Interpretability and Well-Separated Classes
+
+Precision, recall, and F1-score were used to evaluate the classifiers
+
+The data that the model was trained and tested on is the OSDG Community Dataset (OSDG-CD).
