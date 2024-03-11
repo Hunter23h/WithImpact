@@ -37,3 +37,8 @@ class TextClassifier:
 
         # Return predictions if there is one
         return predictions[0] if len(predictions) > 0 else None
+
+classifier = TextClassifier()
+
+input_text = "Saving the climate one tree at a time with digital seeds"
+result = classifier.predict(input_text)
