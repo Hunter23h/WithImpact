@@ -204,7 +204,7 @@ def check_criteria(url):
         else:
             return True
         
-def main(url):
+def scrape(url):
     rate_used_start, rate_total = get_rate_limit()
     # print("Start:")
     print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)

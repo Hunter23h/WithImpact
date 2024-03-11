@@ -31,6 +31,13 @@ DEBUG = os.getenv("DEBUG")
 GITHUB_CLIENT_ID = os.getenv("GITHUB_CLIENT_ID")
 GITHUB_SECRET = os.getenv("GITHUB_SECRET")
 
+# DB INFO
+dbname = os.getenv("DB_NAME")
+dbuser = os.getenv("DB_USER")
+dbpass = os.getenv("DB_PASS")
+dbhost = os.getenv("DB_HOST")
+dbport = os.getenv("DB_PORT")
+
 ALLOWED_HOSTS = []
 
 CRONJOBS = [
@@ -151,19 +158,17 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "N/A()^km8qJSL]fq",  # TODO: have to put this in .env eventually
-        "HOST": "34.130.238.218",
-        "PORT": "5432",
+        "NAME": dbname,
+        "USER": dbuser,
+        "PASSWORD": dbpass,
+        "HOST": dbhost,
+        "PORT": dbport,
         "OPTIONS": {
             "sslmode": "require",
             "sslrootcert": "./security/server-ca.pem",
             "sslcert": "./security/client-cert.pem",
             "sslkey": "./security/client-key.pem",
         },
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -23,7 +23,7 @@ from dj_rest_auth.registration.views import SocialLoginView
 from allauth.socialaccount.providers.github.views import GitHubOAuth2Adapter
 from allauth.socialaccount.providers.oauth2.client import OAuth2Client
 from django.views.decorators.csrf import csrf_exempt
-from webscraping.scrape_github_repo import main
+from webscraping.scrape_github_repo import scrape
 from webscraping.predict import TextClassifier
 
 
@@ -68,7 +68,7 @@ def submit_url(request):
         if url:
             try:
                 # Call the main function with the URL
-                output = main(url)
+                output = scrape(url)
                 if output is None:
                     return JsonResponse({'error': 'URL NOT VALID'}, status=400)
                     

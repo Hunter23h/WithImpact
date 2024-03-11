@@ -30,32 +30,9 @@ def connect_to_database():
 def scrape_data(url):
     token = os.getenv("GITHUB_TOKEN")
     headers = {'Authorization': 'token ' + token}
-
-    # rate_used_start, rate_total = get_rate_limit()
-    # print("----")
-    # print_rate_limit(rate_used=rate_used_start, rate_limit=rate_total)
     api_url, repo = convert_to_api_url(url)
-    # print(f"GitHub API URL: {api_url}")
-    # start_time = time.time()
-    # list_repo = []
-    # print(f"Start time: {time.ctime()}")
-    # valid_project = check_criteria(api_url)
-    # if valid_project:
     repo_dict = requests.get(api_url, headers=headers).json()
-    # print_repo_metrics(repo_dict, repo)
     repo_info = repo_metrics_to_dict(repo_dict, repo)
-    # pp(repo_info)
-    # list_repo.append(repo_info)  
-
-    # print("End:")
-    # rate_used_end, rate_total = get_rate_limit()
-    # print_rate_limit(rate_used=rate_used_end, rate_limit=rate_total)
-    # print(f"Used: {rate_used_end-rate_used_start}")
-    # rate_used = rate_used_end-rate_used_start
-
-    # end_time = time.time()
-    # total_time = end_time - start_time
-    # print(f"Time taken: {total_time//60:.4f} minutes, {total_time%60.0:.4f} seconds")
 
     #-----------------------------------
     # desc = repo_info['Description']
@@ -141,8 +118,6 @@ def main():
         print_rate_limit(rate_used, rate_total)
         
         filename = write_to_json(repo_list)
-
-        # filename = "../jsons/repos_2024-01-22_16-36-37.json"
 
         update_database_from_json(cursor, filename, connection)
 
