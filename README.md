@@ -33,7 +33,7 @@ The DB variables should come straight from GCP, and the SECRET_KEY is for Django
 1. Create virtual environment (`python -m venv myenv`)
 2. Active your virtual environment (`source myenv/Scripts/activate`)
 3. Install any dependencies (`pip install -r requirements.txt`)
-4. Create a folder in "backend/backend" called 'security' and add client-cert.pem, client-key.pem and server-ca.pem (to setup database from GCP)
+4. Create a folder in "backend/backend" called 'security' and add client-cert.pem, client-key.pem and server-ca.pem (these files are from GCP)
 5. In command line, cd to backend and type `python manage.py runserver`
 
 # Frontend Setup
