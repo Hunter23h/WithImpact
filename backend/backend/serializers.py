@@ -1,15 +1,6 @@
 from rest_framework import serializers
 from .models import User, Project, Comment
 from rest_auth.models import TokenModel
-# from rest_auth.utils import import_callable
-# from rest_auth.serializers import UserDetailsSerializer
-
-
-
-# class MyModelSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = MyModel
-#         fields = ["id", "name", "description"]
 
 
 class ProjectsSerializer(serializers.ModelSerializer):
@@ -29,9 +20,3 @@ class CommentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ["id", "project_url", "username", "text", "created_date", "avatar_url"]
-# class TokenSerializer(serializers.ModelSerializer):
-#     user = UsersSerializer(read_only=True)
-
-#     class Meta:
-#         model = TokenModel
-#         fields = ('key', 'user', )
