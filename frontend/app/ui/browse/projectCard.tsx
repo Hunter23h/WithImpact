@@ -25,7 +25,7 @@ function Project({ project }: any) {
               {/* SDG Goal */}
               <div className="mt-[10px]">
                 <Badge className="bg-primary text-white border-none shadow-md text-center">
-                  SDG #{project.sdg_categories}: {SDGS[project.sdg_categories]}
+                  SDG #{project.sdg_categories}: {SDGS[project.sdg_categories - 1]}
                 </Badge>
               </div>
               {/* Github Avatar */}

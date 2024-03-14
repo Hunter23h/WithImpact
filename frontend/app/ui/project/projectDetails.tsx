@@ -36,7 +36,7 @@ function ProjectDetails({ projectData }: { projectData: any }) {
         <div>
           <p className="font-bold">SDG</p>
           <div className="flex gap-[5px] text-labels">
-            <Badge>{SDGS[projectData.sdg_categories]}</Badge>
+            <Badge>{SDGS[projectData.sdg_categories-1]}</Badge>
             {/* <span>SDG</span> */}
           </div>
         </div>
